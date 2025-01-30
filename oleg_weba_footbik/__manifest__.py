@@ -18,7 +18,7 @@
         "views/class_training_views.xml",
         "views/class_attendance_views.xml",
 
-        "data/data_res_partner.xml",  # TODO
+        # "data/data_res_partner.xml",  # TODO
     ],
 
     "assets": {
