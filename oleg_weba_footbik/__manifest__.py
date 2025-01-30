@@ -6,8 +6,26 @@
     "website": "https://weba.com.ua/",
     "category": "Uncategorized",
     "version": "17.0.1.0.0",
-    "depends": ["base"],
+    "license": "LGPL-3",
+    "depends": ["contacts", "hr"],
     "data": [
-        # "security/ir.model.access.csv",
+        "security/ir.model.access.csv",
+
+        "views/menu_view.xml",
+        "views/class_program_views.xml",
+        "views/class_location_views.xml",
+        "views/class_group_views.xml",
+        "views/class_training_views.xml",
+        "views/class_attendance_views.xml",
+
+        "data/data_res_partner.xml",  # TODO
     ],
+
+    "assets": {
+        "web.assets_backend": [
+            "oleg_weba_footbik/static/src/css/kanban_styles.css",
+        ],
+    },
+
+    "installable": True,
 }

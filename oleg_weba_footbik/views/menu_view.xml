@@ -1,0 +1,30 @@
+<odoo>
+
+    <menuitem name="Footbik"
+          id="oleg_weba_footbik.root_menu_footbik"
+          sequence="0"
+          web_icon="oleg_weba_footbik,static/description/logo.png"/>
+
+<!--    <menuitem name="Groups"-->
+<!--          id="main_menu_class_group"-->
+<!--          parent="root_menu_footbik"-->
+<!--          sequence="0"/>-->
+
+<!--    <menuitem name="Training"-->
+<!--          id="main_menu_class_trraining"-->
+<!--          parent="root_menu_footbik"-->
+<!--          sequence="1"/>-->
+
+<!--    <menuitem name="Attendance"-->
+<!--          id="main_menu_class_attendance"-->
+<!--          parent="root_menu_footbik"-->
+<!--          sequence="2"/>-->
+
+    <menuitem name="Addition models"
+          id="main_menu_addition_models"
+          parent="root_menu_footbik"
+          sequence="3"/>
+
+
+
+</odoo>

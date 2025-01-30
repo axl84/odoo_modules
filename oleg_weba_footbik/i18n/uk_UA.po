@@ -1,0 +1,695 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* oleg_weba_footbik
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-30 09:30+0000\n"
+"PO-Revision-Date: 2025-01-30 09:30+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: oleg_weba_footbik
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_kanban
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_kanban
+msgid ""
+"<i class=\"fa fa-clock-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Duration training:</span>"
+msgstr ""
+"<i class=\"fa fa-clock-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Тривалість:</span>"
+
+#. module: oleg_weba_footbik
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_kanban
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_kanban
+msgid ""
+"<i class=\"fa fa-clock-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">End training:</span>"
+msgstr ""
+"<i class=\"fa fa-clock-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Кінець:</span>"
+
+#. module: oleg_weba_footbik
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_kanban
+msgid ""
+"<i class=\"fa fa-clock-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">On training:</span>"
+msgstr ""
+"<i class=\"fa fa-clock-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Відвідав:</span>"
+
+#. module: oleg_weba_footbik
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_kanban
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_kanban
+msgid ""
+"<i class=\"fa fa-clock-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Start training:</span>"
+msgstr ""
+"<i class=\"fa fa-clock-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Початок:</span>"
+
+#. module: oleg_weba_footbik
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_kanban
+msgid ""
+"<i class=\"fa fa-clock-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Sub. frozen:</span>"
+msgstr ""
+"<i class=\"fa fa-clock-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Підписка заморожена:</span>"
+
+#. module: oleg_weba_footbik
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_kanban
+msgid ""
+"<i class=\"fa fa-clock-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Trial training:</span>"
+msgstr ""
+"<i class=\"fa fa-clock-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Пробне тренування:</span>"
+
+#. module: oleg_weba_footbik
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_kanban
+msgid ""
+"<i class=\"fa fa-clock-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Working off:</span>"
+msgstr ""
+"<i class=\"fa fa-clock-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Відпрацювання:</span>"
+
+#. module: oleg_weba_footbik
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_kanban
+msgid ""
+"<i class=\"fa fa-file-text-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Child:</span>"
+msgstr ""
+"<i class=\"fa fa-file-text-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Дитина:</span>"
+
+#. module: oleg_weba_footbik
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_kanban
+msgid ""
+"<i class=\"fa fa-file-text-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Group:</span>"
+msgstr ""
+"<i class=\"fa fa-file-text-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Група:</span>"
+
+#. module: oleg_weba_footbik
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_group_kanban
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_kanban
+msgid ""
+"<i class=\"fa fa-file-text-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Program:</span>"
+msgstr ""
+"<i class=\"fa fa-file-text-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Програма:</span>"
+
+#. module: oleg_weba_footbik
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_kanban
+msgid ""
+"<i class=\"fa fa-file-text-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Training:</span>"
+msgstr ""
+"<i class=\"fa fa-file-text-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Тренування:</span>"
+
+#. module: oleg_weba_footbik
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_group_kanban
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_kanban
+msgid ""
+"<i class=\"fa fa-location-arrow me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Location:</span>"
+msgstr ""
+"<i class=\"fa fa-location-arrow me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Локація:</span>"
+
+#. module: oleg_weba_footbik
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_group_kanban
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_kanban
+msgid ""
+"<i class=\"fa fa-map-marker me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">City:</span>"
+msgstr ""
+"<i class=\"fa fa-map-marker me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Місто:</span>"
+
+#. module: oleg_weba_footbik
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_group_kanban
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_kanban
+msgid ""
+"<i class=\"fa fa-user me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Trainer:</span>"
+msgstr ""
+"<i class=\"fa fa-user me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Тренер:</span>"
+
+#. module: oleg_weba_footbik
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_group_kanban
+msgid ""
+"<i class=\"fa fa-users me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Count children:</span>"
+msgstr ""
+"<i class=\"fa fa-users me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Кількість дітей:</span>"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__message_needaction
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__message_needaction
+msgid "Action Needed"
+msgstr "Необхідні дії"
+
+#. module: oleg_weba_footbik
+#: model:ir.ui.menu,name:oleg_weba_footbik.main_menu_addition_models
+msgid "Addition models"
+msgstr "Додаткові моделі"
+
+#. module: oleg_weba_footbik
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_view_form
+msgid "After Completed training you can not update record"
+msgstr "Після закінчення тренування ви не можете редагувати запис"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__message_attachment_count
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__message_attachment_count
+msgid "Attachment Count"
+msgstr "Кількість вкладень"
+
+#. module: oleg_weba_footbik
+#: model:ir.actions.act_window,name:oleg_weba_footbik.action_class_attendance
+#: model:ir.ui.menu,name:oleg_weba_footbik.menu_class_attendance
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_search
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_view_calendar
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_view_form
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_view_tree
+msgid "Attendance"
+msgstr "Відвідування"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_attendance__child_id
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_search
+msgid "Child"
+msgstr "Дитина"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__children_ids
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__children_ids
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_group_view_form
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_search
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_view_form
+msgid "Children"
+msgstr "Діти"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__city
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__city
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_group_search
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_search
+msgid "City"
+msgstr "Місто"
+
+#. module: oleg_weba_footbik
+#: model:ir.model,name:oleg_weba_footbik.model_class_attendance
+msgid "Class Attendance"
+msgstr "Відвідування"
+
+#. module: oleg_weba_footbik
+#: model:ir.model,name:oleg_weba_footbik.model_class_group
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__class_group_id
+msgid "Class Group"
+msgstr "Група"
+
+#. module: oleg_weba_footbik
+#: model:ir.model,name:oleg_weba_footbik.model_class_location
+msgid "Class Location"
+msgstr "Локація"
+
+#. module: oleg_weba_footbik
+#: model:ir.model,name:oleg_weba_footbik.model_class_program
+msgid "Class Program"
+msgstr "Програма"
+
+#. module: oleg_weba_footbik
+#: model:ir.model,name:oleg_weba_footbik.model_class_training
+msgid "Class Training"
+msgstr "Тренування"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_attendance__company_id
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__company_id
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_location__company_id
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__company_id
+msgid "Club"
+msgstr "Клую"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_attendance__color
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__color
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__color
+msgid "Color"
+msgstr "Колір"
+
+#. module: oleg_weba_footbik
+#. odoo-python
+#: code:addons/oleg_weba_footbik/models/class_attendance.py:0
+#: code:addons/oleg_weba_footbik/models/class_training.py:0
+#: code:addons/user_addons/footbik/oleg_weba_footbik/models/class_attendance.py:0
+#: code:addons/user_addons/footbik/oleg_weba_footbik/models/class_training.py:0
+#: model:ir.model.fields.selection,name:oleg_weba_footbik.selection__class_attendance__state__completed
+#: model:ir.model.fields.selection,name:oleg_weba_footbik.selection__class_training__state__completed
+#, python-format
+msgid "Completed"
+msgstr "Завершено"
+
+#. module: oleg_weba_footbik
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_view_form
+msgid "Completed training"
+msgstr "Тренування завершено"
+
+#. module: oleg_weba_footbik
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_group_view_form
+msgid "Create training"
+msgstr "Створити тренування"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_attendance__create_uid
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__create_uid
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_location__create_uid
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_program__create_uid
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_attendance__create_date
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__create_date
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_location__create_date
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_program__create_date
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__date_training
+msgid "Date training"
+msgstr "Дата тренування"
+
+#. module: oleg_weba_footbik
+#. odoo-python
+#: code:addons/oleg_weba_footbik/models/class_group.py:0
+#: code:addons/user_addons/footbik/oleg_weba_footbik/models/class_group.py:0
+#: model:ir.model.fields,help:oleg_weba_footbik.field_class_group__start_date_for_create_training
+#, python-format
+msgid "Date who use for start create training"
+msgstr "Дата для початку створення тренувань"
+
+#. module: oleg_weba_footbik
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_group_view_form
+msgid "Date/Time training"
+msgstr "Дата/Час тренування"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_attendance__display_name
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__display_name
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_location__display_name
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_program__display_name
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__display_name
+msgid "Display Name"
+msgstr "Назва"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_attendance__duration_training
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__duration_training
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__duration_training
+msgid "Duration training"
+msgstr "Тривалість тренування"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_attendance__end_training
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__end_training
+msgid "End training"
+msgstr "Кінець тренування"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__message_follower_ids
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__message_follower_ids
+msgid "Followers"
+msgstr "Підписники"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__message_partner_ids
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Підписники (Контакти)"
+
+#. module: oleg_weba_footbik
+#: model:ir.ui.menu,name:oleg_weba_footbik.root_menu_footbik
+msgid "Footbik"
+msgstr ""
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__training_on_friday
+msgid "Friday"
+msgstr "П’ятниця"
+
+#. module: oleg_weba_footbik
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_search
+msgid "Group"
+msgstr "Група"
+
+#. module: oleg_weba_footbik
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_search
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_group_search
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_search
+msgid "Group By"
+msgstr ""
+
+#. module: oleg_weba_footbik
+#: model:ir.actions.act_window,name:oleg_weba_footbik.action_class_group
+#: model:ir.ui.menu,name:oleg_weba_footbik.menu_class_group
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_group_search
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_group_view_form
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_group_view_tree
+msgid "Groups"
+msgstr "Групи"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__has_message
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__has_message
+msgid "Has Message"
+msgstr "Є повідомлення"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_attendance__id
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__id
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_location__id
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_program__id
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__id
+msgid "ID"
+msgstr ""
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,help:oleg_weba_footbik.field_class_group__message_needaction
+#: model:ir.model.fields,help:oleg_weba_footbik.field_class_training__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Перевірте, нові повідомлення вимагають вашої уваги."
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,help:oleg_weba_footbik.field_class_group__message_has_error
+#: model:ir.model.fields,help:oleg_weba_footbik.field_class_group__message_has_sms_error
+#: model:ir.model.fields,help:oleg_weba_footbik.field_class_training__message_has_error
+#: model:ir.model.fields,help:oleg_weba_footbik.field_class_training__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Перевірте, деякі повідомлення мають помилку доставки."
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__information_about_group
+msgid "Information about group"
+msgstr "Інформація про групу"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__message_is_follower
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__message_is_follower
+msgid "Is Follower"
+msgstr "Якщ є послідовником"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__is_trial_training_group
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_group_search
+msgid "Is trial training group"
+msgstr "Пробні тренування"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_attendance__write_uid
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__write_uid
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_location__write_uid
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_program__write_uid
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_attendance__write_date
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__write_date
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_location__write_date
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_program__write_date
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: oleg_weba_footbik
+#: model:ir.actions.act_window,name:oleg_weba_footbik.action_class_location
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__location_id
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__location_id
+#: model:ir.ui.menu,name:oleg_weba_footbik.menu_class_location
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_group_search
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_location_view_tree
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_search
+msgid "Location"
+msgstr "Локація"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__max_count_children
+msgid "Max Count Children"
+msgstr "Максимальна кількість дітей"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__message_has_error
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__message_has_error
+msgid "Message Delivery error"
+msgstr "Помилка доставки повідомлення"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__message_ids
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__message_ids
+msgid "Messages"
+msgstr "Повідомлення"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__training_on_monday
+msgid "Monday"
+msgstr "Понеділок"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__name
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_location__name
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_program__name
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__name
+msgid "Name"
+msgstr "Назва"
+
+#. module: oleg_weba_footbik
+#. odoo-python
+#: code:addons/oleg_weba_footbik/models/class_group.py:0
+#: code:addons/user_addons/footbik/oleg_weba_footbik/models/class_group.py:0
+#, python-format
+msgid "No days selected for training generation!"
+msgstr "Не вибрані дні для тренувань"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__message_needaction_counter
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Кількість дій"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__count_children
+msgid "Number of children"
+msgstr "Кількість дітей"
+
+#. module: oleg_weba_footbik
+#. odoo-python
+#: code:addons/oleg_weba_footbik/models/class_group.py:0
+#: code:addons/user_addons/footbik/oleg_weba_footbik/models/class_group.py:0
+#, python-format
+msgid "Number of children cannot be greater than %(count)s"
+msgstr "Кількість дітей не може бути більшим, ніж %(count)s"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__message_has_error_counter
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__message_has_error_counter
+msgid "Number of errors"
+msgstr "Кількість помилок"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,help:oleg_weba_footbik.field_class_group__message_needaction_counter
+#: model:ir.model.fields,help:oleg_weba_footbik.field_class_training__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Кількість повідомлень, що вимагають дії"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,help:oleg_weba_footbik.field_class_group__message_has_error_counter
+#: model:ir.model.fields,help:oleg_weba_footbik.field_class_training__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Кількість повідомлень з помилкою доставки"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_attendance__on_training
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_search
+msgid "On training"
+msgstr "Відвідав"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__photo_group
+msgid "Photo Group"
+msgstr "Фото групи"
+
+#. module: oleg_weba_footbik
+#. odoo-python
+#: code:addons/oleg_weba_footbik/models/class_attendance.py:0
+#: code:addons/oleg_weba_footbik/models/class_training.py:0
+#: code:addons/user_addons/footbik/oleg_weba_footbik/models/class_attendance.py:0
+#: code:addons/user_addons/footbik/oleg_weba_footbik/models/class_training.py:0
+#: model:ir.model.fields.selection,name:oleg_weba_footbik.selection__class_attendance__state__planed
+#: model:ir.model.fields.selection,name:oleg_weba_footbik.selection__class_training__state__planed
+#, python-format
+msgid "Planed"
+msgstr "Заплановано"
+
+#. module: oleg_weba_footbik
+#: model:ir.actions.act_window,name:oleg_weba_footbik.action_class_program
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__class_program_id
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__class_program_id
+#: model:ir.ui.menu,name:oleg_weba_footbik.menu_class_program
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_group_search
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_program_view_tree
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_search
+msgid "Program"
+msgstr "Програма"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__message_has_sms_error
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Помилка доставки SMS"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__training_on_saturday
+msgid "Saturday"
+msgstr "Субота"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__start_training_friday
+msgid "Start Training Friday"
+msgstr ""
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__start_training_monday
+msgid "Start Training Monday"
+msgstr ""
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__start_training_saturday
+msgid "Start Training Saturday"
+msgstr ""
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__start_training_sunday
+msgid "Start Training Sunday"
+msgstr ""
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__start_training_thursday
+msgid "Start Training Thursday"
+msgstr ""
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__start_training_tuesday
+msgid "Start Training Tuesday"
+msgstr ""
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__start_training_wednesday
+msgid "Start Training Wednesday"
+msgstr ""
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__start_date_for_create_training
+msgid "Start date for create training"
+msgstr "Дата початку створення тренувань"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_attendance__start_training
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__start_training
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_search
+msgid "Start training"
+msgstr "Початок тренування"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_attendance__state
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__state
+msgid "State"
+msgstr "Статус"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_attendance__subscription_frozen
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_search
+msgid "Subscription frozen"
+msgstr "Підписка заморожена"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__training_on_sunday
+msgid "Sunday"
+msgstr "Неділя"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__training_on_thursday
+msgid "Thursday"
+msgstr "Четвер"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__time_training
+msgid "Time training"
+msgstr "Час тренування"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__trainer_id
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__trainer_id
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_group_search
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_search
+msgid "Trainer"
+msgstr "Тренер"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_attendance__class_training_id
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_search
+msgid "Training class"
+msgstr "Тренування"
+
+#. module: oleg_weba_footbik
+#: model:ir.actions.act_window,name:oleg_weba_footbik.action_class_training
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__training_ids
+#: model:ir.ui.menu,name:oleg_weba_footbik.menu_class_training
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_group_view_form
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_search
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_view_calendar
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_view_form
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_view_tree
+msgid "Trainings"
+msgstr "Тренування"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_attendance__trial_training
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_search
+msgid "Trial training"
+msgstr "Пробне тренування"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__training_on_tuesday
+msgid "Tuesday"
+msgstr "Вівторок"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__training_on_wednesday
+msgid "Wednesday"
+msgstr "Середа"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_attendance__working_off
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_search
+msgid "Working off"
+msgstr "Відпрацювання"

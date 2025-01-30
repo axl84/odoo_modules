@@ -1,0 +1,14 @@
+/* Убираем цвет линии, добавляем важность для переопределения */
+.o_kanban_renderer .oe_kanban_color_0:after,
+.o_kanban_renderer .oe_kanban_color_1:after,
+.o_kanban_renderer .oe_kanban_color_2:after,
+.o_kanban_renderer .oe_kanban_color_3:after,
+.o_kanban_renderer .oe_kanban_color_4:after,
+.o_kanban_renderer .oe_kanban_color_5:after,
+.o_kanban_renderer .oe_kanban_color_6:after,
+.o_kanban_renderer .oe_kanban_color_7:after,
+.o_kanban_renderer .oe_kanban_color_8:after,
+.o_kanban_renderer .oe_kanban_color_9:after {
+    background-color: none !important; /* Убираем цвет */
+    content: none !important;         /* Убираем сам псевдоэлемент */
+}

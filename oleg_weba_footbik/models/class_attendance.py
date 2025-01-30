@@ -1,0 +1,53 @@
+from odoo import models, fields, _
+
+
+class ClassAttendance(models.Model):
+    _name = "class.attendance"
+    _description = "Class Attendance"
+
+    def _compute_display_name(self):
+        for rec in self:
+            rec.display_name = f"{rec.class_training_id.name}, {rec.child_id.name}"
+
+    class_training_id = fields.Many2one(
+        comodel_name="class.training", string="Training class", ondelete="cascade",
+        index=True)
+
+    state = fields.Selection(
+        selection=[
+            ("planed", _("Planed")),
+            ("completed", _("Completed")),
+        ],
+        string="State",
+        default="planed",
+        index=True
+    )
+
+    child_id = fields.Many2one(
+        comodel_name="res.partner", string="Child", index=True)
+
+    start_training = fields.Datetime(string="Start training")
+    end_training = fields.Datetime(string="End training")
+    duration_training = fields.Float(string="Duration training")
+
+    on_training = fields.Boolean(string="On training", index=True)
+    working_off = fields.Boolean(string="Working off", index=True)
+    trial_training = fields.Boolean(string="Trial training", index=True)
+    subscription_frozen = fields.Boolean(string="Subscription frozen", index=True)
+
+    color = fields.Char(string="Color")
+    company_id = fields.Many2one(comodel_name="res.company", string="Club")
+
+    # Метод заморозки абонемента у ученика в тренировках которые еще не закончены
+    def freeze_subscription_child(self, child_id):  # child_id - res.partner id
+        self.env["class.attendance"].search([
+            ("child_id", "=", child_id),
+            ("state", "=", "planed"),
+        ]).write({"subscription_frozen": True})
+
+    # Метод разморозки абонемента у ученика в тренировках которые еще не закончены
+    def unfreeze_subscription_child(self, child_id):  # child_id - res.partner id
+        self.env["class.attendance"].search([
+            ("child_id", "=", child_id),
+            ("state", "=", "planed"),
+        ]).write({"subscription_frozen": False})
