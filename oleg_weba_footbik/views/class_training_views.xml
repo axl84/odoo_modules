@@ -25,41 +25,51 @@
         <field name="arch" type="xml">
             <form string="Trainings" create="0" delete="0">
                 <header>
-                    <button name="completed_training" type="object" string="Completed training" class="btn btn-success"
-                            invisible="state == 'completed'" help="After Completed training you can not update record"/>
-                    <field name="state" widget="statusbar" statusbar_visible="planed,completed"/>  <!--options="{'clickable': '1'}"-->
+                    <button name="completed_training" type="object" string="Completed" class="btn btn-success"
+                            invisible="state in ('completed', 'cancel')" help="After Completed training you can not update record"/>
+                    <button name="cancel_training" type="object" string="Cancel" class="btn btn-danger"
+                            invisible="state in ('completed', 'cancel')" help="After Completed training you can not update record"/>
+                    <field name="state" widget="statusbar" statusbar_visible="planed,completed,cancel"/>  <!--options="{'clickable': '1'}"-->
                 </header>
                 <sheet>
                     <group>
                         <group class="o_label_nowrap">
-                            <field name="name" readonly="state == 'completed'"/>
+                            <field name="name" readonly="state in ('completed', 'cancel')"/>
                             <field name="class_group_id" readonly="1"/>
                             <field name="color" widget="color" invisible="1"/>
 
                             <field name="date_training" invisible="1"/>
                             <field name="time_training" widget="float_time" invisible="1"/>
-                            <field name="duration_training" widget="float_time" readonly="state == 'completed'"/>
+                            <field name="duration_training" widget="float_time" readonly="state in ('completed', 'cancel')"/>
 
                             <field name="start_training" widget="daterange" options="{'end_date_field': 'end_training'}"/>
                             <field name="end_training" invisible="1"/>
 
-                            <field name="trainer_id" widget="many2one_avatar_user" readonly="state == 'completed'"/>
+                            <field name="trainer_id" widget="many2one_avatar_user" readonly="state in ('completed', 'cancel')"/>
                         </group>
                         <group>
                             <field name="class_program_id" readonly="1"/>
-                            <field name="location_id" readonly="state == 'completed'"/>
+                            <field name="location_id" readonly="state in ('completed', 'cancel')"/>
                             <field name="city" readonly="1"/>
                             <field name="company_id" readonly="1"/>
                         </group>
                     </group>
                     <group>
+                        <group>
+                            <group>
+                                <field name="max_count_children" required="1"/>
+                                <field name="count_children"/>
+                            </group>
+                            <group>
+                            </group>
+                        </group>
                         <field name="children_ids" widget="one2many">
                             <tree string="Children" editable="bottom">
                                 <field name="state" column_invisible="1"/>
 
                                 <field name="child_id"/>
-                                <field name="on_training" readonly="state == 'completed' or subscription_frozen"/>
-                                <field name="working_off" readonly="state == 'completed' or subscription_frozen"/>
+                                <field name="on_training" readonly="state in ('completed', 'cancel') or subscription_frozen"/>
+                                <field name="working_off" readonly="state in ('completed', 'cancel') or subscription_frozen"/>
                                 <field name="trial_training" readonly="1"/>
                                 <field name="subscription_frozen" readonly="1"/>
                             </tree>
@@ -89,6 +99,8 @@
                 <field name="class_program_id" filters="1"/>
                 <field name="start_training"/>
                 <field name="end_training"/>
+                <field name="max_count_children"/>
+                <field name="count_children"/>
             </calendar>
         </field>
     </record>

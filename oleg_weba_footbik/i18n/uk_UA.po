@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-30 09:30+0000\n"
-"PO-Revision-Date: 2025-01-30 09:30+0000\n"
+"POT-Creation-Date: 2025-02-03 14:50+0000\n"
+"PO-Revision-Date: 2025-02-03 14:50+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -126,7 +126,7 @@ msgid ""
 "                                    <span class=\"text-muted\">Location:</span>"
 msgstr ""
 "<i class=\"fa fa-location-arrow me-2 text-secondary\" aria-hidden=\"true\"/>\n"
-"                                    <span class=\"text-muted\">Локація:</span>"
+"                                    <span class=\"text-muted\">Зал:</span>"
 
 #. module: oleg_weba_footbik
 #: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_group_kanban
@@ -190,6 +190,16 @@ msgid "Attendance"
 msgstr "Відвідування"
 
 #. module: oleg_weba_footbik
+#. odoo-python
+#: code:addons/oleg_weba_footbik/models/class_training.py:0
+#: code:addons/user_addons/footbik/oleg_weba_footbik/models/class_training.py:0
+#: model:ir.model.fields.selection,name:oleg_weba_footbik.selection__class_training__state__cancel
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_view_form
+#, python-format
+msgid "Cancel"
+msgstr "Скасовано"
+
+#. module: oleg_weba_footbik
 #: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_attendance__child_id
 #: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_search
 msgid "Child"
@@ -226,7 +236,7 @@ msgstr "Група"
 #. module: oleg_weba_footbik
 #: model:ir.model,name:oleg_weba_footbik.model_class_location
 msgid "Class Location"
-msgstr "Локація"
+msgstr "Зали"
 
 #. module: oleg_weba_footbik
 #: model:ir.model,name:oleg_weba_footbik.model_class_program
@@ -244,7 +254,7 @@ msgstr "Тренування"
 #: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_location__company_id
 #: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__company_id
 msgid "Club"
-msgstr "Клую"
+msgstr "Клуб"
 
 #. module: oleg_weba_footbik
 #: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_attendance__color
@@ -261,14 +271,10 @@ msgstr "Колір"
 #: code:addons/user_addons/footbik/oleg_weba_footbik/models/class_training.py:0
 #: model:ir.model.fields.selection,name:oleg_weba_footbik.selection__class_attendance__state__completed
 #: model:ir.model.fields.selection,name:oleg_weba_footbik.selection__class_training__state__completed
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_view_form
 #, python-format
 msgid "Completed"
 msgstr "Завершено"
-
-#. module: oleg_weba_footbik
-#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_view_form
-msgid "Completed training"
-msgstr "Тренування завершено"
 
 #. module: oleg_weba_footbik
 #: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_group_view_form
@@ -450,10 +456,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_location_view_tree
 #: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_search
 msgid "Location"
-msgstr "Локація"
+msgstr "Зал"
 
 #. module: oleg_weba_footbik
 #: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__max_count_children
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__max_count_children
 msgid "Max Count Children"
 msgstr "Максимальна кількість дітей"
 
@@ -498,13 +505,16 @@ msgstr "Кількість дій"
 
 #. module: oleg_weba_footbik
 #: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__count_children
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__count_children
 msgid "Number of children"
 msgstr "Кількість дітей"
 
 #. module: oleg_weba_footbik
 #. odoo-python
 #: code:addons/oleg_weba_footbik/models/class_group.py:0
+#: code:addons/oleg_weba_footbik/models/class_training.py:0
 #: code:addons/user_addons/footbik/oleg_weba_footbik/models/class_group.py:0
+#: code:addons/user_addons/footbik/oleg_weba_footbik/models/class_training.py:0
 #, python-format
 msgid "Number of children cannot be greater than %(count)s"
 msgstr "Кількість дітей не може бути більшим, ніж %(count)s"

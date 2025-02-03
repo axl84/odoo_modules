@@ -39,7 +39,6 @@ class ClassGroup(models.Model):
     company_id = fields.Many2one(
         comodel_name="res.company", string="Club", default=lambda self: self.env.company)
     location_id = fields.Many2one(comodel_name="class.location", string="Location")
-    max_count_children = fields.Integer(string="Max Count Children", default=30)
     is_trial_training_group = fields.Boolean(
         string="Is trial training group", default=True, index=True)
     duration_training = fields.Float(string="Duration training", default=1)
@@ -74,13 +73,21 @@ class ClassGroup(models.Model):
         column2="res_partner_id",
         domain=[("is_company", "=", False)],
     )
+
+    max_count_children = fields.Integer(string="Max Count Children", default=30)
     count_children = fields.Integer(
         string="Number of children", compute="_compute_count_children", store=True)
 
     @api.depends("children_ids")
     def _compute_count_children(self):
         for rec in self:
-            rec.count_children = len(rec.children_ids.ids)
+            if len(rec.children_ids) > rec.max_count_children:
+                raise UserError(_(
+                    "Number of children cannot be greater than %(count)s",
+                    count=rec.max_count_children
+                ))
+
+            rec.count_children = len(rec.children_ids)
 
     training_ids = fields.One2many(
         comodel_name="class.training",
@@ -197,6 +204,7 @@ class ClassGroup(models.Model):
             "class_program_id": self.class_program_id.id,
             "duration_training": self.duration_training,
             "color": self.color,
+            "max_count_children": self.max_count_children,
         }
 
     def _create_attendance(self, trainings: list, children_ids: list[int]) -> None:
@@ -214,16 +222,27 @@ class ClassGroup(models.Model):
 
     # <---------------Функционал по генерации тренировок и посещений-------------->
 
-    def write(self, vals):
-        res = super(ClassGroup, self).write(vals)
+    # def _raise_error_count_children(self, max_count_children):
+    #     raise UserError(_(
+    #         "Number of children cannot be greater than %(count)s",
+    #         count=max_count_children
+    #     ))
 
-        if len(self.children_ids) > self.max_count_children:
-            raise UserError(_(
-                "Number of children cannot be greater than %(count)s",
-                count=self.max_count_children
-                ))
-
-        return res
+    # @api.model_create_multi
+    # def create(self, vals_list):
+    #     for vals in vals_list:
+    #         if len(vals["children_ids"]) > vals["max_count_children"]:
+    #             self._raise_error_count_children(vals["max_count_children"])
+    #
+    #     return super(ClassGroup, self).create(vals_list)
+    #
+    # def write(self, vals):
+    #     res = super(ClassGroup, self).write(vals)
+    #
+    #     if len(self.children_ids) > self.max_count_children:
+    #         self._raise_error_count_children(self.max_count_children)
+    #
+    #     return res
 
     # Метод добавления ученика в группу и во все тренировки которые еще не закончены
     # (Проверка на вместимость группы происходит до вызова метода)

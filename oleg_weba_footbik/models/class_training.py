@@ -3,6 +3,8 @@ from pytz import timezone
 from odoo import models, fields, api, _
 from datetime import datetime, timedelta
 
+from odoo.exceptions import UserError
+
 
 class ClassTraining(models.Model):
     _name = "class.training"
@@ -24,6 +26,7 @@ class ClassTraining(models.Model):
         selection=[
             ("planed", _("Planed")),
             ("completed", _("Completed")),
+            ("cancel", _("Cancel")),
         ],
         string="State",
         default="planed",
@@ -87,14 +90,36 @@ class ClassTraining(models.Model):
             rec.end_training = end_training
 
     children_ids = fields.One2many(
-        comodel_name="class.attendance", inverse_name="class_training_id",
+        comodel_name="class.attendance",
+        inverse_name="class_training_id",
         string="Children")
+
+    max_count_children = fields.Integer(string="Max Count Children")
+    count_children = fields.Integer(
+        string="Number of children", compute="_compute_count_children", store=True)
+
+    @api.depends("children_ids")
+    def _compute_count_children(self):
+        for rec in self:
+            if len(rec.children_ids) > rec.max_count_children:
+                raise UserError(_(
+                    "Number of children cannot be greater than %(count)s",
+                    count=rec.max_count_children
+                ))
+
+            rec.count_children = len(rec.children_ids)
 
     def completed_training(self):
         self.state = "completed"
         attendances = self.env["class.attendance"].search([
             ("class_training_id", "=", self.id)])
         attendances.write({"state": "completed"})
+
+    def cancel_training(self):
+        self.state = "cancel"
+        attendances = self.env["class.attendance"].search([
+            ("class_training_id", "=", self.id)]).unlink()
+        # attendances.write({"state": "cancel"})
 
         # For testing
         # if self.state == "completed":

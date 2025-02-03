@@ -24,7 +24,11 @@ class ClassAttendance(models.Model):
     )
 
     child_id = fields.Many2one(
-        comodel_name="res.partner", string="Child", index=True)
+        comodel_name="res.partner",
+        string="Child",
+        index=True,
+        domain=[("is_company", "=", False)]
+    )
 
     start_training = fields.Datetime(string="Start training")
     end_training = fields.Datetime(string="End training")
