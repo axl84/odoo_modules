@@ -8,6 +8,7 @@
                 <field name="name" optional="show"/>
                 <field name="class_program_id" optional="show"/>
                 <field name="trainer_id" optional="show"/>
+                <field name="assistant_id" optional="show"/>
                 <field name="city" optional="show"/>
                 <field name="company_id" optional="show"/>
                 <field name="location_id" optional="show"/>
@@ -32,6 +33,7 @@
                             <field name="color" widget="color"/>
                             <field name="class_program_id" required="1"/>
                             <field name="trainer_id" widget="many2one_avatar_user" required="1"/>
+                            <field name="assistant_id" widget="many2one_avatar_user"/>
                             <field name="city" required="1"/>
                             <field name="company_id" required="1"/>
                         </group>
@@ -97,9 +99,9 @@
                             <group>
                                 <group>
                                     <field name="max_count_children" required="1"/>
-                                    <field name="count_children"/>
                                 </group>
                                 <group>
+                                    <field name="count_children"/>
                                 </group>
                             </group>
                             <field name="children_ids" widget="many2many" nolabel="1" colspan="2">
@@ -118,6 +120,7 @@
                                     <field name="state"/>
                                     <field name="location_id"/>
                                     <field name="trainer_id"/>
+                                    <field name="assistant_id"/>
                                     <field name="start_training"/>
                                     <field name="end_training"/>
                                     <field name="duration_training"/>
@@ -142,6 +145,7 @@
                 <field name="display_name"/>
                 <field name="class_program_id"/>
                 <field name="trainer_id"/>
+                <field name="assistant_id"/>
                 <field name="count_children"/>
                 <field name="city"/>
                 <field name="location_id"/>
@@ -169,6 +173,13 @@
                                     <span class="text-muted">Trainer:</span>
                                     <span class="ms-2 fw-bold">
                                         <field name="trainer_id"/>
+                                    </span>
+                                </div>
+                                <div class="mb-2 d-flex align-items-center">
+                                    <i class="fa fa-user me-2 text-secondary" aria-hidden="true"></i>
+                                    <span class="text-muted">Assistant:</span>
+                                    <span class="ms-2 fw-bold">
+                                        <field name="assistant_id"/>
                                     </span>
                                 </div>
                                 <div class="mb-2 d-flex align-items-center">
@@ -248,6 +259,7 @@
                 <field name="name"/>
                 <field name="class_program_id"/>
                 <field name="trainer_id"/>
+                <field name="assistant_id"/>
                 <field name="city"/>
                 <field name="location_id"/>
                 <field name="is_trial_training_group"/>
@@ -256,6 +268,7 @@
                 <group expand="0" string="Group By">
                     <filter name="group_class_program_id" string="Program" domain="[]" context="{'group_by':'class_program_id'}"/>
                     <filter name="group_trainer_id" string="Trainer" domain="[]" context="{'group_by':'trainer_id'}"/>
+                    <filter name="group_assistant_id" string="Assistant" domain="[]" context="{'group_by':'assistant_id'}"/>
                     <filter name="group_city" string="City" domain="[]" context="{'group_by':'city'}"/>
                     <filter name="group_location_id" string="Location" domain="[]" context="{'group_by':'location_id'}"/>
                     <filter name="group_is_trial_training_group" string="Is trial training group" domain="[]" context="{'group_by':'is_trial_training_group'}"/>

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-03 14:50+0000\n"
-"PO-Revision-Date: 2025-02-03 14:50+0000\n"
+"POT-Creation-Date: 2025-02-06 18:50+0000\n"
+"PO-Revision-Date: 2025-02-06 18:50+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -37,15 +37,6 @@ msgstr ""
 
 #. module: oleg_weba_footbik
 #: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_kanban
-msgid ""
-"<i class=\"fa fa-clock-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
-"                                    <span class=\"text-muted\">On training:</span>"
-msgstr ""
-"<i class=\"fa fa-clock-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
-"                                    <span class=\"text-muted\">Відвідав:</span>"
-
-#. module: oleg_weba_footbik
-#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_kanban
 #: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_kanban
 msgid ""
 "<i class=\"fa fa-clock-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
@@ -57,29 +48,29 @@ msgstr ""
 #. module: oleg_weba_footbik
 #: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_kanban
 msgid ""
-"<i class=\"fa fa-clock-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
-"                                    <span class=\"text-muted\">Sub. frozen:</span>"
-msgstr ""
-"<i class=\"fa fa-clock-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
-"                                    <span class=\"text-muted\">Підписка заморожена:</span>"
-
-#. module: oleg_weba_footbik
-#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_kanban
-msgid ""
-"<i class=\"fa fa-clock-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
-"                                    <span class=\"text-muted\">Trial training:</span>"
-msgstr ""
-"<i class=\"fa fa-clock-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
-"                                    <span class=\"text-muted\">Пробне тренування:</span>"
-
-#. module: oleg_weba_footbik
-#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_kanban
-msgid ""
-"<i class=\"fa fa-clock-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"<i class=\"fa fa-crosshairs me-2 text-secondary\" aria-hidden=\"true\"/>\n"
 "                                    <span class=\"text-muted\">Working off:</span>"
 msgstr ""
-"<i class=\"fa fa-clock-o me-2 text-secondary\" aria-hidden=\"true\"/>\n"
-"                                    <span class=\"text-muted\">Відпрацювання:</span>"
+"<i class=\"fa fa-crosshairs me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Відпрацюв.:</span>"
+
+#. module: oleg_weba_footbik
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_kanban
+msgid ""
+"<i class=\"fa fa-edit me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">On training:</span>"
+msgstr ""
+"<i class=\"fa fa-edit me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Відвідав:</span>"
+
+#. module: oleg_weba_footbik
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_kanban
+msgid ""
+"<i class=\"fa fa-eye me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Trial training:</span>"
+msgstr ""
+"<i class=\"fa fa-eye me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Пробне:</span>"
 
 #. module: oleg_weba_footbik
 #: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_kanban
@@ -139,6 +130,25 @@ msgstr ""
 "                                    <span class=\"text-muted\">Місто:</span>"
 
 #. module: oleg_weba_footbik
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_kanban
+msgid ""
+"<i class=\"fa fa-times me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Sub. frozen:</span>"
+msgstr ""
+"<i class=\"fa fa-times me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Заморожено:</span>"
+
+#. module: oleg_weba_footbik
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_group_kanban
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_kanban
+msgid ""
+"<i class=\"fa fa-user me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Assistant:</span>"
+msgstr ""
+"<i class=\"fa fa-user me-2 text-secondary\" aria-hidden=\"true\"/>\n"
+"                                    <span class=\"text-muted\">Асистент:</span>"
+
+#. module: oleg_weba_footbik
 #: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_group_kanban
 #: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_kanban
 msgid ""
@@ -158,6 +168,14 @@ msgstr ""
 "                                    <span class=\"text-muted\">Кількість дітей:</span>"
 
 #. module: oleg_weba_footbik
+#. odoo-python
+#: code:addons/oleg_weba_footbik/models/class_training.py:0
+#: code:addons/user_addons/footbik/oleg_weba_footbik/models/class_training.py:0
+#, python-format
+msgid "A trial record for this training is prohibited!"
+msgstr "Запис на пробне тренування заборонено!"
+
+#. module: oleg_weba_footbik
 #: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__message_needaction
 #: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__message_needaction
 msgid "Action Needed"
@@ -172,6 +190,14 @@ msgstr "Додаткові моделі"
 #: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_view_form
 msgid "After Completed training you can not update record"
 msgstr "Після закінчення тренування ви не можете редагувати запис"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__assistant_id
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__assistant_id
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_group_search
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_search
+msgid "Assistant"
+msgstr "Асистент"
 
 #. module: oleg_weba_footbik
 #: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__message_attachment_count
@@ -422,6 +448,12 @@ msgstr "Інформація про групу"
 #: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__message_is_follower
 msgid "Is Follower"
 msgstr "Якщ є послідовником"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__is_trial_training
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_search
+msgid "Is trial training"
+msgstr "Дозволити пробне тренування"
 
 #. module: oleg_weba_footbik
 #: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__is_trial_training_group

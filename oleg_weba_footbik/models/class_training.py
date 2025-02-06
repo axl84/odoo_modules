@@ -38,8 +38,11 @@ class ClassTraining(models.Model):
     location_id = fields.Many2one(comodel_name="class.location", string="Location")
     trainer_id = fields.Many2one(
         comodel_name="hr.employee", string="Trainer", index=True)
+    assistant_id = fields.Many2one(
+        comodel_name="hr.employee", string="Assistant", index=True)
     class_program_id = fields.Many2one(
         comodel_name="class.program", string="Program", index=True)
+    is_trial_training = fields.Boolean(string="Is trial training", index=True)
 
     date_training = fields.Date(string="Date training")
     time_training = fields.Float(string="Time training")
@@ -109,6 +112,31 @@ class ClassTraining(models.Model):
 
             rec.count_children = len(rec.children_ids)
 
+    # def _raise_error_count_children(self, max_count_children):
+    #     raise UserError(_(
+    #         "Number of children cannot be greater than %(count)s",
+    #         count=max_count_children
+    #     ))
+
+    # @api.model_create_multi
+    # def create(self, vals_list):
+    #     for vals in vals_list:
+
+    #         # Проверка на максимальное кол-во детей на тренировке
+    #         if len(vals["children_ids"]) > vals["max_count_children"]:
+    #             self._raise_error_count_children(vals["max_count_children"])
+    #
+    #     return super(ClassTraining, self).create(vals_list)
+
+    # def write(self, vals):
+    #     res = super(ClassTraining, self).write(vals)
+    #
+    #     # Проверка на максимальное кол-во детей на тренировке
+    #     if len(self.children_ids) > self.max_count_children:
+    #         self._raise_error_count_children(self.max_count_children)
+    #
+    #     return res
+
     def completed_training(self):
         self.state = "completed"
         attendances = self.env["class.attendance"].search([
@@ -121,32 +149,22 @@ class ClassTraining(models.Model):
             ("class_training_id", "=", self.id)]).unlink()
         # attendances.write({"state": "cancel"})
 
-        # For testing
-        # if self.state == "completed":
-        #     self.state = "planed"
-        #     attendances = self.env["class.attendance"].search([
-        #         ("class_training_id", "=", self.id)])
-        #     attendances.write({"state": "planed"})
-        #
-        # else:
-        #     self.state = "completed"
-        #     attendances = self.env["class.attendance"].search([
-        #         ("class_training_id", "=", self.id)])
-        #     attendances.write({"state": "completed"})
-
     # Метод добавления ученика на пробное занятие (проверка на возможность
     # группы принимать учеников на пробные занятия происходит до вызова метода,
     # вместимость группы не учитывается)
     def add_child_trial_training(self, child_id):  # child_id - res.partner id
-        attendance_id = self.env["class.attendance"].sudo().create({
-            "class_training_id": self.id,
-            "child_id": child_id,
-            "start_training": self.start_training,
-            "end_training": self.end_training,
-            "company_id": self.company_id.id,
-            "color": self.color,
-            "duration_training": self.duration_training,
+        if self.is_trial_training:
+            attendance_id = self.env["class.attendance"].sudo().create({
+                "class_training_id": self.id,
+                "child_id": child_id,
+                "start_training": self.start_training,
+                "end_training": self.end_training,
+                "company_id": self.company_id.id,
+                "color": self.color,
+                "duration_training": self.duration_training,
 
-            "trial_training": True,
-        }).id
-        self.children_ids = [(4, attendance_id)]
+                "trial_training": True,
+            }).id
+            self.children_ids = [(4, attendance_id)]
+        else:
+            raise UserError(_("A trial record for this training is prohibited!"))

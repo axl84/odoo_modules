@@ -11,6 +11,7 @@
                 <field name="company_id" optional="show"/>
                 <field name="location_id" optional="show"/>
                 <field name="trainer_id" optional="show"/>
+                <field name="assistant_id" optional="show"/>
                 <field name="class_program_id" optional="show"/>
                 <field name="start_training" optional="show"/>
                 <field name="end_training" optional="show"/>
@@ -44,37 +45,44 @@
 
                             <field name="start_training" widget="daterange" options="{'end_date_field': 'end_training'}"/>
                             <field name="end_training" invisible="1"/>
-
-                            <field name="trainer_id" widget="many2one_avatar_user" readonly="state in ('completed', 'cancel')"/>
+                            <field name="is_trial_training"/>
                         </group>
                         <group>
                             <field name="class_program_id" readonly="1"/>
                             <field name="location_id" readonly="state in ('completed', 'cancel')"/>
                             <field name="city" readonly="1"/>
                             <field name="company_id" readonly="1"/>
+
+                            <field name="trainer_id" widget="many2one_avatar_user" readonly="state in ('completed', 'cancel')"/>
+                            <field name="assistant_id" widget="many2one_avatar_user" readonly="state in ('completed', 'cancel')"/>
                         </group>
                     </group>
                     <group>
-                        <group>
-                            <group>
-                                <field name="max_count_children" required="1"/>
-                                <field name="count_children"/>
-                            </group>
-                            <group>
-                            </group>
-                        </group>
-                        <field name="children_ids" widget="one2many">
-                            <tree string="Children" editable="bottom">
-                                <field name="state" column_invisible="1"/>
 
-                                <field name="child_id"/>
-                                <field name="on_training" readonly="state in ('completed', 'cancel') or subscription_frozen"/>
-                                <field name="working_off" readonly="state in ('completed', 'cancel') or subscription_frozen"/>
-                                <field name="trial_training" readonly="1"/>
-                                <field name="subscription_frozen" readonly="1"/>
-                            </tree>
-                        </field>
                     </group>
+                    <notebook>
+                        <page string="Children" name="children">
+                            <group>
+                                <group>
+                                    <field name="max_count_children" required="1"/>
+                                </group>
+                                <group>
+                                    <field name="count_children"/>
+                                </group>
+                            </group>
+                            <field name="children_ids" widget="one2many">
+                                <tree string="Children" editable="bottom">
+                                    <field name="state" column_invisible="1"/>
+
+                                    <field name="child_id"/>
+                                    <field name="on_training" readonly="state in ('completed', 'cancel') or subscription_frozen"/>
+                                    <field name="working_off" readonly="state in ('completed', 'cancel') or subscription_frozen"/>
+                                    <field name="trial_training" readonly="1"/>
+                                    <field name="subscription_frozen" readonly="1"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
                 </sheet>
                 <div class="oe_chatter">
                     <field name="message_follower_ids" groups="base.group_user"/>
@@ -96,6 +104,7 @@
                 <field name="class_group_id" filters="1"/>
                 <field name="name"/>
                 <field name="trainer_id" widget="many2one_avatar_user" filters="1"/>
+                <field name="assistant_id" widget="many2one_avatar_user" filters="1"/>
                 <field name="class_program_id" filters="1"/>
                 <field name="start_training"/>
                 <field name="end_training"/>
@@ -116,6 +125,7 @@
                 <field name="end_training"/>
                 <field name="duration_training"/>
                 <field name="trainer_id"/>
+                <field name="assistant_id"/>
                 <field name="class_program_id"/>
                 <field name="city"/>
                 <field name="location_id"/>
@@ -166,6 +176,13 @@
                                     </span>
                                 </div>
                                 <div class="mb-2 d-flex align-items-center">
+                                    <i class="fa fa-user me-2 text-secondary" aria-hidden="true"></i>
+                                    <span class="text-muted">Assistant:</span>
+                                    <span class="ms-2 fw-bold">
+                                        <field name="assistant_id"/>
+                                    </span>
+                                </div>
+                                <div class="mb-2 d-flex align-items-center">
                                     <i class="fa fa-file-text-o me-2 text-secondary" aria-hidden="true"></i>
                                     <span class="text-muted">Program:</span>
                                     <span class="ms-2 fw-bold">
@@ -208,18 +225,22 @@
                 <field name="class_group_id"/>
                 <field name="class_program_id"/>
                 <field name="trainer_id"/>
+                <field name="assistant_id"/>
                 <field name="city"/>
                 <field name="location_id"/>
                 <field name="children_ids" operator="child_of" string="Children"
                        filter_domain="[('children_ids.child_id.name', 'ilike', self)]"/>
+                <field name="is_trial_training"/>
                 <separator/>
                 <group expand="0" string="Group By">
                     <filter name="group_class_group_id" string="Group" domain="[]" context="{'group_by':'class_group_id'}"/>
                     <filter name="group_class_program_id" string="Program" domain="[]" context="{'group_by':'class_program_id'}"/>
                     <filter name="group_trainer_id" string="Trainer" domain="[]" context="{'group_by':'trainer_id'}"/>
+                    <filter name="group_assistant_id" string="Assistant" domain="[]" context="{'group_by':'assistant_id'}"/>
                     <filter name="group_city" string="City" domain="[]" context="{'group_by':'city'}"/>
                     <filter name="group_location_id" string="Location" domain="[]" context="{'group_by':'location_id'}"/>
                     <filter name="group_start_training" string="Start training" domain="[]" context="{'group_by':'start_training'}"/>
+                    <filter name="group_is_trial_training" string="Is trial training" domain="[]" context="{'group_by':'is_trial_training'}"/>
                 </group>
             </search>
         </field>

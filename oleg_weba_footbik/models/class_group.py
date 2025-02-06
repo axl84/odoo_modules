@@ -35,6 +35,8 @@ class ClassGroup(models.Model):
         comodel_name="class.program", string="Program", index=True)
     trainer_id = fields.Many2one(
         comodel_name="hr.employee", string="Trainer", index=True)
+    assistant_id = fields.Many2one(
+        comodel_name="hr.employee", string="Assistant", index=True)
     city = fields.Char(string="City")
     company_id = fields.Many2one(
         comodel_name="res.company", string="Club", default=lambda self: self.env.company)
@@ -205,6 +207,8 @@ class ClassGroup(models.Model):
             "duration_training": self.duration_training,
             "color": self.color,
             "max_count_children": self.max_count_children,
+            "is_trial_training": self.is_trial_training_group,
+            "assistant_id": self.assistant_id.id,
         }
 
     def _create_attendance(self, trainings: list, children_ids: list[int]) -> None:
@@ -231,14 +235,17 @@ class ClassGroup(models.Model):
     # @api.model_create_multi
     # def create(self, vals_list):
     #     for vals in vals_list:
+    #
+    #         # Проверка на максимальное кол-во детей в группе
     #         if len(vals["children_ids"]) > vals["max_count_children"]:
     #             self._raise_error_count_children(vals["max_count_children"])
     #
     #     return super(ClassGroup, self).create(vals_list)
-    #
+
     # def write(self, vals):
     #     res = super(ClassGroup, self).write(vals)
     #
+    #     # Проверка на максимальное кол-во детей в группе
     #     if len(self.children_ids) > self.max_count_children:
     #         self._raise_error_count_children(self.max_count_children)
     #
