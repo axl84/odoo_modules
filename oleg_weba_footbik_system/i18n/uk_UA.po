@@ -1,0 +1,206 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* oleg_weba_footbik_system
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-11 11:35+0000\n"
+"PO-Revision-Date: 2025-02-11 11:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: oleg_weba_footbik_system
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.crm_lead_view_form_inherit
+msgid "<span>Age:</span>"
+msgstr "<span>Вік:</span>"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__age
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__age_store
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__age
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__age_store
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_users__age
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_users__age_store
+msgid "Age"
+msgstr "Вік"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__birthday
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__birthday
+msgid "Birthday"
+msgstr "Дата народження"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__crm_lead__type_parent__brother
+#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__res_partner__type_parent__brother
+msgid "Brother"
+msgstr "Брат"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__medium_id
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_users__medium_id
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_utm_source__medium_id
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.crm_lead_view_form_inherit
+msgid "Channel"
+msgstr "Канал"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__res_partner__type_person__child
+msgid "Child"
+msgstr "Дитина"
+
+#. module: oleg_weba_footbik_system
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.crm_lead_view_form_inherit
+msgid "City"
+msgstr "Місто"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model,name:oleg_weba_footbik_system.model_res_partner
+msgid "Contact"
+msgstr "Контакт"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__domain_source_id
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__domain_source_id
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_users__domain_source_id
+msgid "Domain Source"
+msgstr ""
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__email_parent
+msgid "Email parent"
+msgstr "Email батька"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__crm_lead__type_parent__father
+#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__res_partner__type_parent__father
+msgid "Father"
+msgstr "Батько"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__crm_lead__gender__female
+#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__crm_lead__gender_parent__female
+#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__res_partner__gender__female
+msgid "Female"
+msgstr "Жіночий"
+
+#. module: oleg_weba_footbik_system
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.crm_lead_view_form_inherit
+msgid "Full name"
+msgstr "ПІБ"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__full_name_parent
+msgid "Full name parent"
+msgstr "ПІБ батька"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__gender
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__gender
+msgid "Gender"
+msgstr "Пол"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__gender_parent
+msgid "Gender parent"
+msgstr "Пол батька"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__crm_lead__type_parent__grandfather
+#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__res_partner__type_parent__grandfather
+msgid "Grandfather"
+msgstr "Дід"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__crm_lead__type_parent__grandmother
+#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__res_partner__type_parent__grandmother
+msgid "Grandmother"
+msgstr "Бабуся"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__crm_lead__type_parent__guardian
+#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__res_partner__type_parent__guardian
+msgid "Guardian"
+msgstr "Опікун"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model,name:oleg_weba_footbik_system.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Лід/Нагода"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__crm_lead__gender__male
+#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__crm_lead__gender_parent__male
+#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__res_partner__gender__male
+msgid "Male"
+msgstr "Чоловічий"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__manager_promouter_id
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__manager_promouter_id
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_users__manager_promouter_id
+msgid "Manager promouter"
+msgstr "Менеджер-промоутер"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__crm_lead__type_parent__mother
+#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__res_partner__type_parent__mother
+msgid "Mother"
+msgstr "Мати"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__crm_lead__type_parent__nanny
+#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__res_partner__type_parent__nanny
+msgid "Nanny"
+msgstr "Няня"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__res_partner__type_person__parent
+msgid "Parent"
+msgstr "Батько"
+
+#. module: oleg_weba_footbik_system
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.crm_lead_view_form_inherit
+msgid "Region"
+msgstr "Область"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__crm_lead__type_parent__sister
+#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__res_partner__type_parent__sister
+msgid "Sister"
+msgstr "Сестра"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__source_id
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_users__source_id
+msgid "Source"
+msgstr "Джерело"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__telephone_parent
+msgid "Telephone parent"
+msgstr "Телефон батька"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__type_person
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_users__type_person
+msgid "Type Person"
+msgstr "Тип особи"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__type_parent
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__type_parent
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_users__type_parent
+msgid "Type parent"
+msgstr "Тип батька"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model,name:oleg_weba_footbik_system.model_utm_source
+msgid "UTM Source"
+msgstr "Джерело UTM"

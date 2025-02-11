@@ -1,0 +1,69 @@
+<odoo>
+
+    <data noupdate="1">
+        <record id="oleg_weba_footbik_system_promouter" model="utm.medium">
+            <field name="name">Промоутер</field>
+        </record>
+        <record id="oleg_weba_footbik_system_event" model="utm.medium">
+            <field name="name">Подія/івент</field>
+        </record>
+        <record id="oleg_weba_footbik_system_street_administration" model="utm.medium">
+            <field name="name">З вулиці/Адміністрація</field>
+        </record>
+        <record id="oleg_weba_footbik_system_direct_facebook" model="utm.medium">
+            <field name="name">WEB: Direct Facebook</field>
+        </record>
+        <record id="oleg_weba_footbik_system_direct_instagram" model="utm.medium">
+            <field name="name">WEB: Direct Instagram</field>
+        </record>
+        <record id="oleg_weba_footbik_system_direct_tiktok" model="utm.medium">
+            <field name="name">WEB: Direct TikTok</field>
+        </record>
+        <record id="oleg_weba_footbik_system_direct_linkedin" model="utm.medium">
+            <field name="name">WEB: Direct LinkedIn</field>
+        </record>
+        <record id="oleg_weba_footbik_system_messenger_telegram" model="utm.medium">
+            <field name="name">WEB: messenger Telegram</field>
+        </record>
+        <record id="oleg_weba_footbik_system_messenger_viber" model="utm.medium">
+            <field name="name">WEB: messenger Viber</field>
+        </record>
+        <record id="oleg_weba_footbik_system_messenger_whatsapp" model="utm.medium">
+            <field name="name">WEB: messenger WhatsApp</field>
+        </record>
+        <record id="oleg_weba_footbik_system_quiz" model="utm.medium">
+            <field name="name">WEB: Quiz</field>
+        </record>
+        <record id="oleg_weba_footbik_system_google_ads_lead_form" model="utm.medium">
+            <field name="name">WEB: Google ADS lead form</field>
+        </record>
+        <record id="oleg_weba_footbik_system_meta_ads_lead_form" model="utm.medium">
+            <field name="name">WEB: Meta ADS lead form</field>
+        </record>
+        <record id="oleg_weba_footbik_system_tiktok_ads_lead_form" model="utm.medium">
+            <field name="name">WEB: TikTok ADS lead form</field>
+        </record>
+        <record id="oleg_weba_footbik_system_blogger" model="utm.medium">
+            <field name="name">WEB: Blogger</field>
+        </record>
+        <record id="oleg_weba_footbik_system_linkedin" model="utm.medium">
+            <field name="name">WEB: LinkedIn</field>
+        </record>
+        <record id="oleg_weba_footbik_system_linkedin" model="utm.medium">
+            <field name="name">WEB: LinkedIn</field>
+        </record>
+        <record id="oleg_weba_footbik_system_organic_search_lead" model="utm.medium">
+            <field name="name">WEB: Organic Search lead</field>
+        </record>
+        <record id="oleg_weba_footbik_system_email_newsletters_lead" model="utm.medium">
+            <field name="name">WEB: Email newsletters lead</field>
+        </record>
+        <record id="oleg_weba_footbik_system_callBack" model="utm.medium">
+            <field name="name">CallBack</field>
+        </record>
+        <record id="oleg_weba_footbik_system_import_bd" model="utm.medium">
+            <field name="name">Імпорт бази</field>
+        </record>
+    </data>
+
+</odoo>

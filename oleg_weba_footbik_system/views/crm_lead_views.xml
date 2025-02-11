@@ -1,0 +1,95 @@
+<odoo>
+
+    <record id="crm_lead_view_form_inherit" model="ir.ui.view">
+        <field name="name">crm.lead.view.form.inherit</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <!--LEAD-->
+
+            <xpath expr="//group[@name='lead_info']/label[@for='contact_name']" position="replace"/>
+            <xpath expr="//group[@name='lead_info']/div" position="replace">
+                <field name="contact_name" string="Full name"/>
+            </xpath>
+
+            <xpath expr="//group[@name='lead_info']/label[@for='email_from_group_lead_info']" position="before">
+                <label for="birthday"/>
+                <div class="o_row">
+                    <field name="age" invisible="1"/>
+
+                    <field name="birthday"/>
+                    <span>Age:</span>
+                    <field name="age_store" readonly="1"/>
+                </div>
+
+                <field name="gender"/>
+            </xpath>
+
+            <xpath expr="//group[@name='lead_info']/field[@name='email_cc']" position="before">
+                <!--Для отступа-->
+                <label for="gender" string=""/>
+                <div style="margin-bottom: 15px;"/>
+                <!--Для отступа-->
+            </xpath>
+
+
+            <xpath expr="//group[@name='lead_partner']/field[@name='lang_id']" position="after">
+                <!--Для отступа-->
+                <label for="full_name_parent" string=""/>
+                <div style="margin-bottom: 15px;"/>
+                <!--Для отступа-->
+
+                <field name="full_name_parent"/>
+                <field name="type_parent"/>
+                <field name="gender_parent"/>
+                <field name="telephone_parent"/>
+                <field name="email_parent"/>
+
+                <!--Для отступа-->
+                <label for="full_name_parent" string=""/>
+                <div style="margin-bottom: 15px;"/>
+                <!--Для отступа-->
+            </xpath>
+
+            <xpath expr="//group[@name='lead_partner']/div/field[@name='city']" position="replace">
+                <field name="city" placeholder="City" style="width: 35%" class="o_address_city"/>  <!--Для уменьшения длинны поля-->
+            </xpath>
+            <xpath expr="//group[@name='lead_partner']/div[hasclass('o_address_format')]/field[@name='state_id']" position="replace">
+                <field name="state_id" class="o_address_state" placeholder="Region" options='{"no_open": True}'/>  <!--Для исправления перевода-->
+            </xpath>
+
+            <xpath expr="//page[@name='extra']/group/group/field[@name='medium_id']" position="replace">
+                <field name="medium_id" string="Channel"/>  <!--Для исправления перевода-->
+            </xpath>
+            <xpath expr="//page[@name='extra']/group/group/field[@name='source_id']" position="replace">
+                <field name="domain_source_id" invisible="1"/>
+                <field name="source_id" domain="domain_source_id"/>
+                <field name="manager_promouter_id" widget="many2one_avatar_user" invisible="medium_id != 11"/>  <!--Промоутер-->
+            </xpath>
+
+            <!--LEAD-->
+
+            <!--OPPORTUNITY-->
+            <xpath expr="//page[@name='lead']/group/group/div[hasclass('o_address_format')]/field[@name='city']" position="replace">
+                <field name="city" placeholder="City" style="width: 35%" class="o_address_city"/>  <!--Для уменьшения длинны поля-->
+            </xpath>
+            <xpath expr="//page[@name='lead']/group/group/div[hasclass('o_address_format')]/field[@name='state_id']" position="replace">
+                <field name="state_id" class="o_address_state" placeholder="Region" options='{"no_open": True}'/>  <!--Для исправления перевода-->
+            </xpath>
+
+            <xpath expr="//page[@name='lead']/group/group[3]/field[@name='medium_id']" position="replace">
+                <field name="medium_id" string="Channel"/>  <!--Для исправления перевода-->
+            </xpath>
+            <xpath expr="//page[@name='lead']/group/group[3]/field[@name='source_id']" position="after">
+                <field name="manager_promouter_id" widget="many2one_avatar_user" invisible="medium_id != 11"/>  <!--Промоутер-->
+            </xpath>
+
+            <xpath expr="//group[@name='opportunity_partner']/field[@name='lost_reason_id']" position="before">
+                <field name="full_name_parent"/>
+            </xpath>
+
+            <!--OPPORTUNITY-->
+        </field>
+    </record>
+
+</odoo>

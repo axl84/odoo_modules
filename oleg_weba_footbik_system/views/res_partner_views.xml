@@ -1,0 +1,45 @@
+<odoo>
+
+    <record id="view_partner_form_inherit" model="ir.ui.view">
+        <field name="name">view.partner.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='company_type']" position="after">
+                <field name="type_person" invisible="is_company" widget="radio"
+                       options="{'horizontal': True}" required="not is_company"/>
+            </xpath>
+
+            <xpath expr="//span[@name='address_name']" position="before">
+                <field name="type_parent" invisible="type_person != 'parent' or is_company"/>
+
+                <field name="birthday"/>
+
+                <field name="age" invisible="1"/>
+                <field name="age_store" readonly="1"/>
+
+                <field name="gender"/>
+            </xpath>
+
+            <xpath expr="//field[@name='category_id']" position="after">
+                <field name="medium_id"/>
+
+                <field name="domain_source_id" invisible="1"/>
+                <field name="source_id" domain="domain_source_id"/>
+                <field name="manager_promouter_id" widget="many2one_avatar_user" invisible="medium_id != 11"/>  <!--Промоутер-->
+            </xpath>
+        </field>
+    </record>
+
+<!--    <record id="view_partner_tree_inherit" model="ir.ui.view">-->
+<!--        <field name="name">view.partner.tree.inherit</field>-->
+<!--        <field name="model">res.partner</field>-->
+<!--        <field name="inherit_id" ref="base.view_partner_tree"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <xpath expr="//field[@name='email']" position="after">-->
+<!--                <field name="age_store" optional="show"/>-->
+<!--            </xpath>-->
+<!--        </field>-->
+<!--    </record>-->
+
+</odoo>
