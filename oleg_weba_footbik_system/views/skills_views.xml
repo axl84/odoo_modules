@@ -1,0 +1,53 @@
+<odoo>
+
+    <menuitem
+        id="res_partner_menu_аdditional_groups"
+        name="Additional groups"
+        parent="contacts.res_partner_menu_config"
+        sequence="100"
+    />
+
+    <record id="skills_tree" model="ir.ui.view">
+        <field name="name">skills.tree</field>
+        <field name="model">skills</field>
+        <field name="arch" type="xml">
+            <tree string="Skills">
+                <field name="name" optional="show"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="skills_form" model="ir.ui.view">
+        <field name="name">skills.form</field>
+        <field name="model">skills</field>
+        <field name="arch" type="xml">
+            <form string="Skills">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_skills" model="ir.actions.act_window">
+        <field name="name">Skills</field>
+        <field name="res_model">skills</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_skills"
+        name="Skills"
+        action="action_skills"
+        parent="res_partner_menu_аdditional_groups"
+        sequence="1"
+    />
+
+</odoo>

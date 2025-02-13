@@ -1,15 +1,63 @@
 <odoo>
 
+    <record id="view_partners_form_inherit" model="ir.ui.view">
+        <field name="name">res_partner.view.form.calendar.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="calendar.view_partners_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='schedule_meeting']" position="before">
+                <button class="oe_stat_button" type="object" name="action_open_subscription" icon="fa-refresh">
+                    <div class="o_stat_info">
+                        <span class="o_stat_text">
+                            Subscriptions
+                        </span>
+                        <span class="o_stat_value">
+                            <field name="count_subscription"/>
+                        </span>
+                    </div>
+                </button>
+
+                <button class="oe_stat_button" type="object" name="action_open_group" icon="fa-folder">
+                    <div class="o_stat_info">
+                        <span class="o_stat_text">
+                            Groups
+                        </span>
+                        <span class="o_stat_value">
+                            <field name="count_group"/>
+                        </span>
+                    </div>
+                </button>
+
+                <button class="oe_stat_button" type="object" name="action_open_training" icon="fa-rocket">
+                    <div class="o_stat_info">
+                        <span class="o_stat_text">
+                            Trainings
+                        </span>
+                        <span class="o_stat_value">
+                            <field name="count_training"/>
+                        </span>
+                    </div>
+                </button>
+
+                <button class="oe_stat_button" type="object" name="action_open_attendance" icon="fa-sign-in">
+                    <div class="o_stat_info">
+                        <span class="o_stat_text">
+                            Attendance
+                        </span>
+                        <span class="o_stat_value">
+                            <field name="count_attendance"/>
+                        </span>
+                    </div>
+                </button>
+            </xpath>
+        </field>
+    </record>
+
     <record id="view_partner_form_inherit" model="ir.ui.view">
         <field name="name">view.partner.form.inherit</field>
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='company_type']" position="after">
-                <field name="type_person" invisible="is_company" widget="radio"
-                       options="{'horizontal': True}" required="not is_company"/>
-            </xpath>
-
             <xpath expr="//span[@name='address_name']" position="before">
                 <field name="type_parent" invisible="type_person != 'parent' or is_company"/>
 
@@ -28,6 +76,13 @@
                 <field name="source_id" domain="domain_source_id"/>
                 <field name="manager_promouter_id" widget="many2one_avatar_user" invisible="medium_id != 11"/>  <!--Промоутер-->
             </xpath>
+
+            <xpath expr="//field[@name='vat']" position="after">
+                <field name="class_program_id"/>
+                <field name="skills_id"/>
+                <field name="instagram" widget="url"/>
+                <field name="telegram" widget="url"/>
+            </xpath>
         </field>
     </record>
 
@@ -41,5 +96,37 @@
 <!--            </xpath>-->
 <!--        </field>-->
 <!--    </record>-->
+
+    <record id="view_res_partner_filter" model="ir.ui.view">
+        <field name="name">res.partner.select</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="class_program_id"/>
+                <field name="age_store"/>
+                <field name="city"/>
+                <field name="company_id"/>
+                <field name="user_id"/>
+                <field name="medium_id" string="Channel"/>
+                <field name="source_id"/>
+            </xpath>
+
+            <xpath expr="//filter[@name='type_company']" position="after">
+                <separator/>
+                <filter name="filter_gender_male" string="Male" domain="[('gender', '=', 'male')]"/>
+                <filter name="filter_gender_female" string="Female" domain="[('gender', '=', 'female')]"/>
+                <separator/>
+                <filter name="group_class_program_id" string="Program" domain="[]" context="{'group_by':'class_program_id'}"/>
+                <filter name="group_age_store" string="Age" domain="[]" context="{'group_by':'age_store'}"/>
+                <filter name="group_gender" string="Male/Female" domain="[]" context="{'group_by':'gender'}"/>
+                <filter name="group_city" string="City" domain="[]" context="{'group_by':'city'}"/>
+                <filter name="group_company_id" string="Company" domain="[]" context="{'group_by':'company_id'}"/>
+                <filter name="group_user_id" string="Manager" domain="[]" context="{'group_by':'user_id'}"/>
+                <filter name="group_medium_id" string="Channel" domain="[]" context="{'group_by':'medium_id'}"/>
+                <filter name="group_source_id" string="Source" domain="[]" context="{'group_by':'source_id'}"/>
+            </xpath>
+        </field>
+    </record>
 
 </odoo>

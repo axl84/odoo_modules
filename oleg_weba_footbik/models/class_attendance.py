@@ -27,7 +27,7 @@ class ClassAttendance(models.Model):
         comodel_name="res.partner",
         string="Child",
         index=True,
-        domain=[("is_company", "=", False)]
+        domain=[("is_company", "=", False), ("type_person", "=", "child")]
     )
 
     start_training = fields.Datetime(string="Start training")

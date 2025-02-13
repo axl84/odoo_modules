@@ -1,6 +1,6 @@
 import datetime
 
-from odoo import models, fields, api
+from odoo import models, fields, api, _
 from dateutil.relativedelta import relativedelta
 
 GENDER = [
@@ -22,19 +22,6 @@ TYPE_PARENT = [
 
 class ResPartner(models.Model):
     _inherit = "res.partner"
-
-    type_person = fields.Selection(
-        selection=[
-            ("child", "Child"),
-            ("parent", "Parent")
-        ],
-        tracking=True
-    )
-
-    @api.onchange("company_type")
-    def _onchange_type_person(self):
-        if self.is_company:
-            self.type_person = False
 
     birthday = fields.Date(string="Birthday", tracking=True)
     age = fields.Integer(compute="_compute_age", store=False)
@@ -73,3 +60,93 @@ class ResPartner(models.Model):
 
     manager_promouter_id = fields.Many2one(
         comodel_name="hr.employee", string="Manager promouter", tracking=True)
+
+    class_program_id = fields.Many2one(
+        comodel_name="class.program", string="Program", index=True)
+    skills_id = fields.Many2one(comodel_name="skills", string="Skills", tracking=True)
+    instagram = fields.Char(string="Instagram", tracking=True)
+    telegram = fields.Char(string="Telegram", tracking=True)
+
+    # <------------Кнопка перехода в подписки--------->
+    count_subscription = fields.Integer(compute="_compute_count_subscription")
+
+    def _compute_count_subscription(self):
+        for rec in self:
+            rec.count_subscription = self.env["sale.subscription"].search_count([
+                ("partner_id", "=", rec.id)
+            ])
+
+    def action_open_subscription(self):
+        return {
+            "name": _("Subscriptions"),
+            "type": "ir.actions.act_window",
+            "res_model": "sale.subscription",
+            "view_mode": "kanban,tree,form",
+            "target": "current",
+            "domain": [("partner_id", '=', self.id)],
+            "context": {"default_partner_id": self.id}
+        }
+    # <------------Кнопка перехода в подписки--------->
+
+    # <------------Кнопка перехода в группы--------->
+    count_group = fields.Integer(compute="_compute_count_group")
+
+    def _compute_count_group(self):
+        for rec in self:
+            rec.count_group = self.env["class.group"].search_count([
+                ("children_ids", "=", rec.id)
+            ])
+
+    def action_open_group(self):
+        self.ensure_one()
+        return {
+            "name": _("Groups"),
+            "type": "ir.actions.act_window",
+            "res_model": "class.group",
+            "view_mode": "kanban,tree,form",
+            "target": "current",
+            "domain": [("children_ids", "=", self.id)],
+        }
+    # <------------Кнопка перехода в группы--------->
+
+    # <------------Кнопка перехода в тренировки--------->
+    count_training = fields.Integer(compute="_compute_count_training")
+
+    def _compute_count_training(self):
+        for rec in self:
+            rec.count_training = self.env["class.training"].search_count([
+                ("children_ids.child_id", "=", rec.id)
+            ])
+
+    def action_open_training(self):
+        self.ensure_one()
+        return {
+            "name": _("Trainings"),
+            "type": "ir.actions.act_window",
+            "res_model": "class.training",
+            "view_mode": "kanban,tree,form",
+            "target": "current",
+            "domain": [("children_ids.child_id", "=", self.id)],
+        }
+    # <------------Кнопка перехода в тренировки--------->
+
+    # <------------Кнопка перехода в посещения--------->
+    count_attendance = fields.Integer(compute="_compute_count_attendance")
+
+    def _compute_count_attendance(self):
+        for rec in self:
+            rec.count_attendance = self.env["class.attendance"].search_count([
+                ("child_id", "=", rec.id)
+            ])
+
+    def action_open_attendance(self):
+        self.ensure_one()
+        return {
+            "name": _("Attendance"),
+            "type": "ir.actions.act_window",
+            "res_model": "class.attendance",
+            "view_mode": "kanban,tree,form",
+            "target": "current",
+            "domain": [("child_id", "=", self.id)],
+        }
+    # <------------Кнопка перехода в тренировки--------->

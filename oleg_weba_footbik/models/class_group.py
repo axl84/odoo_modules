@@ -73,7 +73,7 @@ class ClassGroup(models.Model):
         column1="class_group_id",
         relation="class_group_res_partner_rel",
         column2="res_partner_id",
-        domain=[("is_company", "=", False)],
+        domain=[("is_company", "=", False), ("type_person", "=", "child")],
     )
 
     max_count_children = fields.Integer(string="Max Count Children", default=30)

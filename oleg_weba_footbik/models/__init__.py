@@ -4,4 +4,5 @@ from . import (
     class_program,
     class_attendance,
     class_location,
+    res_partner,
 )

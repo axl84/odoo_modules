@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-11 11:35+0000\n"
-"PO-Revision-Date: 2025-02-11 11:35+0000\n"
+"POT-Creation-Date: 2025-02-13 10:24+0000\n"
+"PO-Revision-Date: 2025-02-13 10:24+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,9 +16,58 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: oleg_weba_footbik_system
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.view_partners_form_inherit
+msgid ""
+"<span class=\"o_stat_text\">\n"
+"                            Attendance\n"
+"                        </span>"
+msgstr ""
+"<span class=\"o_stat_text\">\n"
+"                            Відвідуваність\n"
+"                        </span>"
+
+#. module: oleg_weba_footbik_system
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.view_partners_form_inherit
+msgid ""
+"<span class=\"o_stat_text\">\n"
+"                            Groups\n"
+"                        </span>"
+msgstr ""
+"<span class=\"o_stat_text\">\n"
+"                            Групи\n"
+"                        </span>"
+
+#. module: oleg_weba_footbik_system
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.view_partners_form_inherit
+msgid ""
+"<span class=\"o_stat_text\">\n"
+"                            Subscriptions\n"
+"                        </span>"
+msgstr ""
+"<span class=\"o_stat_text\">\n"
+"                            Підписки\n"
+"                        </span>"
+
+#. module: oleg_weba_footbik_system
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.view_partners_form_inherit
+msgid ""
+"<span class=\"o_stat_text\">\n"
+"                            Trainings\n"
+"                        </span>"
+msgstr ""
+"<span class=\"o_stat_text\">\n"
+"                            Тренування\n"
+"                        </span>"
+
+#. module: oleg_weba_footbik_system
 #: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.crm_lead_view_form_inherit
 msgid "<span>Age:</span>"
 msgstr "<span>Вік:</span>"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.ui.menu,name:oleg_weba_footbik_system.res_partner_menu_аdditional_groups
+msgid "Additional groups"
+msgstr "Додаткові групи"
 
 #. module: oleg_weba_footbik_system
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__age
@@ -27,8 +76,17 @@ msgstr "<span>Вік:</span>"
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__age_store
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_users__age
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_users__age_store
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.view_res_partner_filter
 msgid "Age"
 msgstr "Вік"
+
+#. module: oleg_weba_footbik_system
+#. odoo-python
+#: code:addons/oleg_weba_footbik_system/models/res_partner.py:0
+#: code:addons/user_addons/footbik/oleg_weba_footbik_system/models/res_partner.py:0
+#, python-format
+msgid "Attendance"
+msgstr "Відвідування"
 
 #. module: oleg_weba_footbik_system
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__birthday
@@ -47,23 +105,64 @@ msgstr "Брат"
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_users__medium_id
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_utm_source__medium_id
 #: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.crm_lead_view_form_inherit
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.view_res_partner_filter
 msgid "Channel"
 msgstr "Канал"
 
 #. module: oleg_weba_footbik_system
-#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__res_partner__type_person__child
-msgid "Child"
-msgstr "Дитина"
-
-#. module: oleg_weba_footbik_system
 #: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.crm_lead_view_form_inherit
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.view_res_partner_filter
 msgid "City"
 msgstr "Місто"
+
+#. module: oleg_weba_footbik_system
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.view_res_partner_filter
+msgid "Company"
+msgstr "Компанія"
 
 #. module: oleg_weba_footbik_system
 #: model:ir.model,name:oleg_weba_footbik_system.model_res_partner
 msgid "Contact"
 msgstr "Контакт"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__count_attendance
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_users__count_attendance
+msgid "Count Attendance"
+msgstr ""
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__count_group
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_users__count_group
+msgid "Count Group"
+msgstr ""
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__count_subscription
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_users__count_subscription
+msgid "Count Subscription"
+msgstr ""
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__count_training
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_users__count_training
+msgid "Count Training"
+msgstr ""
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_skills__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_skills__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_skills__display_name
+msgid "Display Name"
+msgstr ""
 
 #. module: oleg_weba_footbik_system
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__domain_source_id
@@ -87,6 +186,7 @@ msgstr "Батько"
 #: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__crm_lead__gender__female
 #: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__crm_lead__gender_parent__female
 #: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__res_partner__gender__female
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.view_res_partner_filter
 msgid "Female"
 msgstr "Жіночий"
 
@@ -124,10 +224,39 @@ msgid "Grandmother"
 msgstr "Бабуся"
 
 #. module: oleg_weba_footbik_system
+#. odoo-python
+#: code:addons/oleg_weba_footbik_system/models/res_partner.py:0
+#: code:addons/user_addons/footbik/oleg_weba_footbik_system/models/res_partner.py:0
+#, python-format
+msgid "Groups"
+msgstr "Групи"
+
+#. module: oleg_weba_footbik_system
 #: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__crm_lead__type_parent__guardian
 #: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__res_partner__type_parent__guardian
 msgid "Guardian"
 msgstr "Опікун"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_skills__id
+msgid "ID"
+msgstr ""
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__instagram
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_users__instagram
+msgid "Instagram"
+msgstr ""
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_skills__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_skills__write_date
+msgid "Last Updated on"
+msgstr ""
 
 #. module: oleg_weba_footbik_system
 #: model:ir.model,name:oleg_weba_footbik_system.model_crm_lead
@@ -138,8 +267,19 @@ msgstr "Лід/Нагода"
 #: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__crm_lead__gender__male
 #: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__crm_lead__gender_parent__male
 #: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__res_partner__gender__male
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.view_res_partner_filter
 msgid "Male"
 msgstr "Чоловічий"
+
+#. module: oleg_weba_footbik_system
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.view_res_partner_filter
+msgid "Male/Female"
+msgstr "Хлопчик/Дівчина"
+
+#. module: oleg_weba_footbik_system
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.view_res_partner_filter
+msgid "Manager"
+msgstr "Менеджер"
 
 #. module: oleg_weba_footbik_system
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__manager_promouter_id
@@ -161,9 +301,11 @@ msgid "Nanny"
 msgstr "Няня"
 
 #. module: oleg_weba_footbik_system
-#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__res_partner__type_person__parent
-msgid "Parent"
-msgstr "Батько"
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__class_program_id
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_users__class_program_id
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.view_res_partner_filter
+msgid "Program"
+msgstr "Програма"
 
 #. module: oleg_weba_footbik_system
 #: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.crm_lead_view_form_inherit
@@ -177,10 +319,41 @@ msgid "Sister"
 msgstr "Сестра"
 
 #. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_skills__name
+msgid "Skill"
+msgstr "Навички"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.actions.act_window,name:oleg_weba_footbik_system.action_skills
+#: model:ir.model,name:oleg_weba_footbik_system.model_skills
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__skills_id
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_users__skills_id
+#: model:ir.ui.menu,name:oleg_weba_footbik_system.menu_skills
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.skills_form
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.skills_tree
+msgid "Skills"
+msgstr "Навички"
+
+#. module: oleg_weba_footbik_system
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__source_id
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_users__source_id
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.view_res_partner_filter
 msgid "Source"
 msgstr "Джерело"
+
+#. module: oleg_weba_footbik_system
+#. odoo-python
+#: code:addons/oleg_weba_footbik_system/models/res_partner.py:0
+#: code:addons/user_addons/footbik/oleg_weba_footbik_system/models/res_partner.py:0
+#, python-format
+msgid "Subscriptions"
+msgstr "Підписки"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__telegram
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_users__telegram
+msgid "Telegram"
+msgstr ""
 
 #. module: oleg_weba_footbik_system
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__telephone_parent
@@ -188,10 +361,12 @@ msgid "Telephone parent"
 msgstr "Телефон батька"
 
 #. module: oleg_weba_footbik_system
-#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__type_person
-#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_users__type_person
-msgid "Type Person"
-msgstr "Тип особи"
+#. odoo-python
+#: code:addons/oleg_weba_footbik_system/models/res_partner.py:0
+#: code:addons/user_addons/footbik/oleg_weba_footbik_system/models/res_partner.py:0
+#, python-format
+msgid "Trainings"
+msgstr "Тренування"
 
 #. module: oleg_weba_footbik_system
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__type_parent
