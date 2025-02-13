@@ -5,6 +5,10 @@
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.crm_lead_view_form"/>
         <field name="arch" type="xml">
+            <xpath expr="//field[@name='stage_id']" position="attributes">
+                <attribute name="invisible">not active</attribute>
+            </xpath>
+
             <!--LEAD-->
 
             <xpath expr="//group[@name='lead_info']/label[@for='contact_name']" position="replace"/>
