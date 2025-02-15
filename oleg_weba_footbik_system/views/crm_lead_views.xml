@@ -74,6 +74,57 @@
             <!--LEAD-->
 
             <!--OPPORTUNITY-->
+            <xpath expr="//button[@name='action_schedule_meeting']" position="before">
+                <button class="oe_stat_button" type="object" name="action_open_subscription"
+                        icon="fa-refresh" invisible="type == 'lead'">
+                    <div class="o_stat_info">
+                        <span class="o_stat_text">
+                            Subscriptions
+                        </span>
+                        <span class="o_stat_value">
+                            <field name="count_subscription"/>
+                        </span>
+                    </div>
+                </button>
+
+                <button class="oe_stat_button" type="object" name="action_open_group"
+                        icon="fa-folder" invisible="type == 'lead'">
+                    <div class="o_stat_info">
+                        <span class="o_stat_text">
+                            Groups
+                        </span>
+                        <span class="o_stat_value">
+                            <field name="count_group"/>
+                        </span>
+                    </div>
+                </button>
+
+                <button class="oe_stat_button" type="object" name="action_open_training"
+                        icon="fa-rocket" invisible="type == 'lead'">
+                    <div class="o_stat_info">
+                        <span class="o_stat_text">
+                            Trainings
+                        </span>
+                        <span class="o_stat_value">
+                            <field name="count_training"/>
+                        </span>
+                    </div>
+                </button>
+
+                <button class="oe_stat_button" type="object" name="action_open_attendance"
+                        icon="fa-sign-in" invisible="type == 'lead'">
+                    <div class="o_stat_info">
+                        <span class="o_stat_text">
+                            Attendance
+                        </span>
+                        <span class="o_stat_value">
+                            <field name="count_attendance"/>
+                        </span>
+                    </div>
+                </button>
+            </xpath>
+
+
             <xpath expr="//page[@name='lead']/group/group/div[hasclass('o_address_format')]/field[@name='city']" position="replace">
                 <field name="city" placeholder="City" style="width: 35%" class="o_address_city"/>  <!--Для уменьшения длинны поля-->
             </xpath>
@@ -88,8 +139,33 @@
                 <field name="manager_promouter_id" widget="many2one_avatar_user" invisible="medium_id != 11"/>  <!--Промоутер-->
             </xpath>
 
-            <xpath expr="//group[@name='opportunity_partner']/field[@name='lost_reason_id']" position="before">
-                <field name="full_name_parent"/>
+            <xpath expr="//group" position="after">
+                <group invisible="type == 'lead'">
+                    <group string="Parent">
+                        <field name="domain_parent_id" invisible="1"/>
+                        <field name="parent_id" domain="domain_parent_id" widget="many2one_avatar_user"/>
+
+                        <field name="full_name_parent" readonly="type == 'opportunity'"/>
+                        <field name="type_parent" readonly="type == 'opportunity'"/>
+                        <field name="gender_parent" readonly="type == 'opportunity'"/>
+                        <field name="telephone_parent" readonly="type == 'opportunity'"/>
+                        <field name="email_parent" readonly="type == 'opportunity'"/>
+                    </group>
+                    <group string="Demo training">
+                        <field name="program_id"/>
+
+                        <field name="domain_training_id" invisible="1"/>
+                        <label for="training_id" invisible="not program_id"/>
+                        <div class="o_row" invisible="not program_id">
+                            <field name="training_id" domain="domain_training_id"/>
+                            <button name="action_add_child_trial_training" type="object"
+                                    string="Trial training" class="btn btn-success"
+                                    invisible="not training_id"/>
+                        </div>
+                        <field name="added_trial_training"
+                               invisible="not training_id or not added_trial_training"/>
+                    </group>
+                </group>
             </xpath>
 
             <!--OPPORTUNITY-->

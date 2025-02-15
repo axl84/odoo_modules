@@ -91,6 +91,17 @@ class ClassGroup(models.Model):
 
             rec.count_children = len(rec.children_ids)
 
+    full_group = fields.Boolean(
+        compute="_compute_full_training", string="Full group", store=True)
+
+    @api.depends("max_count_children", "count_children")
+    def _compute_full_training(self):
+        for rec in self:
+            if rec.count_children == rec.max_count_children:
+                rec.full_group = True
+            else:
+                rec.full_group = False
+
     training_ids = fields.One2many(
         comodel_name="class.training",
         inverse_name="class_group_id",

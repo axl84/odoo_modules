@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-13 10:24+0000\n"
-"PO-Revision-Date: 2025-02-13 10:24+0000\n"
+"POT-Creation-Date: 2025-02-14 14:47+0000\n"
+"PO-Revision-Date: 2025-02-14 14:47+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: oleg_weba_footbik_system
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.crm_lead_view_form_inherit
 #: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.view_partners_form_inherit
 msgid ""
 "<span class=\"o_stat_text\">\n"
@@ -27,6 +28,7 @@ msgstr ""
 "                        </span>"
 
 #. module: oleg_weba_footbik_system
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.crm_lead_view_form_inherit
 #: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.view_partners_form_inherit
 msgid ""
 "<span class=\"o_stat_text\">\n"
@@ -38,6 +40,7 @@ msgstr ""
 "                        </span>"
 
 #. module: oleg_weba_footbik_system
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.crm_lead_view_form_inherit
 #: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.view_partners_form_inherit
 msgid ""
 "<span class=\"o_stat_text\">\n"
@@ -49,6 +52,7 @@ msgstr ""
 "                        </span>"
 
 #. module: oleg_weba_footbik_system
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.crm_lead_view_form_inherit
 #: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.view_partners_form_inherit
 msgid ""
 "<span class=\"o_stat_text\">\n"
@@ -63,6 +67,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.crm_lead_view_form_inherit
 msgid "<span>Age:</span>"
 msgstr "<span>Вік:</span>"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__added_trial_training
+msgid "Added trial training"
+msgstr "Записан на пробне тренування"
 
 #. module: oleg_weba_footbik_system
 #: model:ir.ui.menu,name:oleg_weba_footbik_system.res_partner_menu_аdditional_groups
@@ -82,7 +91,9 @@ msgstr "Вік"
 
 #. module: oleg_weba_footbik_system
 #. odoo-python
+#: code:addons/oleg_weba_footbik_system/models/crm_lead.py:0
 #: code:addons/oleg_weba_footbik_system/models/res_partner.py:0
+#: code:addons/user_addons/footbik/oleg_weba_footbik_system/models/crm_lead.py:0
 #: code:addons/user_addons/footbik/oleg_weba_footbik_system/models/res_partner.py:0
 #, python-format
 msgid "Attendance"
@@ -126,24 +137,28 @@ msgid "Contact"
 msgstr "Контакт"
 
 #. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__count_attendance
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__count_attendance
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_users__count_attendance
 msgid "Count Attendance"
 msgstr ""
 
 #. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__count_group
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__count_group
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_users__count_group
 msgid "Count Group"
 msgstr ""
 
 #. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__count_subscription
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__count_subscription
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_users__count_subscription
 msgid "Count Subscription"
 msgstr ""
 
 #. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__count_training
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__count_training
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_users__count_training
 msgid "Count Training"
@@ -160,8 +175,18 @@ msgid "Created on"
 msgstr ""
 
 #. module: oleg_weba_footbik_system
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.crm_lead_view_form_inherit
+msgid "Demo training"
+msgstr "Пробне тренування"
+
+#. module: oleg_weba_footbik_system
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_skills__display_name
 msgid "Display Name"
+msgstr ""
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__domain_parent_id
+msgid "Domain Parent"
 msgstr ""
 
 #. module: oleg_weba_footbik_system
@@ -169,6 +194,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__domain_source_id
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_users__domain_source_id
 msgid "Domain Source"
+msgstr ""
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__domain_training_id
+msgid "Domain Training"
 msgstr ""
 
 #. module: oleg_weba_footbik_system
@@ -225,7 +255,9 @@ msgstr "Бабуся"
 
 #. module: oleg_weba_footbik_system
 #. odoo-python
+#: code:addons/oleg_weba_footbik_system/models/crm_lead.py:0
 #: code:addons/oleg_weba_footbik_system/models/res_partner.py:0
+#: code:addons/user_addons/footbik/oleg_weba_footbik_system/models/crm_lead.py:0
 #: code:addons/user_addons/footbik/oleg_weba_footbik_system/models/res_partner.py:0
 #, python-format
 msgid "Groups"
@@ -301,6 +333,13 @@ msgid "Nanny"
 msgstr "Няня"
 
 #. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__parent_id
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.crm_lead_view_form_inherit
+msgid "Parent"
+msgstr "Батько"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__program_id
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__class_program_id
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_users__class_program_id
 #: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.view_res_partner_filter
@@ -343,7 +382,9 @@ msgstr "Джерело"
 
 #. module: oleg_weba_footbik_system
 #. odoo-python
+#: code:addons/oleg_weba_footbik_system/models/crm_lead.py:0
 #: code:addons/oleg_weba_footbik_system/models/res_partner.py:0
+#: code:addons/user_addons/footbik/oleg_weba_footbik_system/models/crm_lead.py:0
 #: code:addons/user_addons/footbik/oleg_weba_footbik_system/models/res_partner.py:0
 #, python-format
 msgid "Subscriptions"
@@ -362,11 +403,31 @@ msgstr "Телефон батька"
 
 #. module: oleg_weba_footbik_system
 #. odoo-python
+#: code:addons/oleg_weba_footbik_system/models/crm_lead.py:0
+#: code:addons/user_addons/footbik/oleg_weba_footbik_system/models/crm_lead.py:0
+#, python-format
+msgid "The student has already been added to this training session!"
+msgstr "Учня вже додано до цього тренування!"
+
+#. module: oleg_weba_footbik_system
+#: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__training_id
+msgid "Training class"
+msgstr "Тренування"
+
+#. module: oleg_weba_footbik_system
+#. odoo-python
+#: code:addons/oleg_weba_footbik_system/models/crm_lead.py:0
 #: code:addons/oleg_weba_footbik_system/models/res_partner.py:0
+#: code:addons/user_addons/footbik/oleg_weba_footbik_system/models/crm_lead.py:0
 #: code:addons/user_addons/footbik/oleg_weba_footbik_system/models/res_partner.py:0
 #, python-format
 msgid "Trainings"
 msgstr "Тренування"
+
+#. module: oleg_weba_footbik_system
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.crm_lead_view_form_inherit
+msgid "Trial training"
+msgstr "Пробне тренування"
 
 #. module: oleg_weba_footbik_system
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__type_parent
@@ -378,4 +439,4 @@ msgstr "Тип батька"
 #. module: oleg_weba_footbik_system
 #: model:ir.model,name:oleg_weba_footbik_system.model_utm_source
 msgid "UTM Source"
-msgstr "Джерело UTM"
+msgstr "Джерело UTM "

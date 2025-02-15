@@ -112,6 +112,17 @@ class ClassTraining(models.Model):
 
             rec.count_children = len(rec.children_ids)
 
+    full_training = fields.Boolean(
+        compute="_compute_full_training", string="Full training", store=True)
+
+    @api.depends("max_count_children", "count_children")
+    def _compute_full_training(self):
+        for rec in self:
+            if rec.count_children == rec.max_count_children:
+                rec.full_training = True
+            else:
+                rec.full_training = False
+
     # def _raise_error_count_children(self, max_count_children):
     #     raise UserError(_(
     #         "Number of children cannot be greater than %(count)s",
