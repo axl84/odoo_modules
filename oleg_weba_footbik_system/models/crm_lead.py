@@ -70,6 +70,7 @@ class CrmLead(models.Model):
     domain_training_id = fields.Binary(
         compute="_compute_domain_training_id", store=False)
 
+    @api.depends("program_id")
     def _compute_domain_training_id(self):
         for rec in self:
             if rec.program_id:
@@ -77,7 +78,8 @@ class CrmLead(models.Model):
                     ("class_program_id", "=", rec.program_id.id),
                     ("is_trial_training", "=", True),
                     ("state", "=", "planed"),
-                    ("full_training", "=", False)
+                    ("full_training", "=", False),
+                    ("company_id", "=", rec.company_id.id),
                 ]
             else:
                 rec.domain_training_id = [("id", "=", 0)]

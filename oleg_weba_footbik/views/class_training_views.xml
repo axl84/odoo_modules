@@ -15,6 +15,7 @@
                 <field name="class_program_id" optional="show"/>
                 <field name="start_training" optional="show"/>
                 <field name="end_training" optional="show"/>
+                <field name="state" optional="show"/>
                 <field name="children_ids" widget="many2many_tags" optional="hide"/>
             </tree>
         </field>

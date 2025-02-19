@@ -10,6 +10,7 @@
                 <field name="start_training" optional="show"/>
                 <field name="end_training" optional="show"/>
                 <field name="company_id" optional="show"/>
+                <field name="state" optional="show"/>
                 <field name="on_training" optional="show"/>
                 <field name="working_off" optional="show"/>
                 <field name="trial_training" optional="show"/>

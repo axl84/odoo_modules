@@ -237,31 +237,6 @@ class ClassGroup(models.Model):
 
     # <---------------Функционал по генерации тренировок и посещений-------------->
 
-    # def _raise_error_count_children(self, max_count_children):
-    #     raise UserError(_(
-    #         "Number of children cannot be greater than %(count)s",
-    #         count=max_count_children
-    #     ))
-
-    # @api.model_create_multi
-    # def create(self, vals_list):
-    #     for vals in vals_list:
-    #
-    #         # Проверка на максимальное кол-во детей в группе
-    #         if len(vals["children_ids"]) > vals["max_count_children"]:
-    #             self._raise_error_count_children(vals["max_count_children"])
-    #
-    #     return super(ClassGroup, self).create(vals_list)
-
-    # def write(self, vals):
-    #     res = super(ClassGroup, self).write(vals)
-    #
-    #     # Проверка на максимальное кол-во детей в группе
-    #     if len(self.children_ids) > self.max_count_children:
-    #         self._raise_error_count_children(self.max_count_children)
-    #
-    #     return res
-
     # Метод добавления ученика в группу и во все тренировки которые еще не закончены
     # (Проверка на вместимость группы происходит до вызова метода)
     def add_children_in_group_and_trainings(self, children_id):
