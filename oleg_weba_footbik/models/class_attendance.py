@@ -27,6 +27,7 @@ class ClassAttendance(models.Model):
         comodel_name="res.partner",
         string="Child",
         index=True,
+        required=True,
         domain=[("is_company", "=", False), ("type_person", "=", "child")]
     )
 

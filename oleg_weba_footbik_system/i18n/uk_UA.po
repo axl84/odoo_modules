@@ -214,7 +214,7 @@ msgstr ""
 #. module: oleg_weba_footbik_system
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__email_parent
 msgid "Email parent"
-msgstr "Email батька"
+msgstr "Email родича"
 
 #. module: oleg_weba_footbik_system
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_sale_subscription__end_frozen_date
@@ -258,7 +258,7 @@ msgstr "ПІБ"
 #. module: oleg_weba_footbik_system
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__full_name_parent
 msgid "Full name parent"
-msgstr "ПІБ батька"
+msgstr "ПІБ родича"
 
 #. module: oleg_weba_footbik_system
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__gender
@@ -376,7 +376,7 @@ msgstr "Няня"
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__parent_id
 #: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.crm_lead_view_form_inherit
 msgid "Parent"
-msgstr "Батько"
+msgstr "Родич"
 
 #. module: oleg_weba_footbik_system
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__program_id
@@ -470,7 +470,7 @@ msgstr ""
 #. module: oleg_weba_footbik_system
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__telephone_parent
 msgid "Telephone parent"
-msgstr "Телефон батька"
+msgstr "Телефон родича"
 
 #. module: oleg_weba_footbik_system
 #. odoo-python
@@ -505,7 +505,7 @@ msgstr "Пробне тренування"
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__type_parent
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_users__type_parent
 msgid "Type parent"
-msgstr "Тип батька"
+msgstr "Тип родича"
 
 #. module: oleg_weba_footbik_system
 #: model:ir.model,name:oleg_weba_footbik_system.model_utm_source

@@ -178,7 +178,8 @@
                 <field name="child_id"/>
                 <field name="class_training_id"/>
                 <separator/>
-                <filter name="on_training" string="On training" domain="[('on_training', '=', True)]"/>
+                <filter name="on_training" string="On training" domain="[('state', '=', 'completed'), ('on_training', '=', True)]"/>
+                <filter name="off_training" string="Off training" domain="[('state', '=', 'completed'), ('on_training', '=', False)]"/>
                 <filter name="working_off" string="Working off" domain="[('working_off', '=', True)]"/>
                 <filter name="trial_training" string="Trial training" domain="[('trial_training', '=', True)]"/>
                 <filter name="subscription_frozen" string="Subscription frozen" domain="[('subscription_frozen', '=', True)]"/>

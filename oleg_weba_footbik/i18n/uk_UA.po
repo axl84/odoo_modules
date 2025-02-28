@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-14 13:28+0000\n"
-"PO-Revision-Date: 2025-02-14 13:28+0000\n"
+"POT-Creation-Date: 2025-02-28 11:35+0000\n"
+"PO-Revision-Date: 2025-02-28 11:35+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -395,14 +395,14 @@ msgid "Friday"
 msgstr "П’ятниця"
 
 #. module: oleg_weba_footbik
-#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__full_training
-msgid "Full training"
-msgstr "Повна кількість"
-
-#. module: oleg_weba_footbik
 #: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_group__full_group
 msgid "Full group"
 msgstr "Повна група"
+
+#. module: oleg_weba_footbik
+#: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_training__full_training
+msgid "Full training"
+msgstr "Повна кількість"
 
 #. module: oleg_weba_footbik
 #: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_training_search
@@ -584,6 +584,11 @@ msgstr "Кількість повідомлень, що вимагають ді�
 #: model:ir.model.fields,help:oleg_weba_footbik.field_class_training__message_has_error_counter
 msgid "Number of messages with delivery error"
 msgstr "Кількість повідомлень з помилкою доставки"
+
+#. module: oleg_weba_footbik
+#: model_terms:ir.ui.view,arch_db:oleg_weba_footbik.class_attendance_search
+msgid "Off training"
+msgstr "Не відвідав"
 
 #. module: oleg_weba_footbik
 #: model:ir.model.fields,field_description:oleg_weba_footbik.field_class_attendance__on_training

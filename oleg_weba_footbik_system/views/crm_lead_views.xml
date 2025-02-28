@@ -160,7 +160,7 @@
                             <field name="training_id" domain="domain_training_id"/>
                             <button name="action_add_child_trial_training" type="object"
                                     string="Trial training" class="btn btn-success"
-                                    invisible="not training_id"/>
+                                    invisible="not training_id or not partner_id"/>
                         </div>
                         <field name="added_trial_training"
                                invisible="not training_id or not added_trial_training"/>
