@@ -1,6 +1,6 @@
 import datetime
 
-from odoo import models, fields, api
+from odoo import models, fields, api, _
 
 
 class SaleSubscription(models.Model):
@@ -9,7 +9,8 @@ class SaleSubscription(models.Model):
     is_frozen = fields.Boolean(string="Frozen Subscription")
     reason_frozen = fields.Selection(
         selection=[
-            ("reason_1", "Reason 1")
+            ("free", _("Free")),
+            ("paid", _("Paid")),
         ],
         string="Comment"
     )
@@ -60,6 +61,7 @@ class SaleSubscription(models.Model):
                 if values["stage_id"] == 4:  # "Frozen"
                     values["is_frozen"] = True
                     values["start_frozen_date"] = datetime.date.today()
+                    values["end_frozen_date"] = False
 
                     # Делаем пометку заморозки подписки в незавершенных посещениях
                     self.env["class.attendance"].freeze_subscription_child(partner_id)
@@ -73,10 +75,11 @@ class SaleSubscription(models.Model):
                     values["frozen_days"] = (today - self.start_frozen_date).days
 
                     # Добавляем к дате след. выставления счета кол-во дней заморозки
-                    values["recurring_next_date"] = (
-                            self.recurring_next_date + datetime.timedelta(
-                                days=values["frozen_days"])
-                    )
+                    if self.recurring_next_date:
+                        values["recurring_next_date"] = (
+                                self.recurring_next_date + datetime.timedelta(
+                                    days=values["frozen_days"])
+                        )
 
                     # Делаем разморозку подписки в незавершенных посещениях
                     self.env["class.attendance"].unfreeze_subscription_child(partner_id)

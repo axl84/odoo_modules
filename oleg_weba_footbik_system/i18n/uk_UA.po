@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-19 14:07+0000\n"
-"PO-Revision-Date: 2025-02-19 14:07+0000\n"
+"POT-Creation-Date: 2025-03-13 11:41+0000\n"
+"PO-Revision-Date: 2025-03-13 11:41+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -97,7 +97,7 @@ msgstr "Вік"
 #: code:addons/user_addons/footbik/oleg_weba_footbik_system/models/res_partner.py:0
 #, python-format
 msgid "Attendance"
-msgstr "Відвідування"
+msgstr ""
 
 #. module: oleg_weba_footbik_system
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__birthday
@@ -236,6 +236,15 @@ msgid "Female"
 msgstr "Жіночий"
 
 #. module: oleg_weba_footbik_system
+#. odoo-python
+#: code:addons/oleg_weba_footbik_system/models/sale_subscription.py:0
+#: code:addons/user_addons/footbik/oleg_weba_footbik_system/models/sale_subscription.py:0
+#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__sale_subscription__reason_frozen__free
+#, python-format
+msgid "Free"
+msgstr "Безкоштовна"
+
+#. module: oleg_weba_footbik_system
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_sale_subscription__is_frozen
 msgid "Frozen Subscription"
 msgstr "Заморожено"
@@ -296,7 +305,7 @@ msgstr "Група"
 #: code:addons/user_addons/footbik/oleg_weba_footbik_system/models/res_partner.py:0
 #, python-format
 msgid "Groups"
-msgstr "Групи"
+msgstr ""
 
 #. module: oleg_weba_footbik_system
 #: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__crm_lead__type_parent__guardian
@@ -373,6 +382,15 @@ msgid "Nanny"
 msgstr "Няня"
 
 #. module: oleg_weba_footbik_system
+#. odoo-python
+#: code:addons/oleg_weba_footbik_system/models/sale_subscription.py:0
+#: code:addons/user_addons/footbik/oleg_weba_footbik_system/models/sale_subscription.py:0
+#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__sale_subscription__reason_frozen__paid
+#, python-format
+msgid "Paid"
+msgstr "Платна"
+
+#. module: oleg_weba_footbik_system
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__parent_id
 #: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.crm_lead_view_form_inherit
 msgid "Parent"
@@ -391,11 +409,6 @@ msgstr "Програма"
 #: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.sale_subscription_form_inherit
 msgid "Program/Group"
 msgstr "Програма/Група"
-
-#. module: oleg_weba_footbik_system
-#: model:ir.model.fields.selection,name:oleg_weba_footbik_system.selection__sale_subscription__reason_frozen__reason_1
-msgid "Reason 1"
-msgstr ""
 
 #. module: oleg_weba_footbik_system
 #: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.crm_lead_view_form_inherit
@@ -459,7 +472,7 @@ msgstr "Підписка"
 #: code:addons/user_addons/footbik/oleg_weba_footbik_system/models/res_partner.py:0
 #, python-format
 msgid "Subscriptions"
-msgstr "Підписки"
+msgstr ""
 
 #. module: oleg_weba_footbik_system
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_res_partner__telegram
@@ -478,7 +491,7 @@ msgstr "Телефон родича"
 #: code:addons/user_addons/footbik/oleg_weba_footbik_system/models/crm_lead.py:0
 #, python-format
 msgid "The student has already been added to this training session!"
-msgstr "Учня вже додано до цього тренування!"
+msgstr ""
 
 #. module: oleg_weba_footbik_system
 #: model:ir.model.fields,field_description:oleg_weba_footbik_system.field_crm_lead__training_id
@@ -493,7 +506,7 @@ msgstr "Тренування"
 #: code:addons/user_addons/footbik/oleg_weba_footbik_system/models/res_partner.py:0
 #, python-format
 msgid "Trainings"
-msgstr "Тренування"
+msgstr ""
 
 #. module: oleg_weba_footbik_system
 #: model_terms:ir.ui.view,arch_db:oleg_weba_footbik_system.crm_lead_view_form_inherit
