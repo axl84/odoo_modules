@@ -1,0 +1,68 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kw_chatbot_builder_viber
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-12 12:53+0000\n"
+"PO-Revision-Date: 2023-12-12 12:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kw_chatbot_builder_viber
+#: model:ir.model,name:kw_chatbot_builder_viber.model_kw_chatbot_chat
+msgid "Chat"
+msgstr "Чат"
+
+#. module: kw_chatbot_builder_viber
+#: model:ir.model,name:kw_chatbot_builder_viber.model_kw_chatbot_conversation
+msgid "Conversation"
+msgstr "Діалог"
+
+#. module: kw_chatbot_builder_viber
+#: model:ir.model,name:kw_chatbot_builder_viber.model_kw_chatbot_step
+msgid "Step"
+msgstr "Крок"
+
+#. module: kw_chatbot_builder_viber
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_viber.kw_chatbot_viber_kw_chatbot_builder_kw_chatbot_step_form
+msgid "Viber Keyboard"
+msgstr "Клавіатура Viber"
+
+#. module: kw_chatbot_builder_viber
+#: model:ir.actions.act_window,name:kw_chatbot_builder_viber.kw_chatbot_step_viber_button_action_window
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_viber.kw_chatbot_builder_viber_notification_form
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_viber.kw_chatbot_viber_kw_chatbot_builder_kw_chatbot_step_form
+msgid "Viber Buttons"
+msgstr "Кнопки Viber"
+
+#. module: kw_chatbot_builder_viber
+#: model:ir.model.fields,field_description:kw_chatbot_builder_viber.field_kw_chatbot_step_viber_button__name
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_viber.kw_chatbot_builder_viber_step_viber_keyboard_form
+msgid "Name"
+msgstr "Назва"
+
+#. module: kw_chatbot_builder_viber
+#: model:ir.model.fields,field_description:kw_chatbot_builder_viber.field_kw_chatbot_step_viber_button__state
+#: model:ir.model.fields,field_description:kw_chatbot_builder_viber.field_kw_chatbot_step_viber_keyboard__state
+msgid "State"
+msgstr "Стан"
+
+#. module: kw_chatbot_builder_viber
+#: model:ir.model.fields,field_description:kw_chatbot_builder_viber.field_kw_chatbot_step_viber_button__code
+#: model:ir.model.fields,field_description:kw_chatbot_builder_viber.field_kw_chatbot_step_viber_keyboard__code
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_viber.kw_chatbot_builder_viber_step_viber_keyboard_form
+msgid "Python Code"
+msgstr "Код Python"
+
+#. module: kw_chatbot_builder_viber
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_viber.selection__kw_chatbot_step_viber_button__state__code
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_viber.selection__kw_chatbot_step_viber_keyboard__state__code
+msgid "Execute Python Code"
+msgstr "Приклад Python коду"

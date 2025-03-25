@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="kw_sms_turbosms_viber_sms_sms_form" model="ir.ui.view">
+        <field name="name">sms.sms.form (kw_sms_turbosms_viber)</field>
+        <field name="model">sms.sms</field>
+        <field name="inherit_id" ref="sms.sms_tsms_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group[last()]" position="after">
+                <group>
+                    <group>
+                        <field name="kw_turbosms_sms_or_viber"/>
+                    </group>
+                    <group invisible="kw_turbosms_sms_or_viber == 'sms'">
+                        <field name="kw_turbosms_is_count_clicks"/>
+                        <field name="kw_turbosms_is_transactional"/>
+                        <field name="kw_turbosms_ttl"/>
+                        <field name="kw_turbosms_image_url"/>
+                        <field name="kw_turbosms_caption"/>
+                        <field name="kw_turbosms_action"/>
+                        <field name="kw_turbosms_file_id"/>
+                    </group>
+                </group>
+            </xpath>
+            <xpath expr="//field[@name='body']" position="attributes">
+                <attribute name="required">0</attribute>
+                <attribute name="invisible">kw_turbosms_sms_or_viber == 'viber'</attribute>
+                <attribute name="widget">text</attribute>
+            </xpath>
+            <xpath expr="//field[@name='body']" position="after">
+                <field invisible="kw_turbosms_sms_or_viber == 'viber'" name="kw_sms_numbers" readonly="kw_turbosms_sms_or_viber != 'viber'" string=" "/>
+                <field invisible="kw_turbosms_sms_or_viber == 'sms'" name="kw_body_viber_sms" required="kw_turbosms_sms_or_viber != 'sms'" string="Viber Message"/>
+                <field invisible="kw_turbosms_sms_or_viber == 'sms'" name="kw_viber_numbers" readonly="kw_turbosms_sms_or_viber != 'sms'" string=" "/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

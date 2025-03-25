@@ -1,0 +1,118 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* payment_wayforpay
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-23 11:09+0000\n"
+"PO-Revision-Date: 2022-05-23 11:09+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: payment_wayforpay
+#: model:ir.model.fields,help:payment_wayforpay.field_payment_acquirer__wayforpay_tnx_link
+msgid "\"Thank you!\" page URL after payment confirmation"
+msgstr ""
+
+#. module: payment_wayforpay
+#: model_terms:ir.ui.view,arch_db:payment_wayforpay.payment_wayforpay_payment_transaction_form
+msgid "Check status Wayforpay"
+msgstr ""
+
+#. module: payment_wayforpay
+#: model:ir.model,name:payment_wayforpay.model_payment_acquirer
+msgid "Payment Acquirer"
+msgstr "Платіжний еквайєр"
+
+#. module: payment_wayforpay
+#: model:ir.model,name:payment_wayforpay.model_account_payment_method
+msgid "Payment Methods"
+msgstr "Способи оплати"
+
+#. module: payment_wayforpay
+#: model:ir.model,name:payment_wayforpay.model_payment_transaction
+msgid "Payment Transaction"
+msgstr "Платіжна операція"
+
+#. module: payment_wayforpay
+#: model:ir.model.fields,field_description:payment_wayforpay.field_payment_acquirer__provider
+msgid "Provider"
+msgstr "Провайдер"
+
+#. module: payment_wayforpay
+#: model:ir.model.fields,help:payment_wayforpay.field_payment_acquirer__provider
+msgid "The Payment Service Provider to use with this acquirer"
+msgstr ""
+
+#. module: payment_wayforpay
+#: model:ir.model.fields.selection,name:payment_wayforpay.selection__payment_acquirer__provider__wayforpay
+#: model:payment.acquirer,display_as:payment_wayforpay.payment_acquirer_wayforpay
+#: model:payment.acquirer,name:payment_wayforpay.payment_acquirer_wayforpay
+msgid "WayForPay"
+msgstr ""
+
+#. module: payment_wayforpay
+#: model:ir.model.fields,field_description:payment_wayforpay.field_payment_acquirer__wayforpay_fees
+msgid "WayForPay Fees (%)"
+msgstr "Комісія магазину"
+
+#. module: payment_wayforpay
+#: model:ir.model.fields,field_description:payment_wayforpay.field_payment_acquirer__wayforpay_merchant_account
+msgid "WayForPay Merchant"
+msgstr "WayForPay Merchant логін"
+
+#. module: payment_wayforpay
+#: model:ir.model.fields,field_description:payment_wayforpay.field_payment_acquirer__wayforpay_merchant_domain
+msgid "WayForPay Merchant domain"
+msgstr ""
+
+#. module: payment_wayforpay
+#: model:ir.model.fields,field_description:payment_wayforpay.field_payment_acquirer__wayforpay_merchant_key
+msgid "WayForPay Mrechant key"
+msgstr "WayForPay секретний ключ"
+
+#. module: payment_wayforpay
+#: model:account.payment.method,name:payment_wayforpay.payment_method_wayforpay
+msgid "Wayforpay"
+msgstr ""
+
+#. module: payment_wayforpay
+#: model:ir.model.fields,field_description:payment_wayforpay.field_payment_acquirer__wayforpay_tnx_link
+msgid "Wayforpay Tnx Link"
+msgstr "Сторінка про успішну оплату"
+
+#. module: payment_wayforpay
+#: model:ir.model.fields,field_description:payment_wayforpay.field_payment_transaction__kw_wfp_response
+msgid "WfP status response"
+msgstr ""
+
+#. module: payment_wayforpay
+#: model_terms:ir.ui.view,arch_db:payment_wayforpay.payment_acquirer_form_wayforpay
+msgid "https://example.com/thank-you-page"
+msgstr ""
+
+#. module: payment_wayforpay
+#: model_terms:payment.acquirer,cancel_msg:payment_wayforpay.payment_acquirer_wayforpay
+msgid "Ваш платіж скасовано."
+msgstr ""
+
+#. module: payment_wayforpay
+#: model_terms:payment.acquirer,pending_msg:payment_wayforpay.payment_acquirer_wayforpay
+msgid "Ваш платіж успішно оброблено, але очікує на затвердження."
+msgstr ""
+
+#. module: payment_wayforpay
+#: model_terms:payment.acquirer,done_msg:payment_wayforpay.payment_acquirer_wayforpay
+msgid "Ваш платіж успішно оброблено. Дякуємо!"
+msgstr ""
+
+#. module: payment_wayforpay
+#: model_terms:payment.acquirer,auth_msg:payment_wayforpay.payment_acquirer_wayforpay
+msgid "Вашу оплату було авторизовано."
+msgstr ""

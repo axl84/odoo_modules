@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="erpbox_repair_reports_xml_repair_repair_view_form_view_new_gui" model="ir.ui.view">
+        <field name="name">kw.chatbot.sender.form (kw_chatbot_builder)</field>
+        <field name="model">kw.chatbot.sender</field>
+        <field name="inherit_id" ref="kw_chatbot.kw_chatbot_kw_chatbot_sender_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="count_available_conversations"/>
+                <field name="connect_only_to_my_clients" widget="boolean_toggle"/>
+                <field invisible="connect_only_to_my_clients == False" name="user_saleperson_id" required="connect_only_to_my_clients != False"/>
+            </xpath></field>
+    </record>
+</odoo>

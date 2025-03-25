@@ -1,0 +1,37 @@
+<odoo>
+    <record id="chat_bot_send_wizard_menu" model="ir.ui.view">
+        <field name="name">chat.bot.send.wizard.form</field>
+        <field name="model">chat.bot.send</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="sender_id" string="Sender" readonly="1"/>
+                    <field name="conversation_id" string="Conversation"
+                           required="1"
+                           domain="[('id', 'in', conversation_ids)]"/>
+                    <field name="text" string="Message" required="1"/>
+                    <field name="conversation_ids" invisible="1"/>
+                    <field name="name" invisible="1"/>
+                    <field name="chat_id" invisible="1"/>
+                </group>
+                <footer>
+                    <button name="action_send" string="Send" type="object"
+                            class="oe_highlight"/>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="chat_bot_send_wizard" model="ir.actions.act_window">
+        <field name="name">ChatBot Send</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">chat.bot.send</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="model_kw_chatbot_sender"/>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">form</field>
+        <field name="context">{'default_sender_id': active_id}</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,20 @@
+<odoo>
+
+    <record id="kw_chatbot_builder_telegram_mass_send_bot_view_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.mass.send.bot.form (kw_chatbot_builder_telegram)</field>
+        <field name="model">kw.chatbot.mass.send.bot</field>
+        <field name="inherit_id"
+               ref="kw_chatbot.kw_chatbot_kw_chatbot_mass_send_bot_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='text']" position="after">
+                <group>
+                    <field name="file_id" filename="file_name"/>
+                    <field name="sms_template_id"/>
+                    <field name="file_name" invisible="1"/>
+                    <field name="telegram_button_ids" widget="many2many_tags"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

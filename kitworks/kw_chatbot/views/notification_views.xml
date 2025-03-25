@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_notification_kw_chatbot_notification_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.notification.form (kw_chatbot)</field>
+        <field name="model">kw.chatbot.notification</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group colspan="4">
+                        <field force_save="1" name="name" readonly="is_active == True" required="1"/>
+                        <field can_create="false" can_write="false" force_save="1" invisible="trigger == 'on_external_event' or is_chosen_partner == True" name="bot_id" readonly="is_active == True" required="trigger != 'on_external_event'"/>
+                        <field name="is_active" widget="boolean_toggle"/>
+                        <field name="is_add_url" widget="boolean_toggle"/>
+
+                        <field name="is_file_send" widget="boolean_toggle"/>
+                        <field name="file_fields_ids" widget="many2many_tags"
+                               domain="[('model_id', '=', model_id), '|', ('relation', '=', 'ir.attachment'), ('ttype','=','binary')]"
+                               invisible="is_file_send == False"/>
+
+                        <field invisible="is_add_url == False" name="is_developer_mode" widget="boolean_toggle"/>
+                        <field invisible="is_add_url == False or is_developer_mode == False" name="developer_url" required="is_developer_mode == True"/>
+                        <field invisible="is_chosen_partner == True or trigger == 'on_external_event'" name="is_personal_conversation" widget="boolean_toggle"/>
+                        <field invisible="trigger == 'on_external_event'" name="is_chosen_partner" widget="boolean_toggle"/>
+                        <field can_create="false" can_write="false" domain="[('id', 'in', conversation_ids)]" force_save="1" invisible="trigger == 'on_external_event' or is_personal_conversation != True or is_chosen_partner == True" name="personal_conversation_ids" readonly="is_active == True" widget="many2many_tags"/>
+                        <field can_create="false" can_write="false" force_save="1" invisible="trigger == 'on_external_event' or is_personal_conversation == True or is_chosen_partner == True" name="conversation_ids" readonly="is_active == True" required="0" widget="many2many_tags"/>
+                    </group>
+                    <group name="action_content">
+                        <field can_create="false" can_write="false" force_save="1" name="model_id" on_change="1" readonly="is_active == True" required="1"/>
+                        <field invisible="model_name != 'product.product'" name="use_image_product" widget="boolean_toggle"/>
+                        <field invisible="1" name="trigger_partner_field_ids"/>
+                        <field invisible="1" name="children_trigger_partner_field_ids"/>
+                        <field domain="[('id', 'in', trigger_partner_field_ids)]" force_save="1" invisible="trigger == 'on_external_event'" name="trigger_partner_field_id" readonly="is_active == True" required="is_chosen_partner == True"/>
+                        <field domain="[('id', 'in', children_trigger_partner_field_ids)]" invisible="mail_message_model_id == False" name="children_trigger_partner_field_id"/>
+                        <field can_create="false" can_write="false" invisible="model_name != 'mail.message'" name="mail_message_model_id" on_change="1" required="model_name == 'mail.message'"/>
+                        <field domain="[('model_id', '=', model_id)]" invisible="trigger not in ['on_write', 'on_create_or_write']" name="trigger_field_ids" widget="many2many_tags"/>
+                        <field force_save="1" invisible="1" name="model_name" readonly="is_active == True"/>
+                        <field force_save="1" name="trigger" readonly="is_active == True or model_name == 'mail.message'" required="1"/>
+                        <field invisible="trigger != 'on_time'" name="trg_date_id" required="trigger == 'on_time'"/>
+                        <label for="trg_date_range" invisible="trigger != 'on_time'"/>
+                        <div class="o_row" invisible="trigger != 'on_time'">
+                            <field name="trg_date_range" required="trigger == 'on_time'"/>
+                            <field name="trg_date_range_type" required="trigger == 'on_time'"/>
+                        </div>
+                        <field invisible="trg_date_id == False or trg_date_range_type != 'day'" name="trg_date_calendar_id"/>
+                        <field invisible="1" name="include_link"/>
+                    </group>
+                    <group colspan="4" string="Domains">
+                        <field invisible="trigger not in ['on_write', 'on_create_or_write']" name="filter_pre_domain" options="{'model': 'model_name', 'in_dialog': True}" readonly="is_active == True" widget="domain"/>
+                        <field force_save="1" name="filter_domain" options="{'model': 'model_name', 'in_dialog': True}" readonly="is_active == True" widget="domain"/>
+                    </group>
+                    <group string="Type Message">
+                        <field name="type_message" required="1" widget="radio"/>
+                    </group>
+                    <group invisible="type_message != 'message_designer'" string="Include serial number to message line">
+                        <field name="line_message_need_serial_number" string="Generate number for message line" widget="boolean_toggle"/>
+                    </group>
+                    <group groups="base.group_no_one" string="Message designer">
+                        <field name="message_designer"/>
+                    </group>
+                    <notebook>
+                        <page invisible="type_message != 'message_designer'" string="Message designer">
+                            <field name="text_line_id" required="type_message == 'message_designer'">
+                                <tree delete="1" editable="bottom">
+                                    <field invisible="1" name="line_message_need_serial_number"/>
+                                    <field name="sequence" widget="handle"/>
+                                    <field invisible="1" name="model_notification_id"/>
+                                    <field invisible="1" name="notification_id"/>
+                                    <field invisible="1" name="model_notification_name"/>
+                                    <field name="text_before"/>
+                                    <field name="need_after_before_text_new_line"/>
+                                    <field domain="[('model_id', '=', model_notification_id)]" name="fields_id"/>
+                                    <field invisible="1" name="sub_model"/>
+                                    <field domain="[('model_id','=',sub_model),('ttype','!=','one2many'),('ttype','!=','many2many')]" name="sub_fields_id" readonly="sub_model == False or child_notification_id != False"/>
+                                    <field name="text_after"/>
+                                    <field name="need_after_after_text_new_line"/>
+                                    <field groups="base.group_no_one" name="part_message"/>
+                                    <field name="child_notification_id" options="{'no_create': True}"/>
+                                </tree></field>
+                        </page>
+                        <page invisible="type_message != 'message_raw'" string="Raw Message">
+                            <field name="message" nolabel="1" required="type_message == 'message_raw'"/>
+                        </page>
+                        <page name="placeholder_generator" string="Dynamic Placeholder Generator">
+                            <group>
+                                <field domain="[('model_id','=',model_id),('ttype','!=','one2many'),('ttype','!=','many2many'),('ttype','!=','binary')]" name="model_object_field"/>
+                                <field force_save="1" name="sub_object" readonly="1"/>
+                                <field domain="[('model_id','=',sub_object),('ttype','!=','one2many'),('ttype','!=','many2many'),('ttype','!=','binary')]" force_save="1" name="sub_model_object_field" readonly="sub_object == False" required="sub_object != False"/>
+                                <field name="null_value"/>
+                                <field name="copyvalue"/>
+                            </group>
+                            <button class="btn-primary" name="add_in_message" string="Add dynamic field in message" type="object"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form></field>
+    </record>
+    <record id="kw_chatbot_notification_kw_chatbot_notification_tree" model="ir.ui.view">
+        <field name="name">kw.chatbot.notification.tree (kw_chatbot_notification)</field>
+        <field name="model">kw.chatbot.notification</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="bot_id"/>
+                <field name="is_active"/>
+            </tree></field>
+    </record>
+    <!--    <record id="kw_chatbot_notification_kw_chatbot_notification_search" model="ir.ui.view">-->
+    <!--        <field name="name">kw.chatbot.notification.search</field>-->
+    <!--        <field name="model">kw.chatbot.notification</field>-->
+    <!--        <field name="arch" type="xml">-->
+    <!--            <search string="Logs">-->
+    <!--                <field name="name"/>-->
+    <!--                <field name="messenger_id"/>-->
+    <!--                <field name="create_date"/>-->
+    <!--                <field name="chat_id"/>-->
+    <!--                <field name="dialog_id"/>-->
+    <!--                <field name="sender_id"/>-->
+    <!--                <field name="conversation_id"/>-->
+    <!--                <group expand="1" string="Group By">-->
+    <!--                    <filter string="Name" name="name" context="{'group_by':'name'}"/>-->
+    <!--                    <filter string="Messenger Id" name="messenger" context="{'group_by':'messenger_id'}"/>-->
+    <!--                    <filter string="Chat Id" name="chat" context="{'group_by':'chat_id'}"/>-->
+    <!--                    <filter string="Dialog Id" name="dialog" context="{'group_by':'dialog_id'}"/>-->
+    <!--                    <filter string="Sender Id" name="sender" context="{'group_by':'sender_id'}"/>-->
+    <!--                    <filter string="Conversation Id" name="conversation" context="{'group_by':'conversation_id'}"/>-->
+    <!--                    <filter string="Today" name="Today"-->
+    <!--                            domain="[('create_date','!=',False),-->
+    <!--                            ('create_date','=',(datetime.datetime.today()))]"/>-->
+    <!--                    <filter string="Yesterday" name="Yesterday"-->
+    <!--                            domain="[('create_date','!=',False),-->
+    <!--                            ('create_date','=',(datetime.datetime.today()-->
+    <!--                            +datetime.timedelta(days=-1)))]"/>-->
+    <!--                    <filter string="2 days ago" name="2_ays_ago"-->
+    <!--                            domain="[('create_date','!=',False),-->
+    <!--                            ('create_date','=',(datetime.datetime.today()-->
+    <!--                            +datetime.timedelta(days=-2)))]"/>-->
+    <!--                </group>-->
+    <!--            </search>-->
+    <!--</field>-->
+    <!--    </record>-->
+    <record id="kw_chatbot_notification_kw_chatbot_notification_action_window" model="ir.actions.act_window">
+        <field name="name">Notification</field>
+        <field name="res_model">kw.chatbot.notification</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('trigger', '!=', 'on_external_event')]</field>
+        <field name="context">{'chatbot_chat_bot_conversation_display_short_name': 1}</field>
+    </record>
+    <record id="kw_chatbot_notification_kw_chatbot_notification_external_action_window" model="ir.actions.act_window">
+        <field name="name">Notification</field>
+        <field name="res_model">kw.chatbot.notification</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('trigger', '=', 'on_external_event')]</field>
+        <field name="context">{'chatbot_chat_bot_conversation_display_short_name': 1}</field>
+    </record>
+    <menuitem action="kw_chatbot_notification_kw_chatbot_notification_action_window" groups="group_kw_chatbot_admin" id="kw_chatbot_notification_kw_chatbot_notification_menu" name="Notification" parent="kw_chatbot.kw_chatbot_settings_main_menu" sequence="999"/>
+    <menuitem action="kw_chatbot_notification_kw_chatbot_notification_external_action_window" groups="group_kw_chatbot_admin" id="kw_chatbot_notification_kw_chatbot_notification_menu_22" name="External Event" parent="kw_chatbot.kw_chatbot_settings_main_menu" sequence="999"/>
+</odoo>

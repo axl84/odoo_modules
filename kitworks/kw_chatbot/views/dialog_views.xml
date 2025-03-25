@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_kw_chatbot_mass_send_bot_action" model="ir.actions.act_window">
+        <field name="name">Mass Send</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">kw.chatbot.mass.send.bot</field>
+        <field name="view_mode">form</field>
+        <field name="context">{'default_dialog_id': active_id}</field>
+        <field name="target">new</field>
+    </record>
+    <record id="kw_chatbot_kw_chatbot_dialog_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.dialog.form (kw_chatbot)</field>
+        <field name="model">kw.chatbot.dialog</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button class="btn-primary" name="%(kw_chatbot_kw_chatbot_mass_send_bot_action)d" string="Send Mass Message" type="action"/>
+                    <button class="oe_highlight" invisible="are_you_inside == True or bots_type != 'is_consultant_bot'" name="action_join" string="Join Channel" type="object"/>
+                    <button invisible="are_you_inside == False or bots_type != 'is_consultant_bot'" name="action_quit" string="Leave Channel" type="object"/>
+                    <field invisible="1" name="are_you_inside"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Name"/>
+                        </h1>
+                    </div>
+                    <group/>
+                    <group>
+                        <group>
+                            <field name="bots_type"/>
+                            <field name="is_partner" readonly="0"/>
+                            <field force_save="1" groups="base.group_multi_company" name="company_id"/>
+                            <!--                            <button type="object" class="btn btn-primary" name="create_chatbot_chat_button" string="Add Chat"/>-->
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="channels" string="Channels">
+                            <field context="{'chatbot_script_answer_display_short_name': 1}" name="chatbot_chat_ids">
+                                <tree create="false">
+                                    <field name="name"/>
+                                    <field name="active" optional="hide"/>
+                                    <field name="messenger_id"/>
+                                    <field invisible="1" name="dialog_id"/>
+                                </tree></field>
+                        </page>
+                        <page name="settings" string="Settings">
+                            <group invisible="bots_type == 'is_consultant_bot'" name="settings" string="Setting">
+                                <field name="execute_sudo" widget="boolean_toggle"/>
+                                <field invisible="bots_type != 'is_consultant_bot'" name="operator_in_odoo_only"/>
+                                <field invisible="bots_type != 'is_consultant_bot'" name="max_count_chats_for_operator"/>
+                                <field name="not_found_msg"/>
+                                <field name="connect_operator_msg"/>
+                                <field name="msg_after_not_found_operator"/>
+                                <field name="msg_for_end_consultation"/>
+                            </group>
+                            <group invisible="bots_type != 'is_consultant_bot'" name="consultant_settings" string="Consultant Setting">
+                                <field name="operator_in_odoo_only"/>
+                                <field name="max_count_chats_for_operator"/>
+                                <field name="moderation_msg" required="bots_type == 'is_consultant_bot'"/>
+                                <field name="aprove_msg" required="bots_type == 'is_consultant_bot'"/>
+                                <field name="reject_msg" required="bots_type == 'is_consultant_bot'"/>
+                            </group>
+                        </page>
+                        <page name="conversations" string="Conversations">
+                            <field name="conversations_ids"><tree>
+                                    <field name="name"/>
+                                    <field name="sender_id"/>
+                                    <field name="partner_id"/>
+                                    <field name="user_id"/>
+                                    <field name="is_closed"/>
+                                    <field name="last_activity_datetime"/>
+                                    <field name="chat_id"/>
+                                    <field name="dialog_id"/>
+                                    <button class="oe_highlight" name="livechat_open_and_subscribe_button" string="LiveChat" type="object"/>
+                                </tree></field>
+                        </page>
+                        <page name="senders" required="bots_type == 'is_consultant_bot'" string="Senders">
+                            <field name="sender_ids"><tree>
+                                    <field name="name"/>
+                                    <field name="messenger_id"/>
+                                    <button class="btn-primary" context="{'default_sender_id': active_id, 'chatbot_chat_bot_conversation_display_short_name': 1}" name="%(kw_chatbot_chat_bot_send_sender_action_window)d" string="Send Message" type="action"/>
+                                    <button class="btn-primary" name="aprove_sender" string="Aprove" type="object"/>
+                                    <button class="btn-primary" name="reject_sender" string="Reject" type="object"/>
+                                </tree></field>
+                        </page>
+                        <page invisible="bots_type != 'is_consultant_bot'" name="operators_odoo" string="Operators">
+                            <field mode="tree" name="operator_ids" widget="section_and_note_one2many">
+                                <tree create="0">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="name"/>
+                                    <field name="messenger_id"/>
+                                </tree></field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <field invisible="1" name="active"/>
+            </form></field>
+    </record>
+    <record id="kw_chatbot_kw_chatbot_dialog_tree" model="ir.ui.view">
+        <field name="name">kw.chatbot.dialog.tree (kw_chatbot)</field>
+        <field name="model">kw.chatbot.dialog</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="is_messenger_specific"/>
+                <field name="messenger_id"/>
+            </tree></field>
+    </record>
+    <record id="kw_chatbot_kw_chatbot_dialog_kanban" model="ir.ui.view">
+        <field name="name">kw.chatbot.dialog.kanban (kw_chatbot)</field>
+        <field name="model">kw.chatbot.dialog</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="id"/>
+                <field name="name"/>
+                <field name="conversations_ids"/>
+                <field name="chatbot_chat_ids"/>
+                <field name="sender_ids"/>
+                <field name="are_you_inside"/>
+                <field name="bots_type"/>
+                <field name="user_ids"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <div class="o_kanban_image">
+                                <img alt="Dialog" t-att-src="kanban_image('kw.chatbot.dialog', 'image_128', record.id.raw_value)"/>
+                            </div>
+                            <div class="oe_kanban_details">
+                                <strong class="o_kanban_record_title" style="word-wrap: break-word;">
+                                    <field name="name"/>
+                                </strong>
+                                <field invisible="1" name="is_setup_config"/>
+                                <field invisible="1" name="kw_chatbot_dialog_count"/>
+                                <div class="float-right">
+                                    <button class="btn btn-primary" invisible="is_setup_config == True" name="action_quit" t-if="record.are_you_inside.raw_value and record.bots_type.raw_value == 'is_consultant_bot'" type="object">
+                                        Leave
+                                    </button>
+                                    <button class="btn btn-primary" invisible="is_setup_config == True" name="action_join" t-if="!record.are_you_inside.raw_value and record.bots_type.raw_value == 'is_consultant_bot'" type="object">
+                                        Join
+                                    </button>
+                                    <button class="btn btn-primary" confirm="You already have chats configured, further changes will overwrite existing chats, are you sure?" invisible="is_setup_config == False or kw_chatbot_dialog_count == 1" name="action_setting" type="object">
+                                        Settings
+                                    </button>
+                                    <button class="btn btn-primary" invisible="is_setup_config == False or kw_chatbot_dialog_count != 1" name="action_setting" type="object">
+                                        Settings
+                                    </button>
+                                </div>
+                                <div>
+                                    <div t-if="record.are_you_inside.raw_value and record.bots_type.raw_value == 'is_consultant_bot'">
+                                        <i aria-label="Odoo Operators" class="fa fa-user" role="img" title="Operators Odoo"/>
+                                        <t t-esc="(record.user_ids.raw_value || []).length"/>
+                                        Operators Odoo
+                                        <br/>
+                                    </div>
+                                    <div>
+                                        <i aria-label="User" class="fa fa-user" role="img" title="User"/>
+                                        <t t-esc="(record.conversations_ids.raw_value || []).length"/>
+                                        Conversations
+                                        <br/>
+                                        <i aria-label="Comments" class="fa fa-comments" role="img" title="Comments"/>
+                                        <t t-esc="(record.chatbot_chat_ids.raw_value || []).length"/>
+                                        Channels
+                                        <br/>
+                                        <i aria-label="Comments" class="fa fa-comments" role="img" title="Comments"/>
+                                        <t t-esc="(record.sender_ids.raw_value || []).length"/>
+                                        Senders
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban></field>
+    </record>
+    <record id="kw_chatbot_kw_chatbot_dialog_action_window" model="ir.actions.act_window">
+        <field name="name">Bots</field>
+        <field name="res_model">kw.chatbot.dialog</field>
+        <field name="view_mode">kanban,form,tree</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new chatbot dialog
+            </p></field>
+    </record>
+    <menuitem action="kw_chatbot_kw_chatbot_dialog_action_window" id="kw_chatbot_kw_chatbot_dialog_menu" name="Bots" parent="kw_chatbot_main_menu" sequence="90"/>
+</odoo>

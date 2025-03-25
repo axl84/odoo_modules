@@ -1,0 +1,41 @@
+<odoo>
+    <record id="kw_chatbot_whatsapp_kw_chatbot_chat_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.chat.form (kw_chatbot_whatsapp)</field>
+        <field name="model">kw.chatbot.chat</field>
+        <field name="inherit_id"
+               ref="kw_chatbot.kw_chatbot_kw_chatbot_chat_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page invisible="provider != 'whatsapp'" string="WhatsApp">
+                    <h3>
+                        Account
+                    </h3>
+                    <group>
+                        <field name="whatsapp_access_token" password="True" required="provider == 'whatsapp'"/>
+                        <field name="whatsapp_business_account" required="provider == 'whatsapp'"/>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="whatsapp_facebook_app_id" required="provider == 'whatsapp'"/>
+                            <field decoration-danger="True" invisible="whatsapp_connect_status != 'disabled'" name="whatsapp_error_msg"/>
+                            <field decoration-danger="whatsapp_connect_status == 'disabled'" decoration-success="whatsapp_connect_status == 'enabled'" name="whatsapp_connect_status"/>
+                        </group>
+                        <group>
+                            <field name="whatsapp_phone_number"/>
+                            <field name="whatsapp_phone_number_id"/>
+                        </group>
+                    </group>
+                    <button class="btn btn-primary" name="whatsapp_connect_phone_number" string="Connect Phone Number" type="object"/>
+                    <br/><br/><h3>Webhook</h3>
+                    <group>
+                        <field name="whatsapp_verify_token"/>
+                        <field name="whatsapp_callback_url"/>
+                        <field decoration-danger="whatsapp_webhook_status == 'disabled'" decoration-success="whatsapp_webhook_status == 'enabled'" name="whatsapp_webhook_status"/>
+                    </group>
+                    <button class="btn btn-primary" invisible="whatsapp_connect_status != 'enabled'" name="whatsapp_update_verify_token" string="Update Verify Token" type="object"/>
+                    <button class="btn btn-primary" invisible="whatsapp_connect_status != 'enabled'" name="whatsapp_update_webhook" string="Update Webhook" type="object"/>
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo>

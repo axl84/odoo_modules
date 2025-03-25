@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_builder_viber_notification_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.notification.form (kw_chatbot_builder_viber)</field>
+        <field name="model">kw.chatbot.notification</field>
+        <field name="inherit_id" ref="kw_chatbot.kw_chatbot_notification_kw_chatbot_notification_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Viber Buttons">
+                    <group>
+                        <group>
+                            <field name="is_save_button_activity" widget="boolean_toggle"/>
+                            <field invisible="viber_button_count > 1" name="send_only_button" widget="boolean_toggle"/>
+                            <field invisible="1" name="viber_button_count"/>
+                        </group>
+                    </group>
+                    <field name="viber_button_ids"><tree>
+                            <field name="sequence" widget="handle"/>
+                            <field name="name"/>
+                            <field name="active"/>
+                            <field name="step_id"/>
+                            <field name="callback_data"/>
+                            <field name="notification_id"/>
+                            <field name="fields_lines"></field>
+                        </tree></field>
+                    <field context="{'default_model_id': model_id}" name="notification_filtered_fields_ids">
+                        <tree editable="bottom">
+                            <field name="sequence" widget="handle"/>
+                            <field force_save="1" name="model_id" readonly="True"/>
+                            <field name="field_id" readonly="filtered_type == 'own_model'" required="filtered_type != 'own_model'"/>
+                            <field name="filtered_type"/>
+                            <field invisible="1" name="partner_field_ids"/>
+                            <field domain="[('id','in',partner_field_ids)]" name="partner_field_id" readonly="filtered_type in ['conversation', 'own_model']"/>
+                        </tree></field>
+                </page>
+            </xpath></field>
+    </record>
+</odoo>

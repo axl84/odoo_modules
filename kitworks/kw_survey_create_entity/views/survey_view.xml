@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_survey_create_entity_survey_survey_form" model="ir.ui.view">
+        <field name="name">survey.survey.form (kw_survey_create_entity)</field>
+        <field name="model">survey.survey</field>
+        <field name="inherit_id" ref="survey.survey_survey_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='options']/group[@name='options']" position="inside">
+                <group name="kw_create_entity" string="Entity">
+                    <field name="kw_is_entity_creator"/>
+                    <field invisible="kw_is_entity_creator == False" name="kw_entity_model_id"/>
+                </group>
+            </xpath></field>
+    </record>
+    <record id="kw_survey_create_entity_survey_question_form" model="ir.ui.view">
+        <field name="name">survey.question.form (kw_survey_create_entity)</field>
+        <field name="model">survey.question</field>
+        <field name="inherit_id" ref="survey.survey_question_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="after">
+                <field invisible="1" name="kw_is_entity_creator"/>
+                <field invisible="1" name="kw_entity_model_id"/>
+                <field invisible="1" name="kw_entity_field_ids"/>
+            </xpath>
+            <xpath expr="//page[@name='options']" position="inside">
+                <group invisible="kw_is_entity_creator == False" string="Entity Field">
+                    <field invisible="1" name="kw_is_filter_domain"/>
+                    <field invisible="1" name="kw_entity_model_name"/>
+                    <field invisible="kw_is_filter_domain == False" name="kw_filter_domain" options="{'model': 'kw_entity_model_name'}" widget="domain"/>
+                    <field invisible="question_type != 'file'" name="kw_is_entity_attachment"/>
+                    <field invisible="kw_is_entity_attachment == True" name="kw_entity_field_id"/>
+                </group>
+            </xpath></field>
+    </record>
+    <record id="kw_survey_create_entity_survey_user_input_form" model="ir.ui.view">
+        <field name="name">survey.user_input.form (kw_survey_create_entity)</field>
+        <field name="model">survey.user_input</field>
+        <field name="inherit_id" ref="survey.survey_user_input_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="after">
+                <field invisible="1" name="kw_is_entity_creator"/>
+                <field invisible="1" name="kw_entity_model_id"/>
+                <field invisible="1" name="kw_entity_res_id"/>
+            </xpath>
+            <xpath expr="//sheet/group/group[2]" position="inside">
+                <field invisible="kw_is_entity_creator == False or kw_entity_res_id == 0" name="kw_entity_reference" widget="reference"/>
+            </xpath>
+            <xpath expr="//field[@name='user_input_line_ids']/tree/field[@name='answer_type']" position="after">
+                <field name="kw_answer_display"/>
+            </xpath>
+            <xpath expr="//field[@name='user_input_line_ids']/tree/field[@name='page_id']" position="attributes">
+                <attribute name="optional">
+                    show</attribute>
+            </xpath>
+            <xpath expr="//field[@name='user_input_line_ids']/tree/field[@name='answer_type']" position="attributes">
+                <attribute name="optional">
+                    hide</attribute>
+            </xpath>
+            <xpath expr="//field[@name='user_input_line_ids']/tree/field[@name='skipped']" position="attributes">
+                <attribute name="optional">
+                    hide</attribute>
+            </xpath>
+            <xpath expr="//field[@name='user_input_line_ids']/tree/field[@name='create_date']" position="attributes">
+                <attribute name="optional">
+                    hide</attribute>
+            </xpath>
+            <xpath expr="//field[@name='user_input_line_ids']/tree/field[@name='answer_is_correct']" position="attributes">
+                <attribute name="optional">
+                    show</attribute>
+            </xpath>
+            <xpath expr="//field[@name='user_input_line_ids']/tree/field[@name='answer_score']" position="attributes">
+                <attribute name="optional">
+                    show</attribute>
+            </xpath></field>
+    </record>
+</odoo>

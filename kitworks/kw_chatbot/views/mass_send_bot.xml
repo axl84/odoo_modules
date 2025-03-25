@@ -1,0 +1,21 @@
+<odoo>
+    <record id="kw_chatbot_kw_chatbot_mass_send_bot_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.mass.send.bot.form (kw_chatbot)</field>
+        <field name="model">kw.chatbot.mass.send.bot</field>
+        <field name="arch" type="xml">
+            <form>
+                <footer>
+                    <button name="action_send" string="Send" type="object" class="btn-primary"/>
+                    <button special="cancel" string="Cancel" class="btn-primary"/>
+                </footer>
+                <group>
+                    <field name="text"/>
+                    <field name="kw_filter_domain" widget="domain" options="{'model': 'res.partner','in_dialog': True}"
+                           force_save="1"/>
+                </group>
+                <field name="dialog_id" invisible="1"/>
+            </form>
+        </field>
+    </record>
+
+</odoo>

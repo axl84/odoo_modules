@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_builder_sale_view_order_form" model="ir.ui.view">
+        <field name="name">sale.order (kw_chatbot_builder_sale)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <sheet position="inside">
+                <field invisible="1" name="kw_conversation_id"/>
+            </sheet>
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button class="oe_stat_button" icon="fa-comment" invisible="kw_conversation_id == False" name="livechat_open_and_subscribe_button" string="LiveChat" type="object">
+                </button>
+            </xpath></field>
+    </record>
+</odoo>

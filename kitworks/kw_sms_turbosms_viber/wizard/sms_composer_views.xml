@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="kw_sms_turbosms_viber_sms_composer_form" model="ir.ui.view">
+        <field name="name">sms.composer.form (kw_sms_turbosms_viber)</field>
+        <field name="model">sms.composer</field>
+        <field name="inherit_id" ref="sms.sms_composer_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group[last()]" position="after">
+                <group>
+                    <group string="Type Massage">
+                        <field name="kw_turbosms_sms_or_viber"/>
+                    </group>
+                    <group invisible="kw_turbosms_sms_or_viber not in ('viber', 'sms_viber')" string="Additional Viber Value">
+                        <field name="kw_turbosms_is_count_clicks"/>
+                        <field name="kw_turbosms_is_transactional"/>
+                        <field name="kw_turbosms_ttl"/>
+                        <field name="kw_turbosms_image_url"/>
+                        <field name="kw_turbosms_caption"/>
+                        <field name="kw_turbosms_action"/>
+                        <field name="kw_turbosms_file_id"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

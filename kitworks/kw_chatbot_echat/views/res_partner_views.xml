@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="kw_chatbot_echat_view_partner_form_inherit_website" model="ir.ui.view">
+        <field name="name">res.partner.form (kw_chatbot_echat)</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+<!--        <field eval="[(4, ref('kw_chatbot.group_kw_chatbot_admin'))]" name="groups_id"/>-->
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='mobile']" position="after">
+                <button class="btn-link" icon="fa-comments" invisible="mobile == False" name="add_echat_conversation" string="E-chat" type="object"/>
+            </xpath>
+            <xpath expr="//field[@name='phone']" position="after">
+                <button class="btn-link" icon="fa-comments" invisible="phone == False" name="add_echat_conversation" string="E-chat" type="object"/>
+            </xpath>
+    </field>
+    </record>
+</odoo>

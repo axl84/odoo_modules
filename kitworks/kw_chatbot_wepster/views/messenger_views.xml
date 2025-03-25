@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_wepster_kw_chatbot_messenger_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.messenger.form (kw_chatbot_wepster)</field>
+        <field name="model">kw.chatbot.messenger</field>
+        <field name="inherit_id" ref="kw_chatbot.kw_chatbot_kw_chatbot_messenger_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page groups="base.group_no_one" invisible="provider != 'wepster'" string="Channels">
+                    <field name="wepster_channels_ids"><tree create="false" editable="bottom">
+                            <field name="type"/>
+                            <field name="name"/>
+                        </tree></field>
+                </page>
+                <page invisible="provider != 'wepster'" string="Wepster">
+                    <group>
+                        <button class="btn-primary" name="add_chat" string="Add Chat" type="object"/>
+                    </group>
+                    <group>
+                        <field name="wepster_api_token" required="provider == 'wepster'"/>
+                        <field name="wepster_businessId" required="provider == 'wepster'"/>
+                    </group>
+                    <group groups="base.group_no_one">
+                        <field name="is_wepster_developer_mode"/>
+                        <field invisible="is_wepster_developer_mode == False" name="wepster_developer_url"/>
+                    </group>
+                    <group>
+                        <field name="wepster_webhook_message_chat"/>
+                    </group>
+                </page>
+            </notebook></field>
+    </record>
+</odoo>

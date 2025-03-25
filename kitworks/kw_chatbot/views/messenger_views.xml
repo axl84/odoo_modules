@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_kw_chatbot_messenger_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.messenger.form (kw_chatbot)</field>
+        <field name="model">kw.chatbot.messenger</field>
+        <field name="arch" type="xml">
+            <form>
+                <header/>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                    </div>
+                    <field invisible="1" name="module_id"/>
+                    <field invisible="1" name="module_state"/>
+                    <field class="oe_avatar" name="image_128" widget="image"/>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Name"/>
+                        </h1>
+                        <div invisible="module_state == 'installed' or module_id == False">
+                            <button class="btn btn-primary" name="button_immediate_install" string="Install" type="object"/>
+                        </div>
+                    </div>
+                    <div invisible="module_state == 'installed' or module_id == False">
+                        <field name="description"/>
+                    </div>
+                    <group>
+                        <group>
+                            <field invisible="module_id != False and module_state != 'installed'" name="provider"/>
+                            <field invisible="module_state == 'uninstalled'" name="state"/>
+                            <field invisible="module_state == 'uninstalled'" name="is_log_enabled"/>
+                            <field groups="base.group_multi_company" name="company_id" options='{"no_open":True}'/>
+                            <button class="btn btn-primary" invisible="provider in ['help_crunch', 'wepster', 'umnico']" name="create_chatbot_chat_button" string="Add Chat" type="object"/>
+                        </group>
+                    </group>
+                    <notebook invisible="(module_id != False and module_state != 'installed')">
+                        <page name="chats" string="Chats">
+                            <field name="chatbot_chat_ids"><tree create="false">
+                                    <field name="name"/>
+                                    <field name="active" optional="hide"/>
+                                    <field invisible="1" name="messenger_id"/>
+                                    <field invisible="name == 'Umnico'" name="dialog_id" optional="hide"/>
+                                </tree></field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <field invisible="1" name="module_id"/>
+            </form></field>
+    </record>
+    <record id="kw_chatbot_kw_chatbot_messenger_kanban" model="ir.ui.view">
+        <field name="name">kw.chatbot.messenger.kanban (kw_chatbot)</field>
+        <field name="model">kw.chatbot.messenger</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_payment_acquirer o_kanban_dashboard" create="true" quick_create="false">
+                <field name="id"/>
+                <field name="name"/>
+                <field name="description"/>
+                <field name="provider"/>
+                <field name="module_id"/>
+                <field name="module_state"/>
+                <field name="color"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <t t-set="installed" t-value="record.module_id.value &amp;&amp; record.module_state.raw_value === 'installed'"/>
+                        <t t-set="to_buy" t-value="!record.module_id.value"/>
+                        <div t-attf-class="oe_kanban_global_click #{kanban_color(record.color.raw_value)}">
+                            <div class="o_payment_acquirer_desc">
+                                <div class="o_kanban_image">
+                                    <img alt="Acquirer" t-att-src="kanban_image('kw.chatbot.messenger', 'image_128', record.id.raw_value)" type="open"/>
+                                </div>
+                                <h3 class="mt4">
+                                    <t t-esc="record.name.value"/>
+                                </h3>
+                                <t t-if="record.description.raw_value" t-out="record.description.value"/>
+                            </div>
+                            <div class="o_payment_acquirer_bottom">
+                                <t t-if="installed">
+                                    <field name="state" options="{'classes': {'enabled': 'success', 'test': 'primary', 'disabled' : 'warning'}}" widget="label_selection"/>
+                                </t>
+                                <button class="btn btn-info float-right" name="button_immediate_install" t-if="!installed and !selection_mode and !to_buy" type="object">
+                                    Install
+                                </button>
+                                <t t-if="!installed and to_buy">
+                                    <button class="btn btn-success float_right" name="open_purchase_url" type="object">
+                                        Purchase
+                                    </button>
+                                    <span class="badge badge-primary oe_inline o_enterprise_label">
+                                        Purchasable
+                                    </span>
+                                </t>
+                                <button class="btn btn-primary float-right" name="set_state_enabled" t-if="installed and record.state.raw_value == 'disabled' and !selection_mode" type="object">
+                                    Activate
+                                </button>
+                                <button class="btn btn-primary float-right" t-if="installed and (record.state.raw_value == 'test' or record.state.raw_value == 'enabled') and !selection_mode" type="edit">
+                                    Configure
+                                </button>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban></field>
+    </record>
+    <record id="kw_chatbot_kw_chatbot_messenger_tree" model="ir.ui.view">
+        <field name="name">kw.chatbot.messenger.tree (kw_chatbot)</field>
+        <field name="model">kw.chatbot.messenger</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="provider"/>
+                <field name="state"/>
+                <field groups="base.group_multi_company" name="company_id"/>
+            </tree></field>
+    </record>
+    <record id="kw_chatbot_kw_chatbot_messenger_action_window" model="ir.actions.act_window">
+        <field name="name">Messengers</field>
+        <field name="res_model">kw.chatbot.messenger</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new chatbot messenger
+            </p></field>
+    </record>
+    <menuitem action="kw_chatbot_kw_chatbot_messenger_action_window" id="kw_chatbot_kw_chatbot_messenger_menu" name="Messengers" parent="kw_chatbot_settings_main_menu" sequence="600"/>
+</odoo>

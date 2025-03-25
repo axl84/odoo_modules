@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_step_alias_from_kw_chatbot_step_action_window" model="ir.actions.act_window">
+        <field name="name">Step aliases</field>
+        <field name="res_model">kw.chatbot.step.alias</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('step_id','=', active_id)]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new chatbot step
+            </p></field>
+    </record>
+    <record id="kw_chatbot_builder_kw_chatbot_step_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.step.form (kw_chatbot_builder)</field>
+        <field name="model">kw.chatbot.step</field>
+        <field name="arch" type="xml">
+            <form create="false">
+                <header/>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" context="{'default_step_id': active_id, 'search_default_step_id': active_id}" icon="fa-step-forward" name="%(kw_chatbot_step_alias_from_kw_chatbot_step_action_window)d" string="Aliases" type="action">
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h2>
+                            <field name="name" placeholder="Name"/>
+                        </h2>
+                    </div>
+                    <group>
+                        <group>
+                            <field invisible="1" name="dialog_id"/>
+                            <field invisible="1" name="sequence"/>
+                            <field name="step_type"/>
+                            <field invisible="step_type != 'schedule'" name="schedule_interval" required="step_type == 'schedule'"/>
+                            <field invisible="schedule_interval != 'minutes'" name="schedule_time" required="schedule_interval == 'minutes'"/>
+                            <field invisible="step_type != 'schedule'" name="schedule_last_run"/>
+                            <field invisible="step_type != 'schedule'" name="schedule_next_run"/>
+                            <field invisible="step_type != 'update_contact_field'" name="update_contact_field" required="step_type == 'update_contact_field'"/>
+                            <field invisible="step_type != 'update_contact_field'" name="merge_by_phone_number"/>
+                            <field invisible="step_type != 'update_contact_field'" name="add_contact_tag_ids" options="{'no_create': True}" widget="many2many_tags"/>
+                            <field invisible="step_type != 'update_contact_field'" name="msg_after_update_contact_field"/>
+                            <field invisible="step_type != 'update_contact_field'" name="remove_contact_tag_ids" options="{'no_create': True}" widget="many2many_tags"/>
+                            <field domain="[('dialog_id', '=', dialog_id)]" invisible="step_type == 'request_notification'" name="go_to_step_id" options="{'no_create': True}"/>
+                            <field invisible="1" name="model_res_partner_id"/>
+                            <field invisible="1" name="model_res_partner_name"/>
+                        </group>
+                        <group>
+                            <field invisible="1" name="is_messenger_specific"/>
+                            <field invisible="1" name="messenger_id"/>
+                            <field context="{'default_dialog_id':dialog_id}" domain="[('dialog_id', '=', dialog_id)]" invisible="step_type != 'forward_operator'" name="redirect_step_id" required="step_type == 'forward_operator'"/>
+                            <field domain="[('id', 'in', bot_operators_ids)]" invisible="step_type != 'forward_operator'" name="bot_operators_id" required="step_type == 'forward_operator'"/>
+                            <field invisible="1" name="bot_operators_ids"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="triggering_answer_domain" options="{'model': 'model_res_partner_name','in_dialog': True}" widget="domain"/>
+                        <field domain="[('dialog_id', '=', dialog_id)]" name="triggering_answer_redirect_step_id" options="{'no_create': True}"/>
+                        <field name="text"/>
+                        <field invisible="1" name="update_contact_field_name"/>
+                        <field invisible="step_type != 'update_contact_field' or update_contact_field_name not in ['phone', 'mobile']" name="telegram_send_contact_text" required="step_type == 'update_contact_field'"/>
+                        <field invisible="step_type != 'forward_operator'" name="is_not_send_send_text" widget="boolean_toggle"/>
+                        <field name="select_flow"/>
+                        <field invisible="step_type != 'create_lead'" name="crm_user_id"/>
+                        <field invisible="step_type != 'create_lead'" name="crm_team_id"/>
+                        <field invisible="step_type != 'create_lead'" name="crm_type"/>
+                        <field invisible="step_type != 'create_lead'" name="crm_tag_ids" widget="many2many_tags"/>
+                        <field invisible="1" name="show_livechat_btn"/>
+                    </group>
+                    <notebook>
+                        <page invisible="step_type not in ['request_notification', 'update_contact_field']" string="Answer">
+                            <field invisible="step_type not in ['request_notification', 'update_contact_field']" name="answer_ids" nolabel="1">
+                                <tree>
+                                    <field name="sequence" widget="handle"/>
+                                    <field invisible="1" name="display_name"/>
+                                    <field name="name"/>
+                                    <field name="redirect_link" string="Optional Link"/>
+                                </tree></field>
+                        </page>
+                        <page string="Aliases">
+                            <field name="alias_ids"><tree>
+                                    <field name="name"/>
+                                    <field name="active" optional="hide"/>
+                                    <field invisible="1" name="step_id"/>
+                                    <field invisible="1" name="dialog_id"/>
+                                </tree></field>
+                        </page>
+                        <page string="Media">
+                            <field name="media_ids"><tree>
+                                    <field name="name"/>
+                                    <field name="active" optional="hide"/>
+                                    <field name="media_type"/>
+                                    <field name="media_file"/>
+                                    <field invisible="1" name="step_id"/>
+                                    <field invisible="1" name="dialog_id"/>
+                                </tree></field>
+                        </page>
+                        <page invisible="show_livechat_btn == False" string="Livechat Buttons">
+                            <field name="odoo_livechat_button_ids"/>
+                        </page>
+                        <page invisible="True" string="Consultant">
+                            <group>
+                                <group>
+                                    <field name="is_consultant_ready"/>
+                                    <field name="is_consultant_not_ready"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <field invisible="1" name="active"/>
+            </form></field>
+    </record>
+    <record id="kw_chatbot_builder_kw_chatbot_step_tree" model="ir.ui.view">
+        <field name="name">kw.chatbot.step.tree (kw_chatbot_builder)</field>
+        <field name="model">kw.chatbot.step</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="text"/>
+                <field name="dialog_id"/>
+                <field name="is_messenger_specific"/>
+                <field name="messenger_id"/>
+            </tree></field>
+    </record>
+    <record id="kw_chatbot_builder_kw_chatbot_step_action_window" model="ir.actions.act_window">
+        <field name="name">Steps</field>
+        <field name="res_model">kw.chatbot.step</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new chatbot step
+            </p></field>
+    </record>
+    <record id="chatbot_dialog_answer_view_form" model="ir.ui.view">
+        <field name="name">chatbot.dialog.answer.form</field>
+        <field name="model">chatbot.dialog.answer</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field invisible="1" name="model_id"/>
+                        <field invisible="1" name="model_name"/>
+                        <field name="notification_id"/>
+                        <field name="is_personal_data"/>
+                        <field domain="[('model', '=', model_name),('model_id', '=', model_id), ('relation', 'in', ['res.partner', 'res.users', 'hr.employee'])]" invisible="is_personal_data != True" name="model_field_id"/>
+                        <field name="is_used_new_domain" string="Use new domain" widget="boolean_toggle"/>
+                        <field invisible="is_used_new_domain == False" name="extra_domain" options="{'model': 'model_name'}" required="is_used_new_domain == True" widget="domain"/>
+                        <field invisible="1" name="dialog_step_id"/>
+                        <field invisible="1" name="dialog_script_id"/>
+                        <field context="{'default_dialog_id': dialog_script_id}" domain="[('dialog_id', '=', dialog_script_id)]" name="refund_step_id"/>
+                    </group>
+                </sheet>
+            </form></field>
+    </record>
+    <record id="chatbot_dialog_answer_view_tree" model="ir.ui.view">
+        <field name="name">chatbot.dialog.answer.tree</field>
+        <field name="model">chatbot.dialog.answer</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="sequence" widget="handle"/>
+                <field name="dialog_step_id"/>
+                <field name="name"/>
+                <field name="redirect_link" string="Optional Link"/>
+            </tree></field>
+    </record>
+    <!--    <menuitem id="kw_chatbot_builder_kw_chatbot_step_menu"-->
+    <!--              action="kw_chatbot_builder_kw_chatbot_step_action_window"-->
+    <!--              parent="kw_chatbot.kw_chatbot_settings_main_menu"-->
+    <!--              groups="base.group_no_one"-->
+    <!--              name="Steps" sequence="700"/>-->
+</odoo>

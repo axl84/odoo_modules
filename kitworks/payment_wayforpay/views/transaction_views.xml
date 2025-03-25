@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="payment_wayforpay_payment_transaction_form" model="ir.ui.view">
+        <field name="name">payment.transaction.form (payment_wayforpay)</field>
+        <field name="model">payment.transaction</field>
+        <field name="inherit_id" ref="kw_payment_base.kw_payment_base_payment_transaction_form"/>
+        <field eval="18" name="priority"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[last()]" position="after">
+                <div>
+                   <button class="oe_stat_button" type="object"
+                           invisible="provider_code != 'wayforpay'"
+                           name="check_status_wayforpay"
+                           string="Check status Wayforpay"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_survey_viber_attachment_survey_question_form" model="ir.ui.view">
+        <field name="name">survey.question.form (kw_chatbot_survey_viber_attachment)</field>
+        <field name="model">survey.question</field>
+        <field name="inherit_id" ref="kw_survey_attachment.survey_question_validation"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='upload_multiple_file']" position="after">
+                <field invisible="question_type != 'file'" name="kw_viber_file_error_message"/>
+            </xpath></field>
+    </record>
+</odoo>

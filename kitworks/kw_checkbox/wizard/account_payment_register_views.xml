@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+     <record id="kw_checkbox_invoice_to_receipt_view_account_payment_register_form" model="ir.ui.view">
+        <field name="name">account.payment.register.form  (kw_checkbox_invoice_to_receipt)</field>
+        <field name="model">account.payment.register</field>
+        <field name="inherit_id" ref="account.view_account_payment_register_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group" position="inside">
+                    <group name="group4">
+                        <field name="kw_checkbox_is_register_receipt" invisible="not kw_checkbox_is_journal_register_receipt"/>
+                        <field name="kw_checkbox_invoice_id" required="kw_checkbox_is_register_receipt"/>
+                        <field name="kw_checkbox_is_mixed_payment" invisible="not kw_checkbox_is_register_receipt" required="kw_checkbox_is_register_receipt" />
+                        <field name="kw_checkbox_mixed_journal_id" invisible="not kw_checkbox_is_mixed_payment or not kw_checkbox_is_register_receipt" required="kw_checkbox_is_mixed_payment and kw_checkbox_is_register_receipt" />
+                        <field name="kw_payment_method_line_id" invisible="not kw_checkbox_is_mixed_payment or not kw_checkbox_is_register_receipt" required="kw_checkbox_is_mixed_payment and kw_checkbox_is_register_receipt"/>
+                        <field name="kw_checkbox_mixed_amount" invisible="not kw_checkbox_is_mixed_payment or not kw_checkbox_is_register_receipt" required="kw_checkbox_is_mixed_payment and kw_checkbox_is_register_receipt"/>
+                    </group>
+                    <group name="group5">
+                        <field name="kw_checkbox_cashier_id" options="{'no_create': True, 'no_open': True}"
+                        invisible="not kw_checkbox_is_register_receipt" required="kw_checkbox_is_register_receipt"/>
+                        <field name="kw_checkbox_cash_register_id" options="{'no_create': True, 'no_open': True}"
+                        invisible="not kw_checkbox_is_register_receipt" required="kw_checkbox_is_register_receipt"/>
+                    </group>
+
+                    <group name="group6">
+                        <field name="kw_checkbox_is_journal_register_receipt"
+                               invisible="1"/>
+                        <field name="kw_available_payment_method_line_ids" invisible="1"/>
+                        <field name="kw_checkbox_cashier_ids" invisible="1"/>
+                        <field name="kw_checkbox_cash_register_ids" invisible="1"/>
+                    </group>
+            </xpath>
+            <xpath expr="//group[@name='group3']" position="attributes">
+                <attribute name="invisible">kw_checkbox_is_register_receipt</attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_create_payments']" position="attributes">
+                <attribute name="invisible">kw_checkbox_is_mixed_payment and kw_checkbox_is_register_receipt</attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_create_payments']" position="after">
+                <button string="Create Mixed Payment" name="action_create_mixed_payments" type="object" class="oe_highlight" invisible="not kw_checkbox_is_mixed_payment or not kw_checkbox_is_register_receipt"  />
+            </xpath>
+        </field>
+     </record>
+</odoo>

@@ -1,0 +1,245 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kw_chatbot_builder_telegram_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-12 12:52+0000\n"
+"PO-Revision-Date: 2023-12-12 12:52+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kw_chatbot_builder_telegram_sale
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram_sale.selection__kw_chatbot_step_telegram_button__type_sale__add_to_cart
+msgid "Add to cart"
+msgstr "Додати до кошика"
+
+#. module: kw_chatbot_builder_telegram_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram_sale.field_kw_chatbot_step__buttons_category_ids
+msgid "Buttons Category"
+msgstr "Категорія кнопки"
+
+#. module: kw_chatbot_builder_telegram_sale
+#. odoo-python
+#: code:addons/kw_chatbot_builder_telegram_sale/models/conversation.py:0
+#, python-format
+msgid "Cart is empty"
+msgstr "Кошик порожній"
+
+#. module: kw_chatbot_builder_telegram_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram_sale.field_kw_chatbot_step_telegram_button__category_id
+msgid "Category"
+msgstr "Категорія"
+
+#. module: kw_chatbot_builder_telegram_sale
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram_sale.selection__kw_chatbot_step_telegram_button__type_sale__choose_category
+msgid "Choose category"
+msgstr "Оберіть категорію"
+
+#. module: kw_chatbot_builder_telegram_sale
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram_sale.selection__kw_chatbot_step_telegram_button__type_sale__choose_product
+msgid "Choose product"
+msgstr "Оберіть товар"
+
+#. module: kw_chatbot_builder_telegram_sale
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram_sale.selection__kw_chatbot_step_telegram_button__type_sale__choose_quantity
+msgid "Choose quantity"
+msgstr "Оберіть кількість"
+
+#. module: kw_chatbot_builder_telegram_sale
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram_sale.selection__kw_chatbot_step_telegram_button__type_sale__confirm_order
+msgid "Confirm order"
+msgstr "Підтвердити замовлення"
+
+#. module: kw_chatbot_builder_telegram_sale
+#: model:ir.model,name:kw_chatbot_builder_telegram_sale.model_kw_chatbot_conversation
+msgid "Conversation"
+msgstr "Діалог"
+
+#. module: kw_chatbot_builder_telegram_sale
+#: model:ir.model,name:kw_chatbot_builder_telegram_sale.model_payment_link_wizard
+msgid "Generate Sales Payment Link"
+msgstr "Створити посилання платежу продажів"
+
+#. module: kw_chatbot_builder_telegram_sale
+#. odoo-python
+#: code:addons/kw_chatbot_builder_telegram_sale/models/conversation.py:0
+#, python-format
+msgid "No delivery"
+msgstr "Без доставки"
+
+#. module: kw_chatbot_builder_telegram_sale
+#. odoo-python
+#: code:addons/kw_chatbot_builder_telegram_sale/models/conversation.py:0
+#, python-format
+msgid "No notification for cart"
+msgstr "Немає сповіщення для кошика"
+
+#. module: kw_chatbot_builder_telegram_sale
+#. odoo-python
+#: code:addons/kw_chatbot_builder_telegram_sale/models/conversation.py:0
+#, python-format
+msgid "No order"
+msgstr "Немає замовлень"
+
+#. module: kw_chatbot_builder_telegram_sale
+#. odoo-python
+#: code:addons/kw_chatbot_builder_telegram_sale/models/conversation.py:0
+#, python-format
+msgid "No product"
+msgstr "Немає товару"
+
+#. module: kw_chatbot_builder_telegram_sale
+#. odoo-python
+#: code:addons/kw_chatbot_builder_telegram_sale/models/conversation.py:0
+#, python-format
+msgid "No product for delivery"
+msgstr "Відсутні товари для доставки"
+
+#. module: kw_chatbot_builder_telegram_sale
+#. odoo-python
+#: code:addons/kw_chatbot_builder_telegram_sale/models/conversation.py:0
+#, python-format
+msgid "No products for this category"
+msgstr "Для цієї категорії відсутні товари"
+
+#. module: kw_chatbot_builder_telegram_sale
+#. odoo-python
+#: code:addons/kw_chatbot_builder_telegram_sale/models/conversation.py:0
+#, python-format
+msgid "No step for start sale"
+msgstr "Відсутній крок для початку продажів"
+
+#. module: kw_chatbot_builder_telegram_sale
+#. odoo-python
+#: code:addons/kw_chatbot_builder_telegram_sale/models/conversation.py:0
+#, python-format
+msgid "No template message for add to cart"
+msgstr "Відсутній шаблон повідомлення для додавання до кошику"
+
+#. module: kw_chatbot_builder_telegram_sale
+#. odoo-python
+#: code:addons/kw_chatbot_builder_telegram_sale/models/conversation.py:0
+#, python-format
+msgid "No template message for delivery"
+msgstr "Відсутній шаблон повідомлення для доставки"
+
+#. module: kw_chatbot_builder_telegram_sale
+#. odoo-python
+#: code:addons/kw_chatbot_builder_telegram_sale/models/conversation.py:0
+#, python-format
+msgid "No template message for product"
+msgstr "Відсутній шаблон повідомлення для товару"
+
+#. module: kw_chatbot_builder_telegram_sale
+#. odoo-python
+#: code:addons/kw_chatbot_builder_telegram_sale/models/conversation.py:0
+#, python-format
+msgid "No template message for remove from cart"
+msgstr "Відсутній шаблон повідомлення для видалення товару з кошика"
+
+#. module: kw_chatbot_builder_telegram_sale
+#. odoo-python
+#: code:addons/kw_chatbot_builder_telegram_sale/models/conversation.py:0
+#, python-format
+msgid "No template message for start sale"
+msgstr "Відсутній шаблон повідомлення для початку продажу"
+
+#. module: kw_chatbot_builder_telegram_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram_sale.field_kw_chatbot_step_telegram_button__product_id
+msgid "Product"
+msgstr "Товар"
+
+#. module: kw_chatbot_builder_telegram_sale
+#. odoo-python
+#: code:addons/kw_chatbot_builder_telegram_sale/models/conversation.py:0
+#, python-format
+msgid "Product not found"
+msgstr "Товар не знайдено"
+
+#. module: kw_chatbot_builder_telegram_sale
+#. odoo-python
+#: code:addons/kw_chatbot_builder_telegram_sale/models/conversation.py:0
+#, python-format
+msgid "Quantity must be integer. Please try again"
+msgstr "Кількість має бути цілою. Будь ласка, введіть ще раз вірне значення"
+
+#. module: kw_chatbot_builder_telegram_sale
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram_sale.selection__kw_chatbot_step_telegram_button__type_sale__remove_from_cart
+msgid "Remove from cart"
+msgstr "Видалити з кошика"
+
+#. module: kw_chatbot_builder_telegram_sale
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram_sale.selection__kw_chatbot_step_telegram_button__state__sale
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram_sale.kw_chatbot_builder_sale_kw_chatbot_step_telegram_button_form
+msgid "Sale"
+msgstr "Продажа"
+
+#. module: kw_chatbot_builder_telegram_sale
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram_sale.kw_chatbot_builder_sale_payment_link_wizard_view_form
+msgid "Send link to telegram"
+msgstr "Надіслати посилання на телеграм"
+
+#. module: kw_chatbot_builder_telegram_sale
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram_sale.selection__kw_chatbot_step_telegram_button__type_sale__show_cart
+msgid "Show cart"
+msgstr "Показати кошик"
+
+#. module: kw_chatbot_builder_telegram_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram_sale.field_kw_chatbot_step_telegram_button__state
+msgid "State"
+msgstr "Стан"
+
+#. module: kw_chatbot_builder_telegram_sale
+#: model:ir.model,name:kw_chatbot_builder_telegram_sale.model_kw_chatbot_step
+msgid "Step"
+msgstr "Крок"
+
+#. module: kw_chatbot_builder_telegram_sale
+#: model:ir.model,name:kw_chatbot_builder_telegram_sale.model_kw_chatbot_step_telegram_button
+msgid "Step Telegram button"
+msgstr "Крок кнопки Telegram"
+
+#. module: kw_chatbot_builder_telegram_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram_sale.field_payment_link_wizard__sms_template_id
+msgid "Template message"
+msgstr "Шаблон повідомлення"
+
+#. module: kw_chatbot_builder_telegram_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram_sale.field_kw_chatbot_step_telegram_button__type_sale
+msgid "Type Sale"
+msgstr "Тип продаж"
+
+#. module: kw_chatbot_builder_telegram_sale
+#: model:ir.model.fields,help:kw_chatbot_builder_telegram_sale.field_kw_chatbot_step_telegram_button__state
+msgid ""
+"Type of server action. The following values are available:\n"
+"- 'Execute Python Code': a block of python code that will be executed\n"
+"- 'Create': create a new record with new values\n"
+"- 'Update a Record': update the values of a record\n"
+"- 'Execute several actions': define an action that triggers several other server actions\n"
+"- 'Send Email': automatically send an email (Discuss)\n"
+"- 'Add Followers': add followers to a record (Discuss)\n"
+"- 'Create Next Activity': create an activity (Discuss)"
+msgstr ""
+"Тип дії сервера. Доступні такі значення:\n"
+"- «Виконати код Python»: блок коду Python, який буде виконано\n"
+"- «Створити»: створити новий запис із новими значеннями\n"
+"- «Оновити запис»: оновити значення запису\n"
+"- «Виконати кілька дій»: визначте дію, яка запускає кілька інших дій сервера\n"
+"- «Надіслати електронний лист»: автоматично надсилати електронний лист (Обговорити)\n"
+"- «Додати послідовників»: додати підписників до запису (обговорити)\n"
+"- «Створити наступну дію»: створити дію (Обговорення)"
+
+#. module: kw_chatbot_builder_telegram_sale
+#. odoo-python
+#: code:addons/kw_chatbot_builder_telegram_sale/wizard/payment_link_wizard.py:0
+#, python-format
+msgid "Url payment link"
+msgstr "Посилання на оплату"

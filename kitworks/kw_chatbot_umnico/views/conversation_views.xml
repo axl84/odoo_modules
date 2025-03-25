@@ -1,0 +1,14 @@
+<odoo>
+    <record id="kw_chatbot_umnico_kw_chatbot_conversation_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.conversation.form (kw_chatbot_umnico)</field>
+        <field name="model">kw.chatbot.conversation</field>
+        <field name="inherit_id"
+               ref="kw_chatbot.kw_chatbot_kw_chatbot_conversation_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='active']" position="after">
+                <field name="umnico_leadId" invisible="1"/>
+                 <field name="umnico_realId" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

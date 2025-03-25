@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_survey_kw_chatbot_chat_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.step.form (kw_chatbot_survey)</field>
+        <field name="model">kw.chatbot.step</field>
+        <field name="inherit_id" ref="kw_chatbot_builder.kw_chatbot_builder_kw_chatbot_step_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='select_flow']" position="after">
+                <field invisible="1" name="is_quiz"/>
+                <field name="survey_id" invisible="is_quiz == False"/>
+                <field name="is_survey_send_text" string='Send Text' widget="boolean_toggle"
+                       invisible="is_quiz == False"/>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="Setting Bot Survey" invisible="select_flow != 'survey'">
+                    <group>
+                        <field name="name_button_start_survey"/>
+                        <field name="kw_close_quiz_button_name"/>
+                        <field name="message_start_survey"/>
+                        <field name="message_end_survey"/>
+                        <field name="send_end_survey_button"/>
+                        <field name="name_button_after_end_survey" invisible="send_end_survey_button == False"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

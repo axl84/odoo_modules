@@ -1,0 +1,83 @@
+<odoo>
+
+    <record id="kw_chatbot_kw_chatbot_chat_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.chat.form (kw_chatbot)</field>
+        <field name="model">kw.chatbot.chat</field>
+        <field name="arch" type="xml">
+            <form>
+                <header/>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field domain="[('id', 'in', messenger_ids)]" name="messenger_id"/>
+                            <field domain="[('id', 'in', dialog_ids)]" name="dialog_id"/>
+                            <field name="is_send_operator_name"/>
+                            <field name="is_automatic_send_greet"/>
+                            <field name="is_send_and_consultation"/>
+                            <field groups="base.group_multi_company" invisible="1" name="company_id"/>
+                            <field name="default_contact_lang"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page invisible="provider != 'odoo_livechat'" string="Odoo Livechat">
+                            <group>
+                                <field context="{'default_is_livechat_bot': True}" name="odoo_livechat_res_partner_id"/>
+                            </group>
+                        </page>
+                        <page invisible="1" string="Communicate">
+                            <group>
+                                <field name="is_communication_chat"/>
+                                <field name="is_consultant_chat"/>
+                            </group>
+                        </page>
+                    </notebook>
+                    <group groups="base.group_no_one">
+                        <field name="is_developer_mode"/>
+                    </group>
+                </sheet>
+                <field invisible="1" name="active"/>
+                <field invisible="1" name="messenger_ids"/>
+                <field invisible="1" name="dialog_ids"/>
+                <field invisible="1" name="provider"/>
+            </form>
+        </field>
+    </record>
+
+    <record id="kw_chatbot_kw_chatbot_chat_tree" model="ir.ui.view">
+        <field name="name">kw.chatbot.chat.tree (kw_chatbot)</field>
+        <field name="model">kw.chatbot.chat</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="active" optional="hide"/>
+                <field name="is_developer_mode" optional="hide"/>
+                <field name="messenger_id"/>
+                <field name="dialog_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="kw_chatbot_kw_chatbot_chat_action_window" model="ir.actions.act_window">
+        <field name="name">Chats</field>
+        <field name="res_model">kw.chatbot.chat</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new chatbot chat
+            </p>
+        </field>
+    </record>
+
+    <menuitem action="kw_chatbot_kw_chatbot_chat_action_window"
+              id="kw_chatbot_kw_chatbot_chat_menu"
+              name="Chats" sequence="800"
+              parent="kw_chatbot_settings_main_menu"/>
+
+</odoo>

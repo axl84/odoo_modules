@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_echat_kw_chatbot_chat_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.chat.form (kw_chatbot_echat)</field>
+        <field name="model">kw.chatbot.chat</field>
+        <field name="inherit_id" ref="kw_chatbot.kw_chatbot_kw_chatbot_chat_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page invisible="provider != 'echat'" string="E-Chat">
+                    <button class="btn btn-primary" name="echat_create_chat" string="Connect" type="object"/>
+                    <group>
+                        <field name="echat_api_token" required="provider == 'echat'"/>
+                        <field name="echat_mobile_phone" required="provider == 'echat'"/>
+                        <field name="echat_integration" required="provider == 'echat'"/>
+                        <field name="echat_messanger" required="provider == 'echat'"/>
+                        <field name="echat_end_tarif" force_save="1" invisible="1"/>
+                        <field name="echat_connection_status" force_save="1"/>
+                    </group>
+                    <group>
+                        <field name="echat_incoming_webhook"/>
+                        <field name="echat_outgoing_webhook"/>
+                        <field name="echat_developer_url" groups="base.group_no_one"
+                               invisible="is_developer_mode == False"/>
+                    </group>
+                </page>
+                <page invisible="provider != 'echat'" string="Lead creation setting">
+                    <group>
+                        <group>
+                            <field name="echat_crm_user_id"/>
+                            <field name="echat_crm_team_id"/>
+                            <field name="echat_crm_type"/>
+                        </group>
+                    </group>
+                </page>
+            </notebook></field>
+    </record>
+</odoo>

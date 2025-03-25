@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_echat_kw_chatbot_sender_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.sender.form (kw_chatbot_echat)</field>
+        <field name="model">kw.chatbot.sender</field>
+        <field name="inherit_id" ref="kw_chatbot.kw_chatbot_kw_chatbot_sender_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page invisible="provider != 'echat'" string="E-Chat">
+                    <group>
+                        <field name="echat_sender_id"/>
+                        <field name="echat_username"/>
+                        <field name="echat_mobile_phone"/>
+                    </group>
+                </page>
+            </notebook></field>
+    </record>
+    <record id="kw_chatbot_echat_kw_chatbot_sender_search" model="ir.ui.view">
+        <field name="name">kw.chatbot.sender.form (kw_chatbot_echat)</field>
+        <field name="model">kw.chatbot.sender</field>
+        <field eval="8" name="priority"/>
+        <field name="arch" type="xml">
+            <search>
+                <field filter_domain="[('echat_username','ilike',self)]" name="echat_username"/>
+            </search></field>
+    </record>
+</odoo>

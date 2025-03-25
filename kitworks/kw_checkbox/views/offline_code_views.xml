@@ -1,0 +1,70 @@
+<odoo>
+    <record id="kw_checkbox_kw_checkbox_offline_code_tree" model="ir.ui.view">
+        <field name="name">kw.checkbox.offline.code.tree (kw_checkbox)</field>
+        <field name="model">kw.checkbox.offline.code</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="cash_register_id"/>
+                <field name="active"/>
+                <field name="datetime_created_at"/>
+                <field name="serial_id"/>
+                <field name="fiscal_code"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="kw_checkbox_kw_checkbox_offline_code_form" model="ir.ui.view">
+        <field name="name">kw.checkbox.offline.code.form (kw_checkbox)</field>
+        <field name="model">kw.checkbox.offline.code</field>
+        <field name="arch" type="xml">
+            <form>
+                <header/>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="cash_register_id"/>
+                            <field name="active"/>
+                        </group>
+                        <group>
+                            <field name="datetime_created_at"/>
+                            <field name="serial_id"/>
+                            <field name="fiscal_code"/>
+                        </group>
+                    </group>
+                    <notebook/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="kw_checkbox_kw_checkbox_offline_code_search" model="ir.ui.view">
+        <field name="name">kw.checkbox.offline.code.search (kw_checkbox)</field>
+        <field name="model">kw.checkbox.offline.code</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="cash_register_id"/>
+                <field name="datetime_created_at"/>
+                <field name="serial_id"/>
+                <field name="fiscal_code"/>
+                <field name="active"
+                       filter_domain="[('active','=',True)]"/>
+                <group expand="1" string="Group By">
+                    <filter string="Cash Register" name="cash_register_id" context="{'group_by':'cash_register_id'}"/>
+                    <filter string="Serial Id" name="serial_id" context="{'group_by':'serial_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window"
+            id="kw_checkbox_kw_checkbox_offline_code_action_window">
+        <field name="name">Offline Code</field>
+        <field name="res_model">kw.checkbox.offline.code</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="kw_checkbox_kw_checkbox_offline_code_menu"
+              action="kw_checkbox_kw_checkbox_offline_code_action_window"
+              parent="kw_checkbox_settings_main_menu"
+              name="Offline Code" sequence="560"/>
+</odoo>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="kw_payment_link_wizard_view_form_inherit" model="ir.ui.view">
+        <field name="name">payment.link.wizard.form(kw_payment_base)</field>
+        <field name="model">payment.link.wizard</field>
+        <field name="inherit_id" ref="payment.payment_link_wizard_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//footer" position="before">
+                <group>
+                    <field name="link" string="Payment Link"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

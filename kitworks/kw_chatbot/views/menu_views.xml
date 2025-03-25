@@ -1,0 +1,22 @@
+<odoo>
+    <menuitem id="kw_chatbot_main_menu"
+              web_icon="kw_chatbot,static/description/icon.png"
+              name="ChatBot"/>
+
+    <menuitem id="kw_chatbot_settings_main_menu"
+              parent="kw_chatbot_main_menu"
+              groups="group_kw_chatbot_admin"
+              name="Settings" sequence="9999"/>
+
+    <menuitem id="kw_chatbot_settings_main_menu"
+              parent="kw_chatbot_main_menu"
+              groups="group_kw_chatbot_admin"
+              name="Settings" sequence="9999"/>
+
+<!--    <menuitem id="kw_chatbot_canned_responses_menu"-->
+<!--              name="Canned Responses"-->
+<!--              parent="kw_chatbot.kw_chatbot_settings_main_menu"-->
+<!--              action="mail.mail_shortcode_action"-->
+<!--              sequence="998"/>-->
+
+</odoo>

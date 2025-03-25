@@ -1,0 +1,15 @@
+<odoo>
+    <menuitem id="kw_facebook_main_menu"
+              web_icon="kw_graph_api,static/description/icon.png"
+              name="Facebook" sequence="100"/>
+
+    <menuitem id="kw_facebook_settings_menu"
+              parent="kw_facebook_main_menu"
+              groups="kw_graph_api.group_kw_facebook_admin"
+              name="Settings" sequence="999"/>
+
+    <menuitem id="kw_facebook_lead_menu"
+              parent="kw_facebook_main_menu"
+              groups="kw_graph_api.group_kw_facebook_user"
+              name="Leads" sequence="500"/>
+</odoo>

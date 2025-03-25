@@ -1,0 +1,10 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.o_preview_questions .o_upload_file {
+  border: 1px solid #d8d7d7;
+  margin-bottom: 5px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.o_preview_questions .o_upload_file i.fa {
+  margin-left: 30px;
+}

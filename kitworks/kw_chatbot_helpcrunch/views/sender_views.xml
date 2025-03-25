@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_helpcrunch_kw_chatbot_sender_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.sender.form (kw_chatbot_helpcrunch)</field>
+        <field name="model">kw.chatbot.sender</field>
+        <field name="inherit_id" ref="kw_chatbot.kw_chatbot_kw_chatbot_sender_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page invisible="provider != 'help_crunch'" string="HelpCrunch">
+                    <group>
+                        <field name="help_crunch_channel_id"/>
+                        <field name="help_crunch_id"/>
+                        <field name="help_crunch_is_bot"/>
+                        <field name="help_crunch_username"/>
+                        <field name="help_crunch_email"/>
+                        <field name="help_crunch_userId"/>
+                    </group>
+                </page>
+            </notebook></field>
+    </record>
+    <record id="kw_chatbot_helpcrunch_kw_chatbot_sender_search" model="ir.ui.view">
+        <field name="name">kw.chatbot.sender.search (kw_chatbot_helpcrunch)</field>
+        <field name="model">kw.chatbot.sender</field>
+        <field eval="8" name="priority"/>
+        <field name="arch" type="xml">
+            <search>
+                <field filter_domain="[('help_crunch_username','ilike',self)]" name="help_crunch_username"/>
+            </search></field>
+    </record>
+</odoo>

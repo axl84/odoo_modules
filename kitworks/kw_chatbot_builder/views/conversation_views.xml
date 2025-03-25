@@ -1,0 +1,23 @@
+<odoo>
+    <record id="kw_chatbot_builder_kw_chatbot_conversation_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.conversation.form (kw_chatbot_builder)</field>
+        <field name="model">kw.chatbot.conversation</field>
+        <field name="inherit_id"
+               ref="kw_chatbot.kw_chatbot_kw_chatbot_conversation_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Telegram Model Activity" groups="base.group_no_one">
+                    <field name="model_activity_ids">
+                        <tree create="false" delete="false" open="false" editable="top">
+                            <field name="res_model"/>
+                            <field name="res_id"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+            <xpath expr="//field[@name='dialog_id']" position="after">
+                <field name="wired_conversation_id"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

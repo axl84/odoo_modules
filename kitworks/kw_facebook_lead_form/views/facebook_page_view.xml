@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_facebook_lead_form_kw_facebook_page_form" model="ir.ui.view">
+        <field name="name">kw.facebook.page.form (kw_graph_api)</field>
+        <field name="model">kw.facebook.page</field>
+        <field name="inherit_id" ref="kw_graph_api.kw_graph_api_kw_facebook_page_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='is_developer_mode']" position="after">
+                <field name="is_lead_form"/>
+            </xpath>
+            <notebook position="inside">
+                <page invisible="is_lead_form == False" name="lead_form" string="Lead Form">
+                    <group>
+                        <field name="lead_form_permission"/>
+                    </group>
+                    <group groups="kw_graph_api.group_kw_facebook_admin">
+                        <field name="is_leadgen_request_limit" readonly="1" groups="base.group_no_one"/>
+                        <field name="form_lead_limit"/>
+                        <field name="is_day_to_inactive" widget="boolean_toggle"/>
+                        <field invisible="is_day_to_inactive == False" name="day_to_inactive"/>
+                    </group>
+                    <button class="btn btn-primary" invisible="is_facebook_webhook == False" name="lead_form_webhook_action" string="Update Webhook" type="object"/>
+                    <field name="facebook_survey_ids"><tree create="false" delete="true">
+                            <field name="title"/>
+                            <field name="answer_done_count"/>
+                        </tree></field>
+                    <button class="btn btn-primary" name="get_facebook_lead_form" string="Get Lead Form" type="object"/>
+                    <button class="btn btn-primary" invisible="facebook_survey_ids == []" name="get_facebook_lead_survey" string="Get Lead" type="object"/>
+                </page>
+            </notebook></field>
+    </record>
+</odoo>

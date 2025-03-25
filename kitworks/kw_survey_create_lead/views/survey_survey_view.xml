@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_survey_crm_survey_survey_form" model="ir.ui.view">
+        <field name="name">survey.survey.form (kw_survey_crm)</field>
+        <field name="model">survey.survey</field>
+        <field name="inherit_id" ref="survey.survey_survey_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='kw_create_entity']" position="inside">
+                <field name="kw_is_lead_creator"/>
+                <field invisible="kw_is_lead_creator == False" name="kw_lead_salesperson_id"/>
+                <field invisible="kw_is_lead_creator == False" name="kw_lead_sales_team_id"/>
+            </xpath></field>
+    </record>
+</odoo>

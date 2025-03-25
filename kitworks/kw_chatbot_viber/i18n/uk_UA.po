@@ -1,0 +1,506 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kw_chatbot_viber
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-12 13:00+0000\n"
+"PO-Revision-Date: 2023-12-12 13:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kw_chatbot_viber
+#. odoo-python
+#: code:addons/kw_chatbot_viber/models/chat.py:0
+#, python-format
+msgid "\"Viber access token\" is empty"
+msgstr ""
+
+#. module: kw_chatbot_viber
+#. odoo-python
+#: code:addons/kw_chatbot_viber/models/chat.py:0
+#, python-format
+msgid "\"Viber token\" is required for Viber chat"
+msgstr ""
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_step_viber_keyboard__active
+msgid "Active"
+msgstr "Активний"
+
+#. module: kw_chatbot_viber
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_viber.kw_chatbot_viber_kw_chatbot_default_viber_buttons_form
+msgid "BG Image"
+msgstr "Зображення"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_step_viber_keyboard__bg_color
+msgid "BackGround Color"
+msgstr "Колір фону"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_step_viber_keyboard__bg_image
+msgid "Bg Image"
+msgstr "Зображення"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__bg_media_image
+msgid "Bg Media Image"
+msgstr "Мультимедіа"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields.selection,name:kw_chatbot_viber.selection__kw_chatbot_default_viber_buttons__text_valign__bottom
+msgid "Bottom"
+msgstr "Знизу"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_step_viber_keyboard__columns
+msgid "Button Horizontal size"
+msgstr "Горизонтальний розмір кнопки"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__button_type
+msgid "Button Type"
+msgstr "Тип кнопки"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_step_viber_keyboard__rows
+msgid "Button Vertical size"
+msgstr "Вертикальний розмір кнопки"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_step_viber_keyboard__action_body
+msgid "CallBack text"
+msgstr "Текст відповіді"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields.selection,name:kw_chatbot_viber.selection__kw_chatbot_default_viber_buttons__text_halign__center
+msgid "Center"
+msgstr "Центр"
+
+#. module: kw_chatbot_viber
+#: model:ir.model,name:kw_chatbot_viber.model_kw_chatbot_chat
+msgid "Chat"
+msgstr "Чат"
+
+#. module: kw_chatbot_viber
+#: model:ir.model,name:kw_chatbot_viber.model_kw_chatbot_conversation
+#: model:ir.model,name:kw_chatbot_viber.model_kw_chatbot_message
+msgid "Conversation"
+msgstr "Діалог"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__create_uid
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_step_viber_keyboard__create_uid
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_viber_image_button__create_uid
+msgid "Created by"
+msgstr "Створений в"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__create_date
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_step_viber_keyboard__create_date
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_viber_image_button__create_date
+msgid "Created on"
+msgstr "Створений в"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__bg_color
+msgid "Default BackGround Color"
+msgstr "Колір фону за замовчуванням"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__bg_btn_color
+msgid "Default Button BackGround Color"
+msgstr "Колір фону кнопки за замовчуванням"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__image_scale_type
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_step_viber_keyboard__image_scale_type
+msgid "Default Image Scale"
+msgstr "Масштаб зображення за замовчуванням"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__image
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_step_viber_keyboard__image
+msgid "Default Image URL"
+msgstr "URL-адреса зображення за замовчуванням"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__media_scale_type
+msgid "Default Media Scale"
+msgstr "Масштаб медіа за замовчуванням"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__bg_media_type
+msgid "Default Media Type"
+msgstr "Тип медіа за замовчуванням"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__bg_media
+msgid "Default Media URL"
+msgstr "Media URL за замовчуванням"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__tx_color
+msgid "Default Text Color"
+msgstr "Колір тексту за замовчуванням"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__text_size
+msgid "Default Text Size"
+msgstr "Розмір тексту за замовчуванням"
+
+#. module: kw_chatbot_viber
+#: model:ir.actions.act_window,name:kw_chatbot_viber.kw_chatbot_viber_kw_chatbot_default_viber_buttons_action_window
+msgid "Default Viber Buttons"
+msgstr "Кнопки Viber за замовчуванням"
+
+#. module: kw_chatbot_viber
+#: model:ir.model,name:kw_chatbot_viber.model_kw_chatbot_default_viber_buttons
+msgid "Default viber buttons customization"
+msgstr "Налаштування кнопок viber за замовчуванням"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__display_name
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_step_viber_keyboard__display_name
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_viber_image_button__display_name
+msgid "Display Name"
+msgstr "Відображуване ім'я"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,help:kw_chatbot_viber.field_kw_chatbot_step_viber_keyboard__name
+msgid "Free text. Valid and allowed HTML tags Max 250 characters."
+msgstr ""
+"Вільний текст. Допустимі і дозволені HTML теги. Максимально 250 символів."
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__id
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_step_viber_keyboard__id
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_viber_image_button__id
+msgid "ID"
+msgstr ""
+
+#. module: kw_chatbot_viber
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_viber.kw_chatbot_viber_kw_chatbot_default_viber_buttons_form
+msgid "Image"
+msgstr "Зображення"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_viber_image_button__image_scale_type
+msgid "Image Scale"
+msgstr "Масштаб зображення"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__is_used
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_viber_image_button__is_used
+msgid "Is Used"
+msgstr "Використовується"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_conversation__is_viber_send
+msgid "Is Viber Send"
+msgstr "Відправка Viber"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields.selection,name:kw_chatbot_viber.selection__kw_chatbot_default_viber_buttons__button_type__keyboard
+msgid "Keyboard"
+msgstr "Клавіатура"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons____last_update
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_step_viber_keyboard____last_update
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_viber_image_button____last_update
+msgid "Last Modified on"
+msgstr "Змінено востаннє"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__write_uid
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_step_viber_keyboard__write_uid
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_viber_image_button__write_uid
+msgid "Last Updated by"
+msgstr "Ким змінено востаннє"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__write_date
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_step_viber_keyboard__write_date
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_viber_image_button__write_date
+msgid "Last Updated on"
+msgstr "Ким змінено востаннє"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields.selection,name:kw_chatbot_viber.selection__kw_chatbot_default_viber_buttons__text_halign__left
+msgid "Left"
+msgstr "Ліворуч"
+
+#. module: kw_chatbot_viber
+#: model:ir.model,name:kw_chatbot_viber.model_link_tracker
+msgid "Link Tracker"
+msgstr "Відстежувач посилань"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_step_viber_keyboard__is_location_picker
+msgid "Location Picer"
+msgstr "Вибір місцезнаходження"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_viber_image_button__media_image
+msgid "Media Image"
+msgstr "Мультимедіа зображення"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_viber_image_button__media_type
+msgid "Media Type"
+msgstr "Тип мультимедіа"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields.selection,name:kw_chatbot_viber.selection__kw_chatbot_default_viber_buttons__text_valign__middle
+msgid "Middle"
+msgstr "Середній"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__name
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_step_viber_keyboard__name
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_viber_image_button__name
+msgid "Name"
+msgstr "Назва"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_chat_bot_partner_send__raw_json
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_chat_bot_partner_send_mass__raw_json
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_chat_bot_send__raw_json
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_message__raw_json
+msgid "Raw Json"
+msgstr "Необроблений Json"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields.selection,name:kw_chatbot_viber.selection__kw_chatbot_default_viber_buttons__button_type__rich_media
+msgid "Rich Media"
+msgstr ""
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields.selection,name:kw_chatbot_viber.selection__kw_chatbot_default_viber_buttons__text_halign__right
+msgid "Right"
+msgstr "Вірно"
+
+#. module: kw_chatbot_viber
+#: model:ir.model,name:kw_chatbot_viber.model_kw_chatbot_sender
+msgid "Sender"
+msgstr "Відправник"
+
+#. module: kw_chatbot_viber
+#: model:ir.ui.menu,name:kw_chatbot_viber.kw_chatbot_kw_chatbot_default_viber_buttons_menu
+msgid "Setting Viber Buttons"
+msgstr "Налаштування кнопок Viber"
+
+#. module: kw_chatbot_viber
+#: model:ir.ui.menu,name:kw_chatbot_viber.kw_chatbot_viber_image_button_menu
+msgid "Setting Viber Image Button"
+msgstr "Налаштування кнопок зображення Viber"
+
+#. module: kw_chatbot_viber
+#: model:ir.model,name:kw_chatbot_viber.model_kw_chatbot_step
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_step_viber_keyboard__step_id
+msgid "Step"
+msgstr "Крок"
+
+#. module: kw_chatbot_viber
+#: model:ir.model,name:kw_chatbot_viber.model_kw_chatbot_step_viber_keyboard
+msgid "Step viber Keyboard"
+msgstr "Крок клавіатури Viber"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_step_viber_keyboard__tx_color
+msgid "Text Color"
+msgstr "Колір тексту"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__text_halign
+msgid "Text Halign"
+msgstr "Вирівнювання тексту"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__text_opacity
+msgid "Text Opacity"
+msgstr "Прозорість тексту"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,help:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__text_opacity
+msgid "Text Opticai setting 0 100"
+msgstr "Налаштування прозорості тексту від 0 до 100"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__text_valign
+msgid "Text Valign"
+msgstr "Вирівнювання тексту"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields.selection,name:kw_chatbot_viber.selection__kw_chatbot_default_viber_buttons__text_valign__top
+msgid "Top"
+msgstr "Вгору"
+
+#. module: kw_chatbot_viber
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_viber.kw_chatbot_viber_kw_chatbot_chat_form
+msgid "Update hook"
+msgstr "Оновити hook"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_chat_bot_partner_send__viber_id
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_chat_bot_partner_send_mass__viber_id
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_chat_bot_send__viber_id
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_conversation__viber_id
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_message__viber_id
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_sender__viber_id
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_viber.kw_chatbot_viber_kw_chatbot_chat_form
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_viber.kw_chatbot_viber_kw_chatbot_sender_form
+msgid "Viber"
+msgstr ""
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_chat__viber_access_token
+msgid "Viber Access Token"
+msgstr "Токен доступу Viber"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_sender__viber_avatar
+msgid "Viber Avatar"
+msgstr "Аватар в Viber"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_sender__viber_country
+msgid "Viber Country"
+msgstr "Країна в Viber"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_chat__viber_developer_url
+msgid "Viber Developer Url"
+msgstr "Viber посилання розробника"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__viber_image_6_1
+msgid "Viber Image 6 1"
+msgstr "Viber зображення 6 1"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__viber_image_6_2
+msgid "Viber Image 6 2"
+msgstr "Viber зображення 6 2"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__viber_image_6_3
+msgid "Viber Image 6 3"
+msgstr "Viber зображення 6 3"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__viber_image_6_4
+msgid "Viber Image 6 4"
+msgstr "Viber зображення 6 4"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__viber_image_6_5
+msgid "Viber Image 6 5"
+msgstr "Viber зображення 6 5"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_default_viber_buttons__viber_image_6_6
+msgid "Viber Image 6 6"
+msgstr "Viber зображення 6 6"
+
+#. module: kw_chatbot_viber
+#: model:ir.actions.act_window,name:kw_chatbot_viber.kw_chatbot_viber_kw_chatbot_viber_image_button_action_window
+#: model:ir.model,name:kw_chatbot_viber.model_kw_chatbot_viber_image_button
+msgid "Viber Image Button"
+msgstr "Кнопка зображення Viber"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_step__viber_keyboard_ids
+msgid "Viber Keyboard"
+msgstr "Клавіатура Viber"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_sender__viber_language_code
+msgid "Viber Language Code"
+msgstr "Viber  Мова коду"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_chat__viber_message_token
+msgid "Viber Message Token"
+msgstr "Viber Токен повідомлення"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_chat__viber_timestamp
+msgid "Viber Timestamp"
+msgstr ""
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_chat__viber_token
+msgid "Viber Token"
+msgstr ""
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields,field_description:kw_chatbot_viber.field_kw_chatbot_chat__viber_update_webhook_response
+msgid "Viber Update Webhook Response"
+msgstr ""
+
+#. module: kw_chatbot_viber
+#. odoo-python
+#: code:addons/kw_chatbot_viber/models/link_tracker.py:0
+#, python-format
+msgid "Visit Webpage"
+msgstr ""
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields.selection,name:kw_chatbot_viber.selection__kw_chatbot_default_viber_buttons__image_scale_type__crop
+#: model:ir.model.fields.selection,name:kw_chatbot_viber.selection__kw_chatbot_default_viber_buttons__media_scale_type__crop
+#: model:ir.model.fields.selection,name:kw_chatbot_viber.selection__kw_chatbot_step_viber_keyboard__image_scale_type__crop
+#: model:ir.model.fields.selection,name:kw_chatbot_viber.selection__kw_chatbot_viber_image_button__image_scale_type__crop
+msgid "crop"
+msgstr ""
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields.selection,name:kw_chatbot_viber.selection__kw_chatbot_default_viber_buttons__image_scale_type__fill
+#: model:ir.model.fields.selection,name:kw_chatbot_viber.selection__kw_chatbot_default_viber_buttons__media_scale_type__fill
+#: model:ir.model.fields.selection,name:kw_chatbot_viber.selection__kw_chatbot_step_viber_keyboard__image_scale_type__fill
+#: model:ir.model.fields.selection,name:kw_chatbot_viber.selection__kw_chatbot_viber_image_button__image_scale_type__fill
+msgid "fill"
+msgstr ""
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields.selection,name:kw_chatbot_viber.selection__kw_chatbot_default_viber_buttons__image_scale_type__fit
+#: model:ir.model.fields.selection,name:kw_chatbot_viber.selection__kw_chatbot_default_viber_buttons__media_scale_type__fit
+#: model:ir.model.fields.selection,name:kw_chatbot_viber.selection__kw_chatbot_step_viber_keyboard__image_scale_type__fit
+#: model:ir.model.fields.selection,name:kw_chatbot_viber.selection__kw_chatbot_viber_image_button__image_scale_type__fit
+msgid "fit"
+msgstr ""
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields.selection,name:kw_chatbot_viber.selection__kw_chatbot_default_viber_buttons__bg_media_type__gif
+#: model:ir.model.fields.selection,name:kw_chatbot_viber.selection__kw_chatbot_viber_image_button__media_type__gif
+msgid "gif"
+msgstr ""
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields.selection,name:kw_chatbot_viber.selection__kw_chatbot_default_viber_buttons__text_size__large
+msgid "large"
+msgstr "великий"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields.selection,name:kw_chatbot_viber.selection__kw_chatbot_default_viber_buttons__bg_media_type__picture
+#: model:ir.model.fields.selection,name:kw_chatbot_viber.selection__kw_chatbot_viber_image_button__media_type__picture
+msgid "picture"
+msgstr "картинка"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields.selection,name:kw_chatbot_viber.selection__kw_chatbot_default_viber_buttons__text_size__regular
+msgid "regular"
+msgstr "нормальний"
+
+#. module: kw_chatbot_viber
+#: model:ir.model.fields.selection,name:kw_chatbot_viber.selection__kw_chatbot_default_viber_buttons__text_size__small
+msgid "small"
+msgstr "малий"

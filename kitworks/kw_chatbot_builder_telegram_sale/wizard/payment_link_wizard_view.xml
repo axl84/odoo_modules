@@ -1,0 +1,17 @@
+<odoo>
+
+    <record id="kw_chatbot_builder_sale_payment_link_wizard_view_form" model="ir.ui.view">
+        <field name="name">payment.link.wizard.form (kw_chatbot_builder_telegram_sale)</field>
+        <field name="model">payment.link.wizard</field>
+        <field name="inherit_id"
+               ref="payment.payment_link_wizard_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//footer/field[@name='link']/.." position="after">
+                <group>
+                    <field name="sms_template_id"/>
+                </group>
+                <button string="Send link to telegram" type="object" name="send_to_telegram" class="btn-primary"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

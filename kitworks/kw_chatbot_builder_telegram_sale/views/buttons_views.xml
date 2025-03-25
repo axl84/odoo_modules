@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_builder_sale_kw_chatbot_step_telegram_button_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.step.telegram.button.form (kw_chatbot_builder_telegram_sale)</field>
+        <field name="model">kw.chatbot.step.telegram.button</field>
+        <field name="inherit_id" ref="kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page invisible="state != 'sale'" string="Sale">
+                    <group>
+                        <field name="category_id" options="{'no_create': True}"/>
+                    </group>
+                </page>
+            </xpath></field>
+    </record>
+</odoo>

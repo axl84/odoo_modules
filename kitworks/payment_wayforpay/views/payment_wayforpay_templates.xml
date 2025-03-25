@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="0">
+
+    <template id="redirect_form">
+        <form t-att-action="api_url" method="post" accept-charset="utf-8">
+            <t t-esc="wayforpay_inputs"/>
+        </form>
+    </template>
+
+</odoo>

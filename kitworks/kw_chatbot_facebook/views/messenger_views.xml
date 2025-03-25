@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_facebook_kw_chatbot_messenger_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.messenger.form (kw_chatbot_facebook)</field>
+        <field name="model">kw.chatbot.messenger</field>
+        <field name="inherit_id" ref="kw_chatbot.kw_chatbot_kw_chatbot_messenger_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='is_log_enabled']" position="after">
+                <field invisible="provider != 'facebook'" name="is_facebook_login"/>
+                <button class="btn btn-primary" invisible="is_facebook_login != True or is_facebook_app_connect != True" name="facebook_login" string="Facebook Login" type="object"/>
+            </xpath>
+            <xpath expr="//page[@name='chats']" position="after">
+                <page invisible="provider != 'facebook' or is_facebook_login != True" name="facebook_app_setting" string="Facebook App Setting">
+                    <group>
+                        <field name="facebook_app_name"/>
+                        <field name="facebook_app_access_token" password="True" required="(provider == 'facebook' and is_facebook_login == True)"/>
+                        <field name="facebook_app_secret" password="True" required="(provider == 'facebook' and is_facebook_login == True)"/>
+                        <field name="is_facebook_webhook_configure"/>
+                        <field name="facebook_app_id"/>
+                        <field name="is_facebook_app_connect"/>
+                        <field invisible="is_facebook_app_connect == True" name="facebook_connect_msg"/>
+                    </group>
+                    <button class="btn btn-primary" name="facebook_app_connect" string="Connect App" type="object"/>
+                    <group invisible="is_facebook_webhook_configure != True">
+                        <field name="facebook_copy_url"/>
+                        <field name="facebook_verify_token"/>
+                        <field name="is_facebook_webhook_connect"/>
+                        <field name="facebook_webhook_msg"/>
+                    </group>
+                    <button class="btn btn-primary" invisible="is_facebook_app_connect != True or is_facebook_webhook_configure != True" name="facebook_update_webhook" string="Update Webhook" type="object"/>
+                </page>
+            </xpath></field>
+    </record>
+</odoo>

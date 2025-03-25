@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Facebook Login</title>
+        <meta charset="UTF-8">
+    </head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <body>
+        <script>
+            function statusChangeCallback(response) {
+                if (response.status === 'connected') {
+                    CheckLogin();
+                    const formData = new FormData();
+                    formData.append('data', JSON.stringify(response));
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", location.pathname, true);
+                    xhr.send(formData); }
+                else {
+                    document.getElementById('status').innerHTML = '<h3>Please log ' +
+                    'into this app.</h3>';} }
+
+                function checkLoginState() {
+                    FB.getLoginStatus(function(response) {
+                    statusChangeCallback(response); });
+                }
+
+                window.fbAsyncInit = function() {
+                    FB.init({
+                    appId      : 'facebook_app_id',
+                    cookie     : true,
+                    xfbml      : true,
+                    version    : 'v14.0' });
+
+                FB.getLoginStatus(function(response) {
+                    statusChangeCallback(response); });
+                };
+
+                (function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "https://connect.facebook.net/en_US/sdk.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+
+                function CheckLogin() {
+                    FB.api('/me', function(response) {
+                        console.log('Successful login for: ' + response.name);
+                        document.getElementById('status').innerHTML =
+                        '<h3>Thanks for logging in, ' + response.name + '!</h3><br>';
+                    });
+                }
+
+        </script>
+        <div align="center">
+            <h2>Facebook Login</h2>
+            <div id="status">
+            </div>
+            <div class="block">
+                <fb:login-button class="fb-login-button" data-scope="manage_pages" data-width="350"
+                                 data-size="large"
+                                 data-button-type="continue_with" data-layout="rounded"
+                                 data-auto-logout-link="true"
+                                 data-use-continue-as="false"
+                                 scope="public_profile,email,pages_manage_metadata,pages_messaging,pages_show_list,leads_retrieval,pages_manage_ads,pages_read_engagement"
+                                 onlogin="checkLoginState();">
+                </fb:login-button>
+            </div>
+        </div>
+    </body>
+</html>

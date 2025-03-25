@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access__model_kw_sms_provider__group_user,access__model_kw_sms_provider__group_user,model_kw_sms_provider,base.group_user,1,0,0,0
+access__model_kw_sms_provider__group_system,access__model_kw_sms_provider__group_system,model_kw_sms_provider,base.group_system,1,1,1,1
+
+access__model_kw_sms_log__group_user,access__model_kw_sms_log__group_user,model_kw_sms_log,base.group_user,1,0,0,0
+access__model_kw_sms_log__group_system,access__model_kw_sms_log__group_system,model_kw_sms_log,base.group_system,1,1,1,1

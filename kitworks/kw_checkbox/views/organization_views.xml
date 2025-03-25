@@ -1,0 +1,76 @@
+<odoo>
+    <record id="kw_checkbox_kw_checkbox_organization_tree" model="ir.ui.view">
+        <field name="name">kw.checkbox.organization.tree (kw_checkbox)</field>
+        <field name="model">kw.checkbox.organization</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="cb_id"/>
+                <field name="edrpou"/>
+                <field name="tax_number"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="kw_checkbox_kw_checkbox_organization_form" model="ir.ui.view">
+        <field name="name">kw.checkbox.organization.form (kw_checkbox)</field>
+        <field name="model">kw.checkbox.organization</field>
+        <field name="arch" type="xml">
+            <form>
+                <header/>
+                <sheet>
+                    <div name="button_line" style="width: 100%">
+                        <div class="oe_button_box" style="width: 100%; "
+                             name="button_box"/>
+                    </div>
+                    <widget name="web_ribbon" title="Archived"
+                            bg_color="bg-danger" invisible="active"/>
+                    <field name="active" invisible="1"/>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="edrpou"/>
+                            <field name="tax_number"/>
+                        </group>
+                        <group>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                            <field name="cb_id"/>
+                            <field name="is_log_enabled"/>
+                        </group>
+                    </group>
+                    <notebook/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="kw_checkbox_kw_checkbox_organization_search" model="ir.ui.view">
+        <field name="name">kw.checkbox.organization.search (kw_checkbox)</field>
+        <field name="model">kw.checkbox.organization</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"
+                       filter_domain="[('name','ilike',self)]"/>
+                <field name="edrpou"
+                       filter_domain="[('edrpou','ilike',self)]"/>
+                <field name="tax_number"
+                       filter_domain="[('tax_number','ilike',self)]"/>
+                <field name="cb_id"
+                       filter_domain="[('cb_id','ilike',self)]"/>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window"
+            id="kw_checkbox_kw_checkbox_organization_action_window">
+        <field name="name">Organizations</field>
+        <field name="res_model">kw.checkbox.organization</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="kw_checkbox_kw_checkbox_organization_menu"
+              action="kw_checkbox_kw_checkbox_organization_action_window"
+              parent="kw_checkbox_settings_main_menu"
+              name="Organizations" sequence="200"/>
+</odoo>

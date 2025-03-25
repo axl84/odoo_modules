@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_sms_api_sms_sms_form" model="ir.ui.view">
+        <field name="name">sms.sms.form (kw_sms_api)</field>
+        <field name="model">sms.sms</field>
+        <field name="inherit_id" ref="sms.sms_tsms_view_form"/>
+        <field name="arch" type="xml">
+            <field name="number" position="after">
+                <field name="kw_sms_sender_name"/>
+                <field name="kw_sms_provider_id" required="1"/></field>
+            <header>
+                <button class="oe_highlight" invisible="state not in ['outgoing','queued']" name="kw_sms_status" string="Send Status" type="object"/>
+            </header></field>
+    </record>
+    <record id="kw_sms_api_sms_sms_tree" model="ir.ui.view">
+        <field name="name">sms.sms.tree (kw_sms_api)</field>
+        <field name="model">sms.sms</field>
+        <field name="inherit_id" ref="sms.sms_sms_view_tree"/>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="kw_sms_sender_name"/>
+                <field name="kw_sms_provider_id"/>
+            </tree></field>
+    </record>
+</odoo>

@@ -1,0 +1,82 @@
+<odoo>
+    <record id="kw_checkbox_kw_checkbox_tax_tree" model="ir.ui.view">
+        <field name="name">kw.checkbox.tax.tree (kw_checkbox)</field>
+        <field name="model">kw.checkbox.tax</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="cash_register_id"/>
+                <field name="active"/>
+                <field name="index"/>
+                <field name="code"/>
+                <field name="label"/>
+                <field name="symbol"/>
+                <field name="rate"/>
+                <field name="extra_rate"/>
+                <field name="included"/>
+                <field name="datetime_created_at"/>
+                <field name="datetime_updated_at"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="kw_checkbox_kw_checkbox_tax_form" model="ir.ui.view">
+        <field name="name">kw.checkbox.tax.form (kw_checkbox)</field>
+        <field name="model">kw.checkbox.tax</field>
+        <field name="arch" type="xml">
+            <form>
+                <header/>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="cash_register_id"/>
+                            <field name="active"/>
+                            <field name="index"/>
+                            <field name="code"/>
+                            <field name="label"/>
+                        </group>
+                        <group>
+                            <field name="symbol"/>
+                            <field name="rate"/>
+                            <field name="extra_rate"/>
+                            <field name="included"/>
+                            <field name="datetime_created_at"/>
+                            <field name="datetime_updated_at"/>
+                        </group>
+                    </group>
+                    <notebook/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="kw_checkbox_kw_checkbox_tax_search" model="ir.ui.view">
+        <field name="name">kw.checkbox.tax.search (kw_checkbox)</field>
+        <field name="model">kw.checkbox.tax</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="cash_register_id"/>
+                <field name="rate"/>
+                <field name="extra_rate"/>
+                <field name="active"
+                       filter_domain="[('active','=',True)]"/>
+                <group expand="1" string="Group By">
+                    <filter string="Cash Register" name="cash_register_id" context="{'group_by':'cash_register_id'}"/>
+                    <filter string="Rate" name="rate" context="{'group_by':'rate'}"/>
+                    <filter string="Extra Rate" name="extra_rate" context="{'group_by':'extra_rate'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window"
+            id="kw_checkbox_kw_checkbox_tax_action_window">
+        <field name="name">Tax</field>
+        <field name="res_model">kw.checkbox.tax</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="kw_checkbox_kw_checkbox_tax_menu"
+              action="kw_checkbox_kw_checkbox_tax_action_window"
+              parent="kw_checkbox_settings_main_menu"
+              name="Tax" sequence="570"/>
+</odoo>

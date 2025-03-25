@@ -1,0 +1,190 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kw_facebook_lead_form
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-05 11:31+0000\n"
+"PO-Revision-Date: 2024-03-05 14:02+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.4.1\n"
+
+#. module: kw_facebook_lead_form
+#: model:ir.model.fields,field_description:kw_facebook_lead_form.field_kw_facebook_page__day_to_inactive
+msgid "Day To Inactive"
+msgstr "День до неактивності"
+
+#. module: kw_facebook_lead_form
+#: model:ir.actions.act_window,name:kw_facebook_lead_form.kw_facebook_lead_survey_survey_action
+#: model:ir.ui.menu,name:kw_facebook_lead_form.kw_facebook_lead_form_survey_survey_menu
+msgid "Facebook Lead Form"
+msgstr "Facebook лід форма"
+
+#. module: kw_facebook_lead_form
+#: model:ir.model.fields,field_description:kw_facebook_lead_form.field_crm_lead__kw_facebook_name
+msgid "Facebook Name"
+msgstr "Facebook назва"
+
+#. module: kw_facebook_lead_form
+#: model:ir.model,name:kw_facebook_lead_form.model_kw_facebook_page
+#: model:ir.model.fields,field_description:kw_facebook_lead_form.field_survey_survey__kw_facebook_page_id
+msgid "Facebook Page"
+msgstr "Facebook сторінка"
+
+#. module: kw_facebook_lead_form
+#: model:ir.model.fields,field_description:kw_facebook_lead_form.field_crm_lead__kw_facebook_phone
+msgid "Facebook Phone"
+msgstr "Facebook телефон"
+
+#. module: kw_facebook_lead_form
+#: model:ir.model.fields,field_description:kw_facebook_lead_form.field_kw_facebook_page__facebook_survey_ids
+msgid "Facebook Survey"
+msgstr "Facebook Опитування"
+
+#. module: kw_facebook_lead_form
+#: model:ir.model.fields,field_description:kw_facebook_lead_form.field_kw_facebook_page__form_lead_limit
+msgid "Form Lead Limit"
+msgstr ""
+
+#. module: kw_facebook_lead_form
+#: model_terms:ir.ui.view,arch_db:kw_facebook_lead_form.kw_facebook_lead_form_kw_facebook_page_form
+msgid "Get Lead"
+msgstr "Отримати лід"
+
+#. module: kw_facebook_lead_form
+#: model_terms:ir.ui.view,arch_db:kw_facebook_lead_form.kw_facebook_lead_form_kw_facebook_page_form
+msgid "Get Lead Form"
+msgstr "Отримати лід-форми"
+
+#. module: kw_facebook_lead_form
+#: model_terms:ir.ui.view,arch_db:kw_facebook_lead_form.kw_facebook_lead_survey_form
+msgid "Get Leads"
+msgstr "Отримати ліди"
+
+#. module: kw_facebook_lead_form
+#: model:ir.model.fields,field_description:kw_facebook_lead_form.field_kw_facebook_page__is_day_to_inactive
+msgid "Inactive Form"
+msgstr "Неактивна форма"
+
+#. module: kw_facebook_lead_form
+#: model:ir.model.fields,field_description:kw_facebook_lead_form.field_survey_survey__is_active_lead_form
+msgid "Is Active Lead Form"
+msgstr "Активна лід-форма"
+
+#. module: kw_facebook_lead_form
+#: model:ir.model.fields,field_description:kw_facebook_lead_form.field_survey_survey__is_facebook_forms
+msgid "Is Facebook Forms"
+msgstr "Facebook форми"
+
+#. module: kw_facebook_lead_form
+#: model:ir.model.fields,field_description:kw_facebook_lead_form.field_crm_lead__is_facebook_lead_form
+msgid "Is Facebook Lead Form"
+msgstr "Facebook лід-форма"
+
+#. module: kw_facebook_lead_form
+#: model:ir.model.fields,field_description:kw_facebook_lead_form.field_survey_question__is_facebook_question
+msgid "Is Facebook Question"
+msgstr "Facebook запитання"
+
+#. module: kw_facebook_lead_form
+#: model:ir.model.fields,field_description:kw_facebook_lead_form.field_kw_facebook_page__is_lead_form
+msgid "Is Lead Form"
+msgstr "Лід-форма"
+
+#. module: kw_facebook_lead_form
+#: model:ir.model.fields,field_description:kw_facebook_lead_form.field_survey_survey__kw_facebook_form_id
+msgid "Kw Facebook Form"
+msgstr "Facebook форма"
+
+#. module: kw_facebook_lead_form
+#: model:ir.model.fields,field_description:kw_facebook_lead_form.field_survey_user_input__kw_facebook_lead_id
+msgid "Kw Facebook Lead"
+msgstr "Facebook лід"
+
+#. module: kw_facebook_lead_form
+#: model:ir.model.fields,field_description:kw_facebook_lead_form.field_crm_lead__kw_facebook_page
+#: model:ir.model.fields,field_description:kw_facebook_lead_form.field_crm_lead__kw_facebook_page_id
+msgid "Kw Facebook Page"
+msgstr "Facebook Сторінка"
+
+#. module: kw_facebook_lead_form
+#: model:ir.model.fields,field_description:kw_facebook_lead_form.field_survey_question__kw_facebook_question_id
+msgid "Kw Facebook Question"
+msgstr "Facebook Запитання"
+
+#. module: kw_facebook_lead_form
+#: model:ir.model.fields,field_description:kw_facebook_lead_form.field_survey_question__kw_facebook_question_key
+msgid "Kw Facebook Question Key"
+msgstr ""
+
+#. module: kw_facebook_lead_form
+#: model_terms:ir.ui.view,arch_db:kw_facebook_lead_form.kw_facebook_lead_form_kw_facebook_page_form
+msgid "Lead Form"
+msgstr "Лід-форма"
+
+#. module: kw_facebook_lead_form
+#: model:ir.model.fields,field_description:kw_facebook_lead_form.field_kw_facebook_page__lead_form_permission
+msgid "Lead Form Permission"
+msgstr "Права доступу до лід-форми"
+
+#. module: kw_facebook_lead_form
+#: model:ir.model,name:kw_facebook_lead_form.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Лід/Нагода"
+
+#. module: kw_facebook_lead_form
+#. odoo-python
+#: code:addons/kw_facebook_lead_form/models/survey_survey.py:0
+#: model:ir.model.fields,field_description:kw_facebook_lead_form.field_survey_survey__facebook_lead_count
+#: model_terms:ir.ui.view,arch_db:kw_facebook_lead_form.kw_facebook_lead_survey_form
+#, python-format
+msgid "Leads"
+msgstr "Ліди"
+
+#. module: kw_facebook_lead_form
+#: model:ir.model,name:kw_facebook_lead_form.model_survey_survey
+msgid "Survey"
+msgstr "Опитування"
+
+#. module: kw_facebook_lead_form
+#: model:ir.model,name:kw_facebook_lead_form.model_survey_question
+msgid "Survey Question"
+msgstr "Питання опитування"
+
+#. module: kw_facebook_lead_form
+#: model:ir.model,name:kw_facebook_lead_form.model_survey_user_input
+msgid "Survey User Input"
+msgstr "Обстеження вхідних даних користувача"
+
+#. module: kw_facebook_lead_form
+#. odoo-python
+#: code:addons/kw_facebook_lead_form/models/facebook_page.py:0
+#, python-format
+msgid "The webhook cannot be configured! Go to the settings of the Facebook App"
+msgstr "Неможливо налаштувати webhook! Перейдіть до налаштувань Facebook App"
+
+#. module: kw_facebook_lead_form
+#: model:ir.actions.server,name:kw_facebook_lead_form.ir_cron_update_facebook_lead_action_ir_actions_server
+#: model:ir.cron,cron_name:kw_facebook_lead_form.ir_cron_update_facebook_lead_action
+msgid "Update Facebook Leads"
+msgstr "Оновити Facebook Leads"
+
+#. module: kw_facebook_lead_form
+#: model_terms:ir.ui.view,arch_db:kw_facebook_lead_form.kw_facebook_lead_form_kw_facebook_page_form
+msgid "Update Webhook"
+msgstr "Оновити Webhook"
+
+#. module: kw_facebook_lead_form
+#. odoo-python
+#: code:addons/kw_facebook_lead_form/models/facebook_page.py:0
+#, python-format
+msgid "Warning!"
+msgstr "Увага!"

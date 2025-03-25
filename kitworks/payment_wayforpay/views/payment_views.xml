@@ -1,0 +1,21 @@
+<odoo>
+
+    <record id="payment_provider_form_wayforpay" model="ir.ui.view">
+        <field name="name">provider.form.wayforpay (payment_wayforpay)</field>
+        <field name="model">payment.provider</field>
+        <field name="inherit_id" ref="payment.payment_provider_form"/>
+        <field name="arch" type="xml">
+            <xpath expr='//group[@name="provider_credentials"]' position="after">
+                <group invisible="code != 'wayforpay'">
+                    <field name="wayforpay_merchant_account"/>
+                    <field name="wayforpay_merchant_key" password="True"/>
+                    <field name="wayforpay_merchant_domain"/>
+                    <field name="wayforpay_fees"/>
+                    <field name="wayforpay_tnx_link" placeholder="https://example.com/thank-you-page"/>
+                    <field name="wayforpay_symbols_for_avoid"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

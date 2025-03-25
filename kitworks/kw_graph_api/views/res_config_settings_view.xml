@@ -1,0 +1,54 @@
+<odoo>
+    <record id="kw_graph_api_config_settings_view_form" model="ir.ui.view">
+        <field name="name">kw.graph.api.config.settings.view.form.inherit (kw_graph_api)</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="10"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app data-string="Facebook" string="Facebook" name="facebook" groups="base.group_no_one">
+                    <div class="app_settings_block" data-string="Facebook Config"
+                         string="Facebook" data-key="kw_graph_api"
+                         groups="base.group_no_one">
+                        <h2>Facebook Config</h2>
+                        <div class="row mt16 o_settings_container">
+                            <div class="col-12 col-lg-6 o_setting_box"
+                                 name="np_default_settings">
+                                <div class="o_settings_left_pane">
+                                </div>
+                                <div class="o_settings_right_pane">
+                                    <span class="o_form_label">Default parameters</span>
+                                    <div class="content-group">
+                                        <div class="row mt16">
+                                            <label for="kw_facebook_app_access_token" class="col-lg-8 o_light_label"/>
+                                            <field name="kw_facebook_app_access_token" password="True"/>
+                                        </div>
+                                        <div class="row mt16">
+                                            <label for="kw_facebook_app_secret" class="col-lg-8 o_light_label"/>
+                                            <field name="kw_facebook_app_secret" password="True"/>
+                                        </div>
+                                        <div class="row mt16">
+                                            <label for="kw_facebook_app_id" class="col-lg-8 o_light_label"/>
+                                            <field name="kw_facebook_app_id"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </app>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_kw_graph_api_config_settings" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_id" ref="kw_graph_api_config_settings_view_form"/>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module' : 'kw_graph_api'}</field>
+    </record>
+
+</odoo>

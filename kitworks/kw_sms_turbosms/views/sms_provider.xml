@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="kw_sms_turbosms_kw_sms_provider_form" model="ir.ui.view">
+        <field name="name">kw.sms.provider.form (kw_sms_turbosms)</field>
+        <field name="model">kw.sms.provider</field>
+        <field name="inherit_id" ref="kw_sms_api.kw_sms_api_kw_sms_provider_form"/>
+        <field name="arch" type="xml">
+            <header>
+                <button class="oe_highlight"
+                        invisible="provider != 'turbosms'"
+                        name="turbosms_get_balance"
+                        string="Update balance"
+                        type="object"/>
+            </header>
+            <notebook>
+                <page invisible="provider != 'turbosms'" string="Settings">
+                    <group>
+                        <group>
+                            <field name="turbosms_token"/>
+                            <field context="{'default_provider_id': active_id}"
+                                   domain="[('provider_id', '=', active_id)]"
+                                   name="turbosms_sender_id"/>
+                        </group>
+                        <group>
+                            <field name="turbosms_balance"/>
+                        </group>
+                        <field context="{'default_provider_id': active_id}"
+                               name="turbosms_sender_ids">
+                            <tree editable="top">
+                                <field name="provider_id"/>
+                                <field name="name"/>
+                            </tree>
+                        </field>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+    <record id="kw_sms_turbosms_kw_sms_provider_kanban" model="ir.ui.view">
+        <field name="name">kw.sms.provider.kanban (kw_sms_turbosms)</field>
+        <field name="model">kw.sms.provider</field>
+        <field name="inherit_id" ref="kw_sms_api.kw_sms_api_kw_sms_provider_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//kanban/templates" position="before">
+                <field name="turbosms_balance"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

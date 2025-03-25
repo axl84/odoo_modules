@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_checkbox_pos_view_pos_config_kanban" model="ir.ui.view">
+        <field name="name">pos.config.kanban.view (kw_checkbox_pos)</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_config_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@class='col-6 o_kanban_primary_left']" position="inside">
+                <button class="btn btn-secondary" groups="base.group_system"
+                        name="%(kw_checkbox_pos.kw_checkbox_offline_mode_action)d"
+                        type="action">Offline Code</button>
+            </xpath>
+        </field>
+    </record>
+</odoo>

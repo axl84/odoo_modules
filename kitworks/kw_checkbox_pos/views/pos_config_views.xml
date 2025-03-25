@@ -1,0 +1,27 @@
+<odoo>
+    <record id="kw_checkbox_pos_pos_config_form" model="ir.ui.view">
+        <field name="name">pos.config.form (kw_checkbox_pos)</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='title']" position="after">
+                <h2>CheckBox Category</h2>
+                <div class="o_settings_container">
+                    <div class="col-lg-12 o_setting_box">
+                        <field name="kw_checkbox_category_ids"
+                               domain="[('pos_config_id','=',id)]"
+                               context="{'default_pos_config_id': id}"/>
+                    </div>
+                </div>
+            </xpath>
+              <xpath expr="//setting[@id='other_devices']" position="before">
+                  <setting id="kw_is_checkbox_check_in_pos" string="Use Checkbox Check" help="This flag enables the function of printing checkbox check in the pos.">
+                        <field name="kw_is_checkbox_check_in_pos"/>
+                  </setting>
+                  <setting id="kw_is_checkbox_rounding" string="Checkbox rounding" help="This flag enables the checkbox rounding in the POS, which is certified by law.">
+                        <field name="kw_is_checkbox_rounding"/>
+                  </setting>
+              </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,27 @@
+<odoo>
+    <record id="kw_checkbox_pos_pos_order_form" model="ir.ui.view">
+        <field name="name">pos.order.form (kw_checkbox_pos)</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="CheckBox">
+                    <group>
+                        <field name="is_offline"/>
+                        <field name="kw_checkbox_receipt_id"/>
+                        <field name="kw_checkbox_organization_id"/>
+                    </group>
+                    <group>
+                        <button name="checkbox_check_and_sell_offline" string="Sell Offline Order" type="object"
+                                invisible="not kw_checkbox_receipt_id or not kw_checkbox_organization_id"/>
+                        <button name="action_reshipping" string="Reshipping checkbox" type="object"/>
+                    </group>
+                </page>
+            </notebook>
+            <xpath expr="//field[@name='lines']/tree/field[@name='pack_lot_ids']" position="after">
+                <field name="pack_excise_ids" widget="many2many_tags" readonly="not is_excise_product"/>
+                <field name="is_excise_product" invisible="1" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

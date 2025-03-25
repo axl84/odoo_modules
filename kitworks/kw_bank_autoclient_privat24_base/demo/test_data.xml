@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Bank -->
+    <record id="demo_privat24_base_bank" model="res.bank">
+        <field name="name">Privat24 Base</field>
+        <field name="active">True</field>
+        <field name="bic">1234567</field>
+    </record>
+
+    <!-- Partner -->
+    <record id="demo_privat24_base_partner" model="res.partner">
+        <field name="name">Test Partner</field>
+    </record>
+
+    <!-- Company -->
+    <record id="demo_privat24_base_company" model="res.company">
+        <field name="name">Privat24 Company Base</field>
+        <field name="partner_id" ref="kw_bank_autoclient_privat24_base.demo_privat24_base_partner"/>
+    </record>
+
+    <!-- Bank Account -->
+    <record id="demo_privat24_base_bank_account" model="res.partner.bank">
+        <field name="acc_number">example_acc</field>
+        <field name="bank_id" ref="kw_bank_autoclient_privat24_base.demo_privat24_base_bank"/>
+        <field name="partner_id" ref="kw_bank_autoclient_privat24_base.demo_privat24_base_partner"/>
+        <field name="company_id" ref="kw_bank_autoclient_privat24_base.demo_privat24_base_company"/>
+        <field name="currency_id" ref="base.UAH"/>
+    </record>
+
+    <!-- Accounts -->
+    <record id="demo_privat24_base_debit_account" model="account.account">
+        <field name="name">Default Debit Account</field>
+        <field name="code">DEBIT.ACC3</field>
+        <field name="account_type">asset_current</field>
+        <field name="company_id" ref="kw_bank_autoclient_privat24_base.demo_privat24_base_company"/>
+    </record>
+
+    <record id="demo_privat24_base_credit_account" model="account.account">
+        <field name="name">Default Credit Account</field>
+        <field name="code">CREDIT.ACC3</field>
+        <field name="account_type">liability_current</field>
+        <field name="company_id" ref="kw_bank_autoclient_privat24_base.demo_privat24_base_company"/>
+    </record>
+
+    <record id="demo_privat24_base_suspense_account" model="account.account">
+        <field name="name">Suspense Account</field>
+        <field name="code">SUSPENSE.ACC3</field>
+        <field name="account_type">asset_current</field>
+        <field name="company_id" ref="kw_bank_autoclient_privat24_base.demo_privat24_base_company"/>
+    </record>
+
+    <!-- Journal -->
+    <record id="demo_privat24_base_journal" model="account.journal">
+        <field name="name">Privat24_Test3</field>
+        <field name="type">bank</field>
+        <field name="code">PRIVAT24_TEST3</field>
+        <field name="bank_account_id" ref="kw_bank_autoclient_privat24_base.demo_privat24_base_bank_account"/>
+        <field name="default_debit_account_id" ref="kw_bank_autoclient_privat24_base.demo_privat24_base_debit_account"/>
+        <field name="default_credit_account_id" ref="kw_bank_autoclient_privat24_base.demo_privat24_base_credit_account"/>
+        <field name="suspense_account_id" ref="kw_bank_autoclient_privat24_base.demo_privat24_base_suspense_account"/>
+        <field name="bank_statements_source">privat24_autoclient</field>
+        <field name="kw_bank_import_initial_date">2021-01-01</field>
+        <field name="privat24_id">example_id</field>
+        <field name="privat24_token">example_token</field>
+        <field name="privat24_auto_sync">False</field>
+        <field name="company_id" ref="kw_bank_autoclient_privat24_base.demo_privat24_base_company"/>
+    </record>
+</odoo>

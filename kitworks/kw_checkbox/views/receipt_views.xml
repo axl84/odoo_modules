@@ -1,0 +1,112 @@
+<odoo>
+    <record id="kw_checkbox_kw_checkbox_receipt_tree" model="ir.ui.view">
+        <field name="name">kw.checkbox.receipt.tree (kw_checkbox)</field>
+        <field name="model">kw.checkbox.receipt</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="fiscal_date"/>
+                <field name="status"/>
+                <field name="type"/>
+                <field name="cashier_id"/>
+                <field name="cash_register_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+                <field name="cb_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="kw_checkbox_kw_checkbox_receipt_form" model="ir.ui.view">
+        <field name="name">kw.checkbox.receipt.form (kw_checkbox)</field>
+        <field name="model">kw.checkbox.receipt</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="update_info" string="Update info" type="object"
+                            class="oe_highlight"/>
+                </header>
+                <sheet>
+                    <div name="button_line" style="width: 100%">
+                        <div class="oe_button_box" style="width: 100%; "
+                             name="button_box"/>
+                    </div>
+                    <widget name="web_ribbon" title="Archived"
+                            bg_color="bg-danger" invisible="active"/>
+                    <field name="active" invisible="1"/>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="fiscal_date"/>
+                            <field name="type"/>
+                            <field name="status"/>
+                        </group>
+                        <group>
+                            <field name="company_id"
+                                   groups="base.group_multi_company"/>
+                            <field name="cashier_id"/>
+                            <field name="cash_register_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="URLs">
+                            <group>
+                                <field name="tax_gov_url" widget="url"/>
+                            </group>
+                            <group>
+                                <field name="qr_url" widget="url"/>
+                                <field name="pdf_url" widget="url"/>
+                            </group>
+                        </page>
+                        <page string="Preview">
+                            <field name="text"/>
+                        </page>
+                        <page string="Response"
+                              groups="base.group_no_one">
+                            <field name="res_val" widget="ace" options="{'mode': 'python'}"/>
+                        </page>
+                        <page string="CB ids">
+                            <group>
+                                <field name="cb_id"/>
+                                <field name="cashier_cb_id"/>
+                                <field name="cash_register_cb_id"/>
+                                <field name="transaction_cb_id"/>
+                                <field name="shift_cb_id"/>
+                            </group>
+                        </page>
+                        <page string="Invoice">
+                            <field name="invoice_id"/>
+                            <field name="payment_id"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="kw_checkbox_kw_checkbox_receipt_search" model="ir.ui.view">
+        <field name="name">kw.checkbox.receipt.search (kw_checkbox)</field>
+        <field name="model">kw.checkbox.receipt</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"
+                       filter_domain="[('name','ilike',self)]"/>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window"
+            id="kw_checkbox_kw_checkbox_receipt_action_window">
+        <field name="name">Receipts</field>
+        <field name="res_model">kw.checkbox.receipt</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="kw_checkbox_kw_checkbox_receipt_menu"
+              action="kw_checkbox_kw_checkbox_receipt_action_window"
+              parent="kw_checkbox_menu_main"
+              name="Receipts" sequence="200"/>
+</odoo>

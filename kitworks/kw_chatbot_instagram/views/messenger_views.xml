@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_instagram_kw_chatbot_messenger_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.messenger.form (kw_chatbot_instagram)</field>
+        <field name="model">kw.chatbot.messenger</field>
+        <field name="inherit_id" ref="kw_chatbot.kw_chatbot_kw_chatbot_messenger_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='is_log_enabled']" position="after">
+                <field invisible="provider != 'instagram'" name="is_instagram_login"/>
+                <button class="btn btn-primary" invisible="is_instagram_login != True or is_instagram_app_connect != True" name="instagram_login" string="Instagram Log In/Out" type="object"/>
+            </xpath>
+            <xpath expr="//page[@name='chats']" position="after">
+                <page invisible="provider != 'instagram' or is_instagram_login != True" string="Instagram App Setting">
+                    <group>
+                        <field name="instagram_app_name"/>
+                        <field name="instagram_app_access_token" password="True" required="(provider == 'instagram' and is_instagram_login == True)"/>
+                        <field name="instagram_app_secret" password="True" required="(provider == 'instagram' and is_instagram_login == True)"/>
+                        <field name="instagram_app_id"/>
+                        <field name="is_instagram_app_connect"/>
+                        <field invisible="is_instagram_app_connect == True" name="instagram_connect_msg"/>
+                    </group>
+                    <button class="btn btn-primary" name="instagram_app_connect" string="Connect App" type="object"/>
+                    <group>
+                        <field name="instagram_copy_url"/>
+                        <field name="instagram_verify_token"/>
+                        <field name="is_instagram_webhook_connect"/>
+                        <field name="instagram_webhook_msg"/>
+                    </group>
+                    <button class="btn btn-primary" invisible="is_instagram_app_connect != True" name="instagram_update_webhook" string="Update Webhook" type="object"/>
+                </page>
+            </xpath></field>
+    </record>
+</odoo>

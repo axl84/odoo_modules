@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="survey_question_validation" model="ir.ui.view">
+        <field name="name">survey.question.validation</field>
+        <field name="model">survey.question</field>
+        <field name="inherit_id" ref="survey.survey_question_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('o_preview_questions')]" position="inside">
+                <div invisible="question_type != 'file'">
+                    <p class="o_upload_file">
+                        Upload Files
+                        <i class="fa fa-upload fa-2x"/>
+                    </p>
+                </div>
+            </xpath>
+            <field name="constr_error_msg" position="after">
+                <field invisible="question_type != 'file'" name="upload_multiple_file"/></field></field>
+    </record>
+</odoo>

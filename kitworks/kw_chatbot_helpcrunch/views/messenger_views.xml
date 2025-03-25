@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_helpcrunch_kw_chatbot_messenger_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.messenger.form (kw_chatbot_helpcrunch)</field>
+        <field name="model">kw.chatbot.messenger</field>
+        <field name="inherit_id" ref="kw_chatbot.kw_chatbot_kw_chatbot_messenger_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page groups="base.group_no_one" invisible="provider != 'help_crunch'" string="Channels">
+                    <field name="helpcrunch_channels_ids"><tree create="false" editable="bottom">
+                            <field name="type"/>
+                            <field name="display_name"/>
+                        </tree></field>
+                </page>
+                <page invisible="provider != 'help_crunch'" string="HelpCrunch">
+                    <group>
+                        <button class="btn-primary" name="update_operators" string="Update Operators" type="object"/>
+                    </group>
+                    <group>
+                        <field name="api_token" required="provider == 'help_crunch'"/>
+                    </group>
+                    <group groups="base.group_no_one">
+                        <field name="is_helpcrunch_developer_mode"/>
+                        <field invisible="is_helpcrunch_developer_mode == False" name="helpcrunch_developer_url"/>
+                    </group>
+                    <group>
+                        <field name="webhook_chat_new"/>
+                        <field name="webhook_message_chat_customer"/>
+                        <field name="operator_id"/>
+                    </group>
+                </page>
+            </notebook></field>
+    </record>
+</odoo>

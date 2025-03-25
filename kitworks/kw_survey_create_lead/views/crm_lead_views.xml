@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_survey_crm_crm_lead_form" model="ir.ui.view">
+        <field name="name">crm.lead.form (kw_survey_crm)</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group/group" position="inside">
+                <field invisible="1" name="kw_survey_user_input_id"/>
+            </xpath>
+            <notebook position="inside">
+                <page invisible="kw_survey_user_input_id == False" string="Answers">
+                    <field name="kw_user_input_line_ids"><tree>
+                            <field name="question_id"/>
+                            <field name="answer_type" optional="hide"/>
+                            <field name="kw_answer_display"/>
+                        </tree></field>
+                </page>
+            </notebook></field>
+    </record>
+</odoo>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_whatsapp_template_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.whatsapp.template.form (kw_chatbot_whatsapp)</field>
+        <field name="model">kw.chatbot.whatsapp.template</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button class="btn btn-primary" groups="kw_chatbot.group_kw_chatbot_admin" invisible="status not in ['rejected', 'approved']" name="whatsapp_reset_to_draft" string="Reset to draft" type="object"/>
+                    <button class="btn btn-primary" groups="kw_chatbot.group_kw_chatbot_admin" invisible="status in ['rejected', 'approved']" name="whatsapp_submit_template" string="Submit for Approval" type="object"/>
+                    <button class="oe_highlight" invisible="status not in ['approved']" name="send_whatsapp_template" string="Send Template" type="object"/>
+                    <field name="status" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" required="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field invisible="1" name="model"/>
+                            <field invisible="1" name="template_id"/>
+                            <field name="chat_id"/>
+                            <field name="model_id"/>
+                            <field name="template_category"/>
+                        </group>
+                        <group>
+                            <field name="template_name"/>
+                            <field name="lang"/>
+                            <field invisible="1" name="conversation_ids"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="body" string="Body">
+                            <group>
+                                <field name="header_text"/>
+                                <field name="body_text"/>
+                                <field name="footer_text"/>
+                            </group>
+                        </page>
+                        <page invisible="status != 'error'" name="error" string="Error">
+                            <group>
+                                <field decoration-danger="status == 'error'" name="error_msg"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form></field>
+    </record>
+    <record id="kw_chatbot_whatsapp_template_tree" model="ir.ui.view">
+        <field name="name">kw.chatbot.whatsapp.template.tree (kw_chatbot_whatsapp)</field>
+        <field name="model">kw.chatbot.whatsapp.template</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="status"/>
+            </tree></field>
+    </record>
+    <record id="kw_chatbot_whatsapp_template_action_window" model="ir.actions.act_window">
+        <field name="name">Whatsapp Templates</field>
+        <field name="res_model">kw.chatbot.whatsapp.template</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem action="kw_chatbot_whatsapp_template_action_window" groups="kw_chatbot.group_kw_chatbot_admin" id="kw_chatbot_whatsapp_template_menus" name="Whatsapp Templates" parent="kw_chatbot.kw_chatbot_settings_main_menu" sequence="999999"/>
+</odoo>

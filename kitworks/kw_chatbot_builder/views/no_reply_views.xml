@@ -1,0 +1,19 @@
+<odoo>
+    <record id="kw_chatbot_builder_kw_chatbot_conversation_no_reply_action_window"
+            model="ir.actions.act_window">
+        <field name="name">No Reply</field>
+        <field name="res_model">kw.chatbot.conversation</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('is_no_reply', '=', True)]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                View no reply chatbot conversations
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="kw_chatbot_builder_kw_chatbot_conversation_no_reply_menu"
+              action="kw_chatbot_builder_kw_chatbot_conversation_no_reply_action_window"
+              parent="kw_chatbot.kw_chatbot_main_menu"
+              name="No Reply" sequence="310"/>
+</odoo>

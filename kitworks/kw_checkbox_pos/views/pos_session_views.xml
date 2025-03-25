@@ -1,0 +1,15 @@
+<odoo>
+    <record id="kw_checkbox_pos_pos_session_form" model="ir.ui.view">
+        <field name="name">pos.session.form (kw_checkbox_pos)</field>
+        <field name="model">pos.session</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_session_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='open_frontend_cb']" position="attributes">
+                <attribute name="invisible">state != 'opening_control'</attribute>
+            </xpath>
+            <xpath expr="//sheet" position="inside">
+                <field name="kw_checkbox_shift_ids"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_builder_helpcrunch_kw_chatbot_messenger_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.messenger.form (kw_chatbot_builder_helpcrunch)</field>
+        <field name="model">kw.chatbot.messenger</field>
+        <field name="inherit_id" ref="kw_chatbot.kw_chatbot_kw_chatbot_messenger_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='is_log_enabled']" position="after">
+                <field invisible="provider != 'help_crunch'" name="helpcrunch_msg_war"/>
+            </xpath></field>
+    </record>
+</odoo>

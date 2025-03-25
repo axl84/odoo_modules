@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="setup_chat_bot_wizard_wizard_menu" model="ir.ui.view">
+        <field name="name">setup.chat.bot.wizard.form</field>
+        <field name="model">setup.chat.bot.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <h3>
+                        <field name="state_name"/>
+                    </h3>
+                    <field invisible="1" name="state"/>
+                    <separator/>
+                    <div invisible="state not in ['step_company']" name="step_company">
+                        <div class="alert alert-info" role="alert">
+                            Оберіть компанії які планують користуватись чатботом
+                        </div>
+                        <group>
+                            <field name="company_ids" widget="many2many_tags"/>
+                        </group>
+                    </div>
+                    <div invisible="state not in ['step_messenger']" name="step_messenger">
+                        <div class="alert alert-info" role="alert">
+                            Оберіть канали спілкування з звоіншінми користувачами
+                        </div>
+                        <group>
+                            <field name="messenger_ids" widget="many2many_tags"/>
+                        </group>
+                    </div>
+                    <div invisible="state not in ['step_add_name_operator']" name="step_add_name_operator">
+                        <div class="alert alert-info" role="alert">
+                            Чи треба додавати Ім'я оператору до повідомлень
+                        </div>
+                        <group>
+                            <field name="add_name_operator"/>
+                        </group>
+                    </div>
+                    <div invisible="state not in ['step_create_partner']" name="step_create_partner">
+                        <div class="alert alert-info" role="alert">
+                            Чи повинен кожен чат створювати новий контакт
+                        </div>
+                        <group>
+                            <field name="is_create_partner"/>
+                        </group>
+                    </div>
+                    <footer>
+                        <field invisible="1" name="show_previous"/>
+                        <field invisible="1" name="show_next"/>
+                        <field invisible="1" name="show_finish"/>
+                        <button invisible="show_previous != True" name="action_previous_step" string="Previous" type="object"/>
+                        <button class="btn-primary" invisible="show_next != True" name="action_next_step" string="Next" type="object"/>
+                        <button class="btn-primary" invisible="show_finish != True" name="action_finish" string="Finish" type="object"/>
+                    </footer>
+                </sheet>
+            </form></field>
+    </record>
+    <record id="setup_chat_bot_wizard_wizard" model="ir.actions.act_window">
+        <field name="name">ChatBot Setting</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">setup.chat.bot.wizard</field>
+        <field name="target">new</field>
+        <!--        <field name="binding_model_id" ref="model_kw_chatbot_sender"/>-->
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">form</field>
+        <!--        <field name="context">{'default_sender_id': active_id}</field>-->
+    </record>
+</odoo>

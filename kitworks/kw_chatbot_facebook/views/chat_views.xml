@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_facebook_kw_chatbot_chat_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.chat.form (kw_chatbot_facebook)</field>
+        <field name="model">kw.chatbot.chat</field>
+        <field name="inherit_id" ref="kw_chatbot.kw_chatbot_kw_chatbot_chat_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='messenger_id']" position="after">
+                <!--                <field name="is_facebook_developer_mode" attrs="{'invisible':[('provider','!=','facebook')]}" groups="base.group_no_one"/>-->
+                <field invisible="provider != 'facebook'" name="is_facebook_developer_mode"/>
+                <field invisible="is_facebook_developer_mode != True" name="is_facebook_login"/>
+            </xpath>
+            <notebook position="inside">
+                <page invisible="is_facebook_login == True or provider != 'facebook'" string="Facebook">
+                    <button class="btn btn-primary" name="facebook_copy_url_button" string="Update url" type="object"/>
+                    <button class="btn btn-primary" name="set_facebook_verify_token" string="Update token" type="object"/>
+                    <group>
+                        <field name="facebook_access_token" required="(provider == 'facebook' and is_facebook_login != True)"/>
+                        <field name="facebook_account_id" required="(provider == 'facebook' and is_facebook_login != True)"/>
+                        <field name="facebook_copy_url"/>
+                        <field name="facebook_verify_token"/>
+                        <field name="facebook_webhook_token"/>
+                        <field groups="base.group_no_one" name="facebook_developer_url"/>
+                    </group>
+                </page>
+            </notebook></field>
+    </record>
+</odoo>

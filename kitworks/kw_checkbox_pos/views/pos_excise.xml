@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_checkbox_pos_kw_pos_excise_view_form" model="ir.ui.view">
+        <field name="name">kw.pos.excise.form</field>
+        <field name="model">kw.pos.excise</field>
+        <field name="arch" type="xml">
+            <form string="Excise">
+                <group>
+                    <group>
+                        <field name="name"/>
+                        <field name="order_line_id" invisible="1"/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+</odoo>

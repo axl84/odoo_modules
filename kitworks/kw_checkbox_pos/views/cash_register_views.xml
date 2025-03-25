@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo><record id="kw_checkbox_pos_kw_checkbox_cash_register_form" model="ir.ui.view">
+        <field name="name">kw.checkbox.cash.register.form (kw_checkbox_pos)</field>
+        <field name="model">kw.checkbox.cash.register</field>
+        <field name="inherit_id" ref="kw_checkbox.kw_checkbox_kw_checkbox_cash_register_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page name="setting_offline_code" string="Offline Mode Setting">
+                    <group name="count_offline_codes" string="Code Count">
+                        <group>
+                            <field name="max_count_codes"/>
+                        </group>
+                        <group>
+                            <div class="text-muted">
+                                How many codes do you need to 'Ask Codes'
+                            </div>
+                        </group>
+                        <group>
+                            <field name="min_count_codes"/>
+                        </group>
+                        <group>
+                            <div class="text-muted">
+                                How many codes must be to make a 'Ask Codes'
+                            </div>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

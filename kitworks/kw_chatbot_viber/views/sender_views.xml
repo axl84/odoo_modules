@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_viber_kw_chatbot_sender_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.sender.form (kw_chatbot_viber)</field>
+        <field name="model">kw.chatbot.sender</field>
+        <field name="inherit_id" ref="kw_chatbot.kw_chatbot_kw_chatbot_sender_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page invisible="provider != 'viber'" string="Viber">
+                    <group>
+                        <field name="viber_id"/>
+                        <field name="viber_country"/>
+                        <field name="viber_avatar"/>
+                        <field name="viber_language_code"/>
+                    </group>
+                </page>
+            </notebook></field>
+    </record>
+</odoo>

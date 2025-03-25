@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="0">
+    <record id="kw_chatbot_sender_umnico" model="kw.chatbot.sender">
+        <field name="name">Umnico</field>
+        <field name="provider">umnico</field>
+    </record>
+</odoo>

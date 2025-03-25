@@ -1,0 +1,1730 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kw_checkbox
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-03 09:54+0000\n"
+"PO-Revision-Date: 2025-03-03 09:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kw_checkbox
+#: model:ir.actions.report,print_report_name:kw_checkbox.action_x_report_for_check
+msgid "'X-report'"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.actions.report,print_report_name:kw_checkbox.action_z_report
+#: model:ir.actions.report,print_report_name:kw_checkbox.action_z_report_pdf
+#: model:ir.actions.report,print_report_name:kw_checkbox.action_z_report_png_pdf
+msgid "'Z-report'"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.x_report_pdf
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.z_report_pdf
+msgid "0.00"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.x_report_pdf
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.z_report_pdf
+msgid ""
+"<br/>\n"
+"                            <span class=\"left-align\">Безготівкова</span>"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.x_report_pdf
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.z_report_pdf
+msgid ""
+"<br/>\n"
+"                            <span class=\"left-align\">Всього</span>"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.x_report_pdf
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.z_report_pdf
+msgid ""
+"<br/>\n"
+"                            <span class=\"left-align\">Готівка</span>"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.x_report_pdf
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.z_report_pdf
+msgid ""
+"<br/>\n"
+"                            <span class=\"left-align\">Загальний оборот</span>"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.x_report_pdf
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.z_report_pdf
+msgid ""
+"<br/>\n"
+"                            <span class=\"left-align\">Кількість чеків</span>"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.x_report_pdf
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.z_report_pdf
+msgid ""
+"<br/>\n"
+"                            <span class=\"left-align\">Кінцевий залишок</span>"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.x_report_pdf
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.z_report_pdf
+msgid ""
+"<br/>\n"
+"                            <span class=\"left-align\">Останній фіскальний чек</span>"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.x_report_pdf
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.z_report_pdf
+msgid ""
+"<br/>\n"
+"                            <span class=\"left-align\">Службове внесення</span>"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.x_report_pdf
+msgid ""
+"<br/>\n"
+"                            X-звіт №"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.z_report_pdf
+msgid ""
+"<br/>\n"
+"                            Z-звіт №"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.x_report_pdf
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.z_report_pdf
+msgid ""
+"<br/>\n"
+"                            ІД"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.x_report_pdf
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.z_report_pdf
+msgid ""
+"<br/>\n"
+"                            за"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.x_report_pdf
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.z_report_pdf
+msgid ""
+"<span class=\"left-align\">Валюта звіту</span>\n"
+"                            <span class=\"right-align\">ГРН</span><br/><br/>"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.x_report_pdf
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.z_report_pdf
+msgid "<span class=\"left-align\">Зміна відкрита</span>"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.x_report_pdf
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.z_report_pdf
+msgid "<span class=\"left-align\">Номер останнього чека</span>"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.x_report_png_pdf
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.z_report_png_pdf
+msgid "<span>Report not found</span>"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.x_report_pdf
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.z_report_pdf
+msgid ""
+"<span>Виручка</span><br/>\n"
+"                            <span class=\"left-align\">Готівкою</span>"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.x_report_pdf
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.z_report_pdf
+msgid ""
+"<span>Готівкові кошти в касі</span><br/>\n"
+"                            <span class=\"left-align\">Початковий залишок</span>"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.x_report_pdf
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.z_report_pdf
+msgid ""
+"<span>Повернення</span><br/>\n"
+"                            <span>Видано по формам оплати</span><br/>\n"
+"                            <span class=\"left-align\">Безготівковий розрахунок</span>"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.x_report_pdf
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.z_report_pdf
+msgid ""
+"<span>Реалізація</span><br/>\n"
+"                            <span>Одержано по формах оплати</span><br/>\n"
+"                            <span class=\"left-align\">Безготівковий розрахунок</span>"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cashier__access_token
+msgid "Access Token"
+msgstr "Токен доступу"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_tax__account_tax_id
+msgid "Account Tax"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cash_register__active
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cashier__active
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_offline_code__active
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_organization__active
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_product_category__active
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_receipt__active
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_shift__active
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_tax__active
+msgid "Active"
+msgstr "Активний"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cash_register__address
+msgid "Address"
+msgstr "Адреса"
+
+#. module: kw_checkbox
+#: model:res.groups,name:kw_checkbox.group_kw_checkbox_admin
+msgid "Admin"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_tax_line__advanced_code
+msgid "Advanced Code"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_cash_register_form
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_cashier_form
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_organization_form
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_receipt_form
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_shift_form
+msgid "Archived"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_cash_register_form
+msgid "Ask Codes"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports__balance
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports__balance
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_x_report__balance
+msgid "Balance"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields.selection,name:kw_checkbox.selection__kw_wizard_service_receipt__payment_type__cash
+msgid "CASH"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields.selection,name:kw_checkbox.selection__kw_wizard_service_receipt__payment_type__cashless
+msgid "CASHLESS"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_receipt_form
+msgid "CB ids"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_wizard_view
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_wizard_service_receipt_wizard_view
+msgid "Cancel"
+msgstr "Скасувати"
+
+#. module: kw_checkbox
+#: model:ir.model.fields.selection,name:kw_checkbox.selection__account_journal__kw_checkbox_payment_method_type__0
+msgid "Cash"
+msgstr "Готівка"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_log__cash_register
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_offline_code__cash_register_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_receipt__cash_register_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_shift__cash_register_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_tax__cash_register_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports__cash_register_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports__cash_register_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_x_report__cash_register_id
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_offline_code_search
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_tax_search
+msgid "Cash Register"
+msgstr "Касовий апарат"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_payment_line__cash_withdrawal
+msgid "Cash Withdrawal"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_payment_line__cash_withdrawal_commission
+msgid "Cash Withdrawal Commission"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_payment__kw_checkbox_cash_register_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_payment_register__kw_checkbox_cash_register_id
+msgid "Cash register"
+msgstr "Касовий апарат"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_receipt__cash_register_cb_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_shift__cash_register_cb_id
+msgid "Cash register CheckBox ID"
+msgstr "Касовий апарат CheckBox ID"
+
+#. module: kw_checkbox
+#: model:ir.actions.act_window,name:kw_checkbox.kw_checkbox_kw_checkbox_cash_register_action_window
+#: model:ir.ui.menu,name:kw_checkbox.kw_checkbox_kw_checkbox_cash_register_menu
+msgid "Cash registers"
+msgstr "Касовий апарат"
+
+#. module: kw_checkbox
+#: model:ir.actions.act_window,name:kw_checkbox.kw_checkbox_wizard_get_x_report_action
+msgid "CashBox X Report Wizard"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.actions.act_window,name:kw_checkbox.kw_checkbox_kw_checkbox_cashier_action_window
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_payment__kw_checkbox_cashier_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_payment_register__kw_checkbox_cashier_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cash_register__cashier_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_log__cashier
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_receipt__cashier_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_shift__cashier_id
+#: model:ir.ui.menu,name:kw_checkbox.kw_checkbox_kw_checkbox_cashier_menu
+msgid "Cashier"
+msgstr "Касир"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_receipt__cashier_cb_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_shift__cashier_cb_id
+msgid "Cashier CheckBox ID"
+msgstr "Касир CheckBox ID"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_res_users__kw_checkbox_cashier_ids
+msgid "Cashiers"
+msgstr "Касири"
+
+#. module: kw_checkbox
+#: model:ir.model.fields.selection,name:kw_checkbox.selection__account_journal__kw_checkbox_payment_method_type__1
+msgid "Cashless"
+msgstr "Безготівкова"
+
+#. module: kw_checkbox
+#: model:ir.ui.menu,name:kw_checkbox.kw_checkbox_menu_main
+msgid "CheckBox"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cash_register__cb_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cashier__cb_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_mixin__cb_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_organization__cb_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_receipt__cb_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_shift__cb_id
+msgid "CheckBox ID"
+msgstr "ID каси"
+
+#. module: kw_checkbox
+#. odoo-python
+#: code:addons/kw_checkbox/models/cash_register.py:0
+#: code:addons/kw_checkbox/models/cashier.py:0
+#: code:addons/kw_checkbox/models/organization.py:0
+#: code:addons/kw_checkbox/models/receipt.py:0
+#: code:addons/kw_checkbox/models/shift.py:0
+#: model:ir.model.constraint,message:kw_checkbox.constraint_kw_checkbox_cash_register_cb_id_uniq
+#: model:ir.model.constraint,message:kw_checkbox.constraint_kw_checkbox_cashier_cb_id_uniq
+#: model:ir.model.constraint,message:kw_checkbox.constraint_kw_checkbox_organization_cb_id_uniq
+#: model:ir.model.constraint,message:kw_checkbox.constraint_kw_checkbox_receipt_cb_id_uniq
+#: model:ir.model.constraint,message:kw_checkbox.constraint_kw_checkbox_shift_cb_id_uniq
+#, python-format
+msgid "CheckBox ID must be unique"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_payment_register__kw_payment_method_line_id
+msgid "CheckBox mixed Payment Method"
+msgstr "Змішаний спосіб оплати CheckBox"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_payment_register__kw_checkbox_mixed_amount
+msgid "CheckBox mixed amount"
+msgstr "CheckBox сума для змішаної оплати"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_payment_register__kw_checkbox_mixed_journal_id
+msgid "CheckBox mixed journal"
+msgstr "CheckBox журнал для змішаної оплати"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_payment_register__kw_checkbox_is_mixed_payment
+msgid "CheckBox mixed payment"
+msgstr "CheckBox змішаний платіж"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_res_company__kw_checkbox_mode
+msgid "CheckBox mode"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_account_journal_form
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_product_product_template_form
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_res_company_form
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_res_users_form
+msgid "Checkbox"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model,name:kw_checkbox.model_kw_checkbox_cashier
+msgid "Checkbox Cashier"
+msgstr "Checkbox  касир"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cash_register__checkbox_name
+msgid "Checkbox Name"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model,name:kw_checkbox.model_kw_wizard_service_receipt
+msgid "Checkbox Service Receipt"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model,name:kw_checkbox.model_kw_checkbox_tax
+msgid "Checkbox Tax"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model,name:kw_checkbox.model_kw_wizard_tax_line
+msgid "Checkbox Tax report"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.ui.menu,name:kw_checkbox.kw_checkbox_wizard_get_x_report_action_menu
+msgid "Checkbox X Report"
+msgstr "X-Звіт"
+
+#. module: kw_checkbox
+#: model:ir.model,name:kw_checkbox.model_kw_wizard_x_report
+msgid "Checkbox X report"
+msgstr "X-Звіт"
+
+#. module: kw_checkbox
+#: model:ir.model,name:kw_checkbox.model_kw_checkbox_cash_register
+msgid "Checkbox cash register"
+msgstr "Checkbox касовий апарат"
+
+#. module: kw_checkbox
+#: model:ir.model,name:kw_checkbox.model_kw_checkbox_log
+msgid "Checkbox log"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model,name:kw_checkbox.model_kw_checkbox_mixin
+msgid "Checkbox mixin"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model,name:kw_checkbox.model_kw_checkbox_offline_code
+msgid "Checkbox offline code"
+msgstr "Checkbox офлайн код"
+
+#. module: kw_checkbox
+#: model:ir.model,name:kw_checkbox.model_kw_checkbox_organization
+msgid "Checkbox organization"
+msgstr "Checkbox організація"
+
+#. module: kw_checkbox
+#: model:ir.model,name:kw_checkbox.model_kw_checkbox_x_reports_payments
+#: model:ir.model,name:kw_checkbox.model_kw_checkbox_z_reports_payments
+#: model:ir.model,name:kw_checkbox.model_kw_wizard_payment_line
+msgid "Checkbox payment report"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model,name:kw_checkbox.model_kw_checkbox_product_category
+msgid "Checkbox product category"
+msgstr "Категорія товару Checkbox"
+
+#. module: kw_checkbox
+#: model:ir.model,name:kw_checkbox.model_kw_checkbox_receipt
+msgid "Checkbox receipts"
+msgstr ""
+
+#. module: kw_checkbox
+#. odoo-python
+#: code:addons/kw_checkbox/models/checkbox.py:0
+#: code:addons/kw_checkbox/models/checkbox.py:0
+#, python-format
+msgid "Checkbox server error: \"%s\""
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model,name:kw_checkbox.model_kw_checkbox_shift
+msgid "Checkbox shifts"
+msgstr "Checkbox зміни"
+
+#. module: kw_checkbox
+#. odoo-python
+#: code:addons/kw_checkbox/models/checkbox.py:0
+#, python-format
+msgid "Checkbox username or password might be empty"
+msgstr ""
+
+#. module: kw_checkbox
+#. odoo-python
+#: code:addons/kw_checkbox/models/account_payment.py:0
+#: code:addons/kw_checkbox/models/account_payment.py:0
+#, python-format
+msgid "Checkbox: Payment amount can not be different than total amount"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_shift_form
+msgid "Close"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports__closed_at_datetime
+msgid "Closed At Datetime"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_shift__closed_at_datetime
+msgid "Closed at"
+msgstr "Закрито о котрій"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_log__code
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_tax__code
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports_payments__code
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports_payments__code
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_payment_line__code
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_tax_line__code
+msgid "Code"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_wizard_service_receipt_wizard_view
+msgid "Commit"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model,name:kw_checkbox.model_res_company
+msgid "Companies"
+msgstr "Компанії"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cash_register__company_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cashier__company_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_organization__company_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_receipt__company_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_shift__company_id
+msgid "Company"
+msgstr "Компанія"
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_invoice_to_receipt_view_account_payment_register_form
+msgid "Create Mixed Payment"
+msgstr "Створити змішаний платіж"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_offline_code__datetime_created_at
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_tax__datetime_created_at
+msgid "Create at"
+msgstr "Створений о котрій"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports__created_at
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports__created_at
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_tax_line__created_at
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_x_report__created_at
+msgid "Created At"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cash_register__create_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cashier__create_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_detail_tax__create_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_log__create_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_offline_code__create_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_organization__create_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_product_category__create_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_receipt__create_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_shift__create_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_tax__create_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports__create_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports_payments__create_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports__create_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports_payments__create_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_excise_barcode__create_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_payment_line__create_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_service_receipt__create_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_tax_line__create_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_x_report__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cash_register__create_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cashier__create_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_detail_tax__create_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_log__create_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_offline_code__create_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_organization__create_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_product_category__create_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_receipt__create_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_shift__create_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_tax__create_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports__create_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports_payments__create_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports__create_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports_payments__create_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_excise_barcode__create_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_payment_line__create_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_service_receipt__create_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_tax_line__create_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_x_report__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cash_register__current_shift_id
+msgid "Current Shift"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_tax_line__decimal_return_sum
+msgid "Decimal Return Sum"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_tax_line__decimal_sell_sum
+msgid "Decimal Sell Sum"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_z_reports_form
+msgid "Details Tax"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cash_register__display_name
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cashier__display_name
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_detail_tax__display_name
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_log__display_name
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_offline_code__display_name
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_organization__display_name
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_product_category__display_name
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_receipt__display_name
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_shift__display_name
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_tax__display_name
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports__display_name
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports_payments__display_name
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports__display_name
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports_payments__display_name
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_excise_barcode__display_name
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_payment_line__display_name
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_service_receipt__display_name
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_tax_line__display_name
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_x_report__display_name
+msgid "Display Name"
+msgstr "Відобразити назву"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_organization__edrpou
+msgid "EDRPOU"
+msgstr "ЄДРПОУ"
+
+#. module: kw_checkbox
+#. odoo-python
+#: code:addons/kw_checkbox/wizard/service_receipt_wizard.py:0
+#: model:ir.model.fields.selection,name:kw_checkbox.selection__kw_wizard_service_receipt__type_of_move__enter
+#, python-format
+msgid "Enter"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_log__error
+msgid "Error"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model,name:kw_checkbox.model_kw_excise_barcode
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_move_line__kw_checkbox_excise_barcode_ids
+msgid "Excise Barcode"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_detail_tax__extra_rate
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_tax__extra_rate
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_tax_line__extra_rate
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_tax_search
+msgid "Extra Rate"
+msgstr "Додатковий тариф"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_offline_code__fiscal_code
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports__fiscal_code
+msgid "Fiscal Code"
+msgstr "Фіскальний код"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_receipt__fiscal_date
+msgid "Fiscal Date"
+msgstr "Фіскальна дата"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cash_register__fiscal_number
+msgid "Fiscal Number"
+msgstr "Фіскальний номер"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_receipt__name
+msgid "Fiscal code"
+msgstr "Фіскальний код"
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_cash_register_form
+msgid "Get All Tax"
+msgstr "Отримання налаштувань податків"
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_cash_register_form
+msgid "Get Codes"
+msgstr "Отримати фіскальні номери"
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_wizard_view
+msgid "Get Report"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_cash_register_form
+msgid "Get Reports X"
+msgstr "X-Звіти"
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_cash_register_form
+msgid "Go offline"
+msgstr "Оффлайн режим"
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_cash_register_form
+msgid "Go online"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_offline_code_search
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_tax_search
+msgid "Group By"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_log__headers
+msgid "Headers"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports__html_text
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports__html_text
+msgid "Html"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cash_register__id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cashier__id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_detail_tax__id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_log__id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_offline_code__id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_organization__id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_product_category__id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_receipt__id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_shift__id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_tax__id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports__id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports_payments__id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports__id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports_payments__id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_excise_barcode__id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_payment_line__id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_service_receipt__id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_tax_line__id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_x_report__id
+msgid "ID"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports__image_x_report
+msgid "Image X Report"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports__image_z_report
+msgid "Image Z Report"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_tax__included
+msgid "Included"
+msgstr "Включно"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_tax__index
+msgid "Index"
+msgstr "Індекс"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports__initial
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports__initial
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_x_report__initial
+msgid "Initial"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_payment__kw_checkbox_invoice_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_payment_register__kw_checkbox_invoice_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_receipt__invoice_id
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_receipt_form
+msgid "Invoice"
+msgstr "Рахунок -фактура"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cash_register__is_log_enabled
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cashier__is_log_enabled
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_organization__is_log_enabled
+msgid "Is Log Enabled"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cash_register__is_offline
+msgid "Is Offline"
+msgstr "Офлайн"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports__is_z_report
+msgid "Is Z Report"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model,name:kw_checkbox.model_account_journal
+msgid "Journal"
+msgstr "Журнал"
+
+#. module: kw_checkbox
+#: model:ir.model,name:kw_checkbox.model_account_move
+msgid "Journal Entry"
+msgstr "Запис у журналі"
+
+#. module: kw_checkbox
+#: model:ir.model,name:kw_checkbox.model_account_move_line
+msgid "Journal Item"
+msgstr "Елемент журналу"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_log__json
+msgid "Json"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cashier__key_id
+msgid "Key"
+msgstr "Ключ"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_payment_register__kw_available_payment_method_line_ids
+msgid "Kw Available Payment Method Line"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_payment__kw_checkbox_cash_register_ids
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_payment_register__kw_checkbox_cash_register_ids
+msgid "Kw Checkbox Cash Register"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_payment__kw_checkbox_cashier_ids
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_payment_register__kw_checkbox_cashier_ids
+msgid "Kw Checkbox Cashier"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_bank_statement_line__kw_checkbox_is_receipt
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_move__kw_checkbox_is_receipt
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_payment__kw_checkbox_is_receipt
+msgid "Kw Checkbox Is Receipt"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_bank_statement_line__kw_checkbox_receipt_ids
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_move__kw_checkbox_receipt_ids
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_payment__kw_checkbox_receipt_ids
+msgid "Kw Checkbox Receipt"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_res_company__kw_checkbox_salesperson_info
+msgid "Kw Checkbox Salesperson Info"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_tax__kw_checkbox_tax_ids
+msgid "Kw Checkbox Tax"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_tax__label
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports_payments__label
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports_payments__label
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_payment_line__label
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_tax_line__label
+msgid "Label"
+msgstr "Мітка"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cash_register____last_update
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cashier____last_update
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_detail_tax____last_update
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_log____last_update
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_offline_code____last_update
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_organization____last_update
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_product_category____last_update
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_receipt____last_update
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_shift____last_update
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_tax____last_update
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports____last_update
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports_payments____last_update
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports____last_update
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports_payments____last_update
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_excise_barcode____last_update
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_payment_line____last_update
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_service_receipt____last_update
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_tax_line____last_update
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_x_report____last_update
+msgid "Last Modified on"
+msgstr "Останні зміни"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports__last_receipt_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports__last_receipt_id
+msgid "Last Receipt"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cash_register__write_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cashier__write_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_detail_tax__write_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_log__write_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_offline_code__write_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_organization__write_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_product_category__write_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_receipt__write_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_shift__write_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_tax__write_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports__write_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports_payments__write_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports__write_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports_payments__write_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_excise_barcode__write_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_payment_line__write_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_service_receipt__write_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_tax_line__write_uid
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_x_report__write_uid
+msgid "Last Updated by"
+msgstr "Останнє оновлення"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cash_register__write_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cashier__write_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_detail_tax__write_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_log__write_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_offline_code__write_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_organization__write_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_product_category__write_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_receipt__write_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_shift__write_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_tax__write_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports__write_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports_payments__write_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports__write_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports_payments__write_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_excise_barcode__write_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_payment_line__write_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_service_receipt__write_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_tax_line__write_date
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_x_report__write_date
+msgid "Last Updated on"
+msgstr "Останнє оновлення"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cash_register__license_key
+msgid "License Key"
+msgstr "Ключ ліцензії"
+
+#. module: kw_checkbox
+#: model:ir.actions.act_window,name:kw_checkbox.kw_checkbox_kw_checkbox_log_action_window
+#: model:ir.ui.menu,name:kw_checkbox.kw_checkbox_kw_checkbox_log_menu_1
+msgid "Log"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:res.groups,name:kw_checkbox.group_kw_checkbox_manager
+msgid "Manager"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_excise_barcode__name
+msgid "Marks serial"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cash_register__max_count_codes
+msgid "Max offline codes"
+msgstr "Max офлайн кодів"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_log__method
+msgid "Method"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cashier__name
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_detail_tax__name
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_tax__name
+msgid "Name"
+msgstr "Назва"
+
+#. module: kw_checkbox
+#. odoo-python
+#: code:addons/kw_checkbox/wizard/x_report_wizard.py:0
+#, python-format
+msgid "No ID in report, Try again!"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_tax_line__no_vat
+msgid "No Vat"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,help:kw_checkbox.field_res_company__kw_checkbox_salesperson_info
+msgid "Official information about salesperson, which will display in receipt"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.actions.act_window,name:kw_checkbox.kw_checkbox_kw_checkbox_offline_code_action_window
+#: model:ir.ui.menu,name:kw_checkbox.kw_checkbox_kw_checkbox_offline_code_menu
+msgid "Offline Code"
+msgstr ""
+
+#. module: kw_checkbox
+#. odoo-python
+#: code:addons/kw_checkbox/models/cashier.py:0
+#, python-format
+msgid "One of the users is already listed with other cashiers"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports__opened_at_datetime
+msgid "Opened At Datetime"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_shift__opened_at_datetime
+msgid "Opened at"
+msgstr "Відкрито о котрій"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_journal__kw_checkbox_organization_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cash_register__organization_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cashier__organization_id
+msgid "Organization"
+msgstr "Організація"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cashier__organization_cb_id
+msgid "Organization CheckBox ID"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.actions.act_window,name:kw_checkbox.kw_checkbox_kw_checkbox_organization_action_window
+#: model:ir.ui.menu,name:kw_checkbox.kw_checkbox_kw_checkbox_organization_menu
+msgid "Organizations"
+msgstr "Організації"
+
+#. module: kw_checkbox
+#: model:ir.model.fields.selection,name:kw_checkbox.selection__account_journal__kw_checkbox_payment_method_type__2
+msgid "Other"
+msgstr "Інше"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_receipt__pdf_url
+msgid "PDF url"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_log__params
+msgid "Params"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cash_register__is_pass_barcode_to_checkbox
+msgid "Pass barcode to Checkbox"
+msgstr "Передавати штрих-код у Checkbox"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cashier__password
+msgid "Password"
+msgstr "Пароль"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_receipt__payment_id
+msgid "Payment"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_x_report__payment_line_ids
+msgid "Payment Line"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_journal__kw_checkbox_payment_method_name
+msgid "Payment Method Name"
+msgstr "Назва способу оплати"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_journal__kw_checkbox_payment_method_type
+msgid "Payment Method Type"
+msgstr "Засіб оплати"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_service_receipt__payment_type
+msgid "Payment Type"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_service_receipt__payment_value
+msgid "Payment Value"
+msgstr ""
+
+#. module: kw_checkbox
+#. odoo-python
+#: code:addons/kw_checkbox/wizard/account_payment_register.py:0
+#: model:ir.model,name:kw_checkbox.model_account_payment
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports__payments
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports__payments
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_x_reports_form
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_z_reports_form
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_wizard_view
+#, python-format
+msgid "Payments"
+msgstr "Платежі"
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_cash_register_form
+msgid "Ping Tax Service"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_receipt_form
+msgid "Preview"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.actions.report,name:kw_checkbox.action_x_report_pdf
+#: model:ir.actions.report,name:kw_checkbox.action_z_report_pdf
+msgid "Print Report"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.actions.report,name:kw_checkbox.action_x_report_png_pdf
+#: model:ir.actions.report,name:kw_checkbox.action_z_report_png_pdf
+msgid "Print Report (PNG)"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model,name:kw_checkbox.model_product_product
+#: model:ir.model,name:kw_checkbox.model_product_template
+msgid "Product"
+msgstr "Товар"
+
+#. module: kw_checkbox
+#: model:ir.actions.act_window,name:kw_checkbox.kw_checkbox_kw_checkbox_product_category_action_window
+#: model:ir.model,name:kw_checkbox.model_product_category
+#: model:ir.model.fields,field_description:kw_checkbox.field_product_category__kw_checkbox_product_category_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_product_product__kw_checkbox_product_category_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_product_template__kw_checkbox_product_category_id
+#: model:ir.ui.menu,name:kw_checkbox.kw_checkbox_kw_checkbox_product_category_menu
+msgid "Product Category"
+msgstr "Категорія товару"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_product_category__name
+msgid "Product Category Name"
+msgstr "Назва категорії товару"
+
+#. module: kw_checkbox
+#: model:ir.model,name:kw_checkbox.model_product_product
+msgid "Product Variant"
+msgstr "Варіант товару"
+
+#. module: kw_checkbox
+#. odoo-python
+#: code:addons/kw_checkbox/models/company.py:0
+#: model:ir.model.fields.selection,name:kw_checkbox.selection__res_company__kw_checkbox_mode__prod
+#, python-format
+msgid "Production"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_payment_line__provider_type
+msgid "Provider Type"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_receipt__qr_url
+msgid "QR-code url"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_detail_tax__rate
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_tax__rate
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_tax_line__rate
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_tax_search
+msgid "Rate"
+msgstr "Тариф"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports_payments__rec_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports_payments__rec_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_payment_line__rec_id
+msgid "Rec"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_tax_line__rec_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_x_report__rec_id
+msgid "Rec ID"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_payment__kw_checkbox_receipt_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_payment_register__kw_checkbox_receipt_id
+msgid "Receipt"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_product_product__kw_checkbox_footer
+#: model:ir.model.fields,field_description:kw_checkbox.field_product_template__kw_checkbox_footer
+msgid "Receipt footer"
+msgstr "Нижній колонтитул чека"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_product_product__kw_checkbox_header
+#: model:ir.model.fields,field_description:kw_checkbox.field_product_template__kw_checkbox_header
+msgid "Receipt header"
+msgstr "Верхній колонтитул чека"
+
+#. module: kw_checkbox
+#: model:ir.actions.act_window,name:kw_checkbox.kw_checkbox_kw_checkbox_receipt_action_window
+#: model:ir.ui.menu,name:kw_checkbox.kw_checkbox_kw_checkbox_receipt_menu
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_invoice_to_receipt_account_invoice_form
+msgid "Receipts"
+msgstr "Надходження"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_payment__kw_checkbox_is_register_receipt
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_payment_register__kw_checkbox_is_register_receipt
+msgid "Register CheckBox receipt"
+msgstr "Квитанція Checkbox"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_journal__kw_checkbox_is_register_receipt
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_payment__kw_checkbox_is_journal_register_receipt
+#: model:ir.model.fields,field_description:kw_checkbox.field_account_payment_register__kw_checkbox_is_journal_register_receipt
+msgid "Register Checkbox receipt"
+msgstr "Квитанція Checkbox"
+
+#. module: kw_checkbox
+#: model:ir.model,name:kw_checkbox.model_account_payment_register
+msgid "Register Payment"
+msgstr "Зареєструйте платіж"
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_pos_view_tax_form
+msgid "Relation CheckBox Tax"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports__name
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports__name
+msgid "Report ID"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_invoice_to_receipt_account_payment_form
+msgid "Reshipping checkbox"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_log__response
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_receipt_form
+msgid "Response"
+msgstr "Відповідь"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_receipt__res_val
+msgid "Response Value"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports__return_receipts_count
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports__return_receipts_count
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_x_report__return_receipts_count
+msgid "Return Receipts Count"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_detail_tax__return_sum
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports_payments__return_sum
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports_payments__return_sum
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_payment_line__return_sum
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_tax_line__return_sum
+msgid "Return Sum"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_detail_tax__returns_turnover
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_tax_line__returns_turnover
+msgid "Returns Turnover"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_res_company__kw_checkbox_rounding_text
+msgid "Rounding Text in Receipt"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_detail_tax__sales_turnover
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_tax_line__sales_turnover
+msgid "Sales Turnover"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_wizard_view
+msgid "Save"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports__sell_receipts_count
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports__sell_receipts_count
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_x_report__sell_receipts_count
+msgid "Sell Receipts Count"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_detail_tax__sell_sum
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports_payments__sell_sum
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports_payments__sell_sum
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_payment_line__sell_sum
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_tax_line__sell_sum
+msgid "Sell Sum"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_offline_code__serial_id
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_shift__name
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports__serial
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports__serial
+msgid "Serial"
+msgstr "Серійний номер"
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_offline_code_search
+msgid "Serial Id"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_z_reports_form
+msgid "Serial Number"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports_payments__service_in
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports_payments__service_in
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_payment_line__service_in
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_z_reports_form
+msgid "Service In"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports_payments__service_in_general
+msgid "Service In General"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports_payments__service_out
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports_payments__service_out
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_payment_line__service_out
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_z_reports_form
+msgid "Service Out"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports_payments__service_out_general
+msgid "Service Out General"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_cash_register_form
+msgid "Service Receipt"
+msgstr "Створення сервісного чеку"
+
+#. module: kw_checkbox
+#: model:ir.ui.menu,name:kw_checkbox.kw_checkbox_settings_main_menu
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_cash_register_form
+msgid "Settings"
+msgstr "Налаштування"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_tax_line__setup_date
+msgid "Setup Date"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports__shift_id
+msgid "Shift"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_receipt__shift_cb_id
+msgid "Shift CheckBox ID"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.actions.act_window,name:kw_checkbox.kw_checkbox_kw_checkbox_shift_action_window
+#: model:ir.ui.menu,name:kw_checkbox.kw_checkbox_kw_checkbox_shift_menu
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_cash_register_form
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_cashier_form
+msgid "Shifts"
+msgstr "Зміни"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cashier__signature_type
+msgid "Signature Type"
+msgstr "Тип підпису"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_receipt__status
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_shift__status
+msgid "Status"
+msgstr "Статус"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_tax__symbol
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_tax_line__symbol
+msgid "Symbol"
+msgstr "Символ"
+
+#. module: kw_checkbox
+#. odoo-python
+#: code:addons/kw_checkbox/wizard/service_receipt_wizard.py:0
+#: model:ir.model.fields.selection,name:kw_checkbox.selection__kw_wizard_service_receipt__type_of_move__take
+#, python-format
+msgid "Take"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.actions.act_window,name:kw_checkbox.kw_checkbox_kw_checkbox_tax_action_window
+#: model:ir.model,name:kw_checkbox.model_account_tax
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_detail_tax__tax_id
+#: model:ir.ui.menu,name:kw_checkbox.kw_checkbox_kw_checkbox_tax_menu
+msgid "Tax"
+msgstr "Податок"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_x_report__tax_line_ids
+msgid "Tax Line"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_organization__tax_number
+msgid "Tax Number"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports__taxes
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports__taxes
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_x_reports_form
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_z_reports_form
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_wizard_view
+msgid "Taxes"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports__taxes_detail
+msgid "Taxes Detail"
+msgstr ""
+
+#. module: kw_checkbox
+#. odoo-python
+#: code:addons/kw_checkbox/models/company.py:0
+#: model:ir.model.fields.selection,name:kw_checkbox.selection__res_company__kw_checkbox_mode__test
+#, python-format
+msgid "Test"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_receipt__text
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports__html_text
+msgid "Text"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,help:kw_checkbox.field_account_journal__kw_checkbox_payment_method_name
+msgid ""
+"The Payment method's name should be specified according to legal "
+"regulations."
+msgstr "Назва способу оплати повинна бути вказана відповідно до правових норм."
+
+#. module: kw_checkbox
+#. odoo-python
+#: code:addons/kw_checkbox/models/cash_register.py:0
+#, python-format
+msgid "There is no OPENED shift"
+msgstr ""
+
+#. module: kw_checkbox
+#. odoo-python
+#: code:addons/kw_checkbox/models/cash_register.py:0
+#: code:addons/kw_checkbox/models/cash_register.py:0
+#: code:addons/kw_checkbox/models/cash_register.py:0
+#: code:addons/kw_checkbox/models/cash_register.py:0
+#: code:addons/kw_checkbox/models/cash_register.py:0
+#: code:addons/kw_checkbox/models/cash_register.py:0
+#: code:addons/kw_checkbox/models/cash_register.py:0
+#: code:addons/kw_checkbox/models/cash_register.py:0
+#: code:addons/kw_checkbox/models/receipt.py:0
+#: code:addons/kw_checkbox/models/shift.py:0
+#: code:addons/kw_checkbox/models/x_reports.py:0
+#: code:addons/kw_checkbox/models/z_reports.py:0
+#, python-format
+msgid "There is no acceptable username"
+msgstr ""
+
+#. module: kw_checkbox
+#. odoo-python
+#: code:addons/kw_checkbox/models/account_payment.py:0
+#: code:addons/kw_checkbox/wizard/account_payment_register.py:0
+#, python-format
+msgid "This journal payment cant be registered as checkbox receipt"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cash_register__name
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_organization__name
+msgid "Title"
+msgstr "Назва"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_receipt__transaction_cb_id
+msgid "Transaction CheckBox ID"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports__transfers_count
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports__transfers_count
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_x_report__transfers_count
+msgid "Transfers Count"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports__transfers_sum
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports__transfers_sum
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_x_report__transfers_sum
+msgid "Transfers Sum"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_receipt__type
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports_payments__type
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports_payments__type
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_payment_line__type
+msgid "Type"
+msgstr "Тип"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_service_receipt__type_of_move
+msgid "Type Of Move"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_product_product__kw_checkbox_uktzed
+#: model:ir.model.fields,field_description:kw_checkbox.field_product_template__kw_checkbox_uktzed
+msgid "UKTZED"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_log__name
+msgid "URL"
+msgstr ""
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_receipt_form
+msgid "URLs"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.actions.server,name:kw_checkbox.action_update_x_report
+#: model:ir.actions.server,name:kw_checkbox.action_update_z_report
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_x_reports_form
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_z_reports_form
+msgid "Update Report"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_tax__datetime_updated_at
+msgid "Update at"
+msgstr "Оновлення о"
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_cash_register_form
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_cashier_form
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_receipt_form
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_shift_form
+msgid "Update info"
+msgstr "Оновити інформацію"
+
+#. module: kw_checkbox
+#: model_terms:ir.ui.view,arch_db:kw_checkbox.kw_checkbox_kw_checkbox_cashier_form
+msgid "Update shifts"
+msgstr "Оновлення змін"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports__updated_at
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports__updated_at
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_wizard_x_report__updated_at
+msgid "Updated At"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model,name:kw_checkbox.model_res_users
+#: model:res.groups,name:kw_checkbox.group_kw_checkbox_user
+msgid "User"
+msgstr "Користувач"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cashier__username
+msgid "Username"
+msgstr "Ім'я користувача"
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_cashier__user_ids
+msgid "Users"
+msgstr "Користувачі"
+
+#. module: kw_checkbox
+#: model:ir.actions.report,name:kw_checkbox.action_x_report
+#: model:ir.actions.report,name:kw_checkbox.action_z_report
+msgid "View Report"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_x_reports_payments__x_report_id
+msgid "X Report"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.actions.act_window,name:kw_checkbox.kw_checkbox_kw_checkbox_x_reports_action_window
+#: model:ir.ui.menu,name:kw_checkbox.kw_checkbox_kw_checkbox_x_reports_menu
+msgid "X-Reports"
+msgstr "X-Звіт"
+
+#. module: kw_checkbox
+#: model:ir.model,name:kw_checkbox.model_kw_checkbox_x_reports
+msgid "XReport"
+msgstr ""
+
+#. module: kw_checkbox
+#. odoo-python
+#: code:addons/kw_checkbox/models/shift.py:0
+#, python-format
+msgid "You should close opened shift before open new one."
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_z_reports_payments__z_report_id
+msgid "Z Report"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.actions.act_window,name:kw_checkbox.kw_checkbox_kw_checkbox_z_reports_action_window
+#: model:ir.ui.menu,name:kw_checkbox.kw_checkbox_kw_checkbox_z_reports_menu
+msgid "Z-Reports"
+msgstr "Z-Звіт"
+
+#. module: kw_checkbox
+#: model:ir.model,name:kw_checkbox.model_kw_checkbox_z_reports
+msgid "ZReports"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.module.category,name:kw_checkbox.module_category_kw_checkbox
+msgid "checkbox"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model,name:kw_checkbox.model_kw_checkbox_detail_tax
+msgid "kw.checkbox.detail.tax"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.model.fields,field_description:kw_checkbox.field_kw_checkbox_receipt__tax_gov_url
+msgid "tax.gov.ua url"
+msgstr ""
+
+#. module: kw_checkbox
+#: model:ir.actions.server,name:kw_checkbox.kw_cron_update_checkbox_shift_info_ir_actions_server
+msgid "Update Checkbox Shift"
+msgstr "Оновити Checkbox зміни"
+
+#. module: kw_checkbox
+#: model:ir.model.fields.selection,name:kw_checkbox.selection__res_company__kw_checkbox_mode__test
+msgid "Тест"
+msgstr ""

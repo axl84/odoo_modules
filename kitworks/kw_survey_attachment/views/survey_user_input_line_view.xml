@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_survey_attachment_inherit_survey_user_input_line_form" model="ir.ui.view">
+        <field name="name">survey.user_input.line.form (kw_survey_attachment)</field>
+        <field name="model">survey.user_input.line</field>
+        <field name="inherit_id" ref="survey.survey_user_input_line_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='answer_type']" position="after">
+                <field name="filename"/>
+            </xpath>
+            <field name="suggested_answer_id" position="after">
+                <field invisible="1" name="answer_type"/>
+                <field invisible="answer_type != 'file'" name="value_file_ids">
+                    <tree create="0" edit="0">
+                        <field invisible="1" name="name"/>
+                        <field filename="name" name="datas" widget="binary"/>
+                    </tree></field></field></field>
+    </record>
+</odoo>

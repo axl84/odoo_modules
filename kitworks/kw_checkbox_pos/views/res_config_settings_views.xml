@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_checkbox_pos_res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.form (kw_checkbox_pos)</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="point_of_sale.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+             <xpath expr="//block[@id='pos_accounting_section']" position="after">
+                 <block title="Checkbox" id="pos_checkbox_section">
+                      <setting id="pos_kw_is_checkbox_check_in_pos" string="Use Checkbox Check" help="This flag enables the function of printing checkbox check in the pos.">
+                            <field name="pos_kw_is_checkbox_check_in_pos"/>
+                      </setting>
+                      <setting id="pos_kw_is_checkbox_rounding" string="Checkbox rounding" help="This flag enables the checkbox rounding in the POS, which is certified by law.">
+                            <field name="pos_kw_is_checkbox_rounding"/>
+                      </setting>
+                </block>
+             </xpath>
+        </field>
+    </record>
+</odoo>

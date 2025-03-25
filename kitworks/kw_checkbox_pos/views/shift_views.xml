@@ -1,0 +1,12 @@
+<odoo>
+    <record id="kw_checkbox_pos_kw_checkbox_shift_form" model="ir.ui.view">
+        <field name="name">kw.checkbox.shift.form (kw_checkbox_pos)</field>
+        <field name="model">kw.checkbox.shift</field>
+        <field name="inherit_id" ref="kw_checkbox.kw_checkbox_kw_checkbox_shift_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[1]/group[1]" position="inside">
+                <field name="pos_session_id"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

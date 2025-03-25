@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_step_telegram_button_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.step.telegram.button.form (kw_chatbot_builder_telegram)</field>
+        <field name="model">kw.chatbot.step.telegram.button</field>
+        <field name="arch" type="xml">
+            <form>
+                <header/>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="active"/>
+                        <field invisible="1" name="notification_id"/>
+                        <field invisible="0" name="notification_model_name"/>
+                        <field invisible="0" name="model_notification_id"/>
+                        <field force_save="1" invisible="state == 'send_notification'" name="model_id" readonly="state in ['url_button', 'dynamic_button']"/>
+                        <field domain="[('model_id', '=', model_id), ('ttype', 'in', ['char', 'text',])]" force_save="1" invisible="state != 'url_button'" name="url_field_id" required="state == 'url_button'"/>
+                        <field invisible="0" name="model_name"/>
+                        <field name="state"/>
+                        <field invisible="1" name="target_model_name"/>
+                        <field invisible="state != 'object_create'" name="target_model_id" options="{'no_create': True}" required="state == 'object_create'"/>
+                        <field context="{'default_model_id': model_id, 'default_relation': target_model_name}" domain="[('model_id', '=', model_id), ('relation', '=', target_model_name),                                     ('ttype', 'in', ['many2one', 'one2many', 'many2many'])]" invisible="state != 'object_create'" name="link_field_id"/>
+                        <field invisible="state != 'email'" name="template_id" required="state == 'email'"/>
+                        <field invisible="state != 'followers'" name="partner_ids" widget="many2many_tags"/>
+                        <field context="{'default_model_id': model_id}" invisible="state != 'sms'" name="sms_template_id" required="state == 'sms'"/>
+                        <field invisible="state != 'sms'" name="sms_mass_keep_log"/>
+                    </group>
+                    <notebook string="Telegram Button">
+                        <page invisible="state not in ['send_notification']" name="send_notification" string="Send notification">
+                            <group>
+                                <field name="send_notification_type"/>
+                                <field invisible="send_notification_type == 'field_search'" name="use_parent_record"/>
+                                <field invisible="use_parent_record == False" name="search_type"/>
+                                <field name="model_notification_id"/>
+                                <field force_save="1" invisible="0" name="model_notification_name" readonly="1"/>
+                                <field invisible="1" name="child_field_ids"/>
+                                <field domain="[('model_id', '=', model_notification_id)]" invisible="send_notification_type == 'record'" name="search_field_id" required="send_notification_type == 'field_search'"/>
+                                <field domain="[('id', '=', child_field_ids)]" invisible="use_parent_record == False" name="child_field_id" required="use_parent_record != False"/>
+                                <field name="notification_for_send" required="state == 'send_notification'"/>
+                                <field invisible="send_notification_type != 'field_search' or state not in ['send_notification']" name="uns_notification_for_send"/>
+                            </group>
+                        </page>
+                        <page invisible="state not in ['dynamic_button']" string="Send notification">
+                            <group>
+                                <field context="{'default_model_id': model_id}" domain="[('model_id', '=', model_id), ('ttype', 'in', ['many2one', 'selection', 'many2many', 'one2many'])]" invisible="model_id == False" name="dynamic_button_field_id" required="state == 'dynamic_button'"/>
+                                <field domain="[('model_id.model', '=', dynamic_button_name_model)]" invisible="dynamic_button_field_ttype != 'one2many'" name="inverse_field_id"/>
+                                <field invisible="1" name="dynamic_button_field_ttype"/>
+                                <field name="dynamic_button_action"/>
+                                <field force_save="1" invisible="0" name="dynamic_button_name_model"/>
+                                <field name="dynamic_button_domain" options="{'model': 'dynamic_button_name_model', 'in_dialog': True}" widget="domain"/>
+                                <field invisible="dynamic_button_action != 'comparison'" name="comparison_value_type"/>
+                                <field invisible="dynamic_button_action != 'comparison' or comparison_value_type != 'value'" name="comparison_value"/>
+                                <field domain="[('model_id', '=', model_id)]" invisible="dynamic_button_action != 'comparison' or comparison_value_type != 'field'" name="comparison_record_field_id"/>
+                                <field invisible="dynamic_button_action != 'comparison'" name="comparison_type"/>
+                                <field domain="[('model_id.model', '=', dynamic_button_name_model)]" invisible="dynamic_button_action != 'comparison'" name="comparison_field_id"/>
+                                <field invisible="dynamic_button_action != 'comparison'" name="comparison_result_text"/>
+                                <field invisible="dynamic_button_field_ttype not in ['many2one', 'one2many', 'many2many']" name="button_name"/>
+                            </group>
+                        </page>
+                        <page invisible="state != 'forward_step'" string="Forward Step">
+                            <group>
+                                <field name="forward_step_id"/>
+                            </group>
+                        </page>
+                        <page invisible="state not in ['object_create', 'object_write']" string="Data to Write">
+                            <group>
+                                <field name="write_type"/>
+                                <field domain="[('model_id', '=', model_id)]" invisible="write_type != 'tg_input'" name="change_field_id"/>
+                                <field domain="[('model_id', '=', model_id)]" invisible="model_name == False or state != 'object_create'" name="record_fields_ids" widget="many2many_tags"/>
+                                <field invisible="state != 'object_create'" name="send_new_record"/>
+                                <field domain="[('model_id', '=', target_model_id)]" invisible="send_new_record == False or state != 'object_create'" name="new_record_notification_id"/>
+                                <field invisible="write_type != 'tg_input'" name="is_resend_notification"/>
+                            </group>
+                            <p invisible="model_id != False">
+                                Please set the Model to Create before choosing values
+                            </p>
+                            <field name="fields_lines" invisible="write_type == 'tg_input' or not model_id or not name" context="{'default_model_id': model_id, 'default_name': name}">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                    <field name="evaluation_type"/>
+                                    <field name="model_id" force_save="1" readonly="1"/>
+                                    <field name="update_field_id" domain="[('model_id', '=', parent.model_id)]"/>
+                                    <field name="value" force_save="1" widget="code" options="{'mode': 'python'}"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page autofocus="autofocus" invisible="state != 'code'" name="code" string="Python Code">
+                            <field name="code" options="{'mode': 'python'}" placeholder="Enter Python code here. Help about Python expression is available in the help tab of this document." widget="ace"/>
+                        </page>
+                        <page autofocus="autofocus" invisible="state != 'next_activity'" name="next_activity" string="Activity">
+                            <group>
+                                <group>
+                                    <field name="activity_type_id" options="{'no_create': True, 'no_open': True}" required="state == 'next_activity'"/>
+                                    <field name="activity_summary" placeholder="e.g. Discuss proposal"/>
+                                </group>
+                                <group>
+                                    <label for="activity_date_deadline_range"/>
+                                    <div class="o_row">
+                                        <field name="activity_date_deadline_range"/>
+                                        <field name="activity_date_deadline_range_type" required="state == 'next_activity' and activity_date_deadline_range > 0"/>
+                                    </div>
+                                    <field name="activity_user_type" required="state == 'next_activity'"/>
+                                    <field invisible="activity_user_type == 'specific'" name="activity_user_field_name" required="state == 'next_activity' and activity_user_type == 'generic'"/>
+                                    <field invisible="activity_user_type == 'generic'" name="activity_user_id" required="state == 'next_activity' and activity_user_type == 'specific'"/>
+                                </group>
+                            </group>
+                            <field class="oe-bordered-editor" name="activity_note" placeholder="Log a note..."/>
+                        </page>
+                        <page autofocus="autofocus" invisible="state != 'multi'" name="actions" string="Actions">
+                            <p class="oe_grey">
+                                If several child actions return an action, only the last one will be executed.
+                                This may happen when having server actions executing code that returns an action, or
+                                server actions returning a client action.
+                            </p>
+                            <field domain="[('model_id', '=', model_id)]" name="child_ids"/>
+                        </page>
+                        <page string="Callback Data">
+                            <field name="callback_data" options="{'mode': 'python'}" widget="ace"/>
+                        </page>
+                        <page invisible="model_id == False" string="Action">
+                            <field context="{'default_model_id': model_id}" name="button_step_ids">
+                                <tree>
+                                    <field name="sequence" widget="handle"/>
+                                    <field force_save="1" invisible="1" name="model_id"/>
+                                    <field invisible="1" name="model_name" string="Model"/>
+                                    <field name="is_domain" string="Domain"/>
+                                    <field name="action_type"/>
+                                    <field name="step_type"/>
+                                    <field name="action_result_type" readonly="action_type == 'before_action'"/>
+                                    <field name="successful_step_id" readonly="step_type == 'notification'" required="step_type == 'step'"/>
+                                    <field name="bind_record" readonly="step_type == 'step'"/>
+                                    <field name="successful_notification_id" readonly="step_type == 'step'" required="step_type == 'notification'"/>
+                                </tree></field>
+                        </page>
+                        <page string="Notification of successful operation">
+                            <group>
+                                <field name="successful_notification" required="0"/>
+                            </group>
+                            <field name="successful_text_line_id"><tree editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field invisible="1" name="model_id"/>
+                                    <field invisible="1" name="model_name"/>
+                                    <field name="text_before"/>
+                                    <field invisible="1" name="telegram_button_id"/>
+                                    <field name="need_after_before_text_new_line"/>
+                                    <field name="fields_id"/>
+                                    <field invisible="1" name="sub_model"/>
+                                    <field domain="[('model_id','=',sub_model),('ttype','!=','one2many'),('ttype','!=','many2many')]" name="sub_fields_id" readonly="sub_model == False"/>
+                                    <field name="text_after"/>
+                                    <field name="need_after_after_text_new_line"/>
+                                    <field groups="base.group_no_one" name="part_message"/>
+                                </tree></field>
+                        </page>
+                        <page string="Notification of unsuccessful operation">
+                            <group>
+                                <field name="unsuccessful_notification" required="0"/>
+                            </group>
+                            <field name="unsuccessful_text_line_id"><tree editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field invisible="1" name="model_id"/>
+                                    <field invisible="1" name="model_name"/>
+                                    <field name="text_before"/>
+                                    <field invisible="1" name="telegram_button_id"/>
+                                    <field name="need_after_before_text_new_line"/>
+                                    <field name="fields_id"/>
+                                    <field invisible="1" name="sub_model"/>
+                                    <field domain="[('model_id','=',sub_model),('ttype','!=','one2many'),('ttype','!=','many2many')]" name="sub_fields_id" readonly="sub_model == False"/>
+                                    <field name="text_after"/>
+                                    <field name="need_after_after_text_new_line"/>
+                                    <field groups="base.group_no_one" name="part_message"/>
+                                </tree></field>
+                        </page>
+                        <page name="help_info" string="Help">
+                            <group>
+                                <div style="margin-top: 4px;">
+                                    <h3>
+                                        Help with Python expressions
+                                    </h3>
+                                    <p>
+                                        Various fields may use Python code or Python expressions. The following variables
+                                        can be used:
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <code>
+                                                env
+                                            </code>
+                                            : Odoo Environment on which the action is triggered
+                                        </li>
+                                        <li>
+                                            <code>
+                                                model
+                                            </code>
+                                            : Odoo Model of the record on which the action is
+                                            triggered; is a void recordset
+                                        </li>
+                                        <li>
+                                            <code>
+                                                sender_partner
+                                            </code>
+                                            : Partner of the sender of the bot message
+                                        </li>
+                                        <li>
+                                            <code>
+                                                sender_user
+                                            </code>
+                                            : User Odoo of the sender of the bot message
+                                        </li>
+                                        <li>
+                                            <code>
+                                                record
+                                            </code>
+                                            : record on which the action is triggered; may be be void
+                                        </li>
+                                        <li>
+                                            <code>
+                                                records
+                                            </code>
+                                            : recordset of all records on which the action is
+                                            triggered in multi mode; may be void
+                                        </li>
+                                        <li>
+                                            <code>
+                                                time
+                                            </code>
+                                            ,
+                                            <code>
+                                                datetime
+                                            </code>
+                                            ,
+                                            <code>
+                                                dateutil
+                                            </code>
+                                            ,
+                                            <code>
+                                                timezone
+                                            </code>
+                                            : useful Python libraries
+                                        </li>
+                                        <li>
+                                            <code>
+                                                log(message, level='info')
+                                            </code>
+                                            :logging function to record debug
+                                            information in
+                                            <code>
+                                                ir.logging
+                                            </code>
+                                            table
+                                        </li>
+                                        <li>
+                                            <code>
+                                                UserError
+                                            </code>
+                                            : Warning Exception to use with
+                                            <code>
+                                                raise
+                                            </code>
+                                        </li>
+                                        <li>
+                                            To return an action, assign:
+                                            <code>
+                                                action = {...}
+                                            </code>
+                                        </li>
+                                    </ul>
+                                    <div>
+                                        <p>
+                                            Example of Python code
+                                        </p>
+                                        <code style="white-space: pre-wrap">
+                                            partner_name = record.name + '_code'
+                                            env['res.partner'].create({'name': partner_name})
+                                        </code>
+                                    </div>
+                                </div>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form></field>
+    </record>
+    <record id="kw_chatbot_step_telegram_button_tree" model="ir.ui.view">
+        <field name="name">kw.chatbot.step.telegram.button.tree (kw_chatbot_builder_telegram)</field>
+        <field name="model">kw.chatbot.step.telegram.button</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="active"/>
+                <field name="step_id" optional="show"/>
+                <field name="url" optional="show"/>
+                <field name="notification_id" optional="hide"/>
+            </tree></field>
+    </record>
+    <record id="kw_chatbot_step_telegram_button_action_window" model="ir.actions.act_window">
+        <field name="name">Telegram Buttons</field>
+        <field name="res_model">kw.chatbot.step.telegram.button</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="kw_chatbot_telegram_button_step_form_view" model="ir.ui.view">
+        <field name="name">kw.chatbot.telegram.button.step.form (kw_chatbot_builder_telegram)</field>
+        <field name="model">kw.chatbot.telegram.button.step</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field force_save="1" invisible="1" name="model_id"/>
+                        <field name="model_name" string="Model"/>
+                        <field name="domain" options="{'model': 'model_name'}" widget="domain"/>
+                        <field invisible="1" name="is_domain"/>
+                        <field name="action_type"/>
+                        <field name="step_type"/>
+                        <field invisible="action_type == 'before_action'" name="action_result_type"/>
+                        <field invisible="step_type in ['notification', 'code']" name="successful_step_id" required="step_type == 'step'"/>
+                        <field invisible="step_type in ['step', 'code']" name="bind_record"/>
+                        <field invisible="step_type in ['step', 'code']" name="successful_notification_id" required="step_type == 'notification'"/>
+                        <field invisible="step_type in ['step', 'notification']" name="code" options="{'mode': 'python'}" placeholder="Enter Python code here. Help about Python expression is available in the help tab of this document." widget="ace"/>
+                    </group>
+                </sheet>
+            </form></field>
+    </record>
+    <record id="kw_chatbot_telegram_button_step_action_window" model="ir.actions.act_window">
+        <field name="name">Telegram Buttons Step</field>
+        <field name="res_model">kw.chatbot.telegram.button.step</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem action="kw_chatbot_step_telegram_button_action_window" groups="base.group_no_one" id="kw_chatbot_step_telegram_button_menu" name="Telegram Buttons" parent="kw_chatbot.kw_chatbot_settings_main_menu" sequence="755"/>
+</odoo>

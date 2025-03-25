@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_helpcrunch_kw_chatbot_chat_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.chat.form (kw_chatbot_helpcrunch)</field>
+        <field name="model">kw.chatbot.chat</field>
+        <field name="inherit_id" ref="kw_chatbot.kw_chatbot_kw_chatbot_chat_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page invisible="provider != 'help_crunch'" string="Lead creation setting">
+                    <group>
+                        <group>
+                            <field name="helpcrunch_crm_user_id"/>
+                            <field name="helpcrunch_crm_team_id"/>
+                            <field name="helpcrunch_crm_type"/>
+                        </group>
+                    </group>
+                </page>
+            </notebook></field>
+    </record>
+</odoo>

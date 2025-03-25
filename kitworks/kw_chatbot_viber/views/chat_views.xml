@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_viber_kw_chatbot_chat_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.chat.form (kw_chatbot_viber)</field>
+        <field name="model">kw.chatbot.chat</field>
+        <field name="inherit_id" ref="kw_chatbot.kw_chatbot_kw_chatbot_chat_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page invisible="provider != 'viber'" string="Viber">
+                    <button class="btn btn-primary"
+                            name="viber_update_hook_address"
+                            string="Update hook" type="object"/>
+                    <group>
+                        <field name="viber_token" required="provider == 'viber'"/>
+                        <field name="viber_update_webhook_response"/>
+                        <field groups="base.group_no_one" name="viber_developer_url"/>
+                        <field name="viber_start_button_name" />
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo>

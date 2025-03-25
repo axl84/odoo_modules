@@ -1,0 +1,27 @@
+<odoo>
+    <record id="kw_graph_api_facebook_webhook_wizard_form"
+            model="ir.ui.view">
+        <field name="name">facebook.webhook.wizard.form</field>
+        <field name="model">facebook.webhook.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="facebook_app_id"/>
+                    <field name="facebook_object"/>
+                    <field name="facebook_fields"/>
+                    <field name="callback_url"/>
+                    <field name="verify_token"/>
+                </group>
+                <footer>
+                    <div>
+                        <button name="facebook_update_webhook"
+                                type="object" class="oe_highlight"
+                                string="Update Webhook"/>
+                        <button special="cancel"
+                                string="Cancel"/>
+                    </div>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

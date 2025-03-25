@@ -1,0 +1,108 @@
+<odoo>
+    <record id="kw_checkbox_kw_checkbox_cash_register_tree" model="ir.ui.view">
+        <field name="name">kw.checkbox.cash.register.tree (kw_checkbox)</field>
+        <field name="model">kw.checkbox.cash.register</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="fiscal_number"/>
+                <field name="cashier_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+                <field name="is_offline"/>
+                <field name="organization_id"/>
+                <field name="address"/>
+                <field name="cb_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="kw_checkbox_kw_checkbox_cash_register_form" model="ir.ui.view">
+        <field name="name">kw.checkbox.cash.register.form (kw_checkbox)</field>
+        <field name="model">kw.checkbox.cash.register</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="update_info" string="Update info" type="object"
+                            class="oe_highlight"/>
+                    <button name="go_online" string="Go online" type="object" invisible="not is_offline"/>
+                    <button name="go_offline" string="Go offline" type="object" invisible="is_offline"/>
+                    <button name="ask_offline_codes" string="Ask Codes" type="object"/>
+                    <button name="get_offline_codes" string="Get Codes" type="object"/>
+                    <button name="get_all_tax" string="Get All Tax" type="object"/>
+                    <button name="ping_tax_service" string="Ping Tax Service" type="object" groups="base.group_no_one"/>
+                    <button name="%(kw_checkbox.kw_checkbox_wizard_get_x_report_action)d"
+                            string="Get Reports X" type="action" />
+                    <button name="cb_to_wizard"
+                            string="Service Receipt" type="object" />
+                </header>
+                <sheet>
+                    <div name="button_line">
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_shifts" type="object"
+                                    class="oe_stat_button"
+                                    icon="fa-shirtsinbulk">
+                                Shifts
+                            </button>
+                        </div>
+                    </div>
+                    <widget name="web_ribbon" title="Archived"
+                            bg_color="bg-danger" invisible="active"/>
+                    <field name="active" invisible="1"/>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="checkbox_name"/>
+                            <field name="fiscal_number"/>
+                            <field name="organization_id"/>
+                            <field name="cashier_id"/>
+                            <field name="license_key" password="True"/>
+                        </group>
+                        <group>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                            <field name="cb_id"/>
+                            <field name="is_offline"/>
+                            <field name="current_shift_id"/>
+                            <field name="is_log_enabled"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page id="settings_cash_register" string="Settings">
+                            <group name="checkbox_settings" string="Settings">
+                                <group>
+                                    <field name="is_pass_barcode_to_checkbox"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="kw_checkbox_kw_checkbox_cash_register_search" model="ir.ui.view">
+        <field name="name">kw.checkbox.cash.register.search (kw_checkbox)</field>
+        <field name="model">kw.checkbox.cash.register</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"
+                       filter_domain="[('name','ilike',self)]"/>
+                <field name="address"
+                       filter_domain="[('address','ilike',self)]"/>
+                <field name="fiscal_number"
+                       filter_domain="[('fiscal_number','ilike',self)]"/>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window"
+            id="kw_checkbox_kw_checkbox_cash_register_action_window">
+        <field name="name">Cash registers</field>
+        <field name="res_model">kw.checkbox.cash.register</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="kw_checkbox_kw_checkbox_cash_register_menu"
+              action="kw_checkbox_kw_checkbox_cash_register_action_window"
+              parent="kw_checkbox_settings_main_menu"
+              name="Cash registers" sequence="300"/>
+</odoo>

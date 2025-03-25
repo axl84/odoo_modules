@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="OrderReceipt" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension" priority="100">
+        <xpath expr="//ul[@t-if='line.pack_lot_lines']" position="after">
+            <t t-if="line.is_excise_product">
+                <div class="pos-receipt-left-padding">
+                    <ul>
+                        <t t-foreach="line.excise_barcodes" t-as="excise" t-key="excise_index">
+                            <li>
+                                Excise: <t t-esc="excise.lot_name"/>
+                            </li>
+                        </t>
+                    </ul>
+                </div>
+            </t>
+        </xpath>
+        <xpath expr="//div[@t-if='props.data.pos_qr_code']" position="replace">
+            <div t-if="props.data.pos_qr_code">
+                <t t-if="env.services.pos.checkbox_qr(props.data.name)"/>
+            </div>
+        </xpath>
+        <xpath expr="//div[hasclass('pos-receipt')]" position="inside">
+            <div t-if="props.data.pos_qr_code_checkbox and props.data.pos_qr_code">
+                <img id="posqrcodecheckbox" t-att-src="props.data.pos_qr_code_checkbox" class="pos-receipt-qrcode" style="width:100pt; height:100pt"/>
+            </div>
+        </xpath>
+    </t>
+</templates>

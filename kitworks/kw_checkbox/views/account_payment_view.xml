@@ -1,0 +1,28 @@
+<odoo>
+    <record id="kw_checkbox_invoice_to_receipt_account_payment_form" model="ir.ui.view">
+        <field name="name">account.payment.form (kw_checkbox_invoice_to_receipt)</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <group>
+                    <group>
+                        <field name="kw_checkbox_is_register_receipt" invisible="not kw_checkbox_is_journal_register_receipt"/>
+                        <field name="kw_checkbox_invoice_id"/>
+                    </group>
+                    <group>
+                        <field name="kw_checkbox_cashier_id" options="{'no_create': True, 'no_open': True}"
+                               invisible="not kw_checkbox_is_journal_register_receipt"/>
+                        <field name="kw_checkbox_cash_register_id" options="{'no_create': True, 'no_open': True}"
+                               invisible="not kw_checkbox_is_journal_register_receipt"/>
+                    </group>
+                </group>
+                <field name="kw_checkbox_is_journal_register_receipt"
+                       invisible="1"/>
+                <field name="kw_checkbox_cashier_ids" invisible="1"/>
+                <field name="kw_checkbox_cash_register_ids" invisible="1"/>
+                <button name="action_reshipping" string="Reshipping checkbox" type="object" invisible="state != 'posted'"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

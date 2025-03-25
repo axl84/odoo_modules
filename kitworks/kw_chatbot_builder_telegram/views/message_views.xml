@@ -1,0 +1,64 @@
+<odoo>
+    <record id="kw_chatbot_message_telegram_button_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.message.form (kw_chatbot_builder_telegram)</field>
+        <field name="model">kw.chatbot.message</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="text"/>
+                        <field name="raw_json" widget="ace" options="{'mode': 'python'}"/>
+                        <field name="conversation_id"/>
+                        <field name="telegram_id"/>
+                        <field name="kw_parent_id"/>
+                        <field name="needed_for_lead" invisible="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="kw_chatbot_message_telegram_button_tree" model="ir.ui.view">
+        <field name="name">kw.chatbot.message.tree (kw_chatbot_builder_telegram)</field>
+        <field name="model">kw.chatbot.message</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="text"/>
+                <field name="raw_json"/>
+                <field name="conversation_id"/>
+                <field name="telegram_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="kw_chatbot_message_telegram_button_action_window"
+            model="ir.actions.act_window">
+        <field name="name">Telegram Message</field>
+        <field name="res_model">kw.chatbot.message</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
+    <menuitem id="kw_chatbot_message_telegram_button_menu"
+              action="kw_chatbot_message_telegram_button_action_window"
+              parent="kw_chatbot.kw_chatbot_settings_main_menu"
+              groups="base.group_no_one"
+              name="Telegram Message" sequence="755"/>
+
+
+    <record id="kw_chatbot_builder_telegram_mail_message_view_form" model="ir.ui.view">
+        <field name="name">mail.message.form (kw_chatbot_builder_telegram)</field>
+        <field name="model">mail.message</field>
+        <field name="inherit_id"
+               ref="mail.mail_message_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='parent_id']" position="after">
+                <field name="kw_message_id" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+
+
+
+</odoo>

@@ -1,0 +1,53 @@
+<odoo noupdate="0">
+    <record id="z_report_paperformat_check" model="report.paperformat">
+        <field name="name">Z Report Check</field>
+        <field name="default" eval="True"/>
+        <field name="format">custom</field>
+        <field name="page_height">210</field>
+        <field name="page_width">100</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">5</field>
+        <field name="margin_bottom">0</field>
+        <field name="margin_left">0</field>
+        <field name="margin_right">0</field>
+        <field name="header_line" eval="False"/>
+    </record>
+
+    <record id="x_report_paperformat_check" model="report.paperformat">
+        <field name="name">X Report Check</field>
+        <field name="default" eval="True"/>
+        <field name="format">custom</field>
+        <field name="page_height">210</field>
+        <field name="page_width">100</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">5</field>
+        <field name="margin_bottom">0</field>
+        <field name="margin_left">0</field>
+        <field name="margin_right">0</field>
+        <field name="header_line" eval="False"/>
+    </record>
+
+    <record id="action_z_report_for_check" model="ir.actions.report">
+        <field name="name">Print Report</field>
+        <field name="model">kw.checkbox.z.reports</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kw_checkbox.z_report</field>
+        <field name="report_file">kw_checkbox.z_report</field>
+        <field name="print_report_name">'Z-report'</field>
+        <field name="binding_model_id" ref="model_kw_checkbox_z_reports"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="kw_checkbox.z_report_paperformat_check"/>
+    </record>
+
+    <record id="action_x_report_for_check" model="ir.actions.report">
+        <field name="name">Print Report</field>
+        <field name="model">kw.checkbox.x.reports</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kw_checkbox.x_report</field>
+        <field name="report_file">kw_checkbox.x_report</field>
+        <field name="print_report_name">'X-report'</field>
+        <field name="binding_model_id" ref="model_kw_checkbox_x_reports"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="x_report_paperformat_check"/>
+    </record>
+</odoo>

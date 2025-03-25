@@ -1,0 +1,15 @@
+<odoo>
+    <record id="kw_chatbot_facebook_kw_chatbot_step_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.step.form (kw_chatbot_facebook)</field>
+        <field name="model">kw.chatbot.step</field>
+        <field name="inherit_id"
+               ref="kw_chatbot_builder.kw_chatbot_builder_kw_chatbot_step_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="FaceBook Buttons" groups="base.group_no_one">
+                    <field name="facebook_button_ids"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,93 @@
+<odoo>
+    <record id="kw_checkbox_wizard_view" model="ir.ui.view">
+        <field name="name">kw.wizard.x_report.view</field>
+        <field name="model">kw.wizard.x_report</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="cash_register_id"/>
+                        <button type="object" name="get_reports_x"
+                                string="Get Report"/>
+                    </group>
+                    <group>
+                        <field name="rec_id" readonly="1"/>
+                        <field name="sell_receipts_count" readonly="1"/>
+                        <field name="return_receipts_count" readonly="1"/>
+                        <field name="transfers_count" readonly="1"/>
+                        <field name="transfers_sum" readonly="1"/>
+                        <field name="balance" readonly="1"/>
+                        <field name="initial" readonly="1"/>
+                        <field name="created_at" readonly="1"/>
+                        <field name="updated_at" readonly="1"/>
+                    </group>
+                </group>
+                <notebook>
+                    <page name="payments" string="Payments">
+                        <group>
+                            <field name="payment_line_ids" string="Payments">
+                                <tree>
+                                    <field name="rec_id" readonly="1"/>
+                                    <field name="code" readonly="1"/>
+                                    <field name="type" readonly="1"/>
+                                    <field name="provider_type" readonly="1"/>
+                                    <field name="label" readonly="1"/>
+                                    <field name="sell_sum" readonly="1"/>
+                                    <field name="return_sum" readonly="1"/>
+                                    <field name="service_in" readonly="1"/>
+                                    <field name="service_out" readonly="1"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+                    <page name="taxes" string="Taxes">
+                        <group>
+                            <field name="tax_line_ids" string="Taxes">
+                                <tree>
+                                    <field name="rec_id" readonly="1"/>
+                                    <field name="code" readonly="1"/>
+                                    <field name="label" readonly="1"/>
+                                    <field name="symbol" readonly="1"/>
+                                    <field name="rate" readonly="1"/>
+                                    <field name="extra_rate" readonly="1"/>
+                                    <field name="sell_sum" readonly="1"/>
+                                    <field name="rate_sell_sum" readonly="1"/>
+                                    <field name="extra_rate_sell_sum" readonly="1"/>
+                                    <field name="rate_return_sum" readonly="1"/>
+                                    <field name="extra_rate_return_sum" readonly="1"/>
+                                    <field name="return_sum" readonly="1"/>
+                                    <field name="decimal_sell_sum" readonly="1"/>
+                                    <field name="decimal_return_sum" readonly="1"/>
+                                    <field name="sales_turnover" readonly="1"/>
+                                    <field name="returns_turnover"
+                                           readonly="1"/>
+                                    <field name="created_at" readonly="1"/>
+                                    <field name="setup_date" readonly="1"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+                </notebook>
+                <footer>
+                    <button name="save_report" string="Save" type="object"
+                            class="oe_highlight"/>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="kw_checkbox_wizard_get_x_report_action"
+            model="ir.actions.act_window">
+        <field name="name">CashBox X Report Wizard</field>
+        <field name="res_model">kw.wizard.x_report</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="kw_checkbox_wizard_view"/>
+    </record>
+
+    <menuitem id="kw_checkbox_wizard_get_x_report_action_menu"
+              action="kw_checkbox_wizard_get_x_report_action"
+              parent="kw_checkbox_settings_main_menu"
+              name="Checkbox X Report" sequence="800"/>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="web.NoReplyConversation" owl="1">
+        <t t-if="state.count > 0">
+            <button class="btn position-relative" t-on-click="openConversationViews">
+                <img t-att-src="'/kw_chatbot/static/description/icon.png'"
+                     style="width: 24px; height: 24px; border-radius: 5px;"
+                     alt="Chatbot"
+                     role="img"
+                     aria-label="Unanswered dialogues"/>
+                <span class="badge rounded-pill bg-danger text-white" t-esc="state.count"></span>
+            </button>
+        </t>
+    </t>
+</templates>

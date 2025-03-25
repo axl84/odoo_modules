@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="0">
+    <record id="kw_chatbot_sender_whatsapp" model="kw.chatbot.sender">
+        <field name="name">WhatsAppBot</field>
+        <field name="provider">whatsapp</field>
+    </record>
+</odoo>

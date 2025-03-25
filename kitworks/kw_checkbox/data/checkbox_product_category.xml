@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="0">
+    <record id="kw_checkbox_product_category0" model="kw.checkbox.product.category">
+        <field name="name">Default Category</field>
+    </record>
+</odoo>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="0">
+    <record id="kw_chatbot_sender_facebook" model="kw.chatbot.sender">
+        <field name="name">FacebookBot</field>
+        <field name="provider">facebook</field>
+    </record>
+</odoo>

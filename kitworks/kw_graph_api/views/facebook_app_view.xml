@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_graph_api_kw_facebook_app_search" model="ir.ui.view">
+        <field name="name">kw.facebook.app.search (kw_graph_api)</field>
+        <field name="model">kw.facebook.app</field>
+        <field eval="8" name="priority"/>
+        <field name="arch" type="xml">
+            <search string="Facebook App">
+                <field name="name"/>
+                <field name="app_id"/>
+            </search></field>
+    </record>
+    <record id="kw_graph_api_kw_facebook_app_tree" model="ir.ui.view">
+        <field name="name">kw.facebook.app.tree (kw_graph_api)</field>
+        <field name="model">kw.facebook.app</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="app_id"/>
+                <field name="is_facebook_app_connect"/>
+            </tree></field>
+    </record>
+    <record id="kw_graph_api_kw_facebook_app_form" model="ir.ui.view">
+        <field name="name">kw.facebook.app.form (kw_graph_api)</field>
+        <field name="model">kw.facebook.app</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <widget bg_color="bg-danger" invisible="active == True" name="web_ribbon" title="Archived"/>
+                    <field invisible="1" name="active"/>
+                    <div name="title_line" style="width: 100%">
+                        <div class="oe_title">
+                            <label class="oe_edit_only" for="name"/>
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                    </div>
+                    <group>
+                        <field name="facebook_app_access_token" password="True"/>
+                        <field name="facebook_app_secret" password="True"/>
+                        <field name="app_id"/>
+                        <field name="is_facebook_webhook"/>
+                        <field name="is_facebook_app_connect"/>
+                        <field invisible="is_facebook_app_connect == True" name="facebook_connect_msg"/>
+                    </group>
+                    <button class="btn btn-primary" name="facebook_app_connect" string="Connect App" type="object"/>
+                    <notebook>
+                        <page name="page" string="Facebook (Page)">
+                            <field name="page_ids"><tree>
+                                    <field name="name"/>
+                                    <field name="net_object"/>
+                                </tree></field>
+                            <button class="btn btn-primary" invisible="is_facebook_app_connect != True" name="facebook_page_login" string="Login" type="object"/>
+                            <group groups="base.group_no_one" invisible="is_facebook_webhook != True" string="Webhook Page">
+                                <field force_save="1" name="page_copy_url" required="is_facebook_webhook == True"/>
+                                <field force_save="1" name="page_verify_token" required="is_facebook_webhook == True"/>
+                                <field force_save="1" name="page_webhook_token" required="is_facebook_webhook == True"/>
+                            </group>
+                            <button class="btn btn-primary" groups="base.group_no_one" invisible="is_facebook_webhook != True" name="update_page_webhook_url" string="Update Webhook URL" type="object"/>
+                        </page>
+                        <page name="instagram" string="Instagram">
+                            <field name="instagram_ids"><tree>
+                                    <field name="name"/>
+                                    <field name="net_object"/>
+                                </tree></field>
+                            <button class="btn btn-primary" invisible="is_facebook_app_connect != True" name="instagram_page_login" string="Login" type="object"/>
+                            <group groups="base.group_no_one" invisible="is_facebook_webhook != True" string="Webhook Instagram">
+                                <field force_save="1" name="instagram_copy_url" required="is_facebook_webhook == True"/>
+                                <field force_save="1" name="instagram_verify_token" required="is_facebook_webhook == True"/>
+                                <field force_save="1" name="instagram_webhook_token" required="is_facebook_webhook == True"/>
+                            </group>
+                            <button class="btn btn-primary" groups="base.group_no_one" invisible="is_facebook_webhook != True" name="update_instagram_webhook_url" string="Update Webhook URL" type="object"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form></field>
+    </record>
+    <record id="kw_graph_api_kw_facebook_app_action_window" model="ir.actions.act_window">
+        <field name="name">Facebook App</field>
+        <field name="res_model">kw.facebook.app</field>
+        <field name="view_mode">tree,form,search</field>
+    </record>
+    <menuitem action="kw_graph_api_kw_facebook_app_action_window" id="kw_graph_api_kw_facebook_app_menu" name="Facebook App" parent="kw_facebook_settings_menu" sequence="100"/>
+</odoo>

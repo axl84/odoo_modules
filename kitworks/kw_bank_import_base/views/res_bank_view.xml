@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.actions.act_window"
+            id="kw_res_partner_bank_action_window">
+        <field name="name">kw_res.partner.bank window</field>
+        <field name="res_model">res.partner.bank</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Bank accounts"
+              id="kw_res_partner_bank_action_window_menu"
+              parent="account.account_account_menu"
+              action="kw_res_partner_bank_action_window"/>
+</odoo>

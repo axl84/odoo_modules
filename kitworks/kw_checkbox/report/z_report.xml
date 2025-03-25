@@ -1,0 +1,13 @@
+<odoo>
+    <template id="z_report">
+        <t t-call="web.basic_layout">
+            <div class="page">
+                <t t-foreach="docs" t-as="rep">
+                    <div>
+                        <span t-field="rep.html_text" style="text-align: center;"/>
+                    </div>
+                </t>
+            </div>
+        </t>
+    </template>
+</odoo>

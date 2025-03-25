@@ -1,0 +1,10 @@
+<odoo>
+    <menuitem id="kw_checkbox_menu_main"
+              web_icon="kw_checkbox,static/description/icon.png"
+              name="CheckBox" sequence="200"
+              groups="group_kw_checkbox_manager,group_kw_checkbox_admin"/>
+
+    <menuitem id="kw_checkbox_settings_main_menu"
+              parent="kw_checkbox.kw_checkbox_menu_main"
+              name="Settings" sequence="9999"/>
+</odoo>

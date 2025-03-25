@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_builder_sale_kw_chatbot_step_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.step.form (kw_chatbot_builder_sale)</field>
+        <field name="model">kw.chatbot.step</field>
+        <field name="inherit_id" ref="kw_chatbot_builder.kw_chatbot_builder_kw_chatbot_step_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page invisible="select_flow != 'sale'" string="Bot Sale">
+                    <div style="margin-top: 4px;">
+                        <h2>
+                            Do not use category
+                        </h2>
+                        <field name="not_use_category" widget="boolean_toggle"/>
+                    </div>
+                    <div invisible="not_use_category == True" style="margin-top: 4px;">
+                        <h2>
+                            Chosen product`s category
+                        </h2>
+                        <group>
+                            <field name="template_message_category"/>
+                            <field invisible="1" name="model_category_id" options="{'no_create': True}"/>
+                            <field invisible="1" name="model_category_name" options="{'no_create': True}"/>
+                            <field name="filter_category_domain" options="{'model': 'model_category_name'}" widget="domain"/>
+                        </group>
+                    </div>
+                    <div style="margin-top: 4px;">
+                        <h2 invisible="not_use_category == True">
+                            Products overview after category selection
+                        </h2>
+                        <h2 invisible="not_use_category != True">
+                            Products overview
+                        </h2>
+                        <group>
+                            <field name="use_img_product" widget="boolean_toggle"/>
+                            <field invisible="0" name="model_product_id" options="{'no_create': True}"/>
+                            <field invisible="0" name="model_product_name" options="{'no_create': True}"/>
+                            <field name="filter_product_domain" options="{'model': 'model_product_name'}" widget="domain"/>
+                        </group>
+                        <group>
+                            <field name="message_product_name" string="Product name on Bot"/>
+                        </group>
+                        <field name="design_product_name_id"><tree editable="bottom">
+                                <field invisible="1" name="line_message_need_serial_number"/>
+                                <field name="sequence" widget="handle"/>
+                                <field invisible="1" name="model_product_id"/>
+                                <field invisible="1" name="model_product_name"/>
+                                <field name="text_before"/>
+                                <field name="need_after_before_text_new_line"/>
+                                <field domain="[('model_id', '=', model_product_id)]" name="fields_id"/>
+                                <field invisible="1" name="sub_model"/>
+                                <field domain="[('model_id','=',sub_model),('ttype','!=','one2many'),('ttype','!=','many2many')]" name="sub_fields_id" readonly="sub_model == False"/>
+                                <field name="text_after"/>
+                                <field name="need_after_after_text_new_line"/>
+                                <field groups="base.group_no_one" name="part_message"/>
+                            </tree></field>
+                        <group>
+                            <field name="button_name_add_to_cart" string="Add to cart button name"/>
+                            <field invisible="not_use_category != True" name="message_back_to_product"/>
+                            <field invisible="not_use_category == True" name="button_name_back_to_category" string="Back to category button name"/>
+                        </group>
+                    </div>
+                    <div style="margin-top: 4px;">
+                        <h2>
+                            Product quantity selection
+                        </h2>
+                        <group>
+                            <field name="message_quantity" string="Notification to select the product quantity"/>
+                            <field name="button_name_enter_quantity"/>
+                        </group>
+                        <field name="design_message_quantity_id"><tree editable="bottom">
+                                <field invisible="1" name="line_message_need_serial_number"/>
+                                <field name="sequence" widget="handle"/>
+                                <field invisible="1" name="model_product_id"/>
+                                <field invisible="1" name="model_product_name"/>
+                                <field name="text_before"/>
+                                <field name="need_after_before_text_new_line"/>
+                                <field domain="[('model_id', '=', model_product_id)]" name="fields_id"/>
+                                <field invisible="1" name="sub_model"/>
+                                <field domain="[('model_id','=',sub_model),('ttype','!=','one2many'),('ttype','!=','many2many')]" name="sub_fields_id" readonly="sub_model == False"/>
+                                <field name="text_after"/>
+                                <field name="need_after_after_text_new_line"/>
+                                <field groups="base.group_no_one" name="part_message"/>
+                            </tree></field>
+                    </div>
+                    <div style="margin-top: 4px;">
+                        <h2>
+                            Notification after adding to cart
+                        </h2>
+                        <group>
+                            <field name="notification_add_to_card" string="Notification after adding to cart"/>
+                            <field name="name_button_cart" string="Open the cart button name"/>
+                        </group>
+                    </div>
+                    <div style="margin-top: 4px;">
+                        <h2>
+                            Cart overview
+                        </h2>
+                        <group>
+                            <field name="notification_cart_id" string="Notification Cart overview"/>
+                            <field name="message_confirm_order" string="Confirm the order name button"/>
+                            <field name="clear_cart_name_button" string="Clear the cart name button"/>
+                            <field name="notification_after_clear_cart" string="Notification after cart cleaning"/>
+                        </group>
+                    </div>
+                    <div style="margin-top: 4px;">
+                        <h2>
+                            Do not use method of delivery selection
+                        </h2>
+                        <field name="not_use_delivery" widget="boolean_toggle"/>
+                    </div>
+                    <div invisible="not_use_delivery == True" style="margin-top: 4px;">
+                        <h2>
+                            Message for selecting the method of delivery
+                        </h2>
+                        <group>
+                            <field name="message_select_delivery" string="Message for selecting the method of delivery"/>
+                        </group>
+                    </div>
+                    <div style="margin-top: 4px;">
+                        <h2>
+                            Message for inputting the customer`s shipping address
+                        </h2>
+                        <group>
+                            <field name="message_input_data_shipping" string="Message for inputting the customer`s shipping address"/>
+                        </group>
+                    </div>
+                    <div style="margin-top: 4px;">
+                        <h2>
+                            The order completion
+                        </h2>
+                        <group>
+                            <field name="button_name_after_confirm_order" string="Notification after confirm order"/>
+                            <field name="tag_ids" widget="many2many_tags"/>
+                        </group>
+                        <h2>
+                            The method of payment selection
+                        </h2>
+                        <group>
+                            <field name="not_use_payment_url" widget="boolean_toggle"/>
+                            <field invisible="not_use_payment_url == True" name="message_payment_url"/>
+                            <field invisible="not_use_payment_url == True" name="button_name_payment_url"/>
+                        </group>
+                    </div>
+                </page>
+            </xpath></field>
+    </record>
+</odoo>

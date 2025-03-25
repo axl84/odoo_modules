@@ -1,0 +1,17 @@
+from . import (
+    conversation,
+    dialog,
+    notification,
+    chat,
+    messenger,
+    sender,
+    logs,
+    message_mailing,
+    mass_send_bot,
+    im_livechannel,
+    mail_channel,
+    mail_message,
+    res_partner,
+    res_users,
+    crm_lead,
+)

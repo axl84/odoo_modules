@@ -1,0 +1,197 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kw_chatbot_telegram
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-12 12:59+0000\n"
+"PO-Revision-Date: 2023-12-12 12:59+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kw_chatbot_telegram
+#. odoo-python
+#: code:addons/kw_chatbot_telegram/models/chat.py:0
+#, python-format
+msgid "\"Telegram token\" is required for Telegram chat"
+msgstr "Для чату Telegram потрібен Telegram токен"
+
+#. module: kw_chatbot_telegram
+#. odoo-python
+#: code:addons/kw_chatbot_telegram/models/conversation.py:0
+#, python-format
+msgid "An error occurred while processing the file"
+msgstr "Під час обробки файлу виникла помилка"
+
+#. module: kw_chatbot_telegram
+#. odoo-python
+#: code:addons/kw_chatbot_telegram/models/conversation.py:0
+#, python-format
+msgid "Cant process: \"message\" not provided"
+msgstr "Неможливо обробити: \"Повідомлення\" не надається"
+
+#. module: kw_chatbot_telegram
+#: model:ir.model,name:kw_chatbot_telegram.model_kw_chatbot_chat
+msgid "Chat"
+msgstr "Чат"
+
+#. module: kw_chatbot_telegram
+#: model:ir.model,name:kw_chatbot_telegram.model_kw_chatbot_notification
+msgid "Chatbot Notification"
+msgstr "Чат-бот сповіщення"
+
+#. module: kw_chatbot_telegram
+#: model:ir.model,name:kw_chatbot_telegram.model_kw_chatbot_conversation
+#: model:ir.model,name:kw_chatbot_telegram.model_kw_chatbot_message
+msgid "Conversation"
+msgstr "Діалог"
+
+#. module: kw_chatbot_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_kw_chatbot_notification__file_fields_ids
+msgid "File Fields"
+msgstr "Поля файлу"
+
+#. module: kw_chatbot_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_kw_chatbot_chat__first_name_bot
+msgid "First Name Bot"
+msgstr "Ім'я користувача в телеграма"
+
+#. module: kw_chatbot_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_kw_chatbot_conversation__is_telegram_send
+msgid "Is Telegram Send"
+msgstr "Відправка"
+
+#. module: kw_chatbot_telegram
+#: model:ir.model,name:kw_chatbot_telegram.model_link_tracker
+msgid "Link Tracker"
+msgstr "Відстежувач посилань"
+
+#. module: kw_chatbot_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_kw_chatbot_conversation__location_latitude
+msgid "Location Latitude"
+msgstr "Широта"
+
+#. module: kw_chatbot_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_kw_chatbot_conversation__location_longitude
+msgid "Location Longitude"
+msgstr "Довгота"
+
+#. module: kw_chatbot_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_chat_bot_partner_send__raw_json
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_chat_bot_partner_send_mass__raw_json
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_chat_bot_send__raw_json
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_kw_chatbot_message__raw_json
+msgid "Raw Json"
+msgstr "Необроблений Json"
+
+#. module: kw_chatbot_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_kw_chatbot_notification__is_file_send
+msgid "Send File"
+msgstr "Надіслати файл"
+
+#. module: kw_chatbot_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_kw_chatbot_notification__is_tg_send_location
+msgid "Send Location"
+msgstr "Надіслати локацію"
+
+#. module: kw_chatbot_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_kw_chatbot_notification__send_location_name
+msgid "Send Location Name"
+msgstr "Надіслати назву локації"
+
+#. module: kw_chatbot_telegram
+#: model:ir.model,name:kw_chatbot_telegram.model_kw_chatbot_sender
+msgid "Sender"
+msgstr "Відправник"
+
+#. module: kw_chatbot_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_chat_bot_partner_send__telegram_id
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_chat_bot_partner_send_mass__telegram_id
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_chat_bot_send__telegram_id
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_kw_chatbot_conversation__telegram_id
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_kw_chatbot_message__telegram_id
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_kw_chatbot_sender__telegram_id
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_telegram.kw_chatbot_telegram_kw_chatbot_chat_form
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_telegram.kw_chatbot_telegram_kw_chatbot_sender_form
+msgid "Telegram"
+msgstr ""
+
+#. module: kw_chatbot_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_kw_chatbot_chat__telegram_access_token
+msgid "Telegram Access Token"
+msgstr "Токен доступу до Telegram"
+
+#. module: kw_chatbot_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_kw_chatbot_chat__telegram_developer_url
+msgid "Telegram Developer Url"
+msgstr "Адреса розробника телеграм"
+
+#. module: kw_chatbot_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_kw_chatbot_sender__telegram_first_name
+msgid "Telegram First Name"
+msgstr "Ім'я користувача в телеграма"
+
+#. module: kw_chatbot_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_kw_chatbot_sender__telegram_is_bot
+msgid "Telegram Is Bot"
+msgstr "Telegram бот"
+
+#. module: kw_chatbot_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_kw_chatbot_sender__telegram_language_code
+msgid "Telegram Language Code"
+msgstr "Мова Telegram"
+
+#. module: kw_chatbot_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_kw_chatbot_sender__telegram_last_name
+msgid "Telegram Last Name"
+msgstr "Прізвище користувача в Telegram"
+
+#. module: kw_chatbot_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_kw_chatbot_chat__telegram_location
+msgid "Telegram Location"
+msgstr "Розташування Telegram"
+
+#. module: kw_chatbot_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_kw_chatbot_chat__telegram_token
+msgid "Telegram Token"
+msgstr "Telegram токен"
+
+#. module: kw_chatbot_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_kw_chatbot_chat__telegram_update_hook_response
+msgid "Telegram Update Hook Response"
+msgstr "Оновити Hook відповідь Telegram"
+
+#. module: kw_chatbot_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_kw_chatbot_sender__telegram_username
+msgid "Telegram Username"
+msgstr "Логін в Telegram"
+
+#. module: kw_chatbot_telegram
+#. odoo-python
+#: code:addons/kw_chatbot_telegram/models/conversation.py:0
+#, python-format
+msgid "There is no answer for your request"
+msgstr "Відповідь на ваш запит відсутня"
+
+#. module: kw_chatbot_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_telegram.field_kw_chatbot_notification__tg_url_name
+msgid "URL Name"
+msgstr "Назва URL"
+
+#. module: kw_chatbot_telegram
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_telegram.kw_chatbot_telegram_kw_chatbot_chat_form
+msgid "Update hook"
+msgstr "Оновити hook"
+
+#. module: kw_chatbot_telegram
+#. odoo-python
+#: code:addons/kw_chatbot_telegram/models/link_tracker.py:0
+#, python-format
+msgid "Visit Webpage"
+msgstr "Відвідати веб-сторінку"

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_umnico_kw_chatbot_sender_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.sender.form (kw_chatbot_umnico)</field>
+        <field name="model">kw.chatbot.sender</field>
+        <field name="inherit_id" ref="kw_chatbot.kw_chatbot_kw_chatbot_sender_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page invisible="provider != 'umnico'" string="umnico">
+                    <group>
+                        <field force_save="1" name="umnico_channel_id"/>
+                        <field name="umnico_id"/>
+                        <field name="umnico_accountId"/>
+                        <field name="umnico_leadId"/>
+                        <field name="umnico_realId"/>
+                        <field name="umnico_customerId"/>
+                        <field name="umnico_username"/>
+                        <field name="umnico_socialId"/>
+                        <field name="umnico_profileUrl"/>
+                        <field name="umnico_saId"/>
+                        <field name="is_person"/>
+                        <field name="login"/>
+                    </group>
+                </page>
+            </notebook></field>
+    </record>
+    <record id="kw_chatbot_umnico_kw_chatbot_sender_search" model="ir.ui.view">
+        <field name="name">kw.chatbot.sender.search (kw_chatbot_umnico)</field>
+        <field name="model">kw.chatbot.sender</field>
+        <field eval="8" name="priority"/>
+        <field name="arch" type="xml">
+            <search>
+                <field filter_domain="[('umnico_username','ilike',self)]" name="umnico_username"/>
+            </search></field>
+    </record>
+</odoo>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_telegram_kw_chatbot_sender_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.sender.form (kw_chatbot_telegram)</field>
+        <field name="model">kw.chatbot.sender</field>
+        <field name="inherit_id" ref="kw_chatbot.kw_chatbot_kw_chatbot_sender_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page invisible="provider != 'telegram'" string="Telegram">
+                    <group>
+                        <field name="telegram_id"/>
+                        <field name="telegram_is_bot"/>
+                        <field name="telegram_first_name"/>
+                        <field name="telegram_last_name"/>
+                        <field name="telegram_username"/>
+                        <field name="telegram_language_code"/>
+                    </group>
+                </page>
+            </notebook></field>
+    </record>
+    <record id="kw_chatbot_telegram_kw_chatbot_sender_search" model="ir.ui.view">
+        <field name="name">kw.chatbot.sender.form (kw_chatbot_telegram)</field>
+        <field name="model">kw.chatbot.sender</field>
+        <field eval="8" name="priority"/>
+        <field name="arch" type="xml">
+            <search>
+                <field filter_domain="[('telegram_username','ilike',self)]" name="telegram_username"/>
+                <field filter_domain="[('telegram_first_name','ilike',self)]" name="telegram_first_name"/>
+                <field filter_domain="[('telegram_last_name','ilike',self)]" name="telegram_last_name"/>
+            </search></field>
+    </record>
+</odoo>

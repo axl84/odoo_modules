@@ -1,0 +1,101 @@
+<odoo>
+    <record id="kw_checkbox_kw_checkbox_x_reports_tree" model="ir.ui.view">
+        <field name="name">kw.checkbox.x.reports.tree (kw_checkbox)</field>
+        <field name="model">kw.checkbox.x.reports</field>
+        <field name="arch" type="xml">
+            <tree create="0">
+                <field name="name"/>
+                <field name="balance"/>
+                <field name="created_at"/>
+
+            </tree>
+        </field>
+    </record>
+
+    <record id="kw_checkbox_kw_checkbox_x_reports_form" model="ir.ui.view">
+        <field name="name">kw.checkbox.x.reports.form (kw_checkbox)</field>
+        <field name="model">kw.checkbox.x.reports</field>
+        <field name="arch" type="xml">
+            <form edit="0" create="0">
+                <header>
+                    <button name="open_report" string="Open Report" type="object"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="cash_register_id"/>
+                            <field name="sell_receipts_count"/>
+                            <field name="return_receipts_count"/>
+
+                        </group>
+                        <group>
+                            <field name="transfers_count"/>
+                            <field name="transfers_sum"/>
+                            <field name="balance"/>
+                            <field name="initial"/>
+                            <field name="created_at"/>
+                            <field name="updated_at"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page string="Payments">
+                            <field name="payments">
+                                <tree>
+                                    <field name="rec_id" readonly="1"/>
+                                    <field name="code" readonly="1"/>
+                                    <field name="type" readonly="1"/>
+                                    <field name="label" readonly="1"/>
+                                    <field name="sell_sum" readonly="1"/>
+                                    <field name="return_sum" readonly="1"/>
+                                    <field name="service_in" readonly="1"/>
+                                    <field name="service_out" readonly="1"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Taxes">
+                            <field name="taxes">
+                                <tree>
+                                    <field name="index"/>
+                                    <field name="code"/>
+                                    <field name="label"/>
+                                    <field name="symbol"/>
+                                    <field name="rate"/>
+                                    <field name="extra_rate"/>
+                                    <field name="included"/>
+                                    <field name="active"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--    <record id="kw_checkbox_kw_checkbox_z_reports_search" model="ir.ui.view">-->
+    <!--        <field name="name">kw.checkbox.z.reports.search (kw_checkbox)</field>-->
+    <!--        <field name="model">kw.checkbox.z.reports</field>-->
+    <!--        <field name="arch" type="xml">-->
+    <!--            <search>-->
+    <!--                <field name="name"-->
+    <!--                       filter_domain="[('name','ilike',self)]"/>-->
+    <!--                <field name="cb_id"-->
+    <!--                       filter_domain="[('cb_id','ilike',self)]"/>-->
+    <!--            </search>-->
+    <!--        </field>-->
+    <!--    </record>-->
+
+    <record model="ir.actions.act_window"
+            id="kw_checkbox_kw_checkbox_x_reports_action_window">
+        <field name="name">X-Reports</field>
+        <field name="res_model">kw.checkbox.x.reports</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="kw_checkbox_kw_checkbox_x_reports_menu"
+              action="kw_checkbox_kw_checkbox_x_reports_action_window"
+              parent="kw_checkbox_menu_main"
+              name="X-Reports" sequence="201"/>
+</odoo>

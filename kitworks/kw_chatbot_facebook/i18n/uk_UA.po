@@ -1,0 +1,234 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kw_chatbot_facebook
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-05 11:27+0000\n"
+"PO-Revision-Date: 2024-03-05 14:02+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.4.1\n"
+
+#. module: kw_chatbot_facebook
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_messenger__facebook_app_name
+msgid "App Name"
+msgstr "App Назва"
+
+#. module: kw_chatbot_facebook
+#: model:ir.model,name:kw_chatbot_facebook.model_kw_chatbot_chat
+msgid "Chat"
+msgstr "Чат"
+
+#. module: kw_chatbot_facebook
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_facebook.kw_chatbot_facebook_kw_chatbot_messenger_form
+msgid "Connect App"
+msgstr "Підключити додаток"
+
+#. module: kw_chatbot_facebook
+#: model:ir.model,name:kw_chatbot_facebook.model_kw_chatbot_conversation
+#: model:ir.model,name:kw_chatbot_facebook.model_kw_chatbot_message
+msgid "Conversation"
+msgstr "Діалог"
+
+#. module: kw_chatbot_facebook
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_chat_bot_partner_send__facebook_id
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_chat_bot_partner_send_mass__facebook_id
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_chat_bot_send__facebook_id
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_conversation__facebook_id
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_message__facebook_id
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_sender__facebook_id
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_facebook.kw_chatbot_facebook_kw_chatbot_chat_form
+msgid "Facebook"
+msgstr ""
+
+#. module: kw_chatbot_facebook
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_chat__facebook_access_token
+msgid "Facebook Access Token"
+msgstr "Токен доступу Facebook"
+
+#. module: kw_chatbot_facebook
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_chat__facebook_account_id
+msgid "Facebook Account"
+msgstr "Акаунт Facebook"
+
+#. module: kw_chatbot_facebook
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_chat__facebook_app_id
+msgid "Facebook App"
+msgstr "Додаток Facebook"
+
+#. module: kw_chatbot_facebook
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_messenger__facebook_app_access_token
+msgid "Facebook App Access Token"
+msgstr "Токен доступу до додатку Facebook"
+
+#. module: kw_chatbot_facebook
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_messenger__facebook_app_id
+msgid "Facebook App ID"
+msgstr "ID додатку Facebook"
+
+#. module: kw_chatbot_facebook
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_chat__facebook_app_secret
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_messenger__facebook_app_secret
+msgid "Facebook App Secret"
+msgstr "Secret додатку Facebook"
+
+#. module: kw_chatbot_facebook
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_facebook.kw_chatbot_facebook_kw_chatbot_messenger_form
+msgid "Facebook App Setting"
+msgstr "Налаштування додатку Facebook"
+
+#. module: kw_chatbot_facebook
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_messenger__facebook_connect_msg
+msgid "Facebook Connect Msg"
+msgstr "Facebook повідомлення з'єднання"
+
+#. module: kw_chatbot_facebook
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_chat__facebook_copy_url
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_messenger__facebook_copy_url
+msgid "Facebook Copy Url"
+msgstr "Facebook копія URL-адреси"
+
+#. module: kw_chatbot_facebook
+#. odoo-python
+#: code:addons/kw_chatbot_facebook/models/messenger.py:0
+#, python-format
+msgid "Facebook Copy Url or Facebook Verify Token are missing"
+msgstr ""
+
+#. module: kw_chatbot_facebook
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_chat__facebook_developer_url
+msgid "Facebook Developer Url"
+msgstr "Facebook Посилання розробника"
+
+#. module: kw_chatbot_facebook
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_facebook.kw_chatbot_facebook_kw_chatbot_messenger_form
+msgid "Facebook Login"
+msgstr "Facebook логін"
+
+#. module: kw_chatbot_facebook
+#: model:ir.model.constraint,message:kw_chatbot_facebook.constraint_kw_chatbot_messenger_facebook_sdk_token_unique
+msgid "Facebook SDK Token should be unique"
+msgstr "Facebook SDK Token має бути унікальним"
+
+#. module: kw_chatbot_facebook
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_messenger__facebook_sdk_token
+msgid "Facebook Sdk Token"
+msgstr "Facebook Sdk токен"
+
+#. module: kw_chatbot_facebook
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_chat__facebook_timestamp
+msgid "Facebook Timestamp"
+msgstr ""
+
+#. module: kw_chatbot_facebook
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_chat__facebook_verify_token
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_messenger__facebook_verify_token
+msgid "Facebook Verify Token"
+msgstr "Facebook токеен верифікації"
+
+#. module: kw_chatbot_facebook
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_messenger__facebook_webhook_msg
+msgid "Facebook Webhook Msg"
+msgstr ""
+
+#. module: kw_chatbot_facebook
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_chat__facebook_webhook_token
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_messenger__facebook_webhook_token
+msgid "Facebook Webhook Token"
+msgstr ""
+
+#. module: kw_chatbot_facebook
+#. odoo-python
+#: code:addons/kw_chatbot_facebook/models/messenger.py:0
+#, python-format
+msgid "Facebook app is not configured"
+msgstr "Facebook app не налаштовано"
+
+#. module: kw_chatbot_facebook
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_messenger__is_facebook_app_connect
+msgid "Is Facebook App Connect"
+msgstr ""
+
+#. module: kw_chatbot_facebook
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_chat__is_facebook_developer_mode
+msgid "Is Facebook Developer Mode"
+msgstr "Facebook режим розробника"
+
+#. module: kw_chatbot_facebook
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_chat__is_facebook_login
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_messenger__is_facebook_login
+msgid "Is Facebook Login"
+msgstr "Facebook логін"
+
+#. module: kw_chatbot_facebook
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_conversation__is_facebook_send
+msgid "Is Facebook Send"
+msgstr "Відправка в Facebook"
+
+#. module: kw_chatbot_facebook
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_messenger__is_facebook_webhook_configure
+msgid "Is Facebook Webhook Configure"
+msgstr ""
+
+#. module: kw_chatbot_facebook
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_messenger__is_facebook_webhook_connect
+msgid "Is Facebook Webhook Connect"
+msgstr ""
+
+#. module: kw_chatbot_facebook
+#: model:ir.model,name:kw_chatbot_facebook.model_link_tracker
+msgid "Link Tracker"
+msgstr "Відстежувач посилань"
+
+#. module: kw_chatbot_facebook
+#: model:ir.model,name:kw_chatbot_facebook.model_kw_chatbot_messenger
+msgid "Messenger"
+msgstr "Месенджер"
+
+#. module: kw_chatbot_facebook
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_chat_bot_partner_send__raw_json
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_chat_bot_partner_send_mass__raw_json
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_chat_bot_send__raw_json
+#: model:ir.model.fields,field_description:kw_chatbot_facebook.field_kw_chatbot_message__raw_json
+msgid "Raw Json"
+msgstr "Необроблений Json"
+
+#. module: kw_chatbot_facebook
+#: model:ir.model,name:kw_chatbot_facebook.model_kw_chatbot_sender
+msgid "Sender"
+msgstr "Відправник"
+
+#. module: kw_chatbot_facebook
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_facebook.kw_chatbot_facebook_kw_chatbot_messenger_form
+msgid "Update Webhook"
+msgstr "Оновити Webhook"
+
+#. module: kw_chatbot_facebook
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_facebook.kw_chatbot_facebook_kw_chatbot_chat_form
+msgid "Update token"
+msgstr "Оновити токен"
+
+#. module: kw_chatbot_facebook
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_facebook.kw_chatbot_facebook_kw_chatbot_chat_form
+msgid "Update url"
+msgstr "Оновити посилання"
+
+#. module: kw_chatbot_facebook
+#. odoo-python
+#: code:addons/kw_chatbot_facebook/models/link_tracker.py:0
+#, python-format
+msgid "Visit Webpage"
+msgstr ""
+
+#. module: kw_chatbot_facebook
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_facebook.kw_chatbot_facebook_kw_chatbot_sender_form
+msgid "facebook"
+msgstr ""

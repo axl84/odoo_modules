@@ -1,0 +1,1225 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kw_chatbot_builder_telegram
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-12 12:52+0000\n"
+"PO-Revision-Date: 2023-12-12 12:52+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kw_chatbot_builder_telegram
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid ""
+"<code style=\"white-space: pre-wrap\">\n"
+"                                            partner_name = record.name + '_code'\n"
+"                                            env['res.partner'].create({'name': "
+"partner_name})\n"
+"                                        </code>"
+msgstr ""
+
+#. module: kw_chatbot_builder_telegram
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid ""
+"<code>UserError</code>: Warning Exception to use with\n"
+"                                            <code>raise</code>"
+msgstr ""
+"<code>UserError</code>: Попередження Виняток для використання з\n"
+"                                           <code>підняти</code>"
+
+#. module: kw_chatbot_builder_telegram
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid "<code>env</code>: Odoo Environment on which the action is triggered"
+msgstr "<code>env</code>: Odoo Середовище, в якому запускається дія"
+
+#. module: kw_chatbot_builder_telegram
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid ""
+"<code>log(message, level='info')</code>:logging function to record debug\n"
+"                                            information in <code>ir.logging</code> table"
+msgstr ""
+"<code>log(message, level='info')</code>:функція логування для запису логів\n"
+"                                            інформації у таблицю <code>ir.logging</code>"
+
+#. module: kw_chatbot_builder_telegram
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid ""
+"<code>model</code>: Odoo Model of the record on which the action is\n"
+"                                            triggered; is a void recordset"
+msgstr ""
+"<code>модель</code>: Odoo Модель запису, на якому запускається дія\n"
+"                                            спрацьовує; є пустим набором записів"
+
+#. module: kw_chatbot_builder_telegram
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid "<code>record</code>: record on which the action is triggered; may be be void"
+msgstr "<code>record</code>: запис, на якому запускається дія; може бути недійсним"
+
+#. module: kw_chatbot_builder_telegram
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid ""
+"<code>records</code>: recordset of all records on which the action is\n"
+"                                            triggered in multi mode; may be void"
+msgstr ""
+"<code>records</code>: набір усіх записів, на яких виконується дія\n"
+"                                            спрацьовує в мультирежимі; може бути недійсним"
+
+#. module: kw_chatbot_builder_telegram
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid "<code>sender_partner</code>: Partner of the sender of the bot message"
+msgstr "<code>sender_partner</code>:Партнер для відправника з бот-месенджера"
+
+#. module: kw_chatbot_builder_telegram
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid "<code>sender_user</code>: User Odoo of the sender of the bot message"
+msgstr "<code>sender_user</code>: Користувач Odoo для відправника з бот-месенджера"
+
+#. module: kw_chatbot_builder_telegram
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid ""
+"<code>time</code>, <code>datetime</code>, <code>dateutil</code>, <code>\n"
+"                                            timezone</code>: useful Python libraries"
+msgstr ""
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__comparison_type
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__dynamic_button_action
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid "Action"
+msgstr "Дія"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_button_step__action_result_type
+msgid "Action Result Type"
+msgstr "Тип результату дії"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_button_step__action_type
+msgid "Action Type"
+msgstr "Тип дії"
+
+#. module: kw_chatbot_builder_telegram
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid "Actions"
+msgstr "Дії"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__active
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_keyboard__active
+msgid "Active"
+msgstr "Активний"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__activity_type_id
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid "Activity"
+msgstr "Діяльність"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__activity_user_type
+msgid "Activity User Type"
+msgstr "Тип користувача активності"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__partner_ids
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_step_telegram_button__state__followers
+msgid "Add Followers"
+msgstr "Додати підписніків"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_telegram_button_step__action_type__after_action
+msgid "After"
+msgstr "Після"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_telegram_button_step__action_result_type__anyway
+msgid "Anyway"
+msgstr "Будь-який"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_telegram_button_step__action_type__before_action
+msgid "Before"
+msgstr "Поперед"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_button_step__bind_record
+msgid "Bind Record"
+msgstr "Зв'язати запис"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__button_name
+msgid "Button Name"
+msgstr "Назва кнопки"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__button_step_ids
+msgid "Button Step"
+msgstr "Кнопка кроку"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__callback_data
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid "Callback Data"
+msgstr "Дані зворотного виклику"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model,name:kw_chatbot_builder_telegram.model_kw_chatbot_chat
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_command__chat_id
+msgid "Chat"
+msgstr "Чат"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model,name:kw_chatbot_builder_telegram.model_kw_chatbot_notification
+msgid "Chatbot Notification"
+msgstr "Чат-бот сповіщення"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__child_ids
+msgid "Child Actions"
+msgstr "Дочірня дія"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__child_field_id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__child_field_ids
+msgid "Child Field"
+msgstr "Дочірнє поле"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__model_notification_id
+msgid "Child Model"
+msgstr "Дочірня модель"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,help:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__child_ids
+msgid ""
+"Child server actions that will be executed. Note that the last return returned action "
+"value will be used as global return value."
+msgstr ""
+"Дії дочірнього сервера, які будуть виконані. Зауважте, що останнє повернуте значення дії "
+"буде використано як глобальне повернуте значення."
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_keyboard__name
+msgid "Code"
+msgstr "Код"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_command__command
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_builder_telegram_kw_chatbot_chat_form
+msgid "Command"
+msgstr "Команда"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_step_telegram_button__dynamic_button_action__comparison
+msgid "Comparison"
+msgstr "Порівняння"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__comparison_result_text
+msgid "Comparison Result Text"
+msgstr "Текст результату порівняння"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_telegram_filtered_fields__filtered_type__contact
+msgid "Contact"
+msgstr "Партнер"
+
+#. module: kw_chatbot_builder_telegram
+#. odoo-python
+#: code:addons/kw_chatbot_builder_telegram/models/dialog.py:0
+#, python-format
+msgid "Continue?"
+msgstr "Продовжити?"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model,name:kw_chatbot_builder_telegram.model_kw_chatbot_conversation
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_model_activity__conversation_id
+msgid "Conversation"
+msgstr "Діалог"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_telegram_filtered_fields__filtered_type__conversation
+msgid "Conversation Activity"
+msgstr "Значення з діалогу"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_step_telegram_button__state__next_activity
+msgid "Create Next Activity"
+msgstr "Створити наступну активність"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_step_telegram_button__state__object_create
+msgid "Create a new Record\t"
+msgstr "Сворити новий запис\t"
+
+#. module: kw_chatbot_builder_telegram
+#. odoo-python
+#: code:addons/kw_chatbot_builder_telegram/models/dialog.py:0
+#, python-format
+msgid "Create contact success"
+msgstr "Контакт створено успішно"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__create_uid
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_keyboard__create_uid
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_button_step__create_uid
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_command__create_uid
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_filtered_fields__create_uid
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_model_activity__create_uid
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_notification_line__create_uid
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_un_notification_line__create_uid
+msgid "Created by"
+msgstr "Створений в"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__create_date
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_keyboard__create_date
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_button_step__create_date
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_command__create_date
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_filtered_fields__create_date
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_model_activity__create_date
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_notification_line__create_date
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_un_notification_line__create_date
+msgid "Created on"
+msgstr "Створений в"
+
+#. module: kw_chatbot_builder_telegram
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid "Data to Write"
+msgstr "Дані для запису"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_notification__value_type__day
+msgid "Day"
+msgstr "День"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_step_telegram_button__activity_date_deadline_range_type__days
+msgid "Days"
+msgstr "Дні"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_command__name
+msgid "Description"
+msgstr "Опис"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_command__dialog_id
+msgid "Dialog"
+msgstr "Діалог"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__display_name
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_keyboard__display_name
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_button_step__display_name
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_command__display_name
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_filtered_fields__display_name
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_model_activity__display_name
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_notification_line__display_name
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_un_notification_line__display_name
+msgid "Display Name"
+msgstr "Відображуване ім'я"
+
+#. module: kw_chatbot_builder_telegram
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid "Domain"
+msgstr "Домен"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__activity_date_deadline_range
+msgid "Due Date In"
+msgstr "Дата виконання в"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__activity_date_deadline_range_type
+msgid "Due type"
+msgstr "Належний тип"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_step_telegram_button__state__dynamic_button
+msgid "Dynamic Button"
+msgstr "Динамічна кнопка"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__dynamic_button_field_ttype
+msgid "Dynamic Button Field Ttype"
+msgstr "Тип поля динамічної кнопки"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__dynamic_button_name_model
+msgid "Dynamic Button Name Model"
+msgstr "Назва моделі динамічної кнопки"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__template_id
+msgid "Email Template"
+msgstr "Email шаблон"
+
+#. module: kw_chatbot_builder_telegram
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_telegram_button_step_form_view
+msgid ""
+"Enter Python code here. Help about Python expression is available in the help tab of this "
+"document."
+msgstr ""
+"Введіть тут код Python. Довідка щодо виразу Python доступна на вкладці довідки цього "
+"документа."
+
+#. module: kw_chatbot_builder_telegram
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid "Example of Python code"
+msgstr "Приклад Python коду"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_step_telegram_button__state__code
+msgid "Execute Python Code"
+msgstr "Приклад Python коду"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_step_telegram_button__state__multi
+msgid "Execute several actions\t"
+msgstr "Виконати кілька дій\t"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__comparison_field_id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__dynamic_button_field_id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_filtered_fields__field_id
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_step_telegram_button__comparison_value_type__field
+msgid "Field"
+msgstr "Поле"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_step_telegram_button__send_notification_type__field_search
+msgid "Field Search"
+msgstr "Поле пошуку"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_notification_line__fields_id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_un_notification_line__fields_id
+msgid "Fields"
+msgstr "Поля по замовчуванню"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__fields_lines
+msgid "Fields Lines"
+msgstr "Лініі полів"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_mass_send_bot__file_id
+msgid "File"
+msgstr "Файл"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_mass_send_bot__file_name
+msgid "File Name"
+msgstr "Назва файлу"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,help:kw_chatbot_builder_telegram.field_kw_chatbot_mass_send_bot__file_id
+msgid "File to send"
+msgstr "Файл для відправки"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_notification__filter_field_id
+msgid "Filter Field"
+msgstr "Поле фільтра"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_notification__filter_value
+msgid "Filter Value"
+msgstr "Значення фільтра"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_notification__filtered_fields_ids
+msgid "Filtered Fields"
+msgstr "Відфільтровані поля"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_filtered_fields__filtered_type
+msgid "Filtered Type"
+msgstr "Фільтрований тип"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,help:kw_chatbot_builder_telegram.field_kw_telegram_button_notification_line__sub_model
+#: model:ir.model.fields,help:kw_chatbot_builder_telegram.field_kw_telegram_button_un_notification_line__sub_model
+msgid "For relationship fields, the technical name of the target model"
+msgstr "Для полів зв'язку, технічна назва цільової моделі"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__forward_step_id
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_step_telegram_button__state__forward_step
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid "Forward Step"
+msgstr "Крок вперед"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_step_telegram_button__activity_user_type__generic
+msgid "Generic User From Record"
+msgstr "Загальний користувач з запису"
+
+#. module: kw_chatbot_builder_telegram
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid "Help"
+msgstr "Довідка"
+
+#. module: kw_chatbot_builder_telegram
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid "Help with Python expressions"
+msgstr "Довідка з Python-виразами"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_keyboard__id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_button_step__id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_command__id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_filtered_fields__id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_model_activity__id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_notification_line__id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_un_notification_line__id
+msgid "ID"
+msgstr ""
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__id_record
+msgid "Id Record"
+msgstr "Id запису"
+
+#. module: kw_chatbot_builder_telegram
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid ""
+"If several child actions return an action, only the last one will be executed.\n"
+"                                This may happen when having server actions executing code "
+"that returns an action, or\n"
+"                                server actions returning a client action."
+msgstr ""
+"Результат перекладу\n"
+"Якщо кілька дочірніх дій повертають дію, буде виконано лише останню.\n"
+"                                 Це може статися, коли дії сервера виконують код, який "
+"повертає дію, або\n"
+"                                 дії сервера, які повертають дію клієнта."
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_step_telegram_button__search_type__children
+msgid "In Children"
+msgstr "В дочірній"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_step_telegram_button__search_type__parent
+msgid "In Parent"
+msgstr "В батьківській"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__inverse_field_id
+msgid "Inverse Field"
+msgstr "Інверсне поле"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_button_step__is_domain
+msgid "Is Domain"
+msgstr "Домен"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_conversation__is_searching_record
+msgid "Is Searching Record"
+msgstr "Запис пошуку"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_conversation__last_button_id
+msgid "Last Button"
+msgstr "Остання кнопка"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button____last_update
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_keyboard____last_update
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_button_step____last_update
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_command____last_update
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_filtered_fields____last_update
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_model_activity____last_update
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_notification_line____last_update
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_un_notification_line____last_update
+msgid "Last Modified on"
+msgstr "Змінено востаннє"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__write_uid
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_keyboard__write_uid
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_button_step__write_uid
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_command__write_uid
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_filtered_fields__write_uid
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_model_activity__write_uid
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_notification_line__write_uid
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_un_notification_line__write_uid
+msgid "Last Updated by"
+msgstr "Ким змінено востаннє"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__write_date
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_keyboard__write_date
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_button_step__write_date
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_command__write_date
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_filtered_fields__write_date
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_model_activity__write_date
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_notification_line__write_date
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_un_notification_line__write_date
+msgid "Last Updated on"
+msgstr "Ким змінено востаннє"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__limit
+msgid "Limit"
+msgstr "Ліміт"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__link_field_id
+msgid "Link Field"
+msgstr "Поле зв'язку"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_keyboard__is_location
+msgid "Location Request"
+msgstr "Запит про місцезнаходження"
+
+#. module: kw_chatbot_builder_telegram
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid "Log a note..."
+msgstr "Лог зафіксовано..."
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__sms_mass_keep_log
+msgid "Log as Note"
+msgstr "Лог зафіксовано"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model,name:kw_chatbot_builder_telegram.model_kw_chatbot_mass_send_bot
+msgid "Mass Send Bot"
+msgstr "Бот масової розсилки"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__dynamic_button_domain
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_button_step__domain
+msgid "Match all records"
+msgstr "Рівень всіх записів"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_notification__message_not_found
+msgid "Message Not Found"
+msgstr "Повідомлення не знайдено"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model,name:kw_chatbot_builder_telegram.model_kw_telegram_button_notification_line
+#: model:ir.model,name:kw_chatbot_builder_telegram.model_kw_telegram_button_un_notification_line
+msgid "Message Notification Line"
+msgstr "Повідомлення рядка сповіщення"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__model_id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__model_name
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__notification_model_name
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_button_step__model_id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_button_step__model_name
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_filtered_fields__model_id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_notification_line__model_id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_notification_line__model_name
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_un_notification_line__model_id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_un_notification_line__model_name
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_telegram_button_step_form_view
+msgid "Model"
+msgstr "Модель"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__model_notification_name
+msgid "Model Notification Name"
+msgstr "Назва сповіщення моделі"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,help:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__target_model_id
+msgid ""
+"Model for record creation / update. Set this field only to specify a different model than "
+"the base model."
+msgstr ""
+"Модель для створення/оновлення запису. Встановіть це поле лише для визначення іншої "
+"моделі, ніж базова."
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_step_telegram_button__activity_date_deadline_range_type__months
+msgid "Months"
+msgstr "Місяці"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__name
+msgid "Name"
+msgstr "Назва"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__new_record_notification_id
+msgid "New Record Notification"
+msgstr "Новий запис в сповіщенні"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_notification_line__need_after_after_text_new_line
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_notification_line__need_after_before_text_new_line
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_un_notification_line__need_after_after_text_new_line
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_un_notification_line__need_after_before_text_new_line
+msgid "New line after text"
+msgstr "Новий рядок після тексту"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__activity_note
+msgid "Note"
+msgstr "Примітка"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__notification_id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_filtered_fields__notification_id
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_telegram_button_step__step_type__notification
+msgid "Notification"
+msgstr "Сповіщення"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__notification_for_send
+msgid "Notification For Send"
+msgstr "Сповіщення про відправку"
+
+#. module: kw_chatbot_builder_telegram
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid "Notification of successful operation"
+msgstr "Сповіщення при успішну операцію"
+
+#. module: kw_chatbot_builder_telegram
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid "Notification of unsuccessful operation"
+msgstr "Сповіщення при неуспішній операції"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_notification_line__part_message
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_un_notification_line__part_message
+msgid "Part Message"
+msgstr "Частина повідомлення"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_filtered_fields__partner_field_id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_filtered_fields__partner_field_ids
+msgid "Partner Field"
+msgstr "Поле партнера"
+
+#. module: kw_chatbot_builder_telegram
+#. odoo-python
+#: code:addons/kw_chatbot_builder_telegram/models/dialog.py:0
+#, python-format
+msgid "Partner already exist"
+msgstr "Партнер вже є"
+
+#. module: kw_chatbot_builder_telegram
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid "Please set the Model to Create before choosing values"
+msgstr "Перед вибором значень установіть для параметра «Модель» значення «Створити»"
+
+#. module: kw_chatbot_builder_telegram
+#. odoo-python
+#: code:addons/kw_chatbot_builder_telegram/models/dialog.py:0
+#, python-format
+msgid "Please share contact"
+msgstr "Будь ласка, поділіться контактом"
+
+#. module: kw_chatbot_builder_telegram
+#. odoo-python
+#: code:addons/kw_chatbot_builder_telegram/models/dialog.py:0
+#, python-format
+msgid "Please write correct email "
+msgstr "Будь ласка, вкажіть коректну пошту "
+
+#. module: kw_chatbot_builder_telegram
+#. odoo-python
+#: code:addons/kw_chatbot_builder_telegram/models/dialog.py:0
+#, python-format
+msgid "Please write your email (example@example.com)"
+msgstr "Будь ласка, напишіть вашу ел. пошту(example@example.com)"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__product_id
+msgid "Product"
+msgstr "Продукт"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,help:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__link_field_id
+msgid ""
+"Provide the field used to link the newly created record on the record used by the server "
+"action."
+msgstr ""
+"Вкажіть поле, яке використовується для прив'язки новоствореного запису до запису, який "
+"використовується дією сервера."
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__code
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_button_step__code
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_telegram_button_step__step_type__code
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid "Python Code"
+msgstr "Код Python"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_step_telegram_button__send_notification_type__record
+msgid "Record"
+msgstr "Запис"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__change_field_id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__comparison_record_field_id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__search_field_id
+msgid "Record Field"
+msgstr "Поле запису"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__record_fields_ids
+msgid "Record Fields"
+msgstr "Поля запису"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_notification__related_fields_ids
+msgid "Related Fields"
+msgstr "Дочірні поля"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_notification_line__sub_model
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_un_notification_line__sub_model
+msgid "Related Model"
+msgstr "Дочірня модель"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_model_activity__res_id
+msgid "Res"
+msgstr ""
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_model_activity__res_model
+msgid "Res Model"
+msgstr ""
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__is_resend_notification
+msgid "Resend Notification"
+msgstr "Надіслати повторно сповіщення"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__activity_user_id
+msgid "Responsible"
+msgstr "Відповідальний"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__comparison_value_type
+msgid "Result Type"
+msgstr "Тип результату"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__sms_template_id
+msgid "SMS Template"
+msgstr "Шаблон SMS"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_notification__is_save_button_activity
+msgid "Save Button Activity"
+msgstr "Зберегти вибір кнопок"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__search_type
+msgid "Search Type"
+msgstr "Тип пошуку"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_step_telegram_button__state__email
+msgid "Send Email\t"
+msgstr "Відправити пошту\t"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__send_new_record
+msgid "Send New Record"
+msgstr "Надіслати новий запис"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_step_telegram_button__state__send_notification
+msgid "Send Notification"
+msgstr "Надіслати сповіщення"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__send_notification_type
+msgid "Send Notification Type"
+msgstr "Тип сповіщення, що надсилається"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_step_telegram_button__state__sms
+msgid "Send SMS Text Message\t"
+msgstr "Надіслати SMS-текст посідомлення\t"
+
+#. module: kw_chatbot_builder_telegram
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid "Send notification"
+msgstr "Надіслати сповіщення"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__sequence
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_keyboard__sequence
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_button_step__sequence
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_filtered_fields__sequence
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_notification_line__sequence
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_un_notification_line__sequence
+msgid "Sequence"
+msgstr "Послідовність"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model,name:kw_chatbot_builder_telegram.model_ir_server_object_lines
+msgid "Server Action value mapping"
+msgstr "Відображення значення дій сервера"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_mass_send_bot__sms_template_id
+msgid "Sms Template"
+msgstr "Шаблон SMS"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_notification__sorted_field_id
+msgid "Sorted Field"
+msgstr "Поле для сортування"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_step_telegram_button__activity_user_type__specific
+msgid "Specific User"
+msgstr "Спеціальний користувач"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__state
+msgid "State"
+msgstr "Стан"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model,name:kw_chatbot_builder_telegram.model_kw_chatbot_step
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__step_id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_keyboard__step_id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_command__step_id
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_telegram_button_step__step_type__step
+msgid "Step"
+msgstr "Крок"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model,name:kw_chatbot_builder_telegram.model_kw_chatbot_step_telegram_keyboard
+msgid "Step Telegram Keyboard"
+msgstr "Крок клавіатури Telegram"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model,name:kw_chatbot_builder_telegram.model_kw_chatbot_step_telegram_button
+msgid "Step Telegram button"
+msgstr "Крок кнопки Telegram"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_button_step__step_type
+msgid "Step Type"
+msgstr "Тип кроку"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_notification_line__sub_fields_id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_un_notification_line__sub_fields_id
+msgid "Sub Fields"
+msgstr "Підполя"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_telegram_button_step__action_result_type__successful
+msgid "Successful"
+msgstr "Успішно"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__successful_notification
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_button_step__successful_notification_id
+msgid "Successful Notification"
+msgstr "Успішне сповіщення"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_button_step__successful_step_id
+msgid "Successful Step"
+msgstr "Успішний крок"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__activity_summary
+msgid "Summary"
+msgstr "Резюме"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__target_model_id
+msgid "Target Model"
+msgstr "Цільова модель"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__target_model_name
+msgid "Target Model Name"
+msgstr "Назва цільової моделі"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,help:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__activity_user_field_name
+msgid "Technical name of the user on the record"
+msgstr "Технічне ім'я користувача на записі"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_ir_server_object_lines__telegram_button_id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_mass_send_bot__telegram_button_ids
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_notification__telegram_button_ids
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step__telegram_button_ids
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_button_step__telegram_button_id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_notification_line__telegram_button_id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_un_notification_line__telegram_button_id
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid "Telegram Button"
+msgstr "Кнопка Telegram"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.actions.act_window,name:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_action_window
+#: model:ir.ui.menu,name:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_menu
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_builder_telegram_kw_chatbot_step_form
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_telegram_kw_chatbot_step_form
+msgid "Telegram Buttons"
+msgstr "Кнопки Telegram"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.actions.act_window,name:kw_chatbot_builder_telegram.kw_chatbot_telegram_button_step_action_window
+msgid "Telegram Buttons Step"
+msgstr "Telegram Кнопки кроків"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model,name:kw_chatbot_builder_telegram.model_kw_chatbot_telegram_filtered_fields
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_builder_telegram_kw_chatbot_step_form
+msgid "Telegram Filtered Fields"
+msgstr "Telegram Фільтри по полям"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_step_telegram_button__write_type__tg_input
+msgid "Telegram Input"
+msgstr "Значення з Telegram"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step__telegram_keyboard_ids
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_telegram_kw_chatbot_step_form
+msgid "Telegram Keyboard"
+msgstr "Клавіатура  Telegram"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.actions.act_window,name:kw_chatbot_builder_telegram.kw_chatbot_message_telegram_button_action_window
+#: model:ir.ui.menu,name:kw_chatbot_builder_telegram.kw_chatbot_message_telegram_button_menu
+msgid "Telegram Message"
+msgstr "Повідомлення Telegram"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model,name:kw_chatbot_builder_telegram.model_kw_chatbot_telegram_model_activity
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_conversation__model_activity_ids
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_builder_telegram_kw_chatbot_conversation_form
+msgid "Model Activity"
+msgstr "Модель активностей"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step__telegram_stop_conv
+msgid "Telegram Stop Conv"
+msgstr "Telegram Зупинити діалог"
+
+#. module: kw_chatbot_builder_telegram
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_builder_telegram_kw_chatbot_step_form
+msgid "Template not found Records"
+msgstr "Шаблон не знайшов записів"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_notification_line__text_after
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_un_notification_line__text_after
+msgid "Text After"
+msgstr "Текст після"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_notification_line__text_before
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_telegram_button_un_notification_line__text_before
+msgid "Text Before"
+msgstr "Текст до"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__successful_text_line_id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__unsuccessful_text_line_id
+msgid "Text Line"
+msgstr "Рядок тексту"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_chat__tg_command_ids
+msgid "Tg Command"
+msgstr "Команди"
+
+#. module: kw_chatbot_builder_telegram
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid ""
+"To return an action, assign:\n"
+"                                            <code>action = {...}</code>"
+msgstr ""
+"Щоб повернути дію, призначте:\n"
+"                                            <code>action = {...}</code>"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_notification__filter_type
+msgid "Type"
+msgstr "Тип"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,help:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__state
+msgid ""
+"Type of server action. The following values are available:\n"
+"- 'Execute Python Code': a block of python code that will be executed\n"
+"- 'Create': create a new record with new values\n"
+"- 'Update a Record': update the values of a record\n"
+"- 'Execute several actions': define an action that triggers several other server actions\n"
+"- 'Send Email': automatically send an email (Discuss)\n"
+"- 'Add Followers': add followers to a record (Discuss)\n"
+"- 'Create Next Activity': create an activity (Discuss)"
+msgstr ""
+"Тип дії сервера. Доступні такі значення:\n"
+"- «Виконати код Python»: блок коду Python, який буде виконано\n"
+"- «Створити»: створити новий запис із новими значеннями\n"
+"- «Оновити запис»: оновити значення запису\n"
+"- «Виконати кілька дій»: визначте дію, яка запускає кілька інших дій сервера\n"
+"- «Надіслати електронний лист»: автоматично надсилати електронний лист (Обговорити)\n"
+"- «Додати послідовників»: додати підписників до запису (обговорити)\n"
+"- «Створити наступну дію»: створити дію (Обговорення)"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_step_telegram_button__state__url_button
+msgid "URL"
+msgstr "Посилання"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_notification__unique_filter_field_id
+msgid "Unique Filter Field"
+msgstr "Поля з унікальними значеннями"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_notification__is_unique_by_field
+msgid "Unique by Field"
+msgstr "Унікальні значення"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_telegram_button_step__action_result_type__unsuccessful
+msgid "Unsuccessful"
+msgstr "Неуспішний"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__uns_notification_for_send
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__unsuccessful_notification
+msgid "Unsuccessful Notification"
+msgstr "Невдале повідомлення"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_step_telegram_button__state__object_write
+msgid "Update a Record"
+msgstr "Оновити запис"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_step_telegram_button__dynamic_button_action__update
+msgid "Update record"
+msgstr "Оновити запис"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__url
+msgid "Url"
+msgstr "Посилання"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__url_field_id
+msgid "Url Field"
+msgstr "Поле Url"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,help:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__activity_user_type
+msgid ""
+"Use 'Specific User' to always assign the same user on the next activity. Use 'Generic "
+"User From Record' to specify the field name of the user to choose on the record."
+msgstr ""
+"Використовуйте «Спеціальний користувач», щоб завжди призначати того самого користувача "
+"під час наступної дії. Використовуйте «Загальний користувач із запису», щоб указати ім’я "
+"поля для вибору користувача в записі."
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_notification__is_days_filter
+msgid "Use Days Filter"
+msgstr "Використати фільтр по дням"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__use_parent_record
+msgid "Use Parent Record"
+msgstr "Використовуйте батьківський запис"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__activity_user_field_name
+msgid "User field name"
+msgstr "Ім'я поля користувача"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__comparison_value
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_step_telegram_button__comparison_value_type__value
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_step_telegram_button__write_type__value
+msgid "Value"
+msgstr "Значення"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_notification__value_type
+msgid "Value Type"
+msgstr "Значення типу"
+
+#. module: kw_chatbot_builder_telegram
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid ""
+"Various fields may use Python code or Python expressions. The following variables\n"
+"                                        can be used:"
+msgstr ""
+"Різні поля можуть використовувати код Python або вирази Python. Наступні змінні\n"
+"                                         може бути використаний:"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_notification__value_type__weekday
+msgid "Weekday"
+msgstr "Будні"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_telegram.selection__kw_chatbot_step_telegram_button__activity_date_deadline_range_type__weeks
+msgid "Weeks"
+msgstr "Тижнів"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,help:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__code
+#: model:ir.model.fields,help:kw_chatbot_builder_telegram.field_kw_chatbot_telegram_button_step__code
+msgid ""
+"Write Python code that the action will execute. Some variables are available for use; "
+"help about python expression is given in the help tab."
+msgstr ""
+"Напишіть код Python, який буде виконуватись. Деякі змінні доступні для використання; "
+"довідку щодо виразу python можна знайти на вкладці довідки."
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model.fields,field_description:kw_chatbot_builder_telegram.field_kw_chatbot_step_telegram_button__write_type
+msgid "Write Type"
+msgstr "Тип запису"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model,name:kw_chatbot_builder_telegram.model_chatbot_dialog_answer
+msgid "chatbot.dialog.answer"
+msgstr ""
+
+#. module: kw_chatbot_builder_telegram
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_telegram.kw_chatbot_step_telegram_button_form
+msgid "e.g. Discuss proposal"
+msgstr "напр. Обговорити пропозицію"
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model,name:kw_chatbot_builder_telegram.model_kw_chatbot_telegram_button_step
+msgid "kw.chatbot.telegram.button.step"
+msgstr ""
+
+#. module: kw_chatbot_builder_telegram
+#: model:ir.model,name:kw_chatbot_builder_telegram.model_kw_chatbot_telegram_command
+msgid "kw.chatbot.telegram.command"
+msgstr ""

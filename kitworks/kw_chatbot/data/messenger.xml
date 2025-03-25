@@ -1,0 +1,156 @@
+<odoo noupdate="0">
+    <record id="kw_chatbot_messenger_telegram" model="kw.chatbot.messenger">
+        <field name="name">Telegram</field>
+        <field name="sequence">200</field>
+        <field name="provider">telegram</field>
+        <field name="image_128" type="base64"
+               file="kw_chatbot/static/src/img/telegram_logo.png"/>
+        <field name="module_name">kw_chatbot_telegram</field>
+        <field name="description" type="html">
+            <p>
+                <a href="https://telegram.org/">Telegram</a>
+                — is a cloud-based mobile and desktop messaging app with a
+                focus on security and speed.
+            </p>
+        </field>
+    </record>
+
+    <record id="kw_chatbot_messenger_facebook" model="kw.chatbot.messenger">
+        <field name="name">Facebook</field>
+        <field name="sequence">300</field>
+        <field name="provider">facebook</field>
+        <field name="image_128" type="base64"
+               file="kw_chatbot/static/src/img/facebook_logo.png"/>
+        <field name="module_name">kw_chatbot_facebook</field>
+        <field name="description" type="html">
+            <p>
+                <a href="https://facebook.com/">Facebook</a>
+                — Facebook helps you connect and share with the people
+                in your life.
+            </p>
+        </field>
+    </record>
+
+    <record id="kw_chatbot_messenger_instagram" model="kw.chatbot.messenger">
+        <field name="name">Instagram</field>
+        <field name="sequence">350</field>
+        <field name="provider">instagram</field>
+        <field name="image_128" type="base64"
+               file="kw_chatbot/static/src/img/instagram_logo.png"/>
+        <field name="module_name">kw_chatbot_instagram</field>
+        <field name="description" type="html">
+            <p>
+                <a href="https://instagram.com/">Instagram</a>
+                — Instagram helps you connect and share with the people
+                in your life.
+            </p>
+        </field>
+    </record>
+
+    <record id="kw_chatbot_messenger_viber" model="kw.chatbot.messenger">
+        <field name="name">Viber</field>
+        <field name="sequence">300</field>
+        <field name="provider">viber</field>
+        <field name="image_128" type="base64"
+               file="kw_chatbot/static/src/img/viber_logo.png"/>
+        <field name="module_name">kw_chatbot_viber</field>
+        <field name="description" type="html">
+            <p>
+                <a href="https://www.viber.com/">Viber</a>
+                — is a cloud-based mobile and desktop messaging app.
+            </p>
+        </field>
+    </record>
+
+    <record id="kw_chatbot_messenger_im_livechat" model="kw.chatbot.messenger">
+        <field name="name">Odoo live-chat</field>
+        <field name="state">enabled</field>
+        <field name="sequence">100</field>
+        <field name="provider">odoo_livechat</field>
+        <field name="image_128" type="base64"
+               file="kw_chatbot/static/src/img/im_livechat_logo.png"/>
+        <field name="module_name">kw_chatbot</field>
+        <field name="description" type="html">
+            <p>
+                <a href="https://www.odoo.com/app/live-chat">Odoo live-chat</a>
+                — is a chat online with customers and website visitors in real time.
+            </p>
+        </field>
+    </record>
+
+    <record id="kw_chatbot_messenger_help_crunch" model="kw.chatbot.messenger">
+        <field name="name">HelpCrunch</field>
+        <field name="sequence">500</field>
+        <field name="provider">help_crunch</field>
+        <field name="image_128" type="base64"
+               file="kw_chatbot/static/src/img/helpcrunch.png"/>
+        <field name="module_name">kw_chatbot_helpcrunch</field>
+        <field name="description" type="html">
+            <p>
+                <a href="https://helpcrunch.com">HelpCrunch</a>
+                — is a chat and additional tools to increase sales on the site, improve support and marketing automation.
+            </p>
+        </field>
+    </record>
+
+    <record id="kw_chatbot_messenger_wepster" model="kw.chatbot.messenger">
+        <field name="name">Wepster</field>
+        <field name="sequence">600</field>
+        <field name="provider">wepster</field>
+        <field name="image_128" type="base64"
+               file="kw_chatbot/static/src/img/wepster_logo.png"/>
+        <field name="module_name">kw_chatbot_wepster</field>
+        <field name="description" type="html">
+            <p>
+                <a href="https://wepster.com/">Wepster</a>
+                — is a chat and additional tools to increase sales on the site, improve support and marketing automation.
+            </p>
+        </field>
+    </record>
+
+    <record id="kw_chatbot_messenger_umnico" model="kw.chatbot.messenger">
+        <field name="name">Umnico</field>
+        <field name="sequence">700</field>
+        <field name="provider">umnico</field>
+        <field name="image_128" type="base64"
+               file="kw_chatbot/static/src/img/umnico_logo.png"/>
+        <field name="module_name">kw_chatbot_umnico</field>
+        <field name="description" type="html">
+            <p>
+                <a href="https://umnico.com/">Umnico</a>
+                — Omnichannel platform for inbound messaging etc.
+            </p>
+        </field>
+    </record>
+
+    <record id="kw_chatbot_messenger_echat" model="kw.chatbot.messenger">
+        <field name="name">E-Chat</field>
+        <field name="sequence">800</field>
+        <field name="provider">echat</field>
+        <field name="image_128" type="base64"
+               file="kw_chatbot/static/src/img/echat_logo.png"/>
+        <field name="module_name">kw_chatbot_echat</field>
+        <field name="description" type="html">
+            <p>
+                <a href="https://www.e-chat.tech/">E-Chat</a>
+                — Omnichannel platform for inbound messaging etc.
+            </p>
+        </field>
+    </record>
+
+    <record id="kw_chatbot_messenger_whatsapp" model="kw.chatbot.messenger">
+        <field name="name">WhatsApp</field>
+        <field name="sequence">900</field>
+        <field name="provider">whatsapp</field>
+        <field name="image_128" type="base64"
+               file="kw_chatbot/static/src/img/whatsapp.png"/>
+        <field name="module_name">kw_chatbot_whatsapp</field>
+        <field name="description" type="html">
+            <p>
+                <a href="https://www.e-chat.tech/">WhatsApp</a>
+                — Omnichannel platform for inbound messaging etc.
+            </p>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,16 @@
+import logging
+
+_logger = logging.getLogger(__name__)
+
+
+def migrate(cr, installed_version):
+    cr.execute("""
+             DELETE FROM ir_ui_view
+            WHERE id IN (
+                SELECT res_id
+                FROM ir_model_data
+                WHERE module = 'kw_chatbot_builder_telegram'
+                  AND model = 'ir.ui.view'
+                    );
+           """)
+    cr.commit()

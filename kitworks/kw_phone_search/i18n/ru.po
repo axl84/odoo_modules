@@ -1,0 +1,74 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* kw_phone_search
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-10 16:23+0000\n"
+"PO-Revision-Date: 2019-05-10 16:23+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kw_phone_search
+#: model:ir.ui.view,arch_db:kw_phone_search.view_kw_phone_number_ua_select
+msgid "By name and phone"
+msgstr "По имени и телефону"
+
+#. module: kw_phone_search
+#: model:ir.model,name:kw_phone_search.model_res_partner
+msgid "Contact"
+msgstr "Контакт"
+
+#. module: kw_phone_search
+#: model:ir.model.fields,field_description:kw_phone_search.field_kw_cleanup_string_mixin_display_name
+msgid "Display Name"
+msgstr "Отображаемое Имя"
+
+#. module: kw_phone_search
+#: model:ir.model.fields,field_description:kw_phone_search.field_kw_cleanup_string_mixin_id
+msgid "ID"
+msgstr "Номер"
+
+#. module: kw_phone_search
+#: model:ir.model.fields,field_description:kw_phone_search.field_res_partner_kw_phone_number_display
+#: model:ir.model.fields,field_description:kw_phone_search.field_res_users_kw_phone_number_display
+msgid "kw Phone Number Display"
+msgstr "Отображение контакта"
+
+#. module: kw_phone_search
+#: model:ir.model.fields,field_description:kw_phone_search.field_res_partner_kw_phone_number_name
+#: model:ir.model.fields,field_description:kw_phone_search.field_res_users_kw_phone_number_name
+msgid "kw Phone Number Name"
+msgstr "Имя и телефон"
+
+#. module: kw_phone_search
+#: model:ir.model.fields,field_description:kw_phone_search.field_kw_cleanup_string_mixin___last_update
+msgid "Last Modified on"
+msgstr "Последнее изменение"
+
+#. module: kw_phone_search
+#: model:ir.ui.view,arch_db:kw_phone_search.res_config_settings_view_form_kw_phone_number_ua
+msgid "Phone format"
+msgstr "Формат телефона"
+
+#. module: kw_phone_search
+#: model:ir.ui.view,arch_db:kw_phone_search.res_config_settings_view_form_kw_phone_number_ua
+msgid "Re-format contacts phones"
+msgstr "Переформатировать"
+
+#. module: kw_phone_search
+#: model:ir.model,name:kw_phone_search.model_kw_cleanup_string_mixin
+msgid "kw.cleanup.string.mixin"
+msgstr "Очищенная строка"
+
+#. module: kw_phone_search
+#: model:ir.model,name:kw_phone_search.model_res_config_settings
+msgid "res.config.settings"
+msgstr "Конфигурация"
+

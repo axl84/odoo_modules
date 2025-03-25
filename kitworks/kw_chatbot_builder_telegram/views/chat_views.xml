@@ -1,0 +1,21 @@
+<odoo>
+    <record id="kw_chatbot_builder_telegram_kw_chatbot_chat_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.chat.form (kw_chatbot_builder_telegram)</field>
+        <field name="model">kw.chatbot.chat</field>
+        <field name="inherit_id" ref="kw_chatbot.kw_chatbot_kw_chatbot_chat_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='is_developer_mode']" position="after">
+                <field invisible="provider != 'telegram'" name="tg_command_ids" string="Command">
+                    <tree editable="bottom">
+                        <field name="name"/>
+                        <field name="command"/>
+                        <field name="step_id" domain="[('dialog_id', '=', dialog_id)]"/>
+                        <field name="dialog_answer_id"/>
+                        <field name="dialog_id" invisible="1"/>
+                        <field invisible="1" name="dialog_id"/>
+                    </tree>
+                </field>
+            </xpath>
+        </field>
+    </record>
+</odoo>

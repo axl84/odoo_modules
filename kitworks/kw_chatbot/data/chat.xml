@@ -1,0 +1,8 @@
+<odoo noupdate="0">
+    <record id="kw_chatbot_chat_livechat" model="kw.chatbot.chat">
+        <field name="name">Odoo live-chat</field>
+        <field name="messenger_id" ref="kw_chatbot_messenger_im_livechat"/>
+<!--        <field name="dialog_id" ref="kw_chatbot_consultant_bot"/>-->
+        <field name="odoo_livechat_res_partner_id" ref="partner_livechat_bot"/>
+    </record>
+</odoo>

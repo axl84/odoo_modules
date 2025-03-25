@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_kw_chatbot_message_mailing_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.message.mailing.form (kw_chatbot)</field>
+        <field name="model">kw.chatbot.message.mailing</field>
+        <field name="arch" type="xml">
+            <form>
+                <header/>
+                <sheet>
+                    <div class="oe_button_box" name="button_box"/>
+                    <group>
+                        <group>
+                            <field name="text"/>
+                        </group>
+                        <group>
+                            <field name="type"/>
+                            <field invisible="type == 'all'" name="sender_ids" widget="many2many_tags"/>
+                            <field name="messenger_id"/>
+                            <field name="is_sent"/>
+                            <field invisible="mailing_log == ''" name="mailing_log"/>
+                        </group>
+                    </group>
+                    <button class="btn-primary" name="action_send" string="Send" type="object"/>
+                </sheet>
+            </form></field>
+    </record>
+    <record id="kw_chatbot_kw_chatbot_message_mailing_tree" model="ir.ui.view">
+        <field name="name">kw.chatbot.message.mailing.tree (kw_chatbot)</field>
+        <field name="model">kw.chatbot.message.mailing</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="text"/>
+                <field name="type"/>
+                <field invisible="type == 'all'" name="sender_ids" string="Recipient" widget="many2many_tags"/>
+                <field name="is_sent"/>
+            </tree></field>
+    </record>
+    <record id="kw_chatbot_kw_chatbot_message_mailing_action_window" model="ir.actions.act_window">
+        <field name="name">Message Mailing</field>
+        <field name="res_model">kw.chatbot.message.mailing</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new message
+            </p></field>
+    </record>
+    <!--    <menuitem id="kw_chatbot_kw_chatbot_message_mailing_menu"-->
+    <!--              action="kw_chatbot_kw_chatbot_message_mailing_action_window"-->
+    <!--              parent="kw_chatbot_main_menu"-->
+    <!--              name="Message Mailing" sequence="1200"/>-->
+</odoo>

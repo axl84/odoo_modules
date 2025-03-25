@@ -1,0 +1,53 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kw_chatbot_login_in_system
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-12 12:54+0000\n"
+"PO-Revision-Date: 2023-12-12 12:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kw_chatbot_login_in_system
+#: model:ir.model.fields,field_description:kw_chatbot_login_in_system.field_kw_chatbot_step__go_to_step_unsuccessful_login
+msgid "Go to step after unsuccessful login in system"
+msgstr "Після невдалого входу в систему перейдіть до кроку"
+
+#. module: kw_chatbot_login_in_system
+#: model:ir.model.fields.selection,name:kw_chatbot_login_in_system.selection__kw_chatbot_step__step_type__login_in_system
+msgid "Login in system"
+msgstr "Авторизація в системі"
+
+#. module: kw_chatbot_login_in_system
+#: model:ir.model.fields,field_description:kw_chatbot_login_in_system.field_kw_chatbot_step__msg_after_login
+msgid "Message after login in system"
+msgstr "Повідомлення після входу в систему"
+
+#. module: kw_chatbot_login_in_system
+#: model:ir.model.fields,field_description:kw_chatbot_login_in_system.field_kw_chatbot_step__msg_after_unsuccessful_login
+msgid "Message after unsuccessful login in system"
+msgstr "Повідомлення після невдалого входу в систему"
+
+#. module: kw_chatbot_login_in_system
+#: model:ir.model,name:kw_chatbot_login_in_system.model_kw_chatbot_step
+msgid "Step"
+msgstr "Крок"
+
+#. module: kw_chatbot_login_in_system
+#: model:ir.model.fields,field_description:kw_chatbot_login_in_system.field_kw_chatbot_step__step_type
+msgid "Step Type"
+msgstr "Тип кроку"
+
+#. module: kw_chatbot_login_in_system
+#. odoo-javascript
+#: code:addons/kw_chatbot_login_in_system/static/src/xml/thread.xml:0
+#, python-format
+msgid "Subject:"
+msgstr ""

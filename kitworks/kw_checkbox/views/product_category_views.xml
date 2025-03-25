@@ -1,0 +1,15 @@
+<odoo>
+    <record id="kw_checkbox_product_product_category_form" model="ir.ui.view">
+        <field name="name">product.category.form (kw_checkbox_product)</field>
+        <field name="model">product.category</field>
+        <field name="inherit_id" ref="product.product_category_form_view"/>
+        <field name="arch" type="xml">
+            <sheet position="inside">
+                <group>
+                    <field name="kw_checkbox_product_category_id"
+                           class="oe_inline"/>
+                </group>
+            </sheet>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,13 @@
+<odoo noupdate="1">
+    <record id="kw_sms_api_model_sms_sms_ir_cron_kw_sms_status" model="ir.cron">
+        <field name="name">SMS: Status update</field>
+        <field name="model_id" ref="model_sms_sms"/>
+        <field name="state">code</field>
+        <field name="code">model.search([('state','=','queued')]).kw_sms_status()</field>
+        <field name="interval_number">15</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False"/>
+        <field name="active" eval="True" />
+    </record>
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_wepster_view_partner_form_inherit_website" model="ir.ui.view">
+        <field name="name">res.partner.form (kw_chatbot_wepster)</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <!--        <field name="groups_id" eval="[(4, ref('kw_chatbot.group_kw_chatbot_admin'))]"/>-->
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='mobile']" position="after">
+                <button invisible="mobile == False" name="add_conversation" string="Add Conversation" type="object">
+                </button>
+            </xpath></field>
+    </record>
+</odoo>

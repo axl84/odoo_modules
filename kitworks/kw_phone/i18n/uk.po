@@ -1,0 +1,130 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kw_phone
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-22 11:50+0000\n"
+"PO-Revision-Date: 2021-03-22 11:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kw_phone
+#: model_terms:ir.ui.view,arch_db:kw_phone.kw_phone_res_config_settings_form
+msgid ""
+"<b>Note</b>:\n"
+"                            Setting the checkboxes will automatically "
+"install\n"
+"                            additional modules that provide selected\n"
+"                            functionality. Inactive checkbox means you\n"
+"                            don't have the required module in your system.\n"
+"                            You can download it from Odoo marketplace\n"
+"                            individually or as part of a bundle."
+msgstr ""
+
+#. module: kw_phone
+#: model_terms:ir.ui.view,arch_db:kw_phone.kw_phone_res_config_settings_form
+msgid "Add partner phone search functionality"
+msgstr ""
+
+#. module: kw_phone
+#: model_terms:ir.ui.view,arch_db:kw_phone.kw_phone_res_config_settings_form
+msgid "Addon requires installation."
+msgstr ""
+
+#. module: kw_phone
+#: model_terms:ir.ui.view,arch_db:kw_phone.kw_phone_res_config_settings_form
+msgid "Adds functionality search sale order by customer phone or email"
+msgstr ""
+
+#. module: kw_phone
+#: model_terms:ir.ui.view,arch_db:kw_phone.kw_phone_res_config_settings_form
+msgid "Append Ukraine +380 code to phone numbers"
+msgstr ""
+
+#. module: kw_phone
+#: model:ir.model.fields,field_description:kw_phone.field_res_config_settings__module_kw_phone_search_crm
+msgid "CRM lead phone search"
+msgstr ""
+
+#. module: kw_phone
+#: model:ir.model,name:kw_phone.model_res_config_settings
+msgid "Config Settings"
+msgstr "Налаштування"
+
+#. module: kw_phone
+#: model:ir.model.fields,field_description:kw_phone.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: kw_phone
+#: model_terms:ir.ui.view,arch_db:kw_phone.kw_phone_res_config_settings_form
+msgid "Download"
+msgstr "Скачати"
+
+#. module: kw_phone
+#: model:ir.model.fields,field_description:kw_phone.field_res_config_settings__module_kw_phone_number_ua
+msgid "Force Ukraine code"
+msgstr ""
+
+#. module: kw_phone
+#: model_terms:ir.ui.view,arch_db:kw_phone.kw_phone_res_config_settings_form
+msgid "Format CRM lead phone numbers and adds search functionality"
+msgstr ""
+
+#. module: kw_phone
+#: model:ir.model.fields,field_description:kw_phone.field_res_config_settings__id
+msgid "ID"
+msgstr ""
+
+#. module: kw_phone
+#: model:ir.model.fields,field_description:kw_phone.field_res_config_settings____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: kw_phone
+#: model:ir.model.fields,field_description:kw_phone.field_res_config_settings__need_install_kw_phone_number_ua
+msgid "Need Install Kw Phone Number Ua"
+msgstr ""
+
+#. module: kw_phone
+#: model:ir.model.fields,field_description:kw_phone.field_res_config_settings__need_install_kw_phone_search
+msgid "Need Install Kw Phone Search"
+msgstr ""
+
+#. module: kw_phone
+#: model:ir.model.fields,field_description:kw_phone.field_res_config_settings__need_install_kw_phone_search_crm
+msgid "Need Install Kw Phone Search Crm"
+msgstr ""
+
+#. module: kw_phone
+#: model:ir.model.fields,field_description:kw_phone.field_res_config_settings__need_install_kw_phone_search_sale
+msgid "Need Install Kw Phone Search Sale"
+msgstr ""
+
+#. module: kw_phone
+#: model:ir.model.fields,field_description:kw_phone.field_res_config_settings__module_kw_phone_search
+msgid "Partner phone search"
+msgstr ""
+
+#. module: kw_phone
+#: model_terms:ir.ui.view,arch_db:kw_phone.kw_phone_res_config_settings_form
+msgid "Phone number utility"
+msgstr ""
+
+#. module: kw_phone
+#: model:ir.model.fields,field_description:kw_phone.field_res_config_settings__module_kw_phone_search_sale
+msgid "Sale order phone search"
+msgstr ""
+
+#. module: kw_phone
+#: model_terms:ir.ui.view,arch_db:kw_phone.kw_phone_res_config_settings_form
+msgid "from KitWorks site."
+msgstr ""

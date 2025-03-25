@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-extend="im_livechat.legacy.mail.widget.Thread.Message">
+        <t t-jquery='.o_thread_message_content' t-operation='replace'>
+            <div class="o_thread_message_content">
+                <t t-esc="message.getBody()"/>
+                <t t-if="message.hasTrackingValues()">
+                    <t t-if="message.hasSubtypeDescription()">
+                        <p><t t-esc="message.getSubtypeDescription()"/></p>
+                    </t>
+                    <t t-call="im_livechat.legacy.mail.widget.Thread.MessageTracking"/>
+                </t>
+                <p t-if="options.displaySubjectOnMessages and message.shouldDisplaySubject()" class="o_mail_subject">Subject: <t t-esc="message.getSubject()"/></p>
+                <t t-if="message.hasAttachments()">
+                    <div t-if="message.hasImageAttachments()" class="o_attachments_previews">
+                        <t t-foreach="message.getImageAttachments()" t-as="attachment">
+                            <t t-call="im_livechat.legacy.mail.AttachmentPreview">
+                                <t t-set="isDeletable" t-value="options.hasMessageAttachmentDeletable"/>
+                            </t>
+                        </t>
+                    </div>
+                    <div t-if="message.hasNonImageAttachments()" class="o_attachments_list">
+                        <t t-foreach="message.getNonImageAttachments()" t-as="attachment">
+                            <t t-call="mail.Attachment">
+                                <t t-set="isDeletable" t-value="options.hasMessageAttachmentDeletable"/>
+                            </t>
+                        </t>
+                    </div>
+                </t>
+                <t t-esc="message.addButton()"/>
+            </div>
+        </t>
+    </t>
+
+</templates>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="kw_chatbot_viber_kw_chatbot_default_viber_buttons_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.default.viber.buttons.form (kw_chatbot_viber)</field>
+        <field name="model">kw.chatbot.default.viber.buttons</field>
+        <field name="arch" type="xml">
+            <form>
+                <header/>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="is_used"/>
+                            <field name="button_type"/>
+                        </group>
+                        <group>
+                            <field name="text_valign"/>
+                            <field name="text_halign"/>
+                            <field name="text_size"/>
+                            <field name="text_opacity"/>
+                        </group>
+                        <group>
+                            <field name="bg_color"/>
+                            <field name="bg_btn_color"/>
+                            <field name="tx_color"/>
+                            <field name="bg_media_type"/>
+                            <field name="bg_media"/>
+                            <field name="media_scale_type"/>
+                            <field name="image"/>
+                            <field name="image_scale_type"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Image">
+                            <group>
+                                <group>
+                                    <field name="viber_image_6_1" widget="image"/>
+                                    <field name="viber_image_6_2" widget="image"/>
+                                    <field name="viber_image_6_3" widget="image"/>
+                                </group>
+                                <group>
+                                    <field name="viber_image_6_4" widget="image"/>
+                                    <field name="viber_image_6_5" widget="image"/>
+                                    <field name="viber_image_6_6" widget="image"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="BG Image">
+                            <group>
+                                <field name="bg_media_image" widget="image"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="kw_chatbot_viber_kw_chatbot_default_viber_buttons_tree" model="ir.ui.view">
+        <field name="name">kw.chatbot.default.viber.buttons.tree (kw_chatbot_viber)</field>
+        <field name="model">kw.chatbot.default.viber.buttons</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="is_used"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="kw_chatbot_viber_kw_chatbot_default_viber_buttons_action_window"
+            model="ir.actions.act_window">
+        <field name="name">Default Viber Buttons</field>
+        <field name="res_model">kw.chatbot.default.viber.buttons</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
+    <menuitem id="kw_chatbot_kw_chatbot_default_viber_buttons_menu"
+              action="kw_chatbot_viber_kw_chatbot_default_viber_buttons_action_window"
+              parent="kw_chatbot.kw_chatbot_settings_main_menu"
+              groups="base.group_no_one"
+              name="Setting Viber Buttons" sequence="890"/>
+</odoo>

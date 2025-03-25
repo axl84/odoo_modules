@@ -1,0 +1,9 @@
+<odoo noupdate="1">
+<!--    <record id="kw_chatbot_consultant_bot" model="kw.chatbot.dialog">-->
+<!--        <field name="name">Operator Chat</field>-->
+<!--    </record>-->
+    <record id="kw_chatbot_config_bot" model="kw.chatbot.dialog">
+        <field name="name">Setup Config</field>
+        <field name="is_setup_config" eval="True"/>
+    </record>
+</odoo>

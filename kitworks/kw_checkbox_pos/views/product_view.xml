@@ -1,0 +1,12 @@
+<odoo>
+    <record id="kw_checkbox_pos_product_form" model="ir.ui.view">
+        <field name="name">product.product (kw_checkbox_pos)</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='barcode']" position="after">
+                <field name="is_excise_product" widget="boolean_toggle"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

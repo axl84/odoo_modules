@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_telegram_kw_chatbot_chat_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.chat.form (kw_chatbot_telegram)</field>
+        <field name="model">kw.chatbot.chat</field>
+        <field name="inherit_id" ref="kw_chatbot.kw_chatbot_kw_chatbot_chat_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page invisible="provider != 'telegram'" string="Telegram">
+                    <button class="btn btn-primary" name="telegram_update_hook_address" string="Update hook" type="object"/>
+                    <group>
+                        <field name="telegram_token" required="provider == 'telegram'"/>
+                        <field name="first_name_bot"/>
+                        <field name="telegram_update_hook_response"/>
+                        <field groups="base.group_no_one" name="telegram_developer_url"/>
+                    </group>
+                </page>
+            </notebook></field>
+    </record>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_notification_kw_chatbot_telegram_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.notification.form (kw_chatbot_telegram)</field>
+        <field name="model">kw.chatbot.notification</field>
+        <field name="inherit_id" ref="kw_chatbot.kw_chatbot_notification_kw_chatbot_notification_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='is_add_url']" position="after">
+                <field invisible="is_add_url == False" name="tg_url_name"/>
+                <field name="is_tg_send_location" widget="boolean_toggle"/>
+                <field invisible="is_tg_send_location == False" name="send_location_name"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_account_journal_kw_bank_autoclient_privat24_base_form" model="ir.ui.view">
+        <field name="name">account.journal.kw.import.form</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group/field[@name='bank_account_id']" position="after">
+                <field invisible="bank_statements_source != 'privat24_autoclient'" name="privat24_id"/>
+                <field invisible="bank_statements_source != 'privat24_autoclient'" name="privat24_token" password="True"/>
+                <field invisible="bank_statements_source != 'privat24_autoclient'" name="privat24_auto_sync"/>
+            </xpath>
+            <xpath expr="//form//sheet" position="before">
+                <div>
+                    <button invisible="bank_statements_source != 'privat24_autoclient'" name="test_privat24_autoclient_connection" string="Test connection" type="object"/>
+                </div>
+            </xpath></field>
+    </record>
+</odoo>

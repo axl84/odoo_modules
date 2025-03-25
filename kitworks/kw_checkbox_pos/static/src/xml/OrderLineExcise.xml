@@ -1,0 +1,25 @@
+<templates id="template" xml:space="preserve">
+
+    <t t-name="kw_checkbox_pos.ProductScreen" t-inherit="point_of_sale.ProductScreen" t-inherit-mode="extension">
+        <xpath expr="//Orderline" position="inside" >
+            <t t-if="line.PackExciseLines">
+                <div class="pos-receipt-left-padding">
+                    <ul>
+                        <t t-foreach="line.PackExciseLines" t-as="excise" t-key="excise_index">
+                            <li>
+                                Excise: <t t-esc="excise.lot_name"/>
+                            </li>
+                        </t>
+                    </ul>
+                </div>
+            </t>
+        </xpath>
+        <xpath expr="//Orderline/t[@t-set-slot='product-name']" position="inside" >
+            <t t-if="console.log(line.get_product().is_excise_product)"/>
+            <i  t-if="line.get_product().is_excise_product"
+                t-on-click.stop="() => line.editPackExciseLines()" role="img"
+                t-attf-class="{{ line.PackExciseLines &amp;&amp; line.PackExciseLines.length == Math.abs(line.quantity) ? 'text-success' : 'text-danger'}} fa fa-list line-lot-icon ms-1"
+                t-attf-title="{{ line.PackExciseLines &amp;&amp; line.PackExciseLines.length == Math.abs(line.quantity) ? 'Valid product lot' : 'Invalid product lot'}}" />
+        </xpath>
+    </t>
+</templates>

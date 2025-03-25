@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_step_from_kw_chatbot_dialog_action_window" model="ir.actions.act_window">
+        <field name="name">Steps</field>
+        <field name="res_model">kw.chatbot.step</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('dialog_id','=', active_id)]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new chatbot step
+            </p></field>
+    </record>
+    <record id="kw_chatbot_builder_kw_chatbot_dialog_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.dialog.form (kw_chatbot_builder)</field>
+        <field name="model">kw.chatbot.dialog</field>
+        <field name="inherit_id" ref="kw_chatbot.kw_chatbot_kw_chatbot_dialog_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//page[@name='settings']/group[@name='settings']" position="inside">
+                <field name="wait_start_message" widget="boolean_toggle"/>
+                <field name="send_msg_after_create_lead" widget="boolean_toggle"/>
+                <field name="max_waiting_time"/>
+                <field name="dialogue_end_time"/>
+                <field name="msg_after_max_waiting_time"/>
+                <field name="end_consultation_msg"/>
+            </xpath>
+            <xpath expr="//form" position="attributes">
+                <attribute name="js_class">
+                    kw_chatbot_builder_form_view</attribute>
+            </xpath>
+            <xpath expr="//page[@name='channels']" position="before">
+                <page invisible="bots_type == 'is_consultant_bot'" name="steps" string="Steps">
+                    <group>
+                        <button class="btn-primary" name="open_step_form_view" string="Add Step" type="object"/>
+                    </group>
+                    <field context="{'chatbot_dialog_answer_display_short_name': 1}" name="chatbot_step_ids">
+                        <tree create="false" delete="false" editable="top" open="false">
+                            <field name="sequence" widget="handle"/>
+                            <field name="text"/>
+                            <field name="step_type"/>
+                            <field name="answer_ids"/>
+                            <field name="go_to_step_id"/>
+                            <button class="btn-primary" name="open_step_form_view_edit" string="Edit" type="object"/>
+                        </tree></field>
+                </page>
+            </xpath>
+            <xpath expr="//page[@name='senders']" position="attributes">
+                <attribute name="invisible">bots_type != 'is_consultant_bot'</attribute>
+            </xpath>
+            <xpath expr="//page[@name='senders']" position="before">
+                <page invisible="bots_type == 'is_consultant_bot'" name="senders" string="Senders">
+                    <field context="{'chatbot_dialog_answer_display_short_name': 1}" mode="tree" name="communication_sender_ids" widget="section_and_note_one2many">
+                        <tree>
+                            <field name="name"/>
+                            <field name="messenger_id"/>
+                            <button class="btn-primary" context="{'default_sender_id': active_id, 'chatbot_chat_bot_conversation_display_short_name': 1}" name="%(kw_chatbot.kw_chatbot_chat_bot_send_sender_action_window)d" string="Send Message" type="action"/>
+                        </tree></field>
+                </page>
+            </xpath></field>
+    </record>
+</odoo>

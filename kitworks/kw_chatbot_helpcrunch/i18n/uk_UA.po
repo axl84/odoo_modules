@@ -1,0 +1,270 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kw_chatbot_helpcrunch
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-12 12:54+0000\n"
+"PO-Revision-Date: 2023-12-12 12:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kw_chatbot_helpcrunch
+#. odoo-python
+#: code:addons/kw_chatbot_helpcrunch/models/conversation.py:0
+#, python-format
+msgid "%(name)s joined you (%(type)s, %(hc_name)s)"
+msgstr ""
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_messenger__api_token
+msgid "Api Token"
+msgstr ""
+
+#. module: kw_chatbot_helpcrunch
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_helpcrunch.kw_chatbot_helpcrunch_kw_chatbot_messenger_form
+msgid "Channels"
+msgstr "Канали"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model,name:kw_chatbot_helpcrunch.model_kw_chatbot_chat
+msgid "Chat"
+msgstr "Чат"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model,name:kw_chatbot_helpcrunch.model_kw_chatbot_conversation
+#: model:ir.model,name:kw_chatbot_helpcrunch.model_kw_chatbot_message
+msgid "Conversation"
+msgstr "Діалог"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_helpcrunch_channels__create_uid
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_helpcrunch_operators__create_uid
+msgid "Created by"
+msgstr "Створений в"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_helpcrunch_channels__create_date
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_helpcrunch_operators__create_date
+msgid "Created on"
+msgstr "Створений в"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model,name:kw_chatbot_helpcrunch.model_mail_channel
+msgid "Discussion Channel"
+msgstr "Канал обговорення"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_helpcrunch_channels__display_name
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_helpcrunch_operators__display_name
+msgid "Display Name"
+msgstr "Відображуване ім'я"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_helpcrunch_operators__email
+msgid "Email"
+msgstr "Ел. пошта"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_sender__hc_token
+msgid "Hc Token"
+msgstr "Токен"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_sender__help_crunch_id
+msgid "Help Crunch"
+msgstr ""
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_sender__help_crunch_channel_id
+msgid "Help Crunch Channel"
+msgstr "Help Crunch канал"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_sender__help_crunch_email
+msgid "Help Crunch Email"
+msgstr "Help Crunch ел. пошта"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_sender__help_crunch_is_bot
+msgid "Help Crunch Is Bot"
+msgstr "Бот Help Crunch"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_sender__help_crunch_userId
+msgid "Help Crunch Userid"
+msgstr "Help Crunch id користувача"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_sender__help_crunch_username
+msgid "Help Crunch Username"
+msgstr "Help Crunch ім'я користувача"
+
+#. module: kw_chatbot_helpcrunch
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_helpcrunch.kw_chatbot_helpcrunch_kw_chatbot_messenger_form
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_helpcrunch.kw_chatbot_helpcrunch_kw_chatbot_sender_form
+msgid "HelpCrunch"
+msgstr ""
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_chat_bot_partner_send__helpcrunch_id
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_chat_bot_partner_send_mass__helpcrunch_id
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_chat_bot_send__helpcrunch_id
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_helpcrunch_operators__helpcrunch_id
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_message__helpcrunch_id
+msgid "Helpcrunch"
+msgstr ""
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_helpcrunch_channels__helpcrunch_channel_id
+msgid "Helpcrunch Channel"
+msgstr "Канал Helpcrunch"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model,name:kw_chatbot_helpcrunch.model_kw_chatbot_helpcrunch_channels
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_messenger__helpcrunch_channels_ids
+msgid "Helpcrunch Channels"
+msgstr "Канали Helpcrunch"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_messenger__helpcrunch_developer_url
+msgid "Helpcrunch Developer Url"
+msgstr "Helpcrunch URL розробника"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model,name:kw_chatbot_helpcrunch.model_kw_chatbot_helpcrunch_operators
+msgid "Helpcrunch Operators"
+msgstr "Оператор Helpcrunch"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_helpcrunch_channels__id
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_helpcrunch_operators__id
+msgid "ID"
+msgstr ""
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_messenger__is_helpcrunch_developer_mode
+msgid "Is Helpcrunch Developer Mode"
+msgstr "Це Helpcrunch режим розробника"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_conversation__is_helpcrunch_send
+msgid "Is Helpcrunch Send"
+msgstr "Відправлено з Helpcrunch"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_helpcrunch_channels____last_update
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_helpcrunch_operators____last_update
+msgid "Last Modified on"
+msgstr "Змінено востаннє"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_helpcrunch_channels__write_uid
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_helpcrunch_operators__write_uid
+msgid "Last Updated by"
+msgstr "Ким змінено востаннє"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_helpcrunch_channels__write_date
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_helpcrunch_operators__write_date
+msgid "Last Updated on"
+msgstr "Ким змінено востаннє"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields.selection,name:kw_chatbot_helpcrunch.selection__kw_chatbot_chat__helpcrunch_crm_type__lead
+msgid "Lead"
+msgstr "Лід"
+
+#. module: kw_chatbot_helpcrunch
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_helpcrunch.kw_chatbot_helpcrunch_kw_chatbot_chat_form
+msgid "Lead creation setting"
+msgstr "Налаштування створення ліда"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_chat__link_bot
+msgid "Link Bot"
+msgstr "Посилання на бот"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model,name:kw_chatbot_helpcrunch.model_kw_chatbot_messenger
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_helpcrunch_channels__messenger_id
+msgid "Messenger"
+msgstr "Месенджер"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_helpcrunch_channels__name
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_helpcrunch_operators__name
+msgid "Name"
+msgstr "Назва"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_messenger__operator_id
+msgid "Operator"
+msgstr "Оператор"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields.selection,name:kw_chatbot_helpcrunch.selection__kw_chatbot_chat__helpcrunch_crm_type__opportunity
+msgid "Opportunity"
+msgstr "Нагода"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_chat_bot_partner_send__raw_json
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_chat_bot_partner_send_mass__raw_json
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_chat_bot_send__raw_json
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_message__raw_json
+msgid "Raw Json"
+msgstr "Необроблений Json"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_helpcrunch_operators__role
+msgid "Role"
+msgstr "Ролі"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_chat__helpcrunch_crm_team_id
+msgid "Sales Team"
+msgstr "Канал продажу"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_chat__helpcrunch_crm_user_id
+msgid "Salesperson"
+msgstr "Продавець"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model,name:kw_chatbot_helpcrunch.model_kw_chatbot_sender
+msgid "Sender"
+msgstr "Відправник"
+
+#. module: kw_chatbot_helpcrunch
+#. odoo-python
+#: code:addons/kw_chatbot_helpcrunch/models/sender.py:0
+#, python-format
+msgid "This sender (HelpCrunch) cannot become an operator"
+msgstr "Цей відправник (HelpCrunch)  не може стати оператором"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_chat__helpcrunch_crm_type
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_helpcrunch_channels__type
+msgid "Type"
+msgstr "Тип"
+
+#. module: kw_chatbot_helpcrunch
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_helpcrunch.kw_chatbot_helpcrunch_kw_chatbot_messenger_form
+msgid "Update Operators"
+msgstr "Оновити операторів"
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_messenger__webhook_chat_new
+msgid "Webhook Chat New"
+msgstr ""
+
+#. module: kw_chatbot_helpcrunch
+#: model:ir.model.fields,field_description:kw_chatbot_helpcrunch.field_kw_chatbot_messenger__webhook_message_chat_customer
+msgid "Webhook Message Chat Customer"
+msgstr ""

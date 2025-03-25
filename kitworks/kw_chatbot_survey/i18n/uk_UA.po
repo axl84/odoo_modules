@@ -1,0 +1,154 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kw_chatbot_survey
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-12 12:55+0000\n"
+"PO-Revision-Date: 2023-12-12 12:55+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kw_chatbot_survey
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_survey.kw_chatbot_survey_survey_view_form
+msgid "Chatbot"
+msgstr "Чат-бот"
+
+#. module: kw_chatbot_survey
+#: model:ir.model,name:kw_chatbot_survey.model_kw_chatbot_conversation
+msgid "Conversation"
+msgstr "Діалог"
+
+#. module: kw_chatbot_survey
+#. odoo-python
+#: code:addons/kw_chatbot_survey/models/chatbot_survey_mixin.py:0
+#, python-format
+msgid "Date should be in format \"2021-12-30\""
+msgstr "Дата має бути в форматі \"2021-12-30\""
+
+#. module: kw_chatbot_survey
+#. odoo-python
+#: code:addons/kw_chatbot_survey/models/chatbot_survey_mixin.py:0
+#, python-format
+msgid "Datetime should be in format \"2021-12-30 17:17:17\""
+msgstr "Дата з часом має бути в форматі \"2021-12-30 17:17:17\""
+
+#. module: kw_chatbot_survey
+#: model:ir.model,name:kw_chatbot_survey.model_kw_chatbot_dialog
+msgid "Dialog"
+msgstr "Діалог"
+
+#. module: kw_chatbot_survey
+#: model:ir.model.fields,field_description:kw_chatbot_survey.field_kw_chatbot_step__entity_model_id
+#: model:ir.model.fields,field_description:kw_chatbot_survey.field_kw_chatbot_survey_mixin__entity_model_id
+msgid "Entity model"
+msgstr "Модель сутності"
+
+#. module: kw_chatbot_survey
+#: model:ir.model.fields,field_description:kw_chatbot_survey.field_kw_chatbot_step__is_quiz
+msgid "Is Quiz"
+msgstr "Опитування"
+
+#. module: kw_chatbot_survey
+#: model:ir.model.fields,field_description:kw_chatbot_survey.field_kw_chatbot_conversation__is_quiz_start
+msgid "Is Quiz Start"
+msgstr "Старт опитування"
+
+#. module: kw_chatbot_survey
+#: model:ir.model.fields,field_description:kw_chatbot_survey.field_survey_survey__kw_step_ids
+msgid "Kw Step"
+msgstr "Крок"
+
+#. module: kw_chatbot_survey
+#: model:ir.model.fields,field_description:kw_chatbot_survey.field_kw_chatbot_step__message_end_survey
+#: model:ir.model.fields,field_description:kw_chatbot_survey.field_kw_chatbot_survey_mixin__message_end_survey
+#: model:ir.model.fields,field_description:kw_chatbot_survey.field_survey_survey__message_end_survey
+msgid "Message End Survey"
+msgstr "Повідомлення та опитування"
+
+#. module: kw_chatbot_survey
+#: model:ir.model.fields,field_description:kw_chatbot_survey.field_kw_chatbot_step__message_start_survey
+#: model:ir.model.fields,field_description:kw_chatbot_survey.field_kw_chatbot_survey_mixin__message_start_survey
+#: model:ir.model.fields,field_description:kw_chatbot_survey.field_survey_survey__message_start_survey
+msgid "Message Start Survey"
+msgstr "Повідомлення старту опитування"
+
+#. module: kw_chatbot_survey
+#: model:ir.model.fields.selection,name:kw_chatbot_survey.selection__kw_chatbot_step__return_step_type__notification
+#: model:ir.model.fields.selection,name:kw_chatbot_survey.selection__kw_chatbot_step_telegram_button__return_step_type__notification
+#: model:ir.model.fields.selection,name:kw_chatbot_survey.selection__kw_chatbot_survey_mixin__return_step_type__notification
+msgid "Notification"
+msgstr "Сповіщення"
+
+#. module: kw_chatbot_survey
+#. odoo-python
+#: code:addons/kw_chatbot_survey/models/chatbot_survey_mixin.py:0
+#, python-format
+msgid "Numeric should be integer"
+msgstr "Номер має бути цілим"
+
+#. module: kw_chatbot_survey
+#: model:ir.model.fields,field_description:kw_chatbot_survey.field_kw_chatbot_step__return_step_type
+#: model:ir.model.fields,field_description:kw_chatbot_survey.field_kw_chatbot_survey_mixin__return_step_type
+msgid "Return Step Type"
+msgstr "Тип кроку повернення"
+
+#. module: kw_chatbot_survey
+#: model:ir.model.fields,field_description:kw_chatbot_survey.field_kw_chatbot_conversation__survey_question_id
+msgid "Sections Question"
+msgstr "Розділ Запитання"
+
+#. module: kw_chatbot_survey
+#: model:ir.model.fields,field_description:kw_chatbot_survey.field_kw_chatbot_conversation__question_and_page_ids
+msgid "Sections and Questions"
+msgstr "Розділи та запитання"
+
+#. module: kw_chatbot_survey
+#: model:ir.model.fields,field_description:kw_chatbot_survey.field_kw_chatbot_step__select_flow
+msgid "Select Standard Flow"
+msgstr "Обрати стандартний потік"
+
+#. module: kw_chatbot_survey
+#: model:ir.model,name:kw_chatbot_survey.model_kw_chatbot_step
+#: model:ir.model.fields.selection,name:kw_chatbot_survey.selection__kw_chatbot_step__return_step_type__step
+#: model:ir.model.fields.selection,name:kw_chatbot_survey.selection__kw_chatbot_step_telegram_button__return_step_type__step
+#: model:ir.model.fields.selection,name:kw_chatbot_survey.selection__kw_chatbot_survey_mixin__return_step_type__step
+msgid "Step"
+msgstr "Крок"
+
+#. module: kw_chatbot_survey
+#: model:ir.model,name:kw_chatbot_survey.model_survey_survey
+#: model:ir.model.fields,field_description:kw_chatbot_survey.field_kw_chatbot_conversation__survey_id
+#: model:ir.model.fields,field_description:kw_chatbot_survey.field_kw_chatbot_step__survey_id
+#: model:ir.model.fields,field_description:kw_chatbot_survey.field_kw_chatbot_survey_mixin__survey_id
+#: model:ir.model.fields.selection,name:kw_chatbot_survey.selection__kw_chatbot_step__select_flow__survey
+msgid "Survey"
+msgstr "Опитування"
+
+#. module: kw_chatbot_survey
+#: model:ir.model,name:kw_chatbot_survey.model_survey_question
+msgid "Survey Question"
+msgstr "Питання опитування"
+
+#. module: kw_chatbot_survey
+#: model:ir.model.fields,field_description:kw_chatbot_survey.field_kw_chatbot_conversation__user_input_id
+msgid "User Input"
+msgstr "Використовувати введення"
+
+#. module: kw_chatbot_survey
+#. odoo-python
+#: code:addons/kw_chatbot_survey/models/dialog.py:0
+#, python-format
+msgid "We can not use survey with question type \"multiple_choice\" and \"matrix\""
+msgstr "Ми не можемо використовувати опитування з типом питання \"multiple_choice\" і \"matrix\""
+
+#. module: kw_chatbot_survey
+#: model:ir.model,name:kw_chatbot_survey.model_kw_chatbot_survey_mixin
+msgid "kw.chatbot.survey.mixin"
+msgstr ""

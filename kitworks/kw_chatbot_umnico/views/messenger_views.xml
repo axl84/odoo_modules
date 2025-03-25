@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_umnico_kw_chatbot_messenger_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.messenger.form (kw_chatbot_umnico)</field>
+        <field name="model">kw.chatbot.messenger</field>
+        <field name="inherit_id" ref="kw_chatbot.kw_chatbot_kw_chatbot_messenger_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page groups="base.group_no_one" invisible="provider != 'umnico'" string="Channels">
+                    <field name="umnico_channels_ids"><tree create="false" editable="bottom">
+                            <field name="type"/>
+                            <field name="name"/>
+                        </tree></field>
+                </page>
+                <page invisible="provider != 'umnico'" string="Umnico">
+                    <button class="btn-primary" invisible="is_umnico_webhook == False" name="add_umnico_chat" string="Add Chat" type="object"/>
+                    <button class="btn-primary" name="update_umnico_webhook" string="Update Webhook" type="object"/>
+                    <group>
+                        <field name="umnico_api_token" required="provider == 'umnico'"/>
+                        <field name="umnico_webhook_message_chat"/>
+                        <field name="is_umnico_webhook"/>
+                        <field name="dialog_id"/>
+                        <field invisible="is_umnico_webhook == False" name="umnico_operator_id" options='{"no_open": True, "no_create": True}'/>
+                    </group>
+                </page>
+            </notebook></field>
+    </record>
+</odoo>

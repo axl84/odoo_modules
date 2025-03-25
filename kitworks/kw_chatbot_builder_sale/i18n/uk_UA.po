@@ -1,0 +1,351 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kw_chatbot_builder_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-12 12:51+0000\n"
+"PO-Revision-Date: 2023-12-12 12:51+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kw_chatbot_builder_sale
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_sale.kw_chatbot_builder_sale_kw_chatbot_step_form
+msgid "Add to cart button name"
+msgstr "Назва кнопки додавання в кошик"
+
+#. module: kw_chatbot_builder_sale
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_sale.kw_chatbot_builder_sale_kw_chatbot_step_form
+msgid "Back to category button name"
+msgstr "Назва кнопки повернення до категорій"
+
+#. module: kw_chatbot_builder_sale
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_sale.kw_chatbot_builder_sale_kw_chatbot_step_form
+msgid "Bot Sale"
+msgstr "Бот продаж"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__button_name_add_to_cart
+msgid "Button Name Add To Cart"
+msgstr "Назва кнопки додавання в кошик"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__button_name_after_confirm_order
+msgid "Button Name After Confirm Order"
+msgstr "Назва кнопки після підтвердження замовлення"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__button_name_back_to_category
+msgid "Button Name Back To Category"
+msgstr "Назва кнопки повернення до категорії"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__button_name_enter_quantity
+msgid "Button Name Enter Quantity"
+msgstr "Назва кнопки вибору кількості"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__button_name_payment_url
+msgid "Button Name Payment Url"
+msgstr "Назва кнопки посилання на оплату"
+
+#. module: kw_chatbot_builder_sale
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_sale.kw_chatbot_builder_sale_kw_chatbot_step_form
+msgid "Cart overview"
+msgstr "Огляд кошика"
+
+#. module: kw_chatbot_builder_sale
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_sale.kw_chatbot_builder_sale_kw_chatbot_step_form
+msgid "Chosen product`s category"
+msgstr "Оберіть категорію товару"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__clear_cart_name_button
+msgid "Clear Cart Name Button"
+msgstr "Назва кнопки очищення кошику"
+
+#. module: kw_chatbot_builder_sale
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_sale.kw_chatbot_builder_sale_kw_chatbot_step_form
+msgid "Clear the cart name button"
+msgstr "Очистити назву кошика"
+
+#. module: kw_chatbot_builder_sale
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_sale.kw_chatbot_builder_sale_kw_chatbot_step_form
+msgid "Confirm the order name button"
+msgstr "Назва кнопки підтвердження замовлення"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__design_message_quantity_id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_message_notification_line__design_message_quantity_id
+msgid "Design Message Quantity"
+msgstr "Дизайн повідомлення кількості"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__design_product_name_id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_message_notification_line__design_product_name_id
+msgid "Design Product Name"
+msgstr "Дизайн назви товару"
+
+#. module: kw_chatbot_builder_sale
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_sale.kw_chatbot_builder_sale_kw_chatbot_step_form
+msgid "Do not use category"
+msgstr "Не використовувати категорії"
+
+#. module: kw_chatbot_builder_sale
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_sale.kw_chatbot_builder_sale_kw_chatbot_step_form
+msgid "Do not use method of delivery selection"
+msgstr "Не використовуйте вибір способу доставки"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__filter_category_domain
+msgid "Filter Category Domain"
+msgstr "Фільтр домена Категорії"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__filter_product_domain
+msgid "Filter Product Domain"
+msgstr "Фільтр домена Продукт"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_sale.selection__kw_chatbot_step__operation_sale__input_quantity
+msgid "Input quantity"
+msgstr "Введіть кількість"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_sale.selection__kw_chatbot_step__operation_sale__input_shipping_address
+msgid "Input shipping address"
+msgstr "Вкажіть адресу доставки"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_sale_order__kw_conversation_id
+msgid "Kw Conversation"
+msgstr "Діалог"
+
+#. module: kw_chatbot_builder_sale
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_sale.kw_chatbot_builder_sale_view_order_form
+msgid "LiveChat"
+msgstr "Живий чат"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__message_back_to_product
+msgid "Message Back To Product"
+msgstr "Повідомлення повернення до товару"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__message_confirm_order
+msgid "Message Confirm Order"
+msgstr "Повідомлення підтвердження замовле"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__message_input_data_shipping
+msgid "Message Input Data Shipping"
+msgstr "Доставка вхідних даних повідомлення"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model,name:kw_chatbot_builder_sale.model_kw_message_notification_line
+msgid "Message Notification Line"
+msgstr "Повідомлення рядка сповіщення"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__message_payment_url
+msgid "Message Payment Url"
+msgstr "Повідомлення Url онлайн-оплати"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__message_product_name
+msgid "Message Product Name"
+msgstr "Повідомлення Назва продукту"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__message_quantity
+msgid "Message Quantity"
+msgstr "Повідомлення Кількість"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__message_select_delivery
+msgid "Message Select Delivery"
+msgstr "Повідомлення Вибір доставки"
+
+#. module: kw_chatbot_builder_sale
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_sale.kw_chatbot_builder_sale_kw_chatbot_step_form
+msgid "Message for inputting the customer`s shipping address"
+msgstr "Повідомлення для введення адреси доставки клієнта"
+
+#. module: kw_chatbot_builder_sale
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_sale.kw_chatbot_builder_sale_kw_chatbot_step_form
+msgid "Message for selecting the method of delivery"
+msgstr "Повідомлення для вибору способу доставки"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__model_category_name
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__model_product_name
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_message_notification_line__model_product_name
+msgid "Model"
+msgstr "Модель"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__model_category_id
+msgid "Model Category"
+msgstr "Модель Категорії"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__model_product_id
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_message_notification_line__model_product_id
+msgid "Model Product"
+msgstr "Модель Продукт"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__name_button_cart
+msgid "Name Button Cart"
+msgstr "Назва кнопки Кошик"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__not_use_category
+msgid "Not Use Category"
+msgstr "Не використовувати категорії"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__not_use_delivery
+msgid "Not Use Delivery"
+msgstr "Не використовувати доставку"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__not_use_payment_url
+msgid "Not Use Payment Url"
+msgstr "Не використовувати посилання на оплату"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__notification_add_to_card
+msgid "Notification Add To Card"
+msgstr "Сповіщення додавання до кошику"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__notification_after_clear_cart
+msgid "Notification After Clear Cart"
+msgstr "Сповіщення після очищення кошика"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__notification_cart_id
+msgid "Notification Cart"
+msgstr "Сповіщення кошика"
+
+#. module: kw_chatbot_builder_sale
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_sale.kw_chatbot_builder_sale_kw_chatbot_step_form
+msgid "Notification Cart overview"
+msgstr "Сповіщення огляду кошика"
+
+#. module: kw_chatbot_builder_sale
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_sale.kw_chatbot_builder_sale_kw_chatbot_step_form
+msgid "Notification after adding to cart"
+msgstr "Сповіщення після додавання до кошика"
+
+#. module: kw_chatbot_builder_sale
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_sale.kw_chatbot_builder_sale_kw_chatbot_step_form
+msgid "Notification after cart cleaning"
+msgstr "Сповіщення після очищення кошика"
+
+#. module: kw_chatbot_builder_sale
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_sale.kw_chatbot_builder_sale_kw_chatbot_step_form
+msgid "Notification after confirm order"
+msgstr "Сповіщення після підтвердження замовлення"
+
+#. module: kw_chatbot_builder_sale
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_sale.kw_chatbot_builder_sale_kw_chatbot_step_form
+msgid "Notification to select the product quantity"
+msgstr "Сповіщення про вибір кількості товару"
+
+#. module: kw_chatbot_builder_sale
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_sale.kw_chatbot_builder_sale_kw_chatbot_step_form
+msgid "Open the cart button name"
+msgstr "Назва кнопки відкриття кошика"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__operation_sale
+msgid "Operation Sale"
+msgstr "Оператор продажу"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__product_id
+msgid "Product"
+msgstr "Продукт"
+
+#. module: kw_chatbot_builder_sale
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_sale.kw_chatbot_builder_sale_kw_chatbot_step_form
+msgid "Product name on Bot"
+msgstr "Назва продукту в боті"
+
+#. module: kw_chatbot_builder_sale
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_sale.kw_chatbot_builder_sale_kw_chatbot_step_form
+msgid "Product quantity selection"
+msgstr "Вибір кількості продукції"
+
+#. module: kw_chatbot_builder_sale
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_sale.kw_chatbot_builder_sale_kw_chatbot_step_form
+msgid "Products overview"
+msgstr "Огляд продукції"
+
+#. module: kw_chatbot_builder_sale
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_sale.kw_chatbot_builder_sale_kw_chatbot_step_form
+msgid "Products overview after category selection"
+msgstr "Огляд продуктів після вибору категорії"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_sale.selection__kw_chatbot_step__select_flow__sale
+msgid "Sale"
+msgstr "Продажа"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model,name:kw_chatbot_builder_sale.model_sale_order
+msgid "Sales Order"
+msgstr "Замовлення на продаж"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__select_flow
+msgid "Select Standard Flow"
+msgstr "Обрати стандартний потік"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_sale.selection__kw_chatbot_step__operation_sale__send_message
+msgid "Send message"
+msgstr "Надіслати повідомлення"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields.selection,name:kw_chatbot_builder_sale.selection__kw_chatbot_step__operation_sale__standard
+msgid "Standard"
+msgstr "Стандартний"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model,name:kw_chatbot_builder_sale.model_kw_chatbot_step
+msgid "Step"
+msgstr "Крок"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__tag_ids
+msgid "Tags"
+msgstr "Теги"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__template_message_category
+msgid "Template Message Category"
+msgstr "Шаблон повідомлення категорій"
+
+#. module: kw_chatbot_builder_sale
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_sale.kw_chatbot_builder_sale_kw_chatbot_step_form
+msgid "The method of payment selection"
+msgstr "Вибір способу оплати"
+
+#. module: kw_chatbot_builder_sale
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_builder_sale.kw_chatbot_builder_sale_kw_chatbot_step_form
+msgid "The order completion"
+msgstr "Спосіб вибору оплати"
+
+#. module: kw_chatbot_builder_sale
+#: model:ir.model.fields,field_description:kw_chatbot_builder_sale.field_kw_chatbot_step__use_img_product
+msgid "Use image in select product"
+msgstr "Використовувати зображення у виборі продукту"

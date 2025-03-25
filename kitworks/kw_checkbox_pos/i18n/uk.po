@@ -1,0 +1,722 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kw_checkbox_pos
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-03 10:05+0000\n"
+"PO-Revision-Date: 2025-03-03 10:05+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kw_checkbox_pos
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_offline_mode_view_form
+msgid "Apply Company"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_offline_mode_view_form
+msgid "Ask Codes"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#: code:addons/kw_checkbox_pos/static/src/xml/Screens/PaymentScreen/PaymentScreenNumpad.xml:0
+#: code:addons/kw_checkbox_pos/static/src/xml/Screens/ProductScreen/NumpadWidget.xml:0
+#, python-format
+msgid "Backspace"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#: code:addons/kw_checkbox_pos/static/src/xml/EditListExcise.xml:0
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_offline_mode_view_form
+#, python-format
+msgid "Cancel"
+msgstr "Скасувати"
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields.selection,name:kw_checkbox_pos.selection__pos_payment_method__kw_checkbox_payment_method_type__0
+msgid "Cash"
+msgstr "Готівка"
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_checkbox_category__kw_checkbox_cash_register_id
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_checkbox_offline_mode_wizard__kw_checkbox_cash_register_ids
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_pos_config__kw_checkbox_cash_register_ids
+msgid "Cash register"
+msgstr "Касовий апарат"
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields.selection,name:kw_checkbox_pos.selection__pos_payment_method__kw_checkbox_payment_method_type__1
+msgid "Cashless"
+msgstr "Безготівкова"
+
+#. module: kw_checkbox_pos
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_pos_pos_order_form
+msgid "CheckBox"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model:ir.model,name:kw_checkbox_pos.model_kw_checkbox_category
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_pos_pos_config_form
+msgid "CheckBox Category"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_pos_res_config_settings_view_form
+msgid "Checkbox"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_pos_order__checkbox_qr
+msgid "Checkbox Qr"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model:ir.model,name:kw_checkbox_pos.model_kw_checkbox_cash_register
+msgid "Checkbox cash register"
+msgstr "Checkbox касовий апарат"
+
+#. module: kw_checkbox_pos
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_pos_pos_config_form
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_pos_res_config_settings_view_form
+msgid "Checkbox rounding"
+msgstr "Checkbox округлення"
+
+#. module: kw_checkbox_pos
+#: model:ir.model,name:kw_checkbox_pos.model_kw_checkbox_shift
+msgid "Checkbox shifts"
+msgstr "Checkbox зміни"
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#: code:addons/kw_checkbox_pos/static/src/js/Screens/PaymentScreen/PaymentScreen.js:0
+#, python-format
+msgid "Chose payment method"
+msgstr "Виберіть спосіб оплати"
+
+#. module: kw_checkbox_pos
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_pos_kw_checkbox_cash_register_form
+msgid "Code Count"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model:ir.model,name:kw_checkbox_pos.model_res_config_settings
+msgid "Config Settings"
+msgstr "Налаштування"
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_checkbox_cash_register__count_offline_codes
+msgid "Count Offline Codes"
+msgstr "Підрахунок офлайн кодів"
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_checkbox_category__create_uid
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_checkbox_offline_mode_wizard__create_uid
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_pos_excise__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_checkbox_category__create_date
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_checkbox_offline_mode_wizard__create_date
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_pos_excise__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#. odoo-python
+#: code:addons/kw_checkbox_pos/models/pos_session.py:0
+#, python-format
+msgid "Current user does not allowed to start session on this POS"
+msgstr "Поточний користувач не має права розпочинати сеанс на цьому POS"
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#: code:addons/kw_checkbox_pos/static/src/xml/Screens/PaymentScreen/PaymentScreenNumpad.xml:0
+#, python-format
+msgid "Delete"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#: code:addons/kw_checkbox_pos/static/src/xml/Screens/ProductScreen/NumpadWidget.xml:0
+#, python-format
+msgid "Disc"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_checkbox_category__display_name
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_checkbox_offline_mode_wizard__display_name
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_pos_excise__display_name
+msgid "Display Name"
+msgstr "Відобразити назву"
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#: code:addons/kw_checkbox_pos/static/src/xml/EditExciseInput.xml:0
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_pos_order_line__excise
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_pos_kw_pos_excise_view_form
+#, python-format
+msgid "Excise"
+msgstr "Акциз"
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,help:kw_checkbox_pos.field_pos_payment_method__kw_checkbox_payment_method_name
+msgid ""
+"The Payment method's name should be specified according to legal "
+"regulations."
+msgstr "Назва способу оплати повинна бути вказана відповідно до правових норм."
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#: code:addons/kw_checkbox_pos/static/src/xml/EditListExcise.xml:0
+#, python-format
+msgid "Excise Barcode:"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#: code:addons/kw_checkbox_pos/static/src/xml/OrderLineExcise.xml:0
+#: code:addons/kw_checkbox_pos/static/src/xml/OrderLinesReceipt.xml:0
+#: code:addons/kw_checkbox_pos/static/src/xml/OrderReceipt.xml:0
+#, python-format
+msgid "Excise:"
+msgstr "Акциз:"
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_pos_order__checkbox_check
+msgid "Fiscal code"
+msgstr "Фіскальний код"
+
+#. module: kw_checkbox_pos
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_offline_mode_view_form
+msgid "Get Codes"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_offline_mode_view_form
+msgid "Go offline"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_offline_mode_view_form
+msgid "Go online"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_pos_kw_checkbox_category_search
+msgid "Group By"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_pos_kw_checkbox_cash_register_form
+msgid "How many codes do you need to 'Ask Codes'"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_pos_kw_checkbox_cash_register_form
+msgid "How many codes must be to make a 'Ask Codes'"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_checkbox_category__id
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_checkbox_offline_mode_wizard__id
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_pos_excise__id
+msgid "ID"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#: code:addons/kw_checkbox_pos/static/src/js/OrderWidget.js:0
+#: code:addons/kw_checkbox_pos/static/src/js/excise_popup_handler.js:0
+#, python-format
+msgid "Input Excise"
+msgstr "Введіть акциз"
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#: code:addons/kw_checkbox_pos/static/src/xml/OrderLineExcise.xml:0
+#: code:addons/kw_checkbox_pos/static/src/xml/OrderLineExcise.xml:0
+#, python-format
+msgid "Invalid product excise"
+msgstr "Недійсний товарний акциз"
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_pos_order_line__is_excise_product
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_product_product__is_excise_product
+msgid "Is Excise Product"
+msgstr "Є підакцизним продуктом"
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_pos_order__is_offline
+msgid "Is Offline"
+msgstr "Офлайн"
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_pos_config__kw_checkbox_category_ids
+msgid "Kw Checkbox Category"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_pos_order__kw_checkbox_organization_id
+msgid "Kw Checkbox Organization"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_pos_session__kw_checkbox_shift_ids
+msgid "Kw Checkbox Shift"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_pos_config__kw_is_checkbox_check_in_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_res_config_settings__pos_kw_is_checkbox_check_in_pos
+msgid "Kw Is Checkbox Check In Pos"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_pos_config__kw_is_checkbox_rounding
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_res_config_settings__pos_kw_is_checkbox_rounding
+msgid "Kw Is Checkbox Rounding"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_checkbox_category____last_update
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_checkbox_offline_mode_wizard____last_update
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_pos_excise____last_update
+msgid "Last Modified on"
+msgstr "Останні зміни"
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_checkbox_category__write_uid
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_checkbox_offline_mode_wizard__write_uid
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_pos_excise__write_uid
+msgid "Last Updated by"
+msgstr "Останнє оновлення"
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_checkbox_category__write_date
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_checkbox_offline_mode_wizard__write_date
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_pos_excise__write_date
+msgid "Last Updated on"
+msgstr "Останнє оновлення"
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_checkbox_cash_register__min_count_codes
+msgid "Min offline codes"
+msgstr "Min офлайн кодів"
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_pos_excise__name
+msgid "Name"
+msgstr "Назва"
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#: code:addons/kw_checkbox_pos/static/src/js/excise_popup_handler.js:0
+#: code:addons/kw_checkbox_pos/static/src/js/excise_popup_handler.js:0
+#, python-format
+msgid "No"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_pos_view_pos_config_kanban
+msgid "Offline Code"
+msgstr "Офлайн код"
+
+#. module: kw_checkbox_pos
+#: model:ir.actions.act_window,name:kw_checkbox_pos.kw_checkbox_offline_mode_action
+msgid "Offline Mode"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_pos_kw_checkbox_cash_register_form
+msgid "Offline Mode Setting"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model:ir.model,name:kw_checkbox_pos.model_kw_checkbox_offline_mode_wizard
+msgid "Offline Mode Wizard"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#: code:addons/kw_checkbox_pos/static/src/xml/EditListExcise.xml:0
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_offline_mode_view_form
+#, python-format
+msgid "Ok"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_pos_excise__order_line_id
+msgid "Order Line"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_checkbox_category__kw_checkbox_organization_id
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_pos_config__kw_checkbox_organization_ids
+msgid "Organization"
+msgstr "Організація"
+
+#. module: kw_checkbox_pos
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_pos_kw_checkbox_category_search
+msgid "Organization Id"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields.selection,name:kw_checkbox_pos.selection__pos_payment_method__kw_checkbox_payment_method_type__2
+msgid "Other"
+msgstr "Інше"
+
+#. module: kw_checkbox_pos
+#: model:ir.actions.act_window,name:kw_checkbox_pos.kw_checkbox_pos_kw_checkbox_category_action_window
+#: model:ir.ui.menu,name:kw_checkbox_pos.kw_checkbox_pos_kw_checkbox_category_menu
+msgid "POS Checkbox Category"
+msgstr "POS Checkbox категорія"
+
+#. module: kw_checkbox_pos
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_pos_kw_checkbox_category_search
+msgid "POS Config"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_pos_order_line__pack_excise_ids
+msgid "Pack Excise"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_pos_payment_method__kw_checkbox_payment_method_name
+msgid "Payment Method Name"
+msgstr "Назва способу оплати"
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_pos_payment_method__kw_checkbox_payment_method_type
+msgid "Payment Method Type"
+msgstr "Засіб оплати"
+
+#. module: kw_checkbox_pos
+#. odoo-python
+#: code:addons/kw_checkbox_pos/models/pos_config.py:0
+#, python-format
+msgid ""
+"Please add payment method's kw_checkbox_product_category_id to POS Config "
+"before use it"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model:ir.model,name:kw_checkbox_pos.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Налаштування точки продажу"
+
+#. module: kw_checkbox_pos
+#: model:ir.model,name:kw_checkbox_pos.model_pos_make_payment
+msgid "Point of Sale Make Payment Wizard"
+msgstr "Помічник оплати точки продажу"
+
+#. module: kw_checkbox_pos
+#: model:ir.model,name:kw_checkbox_pos.model_pos_order_line
+msgid "Point of Sale Order Lines"
+msgstr "Рядки замовлення точки продажу"
+
+#. module: kw_checkbox_pos
+#: model:ir.model,name:kw_checkbox_pos.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Замовлення точки продажу"
+
+#. module: kw_checkbox_pos
+#: model:ir.model,name:kw_checkbox_pos.model_pos_payment_method
+msgid "Point of Sale Payment Methods"
+msgstr "Способи оплати точки продажу"
+
+#. module: kw_checkbox_pos
+#: model:ir.model,name:kw_checkbox_pos.model_pos_session
+msgid "Point of Sale Session"
+msgstr "Сесія точки продажу"
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_checkbox_category__pos_config_id
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_checkbox_offline_mode_wizard__pos_config_id
+msgid "Pos Config"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_checkbox_shift__pos_session_id
+msgid "Pos Session"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#: code:addons/kw_checkbox_pos/static/src/xml/Screens/ProductScreen/NumpadWidget.xml:0
+#, python-format
+msgid "Price"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_kw_checkbox_category__kw_checkbox_product_category_id
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_pos_payment_method__kw_checkbox_product_category_id
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_pos_kw_checkbox_category_search
+msgid "Product Category"
+msgstr "Категорія товару"
+
+#. module: kw_checkbox_pos
+#: model:ir.model,name:kw_checkbox_pos.model_product_product
+msgid "Product Variant"
+msgstr "Варіант товару"
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#: code:addons/kw_checkbox_pos/static/src/xml/Screens/ProductScreen/NumpadWidget.xml:0
+#, python-format
+msgid "Qty"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_pos_order__kw_checkbox_receipt_id
+msgid "Receipt"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,field_description:kw_checkbox_pos.field_pos_payment_method__kw_checkbox_is_register_receipt
+msgid "Register Checkbox receipt"
+msgstr "Квитанція Checkbox"
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#: code:addons/kw_checkbox_pos/static/src/xml/EditExciseInput.xml:0
+#: code:addons/kw_checkbox_pos/static/src/xml/EditExciseInput.xml:0
+#, python-format
+msgid "Remove"
+msgstr "Видалити"
+
+#. module: kw_checkbox_pos
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_pos_pos_order_form
+msgid "Reshipping checkbox"
+msgstr "Повторна відправка до Checkbox"
+
+#. module: kw_checkbox_pos
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_pos_pos_order_form
+msgid "Sell Offline Order"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#. odoo-python
+#: code:addons/kw_checkbox_pos/models/pos_session.py:0
+#, python-format
+msgid "Session require opened shifts to start"
+msgstr "Для початку сесії потрібні відкриті зміни"
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#: code:addons/kw_checkbox_pos/static/src/js/excise_popup_handler.js:0
+#, python-format
+msgid "Some Excise Numbers are missing"
+msgstr "Деякі акцизні номери відсутні"
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#: code:addons/kw_checkbox_pos/static/src/js/excise_popup_handler.js:0
+#, python-format
+msgid "Some Serial/Lot Numbers are missing"
+msgstr "Деякі серійні номери/номери партії відсутні"
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#: code:addons/kw_checkbox_pos/static/src/js/Screens/PaymentScreen/PaymentScreen.js:0
+#, python-format
+msgid "Sorry, you should choose the same payment method"
+msgstr "На жаль, вам слід вибрати той самий спосіб оплати"
+
+#. module: kw_checkbox_pos
+#. odoo-python
+#: code:addons/kw_checkbox_pos/models/pos_session.py:0
+#, python-format
+msgid "There is no valid cashier for cash register"
+msgstr "Немає відповідного касиру для вказаного касового апарату"
+
+#. module: kw_checkbox_pos
+#. odoo-python
+#: code:addons/kw_checkbox_pos/models/pos_session.py:0
+#, python-format
+msgid "This cash register user by other user"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,help:kw_checkbox_pos.field_pos_config__kw_is_checkbox_rounding
+#: model:ir.model.fields,help:kw_checkbox_pos.field_res_config_settings__pos_kw_is_checkbox_rounding
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_pos_pos_config_form
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_pos_res_config_settings_view_form
+msgid ""
+"This flag enables the checkbox rounding in the POS, which is certified by "
+"law."
+msgstr ""
+"Цей прапорець дозволяє використовувати заокруглення Checkbox в POS, який "
+"потрiбен по закону."
+
+#. module: kw_checkbox_pos
+#: model:ir.model.fields,help:kw_checkbox_pos.field_pos_config__kw_is_checkbox_check_in_pos
+#: model:ir.model.fields,help:kw_checkbox_pos.field_res_config_settings__pos_kw_is_checkbox_check_in_pos
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_pos_pos_config_form
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_pos_res_config_settings_view_form
+msgid "This flag enables the function of printing checkbox check in the pos."
+msgstr "Цей прапорець дозволяє функцію друку Checkbox в POS."
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#: code:addons/kw_checkbox_pos/static/src/js/Screens/PaymentScreen/PaymentScreen.js:0
+#: code:addons/kw_checkbox_pos/static/src/js/Screens/PaymentScreen/PaymentScreen.js:0
+#, python-format
+msgid "This method can't be used for this receipt"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#: code:addons/kw_checkbox_pos/static/src/js/Screens/ProductScreen/ProductScreen.js:0
+#, python-format
+msgid "This product has another category and cant be added"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#. odoo-python
+#: code:addons/kw_checkbox_pos/models/pos_session.py:0
+#, python-format
+msgid "Unable to reach the tax office, try again later"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_pos_pos_config_form
+#: model_terms:ir.ui.view,arch_db:kw_checkbox_pos.kw_checkbox_pos_res_config_settings_view_form
+msgid "Use Checkbox Check"
+msgstr "Використовувати чек Чекбоксу"
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#: code:addons/kw_checkbox_pos/static/src/xml/OrderLineExcise.xml:0
+#: code:addons/kw_checkbox_pos/static/src/xml/OrderLineExcise.xml:0
+#, python-format
+msgid "Valid product excise"
+msgstr "Дійсний товарний акциз"
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#: code:addons/kw_checkbox_pos/static/src/js/excise_popup_handler.js:0
+#: code:addons/kw_checkbox_pos/static/src/js/excise_popup_handler.js:0
+#, python-format
+msgid "Yes"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#: code:addons/kw_checkbox_pos/static/src/js/excise_popup_handler.js:0
+#, python-format
+msgid ""
+"You are trying to sell goods with excise numbers, but some of them are not set.\n"
+"Continue anyway?"
+msgstr ""
+"Ви намагаєтеся продати товари з акцизними номерами, але деякі з них не встановлені.\n"
+" Все одно продовжити?"
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#: code:addons/kw_checkbox_pos/static/src/js/excise_popup_handler.js:0
+#, python-format
+msgid ""
+"You are trying to sell products with serial/lot numbers, but some of them are not set.\n"
+"Would you like to proceed anyway?"
+msgstr ""
+"Ви намагаєтеся продати товари з серійними номерами/номерами лотів, але деякі з них не встановлено.\n"
+" Ви все одно хочете продовжити?"
+
+#. module: kw_checkbox_pos
+#. odoo-python
+#: code:addons/kw_checkbox_pos/models/pos_config.py:0
+#, python-format
+msgid "You can add only one type of payment cash"
+msgstr "Ви можете додати лише один вид оплати готівкою"
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#: code:addons/kw_checkbox_pos/static/src/js/Screens/PaymentScreen/PaymentScreen.js:0
+#, python-format
+msgid "You cannot return"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#. odoo-python
+#: code:addons/kw_checkbox_pos/static/src/js/Screens/PaymentScreen/PaymentScreen.js:0
+#: code:addons/kw_checkbox_pos/wizard/pos_payment.py:0
+#, python-format
+msgid "You cannot return more than what is available at the box office"
+msgstr "Ви не можете повернути більше того, що є в касі"
+
+#. module: kw_checkbox_pos
+#. odoo-python
+#: code:addons/kw_checkbox_pos/models/pos_session.py:0
+#: code:addons/kw_checkbox_pos/wizard/pos_box.py:0
+#, python-format
+msgid "You cannot withdraw more than what is available at the box office"
+msgstr "Ви не можете зняти більше, ніж є в касі"
+
+#. module: kw_checkbox_pos
+#. odoo-python
+#: code:addons/kw_checkbox_pos/models/pos_order.py:0
+#: code:addons/kw_checkbox_pos/models/pos_order.py:0
+#, python-format
+msgid "You cant register payment throw this method"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#. odoo-python
+#: code:addons/kw_checkbox_pos/wizard/wizard_offline_mode.py:0
+#, python-format
+msgid "You do not have offline code, please get it"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#. odoo-python
+#: code:addons/kw_checkbox_pos/models/pos_config.py:0
+#, python-format
+msgid "You should add only one cash register by one organization"
+msgstr "Вам слід додати лише одну касу однієї організації"
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#: code:addons/kw_checkbox_pos/static/src/js/Screens/PaymentScreen/PaymentScreen.js:0
+#, python-format
+msgid "You should choose acceptable payment method"
+msgstr "Вам слід вибрати прийнятний спосіб оплати"
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#: code:addons/kw_checkbox_pos/static/src/js/Screens/ProductScreen/ProductScreen.js:0
+#, python-format
+msgid "You should make new receipt for this product"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#. odoo-javascript
+#: code:addons/kw_checkbox_pos/static/src/js/Screens/PaymentScreen/PaymentScreen.js:0
+#, python-format
+msgid ""
+"You should not use payment method with tax calculation function and without "
+"tax calculation function"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#. odoo-python
+#: code:addons/kw_checkbox_pos/models/pos_order.py:0
+#, python-format
+msgid "You should use offline mode, because CheckBox signature turned off"
+msgstr ""
+
+#. module: kw_checkbox_pos
+#: model:ir.model,name:kw_checkbox_pos.model_kw_pos_excise
+msgid "kw.pos.excise"
+msgstr ""

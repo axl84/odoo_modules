@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="kw_chatbot_notification_sale_order" model="kw.chatbot.notification">
+        <field name="name">Sale Order Change Status</field>
+        <field name="trigger">on_write</field>
+        <field name="model_id" ref="sale.model_sale_order"/>
+        <field name="trigger_field_ids" eval="[(6, 0, [ref('sale.field_sale_order__state')])]"/>
+        <field name="message">Замовлення на продаж {{ object.name }} змінило статус на '{{ object.state }}'</field>
+    </record>
+
+    <record id="kw_chatbot_notification_res_partner" model="kw.chatbot.notification">
+        <field name="name">Create Contact</field>
+        <field name="trigger">on_create</field>
+        <field name="is_add_url">True</field>
+        <field name="model_id" ref="base.model_res_partner"/>
+        <field name="message">Контакт {{ object.name }} був створений!</field>
+    </record>
+
+    <record id="kw_chatbot_notification_sale_order_mail_message" model="kw.chatbot.notification">
+        <field name="name">Sale Order Mail Message</field>
+        <field name="trigger">on_create</field>
+        <field name="model_id" ref="mail.model_mail_message"/>
+        <field name="mail_message_model_id" ref="sale.model_sale_order"/>
+        <field name="message">{{ object.body }}</field>
+    </record>
+</odoo>

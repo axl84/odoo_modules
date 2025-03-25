@@ -1,0 +1,29 @@
+<odoo>
+    <record id="kw_checkbox_account_journal_form"
+            model="ir.ui.view">
+        <field name="name">account.journal.form (kw_checkbox)</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id"
+               ref="account.view_account_journal_form"/>
+        <field name="arch" type="xml">
+            <notebook>
+                <page string="Checkbox">
+                    <group>
+                        <group>
+                            <field name="kw_checkbox_is_register_receipt"/>
+                            <field name="kw_checkbox_organization_id"/>
+                            <field name="kw_checkbox_payment_method_type"
+                                   required="kw_checkbox_is_register_receipt != False"
+                                   invisible="not kw_checkbox_is_register_receipt"
+                            />
+                            <field name="kw_checkbox_payment_method_name"
+                                   required="kw_checkbox_is_register_receipt != False"
+                                   invisible="not kw_checkbox_is_register_receipt"
+                            />
+                        </group>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo>

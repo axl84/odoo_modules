@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_builder_viber_step_viber_keyboard_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.step.viber.keyboard.form (kw_chatbot_builder_viber)</field>
+        <field name="model">kw.chatbot.step.viber.keyboard</field>
+        <field name="arch" type="xml">
+            <form>
+                <header/>
+                <sheet>
+                    <div class="oe_title">
+                        <h2>
+                            <field name="name" placeholder="Name"/>
+                        </h2>
+                    </div>
+                    <group>
+                        <field invisible="1" name="step_id"/>
+                        <field invisible="1" name="notification_id"/>
+                        <field force_save="1" name="model_id"/>
+                        <field name="model_name"/>
+                        <field name="state"/>
+                        <field name="send_last" widget="boolean_toggle"/>
+                        <field invisible="1" name="target_model_name"/>
+                        <field invisible="state != 'object_create'" name="target_model_id" options="{'no_create': True}" required="state == 'object_create'"/>
+                        <field context="{'default_model_id': model_id, 'default_relation': target_model_name}" domain="[('model_id', '=', model_id), ('relation', '=', target_model_name),                                     ('ttype', 'in', ['many2one', 'one2many', 'many2many'])]" invisible="state != 'object_create'" name="link_field_id"/>
+                        <field invisible="state != 'email'" name="template_id" required="state == 'email'"/>
+                        <field invisible="state != 'followers'" name="partner_ids" widget="many2many_tags"/>
+                        <field context="{'default_model_id': model_id}" invisible="state != 'sms'" name="sms_template_id" required="state == 'sms'"/>
+                        <field invisible="state != 'sms'" name="sms_mass_keep_log"/>
+                    </group>
+                    <notebook>
+                        <page invisible="state not in ['send_notification']" name="viber_buttons" string="Viber Button">
+                            <group>
+                                <field name="use_parent_record"/>
+                                <field invisible="use_parent_record == False" name="search_type"/>
+                                <field name="model_notification_id"/>
+                                <field force_save="1" invisible="0" name="model_notification_name" readonly="1"/>
+                                <field invisible="1" name="child_field_ids"/>
+                                <field domain="[('id', '=', child_field_ids)]" invisible="use_parent_record == False" name="child_field_id" required="use_parent_record != False"/>
+                                <field name="notification_for_send" required="state == 'send_notification'"/>
+                                <field name="uns_notification_for_send" string="Unsuccessful Notification For Send"/>
+                            </group>
+                        </page>
+                        <page invisible="state != 'forward_step'" string="Forward Step">
+                            <group>
+                                <field name="forward_step_id"/>
+                            </group>
+                        </page>
+                        <page invisible="state not in ['object_create', 'object_write']" string="Data to Write">
+                            <p invisible="model_id != False">
+                                Please set the Model to Create before choosing values
+                            </p>
+                            <field name="fields_lines" invisible="not model_id or not name" context="{'default_model_id': model_id, 'default_name': name}">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                    <field name="evaluation_type"/>
+                                    <field name="model_id" force_save="1" readonly="1"/>
+                                    <field name="update_field_id" domain="[('model_id', '=', parent.model_id)]"/>
+                                    <field name="value" force_save="1" widget="code" options="{'mode': 'python'}"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page autofocus="autofocus" invisible="state != 'code'" name="code" string="Python Code">
+                            <field name="code" options="{'mode': 'python'}" placeholder="Enter Python code here. Help about Python expression is available in the help tab of this document." widget="ace"/>
+                        </page>
+                        <page autofocus="autofocus" invisible="state != 'next_activity'" name="next_activity" string="Activity">
+                            <group>
+                                <group>
+                                    <field name="activity_type_id" options="{'no_create': True, 'no_open': True}" required="state == 'next_activity'"/>
+                                    <field name="activity_summary" placeholder="e.g. Discuss proposal"/>
+                                </group>
+                                <group>
+                                    <label for="activity_date_deadline_range"/>
+                                    <div class="o_row">
+                                        <field name="activity_date_deadline_range"/>
+                                        <field name="activity_date_deadline_range_type" required="state == 'next_activity' and activity_date_deadline_range > 0"/>
+                                    </div>
+                                    <field name="activity_user_type" required="state == 'next_activity'"/>
+                                    <field invisible="activity_user_type == 'specific'" name="activity_user_field_name" required="state == 'next_activity' and activity_user_type == 'generic'"/>
+                                    <field invisible="activity_user_type == 'generic'" name="activity_user_id" required="state == 'next_activity' and activity_user_type == 'specific'"/>
+                                </group>
+                            </group>
+                            <field class="oe-bordered-editor" name="activity_note" placeholder="Log a note..."/>
+                        </page>
+                        <page string="Callback Data">
+                            <field name="callback_data" options="{'mode': 'python'}" widget="ace"/>
+                        </page>
+                        <page string="Notification of successful operation">
+                            <group>
+                                <field name="successful_notification" required="0"/>
+                            </group>
+                            <field name="successful_text_line_id"><tree editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field invisible="1" name="model_id"/>
+                                    <field invisible="1" name="model_name"/>
+                                    <field name="text_before"/>
+                                    <field invisible="1" name="viber_button_id"/>
+                                    <field name="need_after_before_text_new_line"/>
+                                    <field name="fields_id"/>
+                                    <field invisible="1" name="sub_model"/>
+                                    <field domain="[('model_id','=',sub_model),('ttype','!=','one2many'),('ttype','!=','many2many')]" name="sub_fields_id" readonly="sub_model == False"/>
+                                    <field name="text_after"/>
+                                    <field name="need_after_after_text_new_line"/>
+                                    <field groups="base.group_no_one" name="part_message"/>
+                                </tree></field>
+                        </page>
+                        <page string="Notification of unsuccessful operation">
+                            <group>
+                                <field name="unsuccessful_notification" required="0"/>
+                            </group>
+                            <field name="unsuccessful_text_line_id"><tree editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field invisible="1" name="model_id"/>
+                                    <field invisible="1" name="model_name"/>
+                                    <field name="text_before"/>
+                                    <field invisible="1" name="viber_button_id"/>
+                                    <field name="need_after_before_text_new_line"/>
+                                    <field name="fields_id"/>
+                                    <field invisible="1" name="sub_model"/>
+                                    <field domain="[('model_id','=',sub_model),('ttype','!=','one2many'),('ttype','!=','many2many')]" name="sub_fields_id" readonly="sub_model == False"/>
+                                    <field name="text_after"/>
+                                    <field name="need_after_after_text_new_line"/>
+                                    <field groups="base.group_no_one" name="part_message"/>
+                                </tree></field>
+                        </page>
+                        <page name="viber_button_set" string="Button Settings">
+                            <group>
+                                <group>
+                                    <field name="columns"/>
+                                    <field name="rows"/>
+                                    <field name="active"/>
+                                    <field name="image_scale_type"/>
+                                </group>
+                                <group>
+                                    <field name="image"/>
+                                    <field name="bg_image"/>
+                                    <field name="bg_color"/>
+                                    <field name="tx_color"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form></field>
+    </record>
+
+    <record id="kw_chatbot_step_viber_button_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.step.viber.button.form (kw_chatbot_builder_viber)</field>
+        <field name="model">kw.chatbot.step.viber.button</field>
+        <field name="arch" type="xml">
+            <form>
+                <header/>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="state"/>
+                        <field name="code" widget="ace" options="{'mode': 'python'}" invisible="state != 'code'"
+                               placeholder="Enter Python code here. Help about Python expression is available in the help tab of this document."/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="kw_chatbot_step_viber_button_tree" model="ir.ui.view">
+        <field name="name">kw.chatbot.step.viber.button.tree (kw_chatbot_builder_viber)</field>
+        <field name="model">kw.chatbot.step.viber.button</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="kw_chatbot_step_viber_button_action_window"
+            model="ir.actions.act_window">
+        <field name="name">Viber Buttons</field>
+        <field name="res_model">kw.chatbot.step.viber.button</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
+</odoo>

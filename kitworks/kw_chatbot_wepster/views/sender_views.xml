@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_wepster_kw_chatbot_sender_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.sender.form (kw_chatbot_wepster)</field>
+        <field name="model">kw.chatbot.sender</field>
+        <field name="inherit_id" ref="kw_chatbot.kw_chatbot_kw_chatbot_sender_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page invisible="provider != 'wepster'" string="Wepster">
+                    <group>
+                        <field force_save="1" name="wepster_channel_id"/>
+                        <field name="wepster_id"/>
+                        <field name="wepster_is_bot"/>
+                        <field name="wepster_username"/>
+                        <field name="wepster_email"/>
+                        <field name="wepster_userId"/>
+                    </group>
+                </page>
+            </notebook></field>
+    </record>
+    <record id="kw_chatbot_wepster_kw_chatbot_sender_search" model="ir.ui.view">
+        <field name="name">kw.chatbot.sender.search (kw_chatbot_wepster)</field>
+        <field name="model">kw.chatbot.sender</field>
+        <field eval="8" name="priority"/>
+        <field name="arch" type="xml">
+            <search>
+                <field filter_domain="[('wepster_username','ilike',self)]" name="wepster_username"/>
+            </search></field>
+    </record>
+</odoo>

@@ -1,0 +1,50 @@
+<odoo>
+    <record id="kw_sms_api_kw_sms_log_tree" model="ir.ui.view">
+        <field name="name">kw.sms.log.tree (kw_sms_api)</field>
+        <field name="model">kw.sms.log</field>
+        <field name="arch" type="xml">
+            <tree create="false">
+                <field name="create_date"/>
+                <field name="provider_id"/>
+                <field name="request_url"/>
+<!--                <field name="request"/>-->
+<!--                <field name="response"/>-->
+            </tree>
+        </field>
+    </record>
+
+    <record id="kw_sms_api_kw_sms_log_form" model="ir.ui.view">
+        <field name="name">kw.sms.log.form (kw_sms_api)</field>
+        <field name="model">kw.sms.log</field>
+        <field name="arch" type="xml">
+            <form create="false" edit="false">
+                <group>
+                     <group>
+                        <field name="create_date"/>
+                        <field name="provider_id"/>
+                    </group>
+                     <group>
+                        <field name="request_url"/>
+                    </group>
+                </group>
+                <group>
+                    <field name="request" widget="ace" options="{'mode': 'python'}"/>
+                    <field name="response" widget="ace" options="{'mode': 'python'}"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+
+    <record model="ir.actions.act_window"
+            id="kw_sms_api_kw_sms_log_action_window">
+        <field name="name">SMS Log</field>
+        <field name="res_model">kw.sms.log</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="kw_sms_api_kw_sms_log_menu"
+              action="kw_sms_api_kw_sms_log_action_window"
+              parent="phone_validation.phone_menu_main"
+              name="SMS log" sequence="9000"/>
+</odoo>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="0">
+    <record id="kw_chatbot_sender_echat" model="kw.chatbot.sender">
+        <field name="name">E-Chat</field>
+        <field name="provider">echat</field>
+    </record>
+</odoo>

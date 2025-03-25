@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_chatbot_kw_chatbot_log_form" model="ir.ui.view">
+        <field name="name">kw.chatbot.log.form (kw_chatbot)</field>
+        <field name="model">kw.chatbot.log</field>
+        <field name="arch" type="xml">
+            <form>
+                <header/>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="messenger_id"/>
+                        <field name="create_date"/>
+                        <field name="body" widget="ace" options="{'mode': 'python'}"/>
+                        <field name="url"/>
+                        <field name="method"/>
+                        <field name="headers"/>
+                        <field name="chat_id"/>
+                        <field name="dialog_id"/>
+                        <field name="sender_id"/>
+                        <field name="conversation_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="kw_chatbot_kw_chatbot_log_tree" model="ir.ui.view">
+        <field name="name">kw.chatbot.log.tree (kw_chatbot)</field>
+        <field name="model">kw.chatbot.log</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="create_date"/>
+                <field name="messenger_id" optional="show"/>
+                <field name="chat_id" optional="show"/>
+                <field name="dialog_id" optional="hide"/>
+                <field name="sender_id" optional="hide"/>
+                <field name="conversation_id" optional="hide"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="kw_chatbot_kw_chatbot_log_search" model="ir.ui.view">
+        <field name="name">kw.chatbot.log.search</field>
+        <field name="model">kw.chatbot.log</field>
+        <field name="arch" type="xml">
+            <search string="Logs">
+                <field name="name"/>
+                <field name="messenger_id"/>
+                <field name="create_date"/>
+                <field name="chat_id"/>
+                <field name="dialog_id"/>
+                <field name="sender_id"/>
+                <field name="conversation_id"/>
+                <group expand="1" string="Group By">
+                    <filter string="Name" name="name" context="{'group_by':'name'}"/>
+                    <filter string="Messenger Id" name="messenger" context="{'group_by':'messenger_id'}"/>
+                    <filter string="Chat Id" name="chat" context="{'group_by':'chat_id'}"/>
+                    <filter string="Dialog Id" name="dialog" context="{'group_by':'dialog_id'}"/>
+                    <filter string="Sender Id" name="sender" context="{'group_by':'sender_id'}"/>
+                    <filter string="Conversation Id" name="conversation" context="{'group_by':'conversation_id'}"/>
+
+                    <filter string="Today" name="Today"
+                            domain="[('create_date','!=',False),
+                            ('create_date','=',(datetime.datetime.today()))]"/>
+                    <filter string="Yesterday" name="Yesterday"
+                            domain="[('create_date','!=',False),
+                            ('create_date','=',(datetime.datetime.today()
+                            +datetime.timedelta(days=-1)))]"/>
+                    <filter string="2 days ago" name="2_ays_ago"
+                            domain="[('create_date','!=',False),
+                            ('create_date','=',(datetime.datetime.today()
+                            +datetime.timedelta(days=-2)))]"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="kw_chatbot_kw_chatbot_log_action_window"
+            model="ir.actions.act_window">
+        <field name="name">Messengers Logs</field>
+        <field name="res_model">kw.chatbot.log</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
+    <menuitem id="kw_chatbot_kw_chatbot_log_menu"
+              action="kw_chatbot_kw_chatbot_log_action_window"
+              parent="kw_chatbot_settings_main_menu"
+              groups="base.group_no_one"
+              name="Messengers Logs" sequence="755"/>
+</odoo>

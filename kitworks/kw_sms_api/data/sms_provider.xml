@@ -1,0 +1,70 @@
+<odoo noupdate="1">
+    <record id="kw_sms_provider_sandbox" model="kw.sms.provider">
+        <field name="name">SandBox (logging only)</field>
+        <field name="sequence">100</field>
+        <field name="provider">sandbox</field>
+        <field name="image_128" type="base64" file="kw_sms_api/static/src/img/sandbox_logo.png"/>
+        <field name="module_name">kw_sms_api</field>
+        <field name="description" type="html">
+            <p>
+                Provide functionality to test sms sender.
+            </p>
+        </field>
+    </record>
+
+    <record id="kw_sms_provider_turbosms" model="kw.sms.provider">
+        <field name="name">TurboSMS</field>
+        <field name="sequence">200</field>
+        <field name="provider">turbosms</field>
+        <field name="image_128" type="base64" file="kw_sms_api/static/src/img/turbosms_logo.png"/>
+        <field name="module_name">kw_sms_turbosms</field>
+        <field name="description" type="html">
+            <p>
+                <a href="https://turbosms.ua/">TurboSMS</a>
+                — сервис CMC рассылок, официальный партнёр Viber и
+                операторов мобильной связи Украины. Создавайте массовые СМС
+                рассылки рекламы, сообщайте про акции и скидки сразу после
+                регистрации!
+            </p>
+        </field>
+    </record>
+
+    <record id="kw_sms_provider_alphasms" model="kw.sms.provider">
+        <field name="name">АльфаSMS</field>
+        <field name="sequence">200</field>
+        <field name="provider">alphasms</field>
+        <field name="image_128" type="base64"
+               file="kw_sms_api/static/src/img/alphasms_logo.png"/>
+        <field name="module_name">kw_sms_alphasms</field>
+        <field name="description" type="html">
+            <p>
+                <a href="https://alphasms.ua/">АльфаSMS</a>
+                - ведущая компания на украинском рынке SMS-услуг для
+                корпоративных и частных заказчиков. Наша компания занимается
+                развитием телекоммуникационных решений для бизнеса, которые
+                позволяют в сжатые сроки и с невысокими затратами достичь новых
+                высот ведения бизнеса, опережая своих конкурентов.
+            </p>
+        </field>
+    </record>
+
+    <record id="kw_sms_provider_letsads" model="kw.sms.provider">
+        <field name="name">LetsAds.com</field>
+        <field name="sequence">200</field>
+        <field name="provider">letsads</field>
+        <field name="image_128" type="base64"
+               file="kw_sms_api/static/src/img/letsads_logo.png"/>
+        <field name="module_name">kw_sms_letsads</field>
+        <field name="description" type="html">
+            <p>
+                <a href="https://letsads.com/">LetsAds.com</a>
+                -
+                Мы работаем более 5 лет и имеем прямые подключения ко всем
+                крупным операторам связи во всем мире. <br/>
+                Мы обеспечиваем максимальную скорость рассылки и
+                гарантированную доставку SMS вашим клиентам.
+            </p>
+        </field>
+    </record>
+
+</odoo>
