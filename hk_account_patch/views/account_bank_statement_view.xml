@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+<!--    <record id="bank_statement_line_form_add_view_hk" model="ir.ui.view">-->
+<!--        <field name="name">view_bank_statement_line_form.inherit</field>-->
+<!--        <field name="model">account.bank.statement.line</field>-->
+<!--        <field name="inherit_id" ref="account_reconcile_oca.bank_statement_line_form_add_view" />-->
+<!--        <field name="arch" type="xml">-->
+<!--            <field name="statement_id" position="attributes">-->
+<!--                <attribute name="required">1</attribute>-->
+<!--            </field>-->
+<!--        </field>-->
+<!--    </record>-->
+
+
+    <record id="view_bank_statement_line_tree" model="ir.ui.view">
+        <field name="name">account.bank.statement.line.tree</field>
+        <field name="model">account.bank.statement.line</field>
+        <field name="inherit_id" ref="base_accounting_kit.view_bank_statement_line_tree" />
+        <field name="arch" type="xml">
+            <tree position="attributes">
+                <attribute name="create">true</attribute>
+            </tree>
+            <tree position="inside">
+                <field name="statement_id" />
+            </tree>
+        </field>
+    </record>
+    <record id="account_bank_statement_line_menu_action" model="ir.actions.act_window">
+        <field name="name">Bank statement lines</field>
+        <field name="res_model">account.bank.statement.line</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="domain">[('journal_id.type', '=', 'bank')]</field>
+    </record>
+    <record id="account_cash_statement_line_menu_action" model="ir.actions.act_window">
+        <field name="name">Cash statement lines</field>
+        <field name="res_model">account.bank.statement.line</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('journal_id.type', '=', 'cash')]</field>
+    </record>
+    <record id="menu_accounting_bank_and_cash" model="ir.ui.menu">
+        <field name="parent_id" ref="account.menu_finance" />
+        <field name="name">Bank and Cache</field>
+    </record>
+    <record id="account_bank_statement_line_menu" model="ir.ui.menu">
+        <field name="parent_id" ref="menu_accounting_bank_and_cash" />
+        <field name="name">Bank statement lines</field>
+        <field name="action" ref="account_bank_statement_line_menu_action" />
+    </record>
+    <record id="account_cash_statement_line_menu" model="ir.ui.menu">
+        <field name="parent_id" ref="menu_accounting_bank_and_cash" />
+        <field name="name">Cash statement lines</field>
+        <field name="action" ref="account_cash_statement_line_menu_action" />
+        <field name="sequence">21</field>
+    </record>
+
+    <record id="view_bank_statement_form_hk" model="ir.ui.view">
+            <field name="name">account.bank.statement.form</field>
+            <field name="model">account.bank.statement</field>
+            <field name="inherit_id" ref="account_statement_base.view_bank_statement_form" />
+            <field name="arch" type="xml">
+                <field name="date" position="attributes">
+                    <attribute name="readonly">0</attribute>
+                </field>
+                <field name="line_ids" position="replace">
+                    <field name="line_ids" widget="one2many" mode="tree,kanban" context="{'default_journal_id': journal_id}">
+                            <tree editable="bottom" string="Statement lines" default_order="sequence, id">
+                                <control>
+                                    <create name="add_line_control" string="Add a line"/>
+                                </control>
+                                <field name="statement_id" invisible="1"/>
+                                <field name="journal_id" invisible="1"/>
+                                <field name="suitable_journal_ids" column_invisible="True"/>
+                                <field name="date"/>
+                                <field name="payment_ref"/>
+                                <field name="company_id" invisible="1"/>
+                                <field name="partner_id"/>
+                                <field name="amount"/>
+                                <field name="transaction_type"/>
+                            </tree>
+                        </field>
+                </field>
+            </field>
+        </record>
+        <record id="account.action_view_bank_statement_tree" model="ir.actions.act_window">
+            <field name="name">Cash Registers</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.bank.statement</field>
+            <field name="view_mode">tree,form,pivot,graph</field>
+            <field name="view_id" ref="account.view_bank_statement_tree"/>
+            <field name="search_view_id" ref="account.view_bank_statement_search"/>
+            <field name="domain">['|', ('journal_id', '=', False), ('journal_id.type', '=', 'cash')]</field>
+            <field name="context">{'journal_type':'cash'}</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Create a new cash log
+              </p><p>
+                A Cash Register allows you to manage cash entries in your cash
+                journals. This feature provides an easy way to follow up cash
+                payments on a daily basis.
+              </p>
+            </field>
+        </record>
+</odoo>
