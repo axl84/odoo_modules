@@ -15,7 +15,11 @@ class ClassTraining(models.Model):
         for rec in self:
             # К началу тренировки (по UTC) + время текущего часового пояса пользователя
             difference_time = self._get_timezone_difference_time()
-            start_training = rec.start_training + timedelta(hours=difference_time)
+
+            start_training = False
+            if rec.start_training:
+                start_training = rec.start_training + timedelta(hours=difference_time)
+
             rec.display_name = f"{rec.class_group_id.name}, {rec.name}, {start_training}"
 
     class_group_id = fields.Many2one(
