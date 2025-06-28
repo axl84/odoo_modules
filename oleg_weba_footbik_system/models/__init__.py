@@ -5,4 +5,5 @@ from . import (
     skills,
     sale_subscription,
     sale_order,
+    purchase_order,
 )
