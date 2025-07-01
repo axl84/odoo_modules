@@ -32,11 +32,14 @@ class ClassAttendance(models.Model):
         domain=[("is_company", "=", False), ("type_person", "=", "child")]
     )
 
+    phone = fields.Char(related="child_id.phone")
+    email = fields.Char(related="child_id.email")
+
     def _phone_get_number_fields(self):  # For sms templates
-        return ["child_id"]
+        return ["phone"]
 
     def _mail_get_partner_fields(self, introspect_fields=False):  # For sms templates
-        return ["child_id"]
+        return ["email"]
 
     start_training = fields.Datetime(string="Start training")
     end_training = fields.Datetime(string="End training")
