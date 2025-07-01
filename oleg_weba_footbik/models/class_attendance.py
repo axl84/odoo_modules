@@ -4,6 +4,7 @@ from odoo import models, fields, _
 class ClassAttendance(models.Model):
     _name = "class.attendance"
     _description = "Class Attendance"
+    _inherit = "mail.thread"
 
     def _compute_display_name(self):
         for rec in self:
