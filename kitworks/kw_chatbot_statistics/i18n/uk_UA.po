@@ -1,0 +1,324 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kw_chatbot_statistics
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-18 12:16+0000\n"
+"PO-Revision-Date: 2024-11-18 12:16+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_operator_activity__average_closing_time
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_pivot
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_report_day_pivot
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_report_operator_pivot
+msgid "Average Closing Time"
+msgstr "Середній час закриття"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_operator_activity__average_first_response_time
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_pivot
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_report_day_pivot
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_report_operator_pivot
+msgid "Average First Response Time"
+msgstr "Середній час першої відповіді"
+
+#. module: kw_chatbot_statistics
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.statistics_wizard_set_category_form_view
+msgid "Cancel"
+msgstr "Скасувати"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_operator_activity__category_id
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_statistics_wizard_set_category__category_id
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_report_operator_pivot
+msgid "Category"
+msgstr "Категорія"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_operator_activity__chat_id
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_statistics_wizard_set_category__chat_id
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_pivot
+msgid "Chat"
+msgstr "Чат"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_operator_activity__duration_chat
+msgid "Chat Duration"
+msgstr "Тривалість розмови"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields.selection,name:kw_chatbot_statistics.selection__kw_chatbot_operator_activity__who_answered_id__client
+msgid "Client"
+msgstr "Клієнт"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_operator_activity__completed
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_pivot
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_report_day_pivot
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_report_operator_pivot
+msgid "Completed"
+msgstr "Виконані"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_operator_activity__conversation_id
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_statistics_wizard_set_category__conversation_id
+msgid "Conversation"
+msgstr "Розмова"
+
+#. module: kw_chatbot_statistics
+#: model:ir.actions.act_window,name:kw_chatbot_statistics.kw_chatbot_conversation_category_action_window
+#: model:ir.ui.menu,name:kw_chatbot_statistics.kw_chatbot_conversation_category_menu
+msgid "Conversation Categories"
+msgstr "Категорії звернень"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model,name:kw_chatbot_statistics.model_kw_chatbot_conversation_category
+msgid "Conversation Category"
+msgstr "Категорія звернення"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_conversation_category__create_uid
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_operator_activity__create_uid
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_statistics_wizard_set_category__create_uid
+msgid "Created by"
+msgstr "Ким створений"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_conversation_category__create_date
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_operator_activity__create_date
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_statistics_wizard_set_category__create_date
+msgid "Created on"
+msgstr "Дата створення"
+
+#. module: kw_chatbot_statistics
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_pivot
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_report_day_pivot
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_report_operator_pivot
+msgid "Date"
+msgstr "Дата"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_operator_activity__date_end
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_statistics_wizard_set_category__date_end
+msgid "Date End"
+msgstr "Завершення діалогу"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_operator_activity__date_start
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_statistics_wizard_set_category__date_start
+msgid "Date Start"
+msgstr "Початок діалогу"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_operator_activity__dialog_id
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_statistics_wizard_set_category__dialog_id
+msgid "Dialog"
+msgstr "Діалог"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_conversation_category__display_name
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_operator_activity__display_name
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_statistics_wizard_set_category__display_name
+msgid "Display Name"
+msgstr "Відображення ім'я"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_operator_activity__is_answer
+msgid "Elaborated dialogue"
+msgstr "Опрацьований діалог"
+
+#. module: kw_chatbot_statistics
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_pivot
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_report_day_pivot
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_report_operator_pivot
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_report_evaluation_pivot
+msgid "Evaluation"
+msgstr "Оцінка"
+
+#. module: kw_chatbot_statistics
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.view_kw_chatbot_operator_activity_kanban
+msgid "Evaluation:"
+msgstr "Оцінка:"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_operator_activity__first_answer_date
+msgid "First Answer Date"
+msgstr "Перша відповідь оператора"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_conversation_category__id
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_operator_activity__id
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_statistics_wizard_set_category__id
+msgid "ID"
+msgstr ""
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_operator_activity__in_standby_mode
+msgid "In Standby Mode"
+msgstr "В режимі очікування"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_statistics_wizard_set_category__is_not_elements
+msgid "Is Not Elements"
+msgstr ""
+
+#. module: kw_chatbot_statistics
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_pivot
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_report_day_pivot
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_report_operator_pivot
+msgid "Is Standby Mode"
+msgstr "В режимі очікування"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_conversation_category____last_update
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_operator_activity____last_update
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_statistics_wizard_set_category____last_update
+msgid "Last Modified on"
+msgstr "Востаннє змінено на"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_conversation_category__write_uid
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_operator_activity__write_uid
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_statistics_wizard_set_category__write_uid
+msgid "Last Updated by"
+msgstr "Останнє оновлення"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_conversation_category__write_date
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_operator_activity__write_date
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_statistics_wizard_set_category__write_date
+msgid "Last Updated on"
+msgstr "Останнє оновлення на"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_operator_activity__missed
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_pivot
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_report_day_pivot
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_report_operator_pivot
+msgid "Missed"
+msgstr "Пропущено"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_conversation_category__name
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_kw_chatbot_conversation_category_form
+msgid "Name"
+msgstr "Назва Категорії"
+
+#. module: kw_chatbot_statistics
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.statistics_wizard_set_category_form_view
+msgid "No statistics records to set the category"
+msgstr "Немає записів статистики для встановлення категорії"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_operator_activity__open_dialogues
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_pivot
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_report_day_pivot
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_report_operator_pivot
+msgid "Open Dialogues"
+msgstr "Відкриті діалоги"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_operator_activity__operator_id
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_statistics_wizard_set_category__operator_id
+#: model:ir.model.fields.selection,name:kw_chatbot_statistics.selection__kw_chatbot_operator_activity__who_answered_id__operator
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_report_evaluation_pivot
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_report_operator_pivot
+msgid "Operator"
+msgstr "Оператор"
+
+#. module: kw_chatbot_statistics
+#: model:ir.actions.act_window,name:kw_chatbot_statistics.kw_chatbot_operator_activity_action_window
+#: model:ir.ui.menu,name:kw_chatbot_statistics.kw_chatbot_operator_activity_menu
+msgid "Operator Activities"
+msgstr "Активність операторів"
+
+#. module: kw_chatbot_statistics
+#: code:addons/kw_chatbot_statistics/models/operator_activity.py:0
+#: model:ir.model,name:kw_chatbot_statistics.model_kw_chatbot_operator_activity
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_form
+msgid "Operator Activity"
+msgstr "Активність оператора"
+
+#. module: kw_chatbot_statistics
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.view_kw_chatbot_operator_activity_graph
+msgid "Operator Evaluation"
+msgstr "Оцінка оператора"
+
+#. module: kw_chatbot_statistics
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.view_kw_chatbot_operator_activity_kanban
+msgid "Operator:"
+msgstr "Оператор:"
+
+#. module: kw_chatbot_statistics
+#: model:ir.actions.act_window,name:kw_chatbot_statistics.kw_chatbot_operator_activity_report_day_action_window
+#: model:ir.ui.menu,name:kw_chatbot_statistics.kw_chatbot_operator_activity_report_day_menu
+msgid "Report Day"
+msgstr "Звіт по дням"
+
+#. module: kw_chatbot_statistics
+#: model:ir.actions.act_window,name:kw_chatbot_statistics.kw_chatbot_operator_activity_report_evaluation_action_window
+#: model:ir.ui.menu,name:kw_chatbot_statistics.kw_chatbot_operator_activity_report_evaluation_menu
+msgid "Report Evaluation"
+msgstr "Звіт по оцінкам"
+
+#. module: kw_chatbot_statistics
+#: model:ir.actions.act_window,name:kw_chatbot_statistics.kw_chatbot_operator_activity_report_operator_action_window
+#: model:ir.ui.menu,name:kw_chatbot_statistics.kw_chatbot_operator_activity_report_operator_menu
+msgid "Report Operator"
+msgstr "Звіт по операторам"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_operator_activity__sender_id
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_statistics_wizard_set_category__sender_id
+msgid "Sender"
+msgstr "Відправник"
+
+#. module: kw_chatbot_statistics
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_report_evaluation_pivot
+msgid "Service Evaluation"
+msgstr "Оцінка"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_operator_activity__evaluation
+msgid "Service evaluation"
+msgstr "Оцінка"
+
+#. module: kw_chatbot_statistics
+#: model:ir.actions.act_window,name:kw_chatbot_statistics.action_statistics_wizard_set_category
+#: model:ir.ui.menu,name:kw_chatbot_statistics.kw_chatbot_open_statistics_wizard_set_category_menu
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.statistics_wizard_set_category_form_view
+msgid "Set Category"
+msgstr "Обрати категорію"
+
+#. module: kw_chatbot_statistics
+#: model:ir.ui.menu,name:kw_chatbot_statistics.kw_chatbot_statistics
+msgid "Statistics"
+msgstr "Статистика"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model,name:kw_chatbot_statistics.model_statistics_wizard_set_category
+#: model:ir.actions.act_window,name:kw_chatbot_statistics.action_open_statistics_wizard_set_category
+msgid "Statistics Wizard: Set Category"
+msgstr "Wizard Статистики: Встановлення категорії"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_operator_activity__total_dialogs
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_pivot
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_report_day_pivot
+#: model_terms:ir.ui.view,arch_db:kw_chatbot_statistics.kw_chatbot_operator_activity_report_operator_pivot
+msgid "Total Dialogs"
+msgstr "Всього діалогів"
+
+#. module: kw_chatbot_statistics
+#: model:ir.model.fields,field_description:kw_chatbot_statistics.field_kw_chatbot_operator_activity__who_answered_id
+msgid "Who answered last"
+msgstr "Хто відповів останнім"

@@ -1,0 +1,8 @@
+<odoo>
+
+    <menuitem id="kw_chatbot_statistics"
+              parent="kw_chatbot.kw_chatbot_main_menu"
+              groups="kw_chatbot.group_kw_chatbot_admin"
+              name="Statistics" sequence="8000"/>
+
+</odoo>

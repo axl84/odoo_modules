@@ -1,0 +1,255 @@
+<odoo>
+
+    <!-- Operator activity views and menu -->
+
+    <record id="kw_chatbot_operator_activity_form"
+            model="ir.ui.view">
+        <field name="name">kw.chatbot.operator.activity.form (kw_chatbot)</field>
+        <field name="model">kw.chatbot.operator.activity</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            Operator Activity
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="operator_id" readonly="1"/>
+                            <field name="chat_id" readonly="1"/>
+                            <field name="dialog_id" readonly="1"/>
+                            <field name="conversation_id" readonly="1"/>
+                            <field name="sender_id" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="date_start" readonly="1"/>
+                            <field name="first_answer_date" readonly="1"/>
+                            <field name="date_end" readonly="1"/>
+                            <field name="duration_chat" readonly="1"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="category_id"/>
+                        <field name="who_answered_id" readonly="1"/>
+                        <field name="is_answer" readonly="1"/>
+                        <field name="evaluation" readonly="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_kw_chatbot_operator_activity_kanban" model="ir.ui.view">
+        <field name="name">kw.chatbot.operator.activity.kanban (kw_chatbot)</field>
+        <field name="model">kw.chatbot.operator.activity</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="operator_id"/>
+                <field name="evaluation"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <div class="oe_kanban_details">
+                                <span class="oe_kanban_title">Operator:
+                                    <field name="operator_id"/>
+                                </span>
+                                <span class="oe_kanban_subtitle">Evaluation:
+                                    <field name="evaluation"/>
+                                </span>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_kw_chatbot_operator_activity_graph"
+            model="ir.ui.view">
+        <field name="name">kw.chatbot.operator.activity.graph (kw_chatbot)</field>
+        <field name="model">kw.chatbot.operator.activity</field>
+        <field name="arch" type="xml">
+            <graph string="Operator Evaluation">
+                <field name="operator_id" type="row"/>
+                <field name="evaluation" type="measure"
+                       operator="avg"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="kw_chatbot_operator_activity_pivot"
+            model="ir.ui.view">
+        <field name="name">kw.chatbot.operator.activity.pivot (kw_chatbot)</field>
+        <field name="model">kw.chatbot.operator.activity</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="date_start" string="Date" type="row" interval="day"/>
+                <field name="chat_id" string="Chat" type="row"/>
+
+                <field name="open_dialogues" string="Open Dialogues" type="measure"/>
+                <field name="in_standby_mode" string="Is Standby Mode" type="measure"/>
+                <field name="completed" type="measure" string="Completed"/>
+                <field name="missed" type="measure" string="Missed"/>
+                <field name="average_first_response_time" type="measure" string="Average First Response Time"/>
+                <field name="average_closing_time" type="measure" string="Average Closing Time"/>
+                <field name="evaluation" string="Evaluation" type="measure"/>
+                <field name="total_dialogs" type="measure" string="Total Dialogs"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="kw_chatbot_operator_activity_tree"
+            model="ir.ui.view">
+        <field name="name">kw.chatbot.operator.activity.tree (kw_chatbot)</field>
+        <field name="model">kw.chatbot.operator.activity</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- tree create="false" -->
+                <field name="operator_id" optional="show"/>
+                <field name="chat_id" optional="show"/>
+                <field name="dialog_id" optional="show"/>
+                <field name="conversation_id" optional="show"/>
+                <field name="sender_id" optional="show"/>
+                <field name="date_start" optional="show"/>
+                <field name="first_answer_date" optional="show"/>
+                <field name="date_end" optional="show"/>
+                <field name="duration_chat" optional="show"/>
+                <field name="category_id" optional="show"/>
+                <field name="who_answered_id" optional="show"/>
+                <field name="is_answer" optional="show"/>
+                <field name="evaluation" optional="show"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="kw_chatbot_operator_activity_action_window"
+            model="ir.actions.act_window">
+        <field name="name">Operator Activities</field>
+        <field name="res_model">kw.chatbot.operator.activity</field>
+        <field name='view_mode'>tree,form,pivot,graph,kanban</field>
+    </record>
+
+    <menuitem id="kw_chatbot_operator_activity_menu"
+              name="Operator Activities"
+              parent="kw_chatbot_statistics"
+              action="kw_chatbot_operator_activity_action_window"
+              sequence="9990"/>
+
+    <!-- Report day pivot and menu -->
+
+    <record id="kw_chatbot_operator_activity_report_day_pivot"
+            model="ir.ui.view">
+        <field name="name">kw.chatbot.operator.activity.report.day.pivot (kw_chatbot)</field>
+        <field name="model">kw.chatbot.operator.activity</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="date_start" string="Date" type="row" interval="day"/>
+                <field name="chat_id" string="Chat" type="row"/>
+
+                <field name="open_dialogues" string="Open Dialogues" type="measure"/>
+                <field name="in_standby_mode" string="Is Standby Mode" type="measure"/>
+                <field name="completed" type="measure" string="Completed"/>
+                <field name="missed" type="measure" string="Missed"/>
+                <field name="average_first_response_time" type="measure" string="Average First Response Time"/>
+                <field name="average_closing_time" type="measure" string="Average Closing Time"/>
+                <field name="evaluation" string="Evaluation" type="measure"/>
+                <field name="total_dialogs" type="measure" string="Total Dialogs"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="kw_chatbot_operator_activity_report_day_action_window"
+            model="ir.actions.act_window">
+        <field name="name">Report Day</field>
+        <field name="res_model">kw.chatbot.operator.activity</field>
+        <field name='view_mode'>pivot</field>
+        <field name="view_id" ref="kw_chatbot_operator_activity_report_day_pivot"/>
+    </record>
+
+    <menuitem id="kw_chatbot_operator_activity_report_day_menu"
+              name="Report Day"
+              parent="kw_chatbot_statistics"
+              action="kw_chatbot_operator_activity_report_day_action_window"
+              sequence="9991"/>
+
+    <!-- Report operator pivot and menu -->
+
+    <record id="kw_chatbot_operator_activity_report_operator_pivot"
+            model="ir.ui.view">
+        <field name="name">kw.chatbot.operator.activity.report.operator.pivot (kw_chatbot)</field>
+        <field name="model">kw.chatbot.operator.activity</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="operator_id" string="Operator" type="row"/>
+
+                <field name="open_dialogues" string="Open Dialogues" type="measure"/>
+                <field name="in_standby_mode" string="Is Standby Mode" type="measure"/>
+                <field name="completed" type="measure" string="Completed"/>
+                <field name="missed" type="measure" string="Missed"/>
+                <field name="average_first_response_time" type="measure" string="Average First Response Time"/>
+                <field name="average_closing_time" type="measure" string="Average Closing Time"/>
+                <field name="evaluation" string="Evaluation" type="measure"/>
+                <field name="total_dialogs" type="measure" string="Total Dialogs"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="kw_chatbot_operator_activity_report_operator_action_window"
+            model="ir.actions.act_window">
+        <field name="name">Report Operator</field>
+        <field name="res_model">kw.chatbot.operator.activity</field>
+        <field name='view_mode'>pivot</field>
+        <field name="view_id" ref="kw_chatbot_operator_activity_report_operator_pivot"/>
+    </record>
+
+    <menuitem id="kw_chatbot_operator_activity_report_operator_menu"
+              name="Report Operator"
+              parent="kw_chatbot_statistics"
+              action="kw_chatbot_operator_activity_report_operator_action_window"
+              sequence="9992"/>
+
+    <!-- Report evaluation pivot and menu -->
+
+    <record id="kw_chatbot_operator_activity_report_evaluation_pivot"
+            model="ir.ui.view">
+        <field name="name">kw.chatbot.operator.activity.report.evaluation.pivot (kw_chatbot)</field>
+        <field name="model">kw.chatbot.operator.activity</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="operator_id" string="Operator" type="row"/>
+
+                <field name="evaluation" string="Evaluation" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="kw_chatbot_operator_activity_report_evaluation_action_window"
+            model="ir.actions.act_window">
+    <field name="name">Report Evaluation</field>
+    <field name="res_model">kw.chatbot.operator.activity</field>
+    <field name='view_mode'>pivot</field>
+    <field name="view_id" ref="kw_chatbot_operator_activity_report_evaluation_pivot"/>
+    </record>
+
+    <menuitem id="kw_chatbot_operator_activity_report_evaluation_menu"
+              name="Report Evaluation"
+              parent="kw_chatbot_statistics"
+              action="kw_chatbot_operator_activity_report_evaluation_action_window"
+              sequence="9993"/>
+
+    <record id="action_open_statistics_wizard_set_category" model="ir.actions.act_window">
+        <field name="name">Statistics Wizard: Set Category</field>
+        <field name="res_model">statistics.wizard.set.category</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{}</field>
+    </record>
+
+    <menuitem id="kw_chatbot_open_statistics_wizard_set_category_menu"
+              name="Set Category"
+              parent="kw_chatbot_statistics"
+              action="action_open_statistics_wizard_set_category"
+              sequence="9994"/>
+
+</odoo>
