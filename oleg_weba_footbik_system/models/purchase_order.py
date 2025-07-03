@@ -19,7 +19,7 @@ class PurchaseOrder(models.Model):
                 try:
                     rec.action_create_invoice()
                     rec.invoice_ids[0].invoice_date = date.today()
-                    rec.invoice_ids[0].action_post()
+                    # rec.invoice_ids[0].action_post()
                 except UserError as e:
                     _logger.error(
                         msg=f"Invoice was not created from purchase.order: {rec.id}."
