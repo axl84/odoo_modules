@@ -7,7 +7,7 @@
         <field name="redirect_form_view_id" ref="redirect_form"/>
         <field name="module_id" ref="base.module_payment_wayforpay"/>
         <field name="company_id" ref="base.main_company"/>
-        <field name="image_128" type="base64"
+        <field name="image_128" attachment="1"
                file="payment_wayforpay/static/src/img/wayforpay_icon.png"/>
         <field name="pre_msg">
             <![CDATA[<p>You will be redirected to the WayForPay website after clicking on the payment button.</p>]]>
@@ -16,16 +16,7 @@
         <field name="wayforpay_merchant_key">flk3409refn54t54t*FNJRET</field>
     </record>
 
-    <record id="payment_method_wayforpay" model="payment.method">
-        <field name="name">Wayforpay</field>
-        <field name="code">wayforpay</field>
-        <field name="image" type="base64"
-               file="payment_wayforpay/static/src/img/wayforpay_icon.png"/>
-        <field name="provider_ids"
-               eval="[(6, 0, [
-                   ref('payment_wayforpay.payment_provider_wayforpay'),
-               ])]"/>
-    </record>
+
 
     <record id="account_payment_method_wayforpay" model="account.payment.method">
         <field name="name">Wayforpay</field>

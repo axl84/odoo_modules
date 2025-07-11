@@ -8,6 +8,7 @@ from markupsafe import Markup
 from werkzeug import urls
 from odoo import fields, models, api
 from odoo.exceptions import ValidationError
+from odoo.tools.common import SUPERUSER_ID
 from ..wayforpay import (
     WayForPay, Form
 )
@@ -20,8 +21,6 @@ def normalize_float(value):
 def normalize_float_to_int(value):
     return int(value) if float(int(value)) == value else ceil(value)
 
-
-SUPERUSER_ID = 1
 
 _logger = logging.getLogger(__name__)
 

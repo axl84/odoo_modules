@@ -7,10 +7,15 @@
         <field name="arch" type="xml">
             <xpath expr='//group[@name="provider_credentials"]' position="after">
                 <group invisible="code != 'wayforpay'">
-                    <field name="wayforpay_merchant_account"/>
-                    <field name="wayforpay_merchant_key" password="True"/>
-                    <field name="wayforpay_merchant_domain"/>
-                    <field name="wayforpay_fees"/>
+                    <field name="wayforpay_merchant_account" 
+                           attrs="{'required': [('code', '=', 'wayforpay')]}"/>
+                    <field name="wayforpay_merchant_key" 
+                           attrs="{'required': [('code', '=', 'wayforpay')]}" 
+                           password="True"/>
+                    <field name="wayforpay_merchant_domain" 
+                           attrs="{'required': [('code', '=', 'wayforpay')]}"/>
+                    <field name="wayforpay_fees" 
+                           attrs="{'required': [('code', '=', 'wayforpay')]}"/>
                     <field name="wayforpay_tnx_link" placeholder="https://example.com/thank-you-page"/>
                     <field name="wayforpay_symbols_for_avoid"/>
                 </group>

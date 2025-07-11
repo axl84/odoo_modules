@@ -1,6 +1,8 @@
 import logging
 
-from odoo import fields, models
+from odoo import fields, models, api
+from odoo.exceptions import ValidationError
+from odoo.tools.translate import _
 from ..wayforpay.constants import PURCHASE_URL
 
 _logger = logging.getLogger(__name__)
@@ -17,16 +19,16 @@ class PaymentProvider(models.Model):
         selection_add=[('wayforpay', 'WayForPay')],
         ondelete={'wayforpay': 'set default'})
     wayforpay_merchant_account = fields.Char(
-        string='WayForPay Merchant', required_if_provider='wayforpay',
+        string='WayForPay Merchant',
         groups='base.group_user', default='test_merch_n1', )
     wayforpay_merchant_key = fields.Char(
-        string='WayForPay Mrechant key', required_if_provider='wayforpay',
+        string='WayForPay Merchant key',
         groups='base.group_user', default='flk3409refn54t54t*FNJRET', )
     wayforpay_merchant_domain = fields.Char(
-        string='WayForPay Merchant domain', required_if_provider='wayforpay',
+        string='WayForPay Merchant domain',
         groups='base.group_user', default='localhost', )
     wayforpay_fees = fields.Float(
-        string='WayForPay Fees (%)', required_if_provider='wayforpay',
+        string='WayForPay Fees (%)',
         groups='base.group_user', default=2.5)
     wayforpay_tnx_link = fields.Char(
         help='"Thank you!" page URL after payment confirmation')
@@ -48,3 +50,14 @@ class PaymentProvider(models.Model):
 
     def _wayforpay_get_api_url(self):
         return PURCHASE_URL
+
+    @api.constrains('code')
+    def _check_wayforpay_required_fields(self):
+        for record in self:
+            if record.code == 'wayforpay':
+                if not record.wayforpay_merchant_account:
+                    raise ValidationError(_('WayForPay Merchant Account is required'))
+                if not record.wayforpay_merchant_key:
+                    raise ValidationError(_('WayForPay Merchant Key is required'))
+                if not record.wayforpay_merchant_domain:
+                    raise ValidationError(_('WayForPay Merchant Domain is required'))
